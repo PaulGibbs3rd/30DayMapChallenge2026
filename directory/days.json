@@ -25,9 +25,15 @@
       "day": 2,
       "date": "2026-11-02",
       "theme": "Lines",
-      "title": "Lines",
-      "description": "Explore paths, connections, or movement through a map built around line features.",
-      "status": "planned"
+      "title": "Seattle, a City of Climbs",
+      "description": "Explore Seattle’s steep street segments in 3D, rank recorded grades, and inspect interactive terrain elevation profiles.",
+      "status": "complete",
+      "tags": [
+        "ArcGIS JavaScript",
+        "Calcite",
+        "3D",
+        "Elevation"
+      ]
     },
     {
       "day": 3,

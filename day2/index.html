@@ -1,27 +1,39 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Day 2 of Paul Gibbs's 30DayMapChallenge 2026: Lines. Planned map; explore the theme and project links.">
-  <meta name="theme-color" content="#f5f0e5">
-  <title>Day 2: Lines | 30DayMapChallenge 2026</title>
-  <link rel="stylesheet" href="../directory/placeholder.css">
-</head>
-<body class="placeholder-page">
-  <main class="day-placeholder">
-    <header>
-      <p class="eyebrow">PAUL GIBBS · NOVEMBER 2, 2026</p>
-      <h1><span>Day 02</span> Lines</h1>
-      <p class="theme-description">Explore routes, connections, or boundaries through linework, using direction, continuity, and movement to organize the map.</p>
-    </header>
-    <p class="status-badge">Planned · Map not implemented</p>
-    <p class="placeholder-note">This day's map is still to come. The theme is ready; the subject, data, and final output will be documented as the project takes shape.</p>
-    <nav class="placeholder-links" aria-label="Day 2 project links">
-      <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day2" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
-      <a href="readme.md">Project notes</a>
-      <a href="../directory/index.html">All days</a>
-    </nav>
-  </main>
-</body>
-</html>
+<html lang="en" class="calcite-mode-dark"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101e27">
+<meta name="description" content="Seattle's steep streets in 3D, ranked by recorded grade, with interactive terrain elevation profiles.">
+<title>Seattle, a City of Climbs · Day 02 / Lines</title>
+<link rel="icon" href="data:;base64,="><link rel="stylesheet" href="style.css">
+<script type="module" src="https://js.arcgis.com/5.1/"></script><script type="module" src="app.js"></script>
+</head><body>
+<a class="skip" href="#ranking-heading">Skip to street ranking</a>
+<calcite-shell>
+<header slot="header"><a class="day" href="../directory/" aria-label="All challenge days">02<small>LINES</small></a><div class="identity"><p class="eyebrow">THE TOPOGRAPHY OF EVERYDAY STREETS</p><h1>Seattle, a City of Climbs <span>↗</span></h1></div><calcite-button id="about" appearance="transparent" kind="neutral" icon-start="information" scale="s">About the data</calcite-button></header>
+<main>
+<aside aria-label="Ranked Seattle streets">
+<div class="intro"><p class="eyebrow">47.61° N / 122.33° W</p><h2 id="ranking-heading" tabindex="-1">A little distance.<br>A lot of uphill.</h2><p>Discover the city's steepest recorded street segments. Choose a climb to explore its terrain in 3D.</p></div>
+<div class="filters"><calcite-label scale="s">Minimum segment length<calcite-select id="min-length" label="Minimum segment length" scale="s"><calcite-option value="0">Any length</calcite-option><calcite-option value="100" selected>100 feet</calcite-option><calcite-option value="250">250 feet</calcite-option><calcite-option value="500">500 feet</calcite-option></calcite-select></calcite-label><calcite-label layout="inline" scale="s"><calcite-switch id="unique" checked scale="s"></calcite-switch>One segment per street</calcite-label></div>
+<div class="list-heading"><span>THE STEEPEST 20</span><span>GRADE ↓</span></div>
+<p id="ranking-status" role="status">Reading street records…</p><calcite-button id="retry" hidden scale="s" appearance="outline">Retry data</calcite-button>
+<calcite-list id="ranking" label="Steepest street segments" selection-mode="single-persist" selection-appearance="border"></calcite-list>
+<p class="footnote">Recorded segment grades, not whole-street averages. Ties share a rank. In-service, classified streets only; alleys excluded.</p>
+</aside>
+<section class="scene-workspace" aria-label="3D streets and elevation profile"><div class="stage">
+<arcgis-scene id="scene" basemap="dark-gray-vector" ground="world-elevation" camera-position="-122.39,47.46,16000" camera-tilt="46" camera-heading="0" popup-disabled attribution-mode="dark"><arcgis-zoom slot="top-right"></arcgis-zoom><arcgis-navigation-toggle slot="top-right"></arcgis-navigation-toggle><arcgis-compass slot="top-right"></arcgis-compass></arcgis-scene>
+<div class="caption"><p class="eyebrow">SEATTLE / WASHINGTON</p><span>Terrain at true scale · drag to explore</span><p id="marker-status" role="status">Locating ranked climbs…</p></div>
+<div id="scene-status" role="status">Preparing the 3D terrain…</div>
+<div class="tools"><calcite-button id="overview" scale="s" kind="neutral" icon-start="extent">City overview</calcite-button><calcite-label layout="inline" scale="s"><calcite-switch id="steep-only" scale="s"></calcite-switch>Grades ≥ 15%</calcite-label></div>
+<div class="legend" aria-label="Recorded street grade"><span>RECORDED GRADE</span><div class="ramp"></div><div class="ticks"><span>0%</span><span>5</span><span>10</span><span>15</span><span>20%+</span></div><small>Unrecorded: gray</small></div>
+</div>
+<section class="profile-panel" aria-labelledby="street-heading"><div class="selection"><div><p id="selected-rank" class="eyebrow">SELECT A CLIMB</p><h2 id="street-heading">Every hill has a story.</h2><p id="cross-streets">Choose a ranked street or click a line in the scene.</p></div><div class="metrics"><div><strong id="grade">—</strong><span>recorded grade</span></div><div><strong id="length">—</strong><span>segment length</span></div></div></div>
+<div class="profile-heading"><h3>Terrain elevation along street</h3><calcite-button id="locate" appearance="transparent" scale="s" icon-start="zoom-to-object" disabled>Zoom to segment</calcite-button></div>
+<div class="endpoint-guide" aria-label="Elevation profile endpoints"><span id="endpoint-a">A · Profile start</span><span id="endpoint-b">B · Profile end</span></div><p id="direction-status" class="footnote" role="status">Choose a climb to sample endpoint elevations.</p><arcgis-elevation-profile id="profile" reference-element="scene" distance-unit="feet" elevation-unit="feet" hide-start-button hide-select-button hide-clear-button></arcgis-elevation-profile>
+<p class="footnote">Hover over the chart to locate a point in the scene. Terrain can differ from roadway elevation, especially at bridges. Chart axes scale independently.</p></section>
+</section></main>
+<calcite-dialog id="about-dialog" slot="dialogs" heading="Reading the climbs" modal>
+<p>This map ranks street segments by Seattle Department of Transportation's <code>SLOPE_PCT</code>. A 20% grade means 20 feet of rise per 100 horizontal feet, not 20 degrees.</p>
+<p>Eligible records are marked <code>INSVC</code>, have a street classification, and are not alleys. Missing slopes are excluded. Minimum length uses SDOT's <code>SEGLENGTH</code> in feet. One segment per street retains the steepest eligible segment for each street name.</p>
+<p>Grades are source records, not independently verified measurements. Short segments can have extreme values. Lines follow the ground; bridges may appear at terrain height. The elevation profile samples Esri World Elevation independently of recorded grade and is not a roadway survey. The scene has no vertical exaggeration. Numbered circles match the current ranking and hide at block scale, where A/B labels mark the profile endpoints. When terrain data is available, A is the lower endpoint, B the higher, and the camera looks from the lower side. This is terrain direction, not permitted traffic direction. Similar elevations or disconnected geometry use a neutral view.</p>
+<p><a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/seattle-streets/explore" target="_blank" rel="noopener noreferrer">Seattle Streets · Seattle Department of Transportation ↗</a></p><p><a href="readme.md">Project notes</a> · Paul Gibbs · #30DayMapChallenge 2026</p>
+</calcite-dialog></calcite-shell><noscript>This map requires JavaScript and an internet connection.</noscript>
+</body></html>
