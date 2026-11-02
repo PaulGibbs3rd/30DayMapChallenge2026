@@ -1,4 +1,4 @@
-import { bearing, destination, midpoint, orientTerrain } from './navigation.js';
+import { bearing, destination, midpoint, orientTerrain } from './navigation.js?v=a945d77562e4';
 
 const $ = (id) => document.getElementById(id);
 const SERVICE = 'https://services.arcgis.com/ZOyb2t4B0UYuYNYH/arcgis/rest/services/Seattle_Streets_1/FeatureServer/0';

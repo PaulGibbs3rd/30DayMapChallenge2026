@@ -71,3 +71,7 @@ The application shell, navigation, resizable ranking sidebar, profile panel, con
 The ranking panel docks on desktop and opens as an overlay on narrow screens; the legend collapses on mobile. Dark `color-scheme` and inherited scrollbar colors cover native scrolling inside the components as well as the page. Component styling uses theme tokens and host styles without reaching into shadow DOM internals.
 
 The LinkedIn GIF records the earlier interface and remains available as a demo of the mapping functionality.
+
+## Deployment cache consistency
+
+The build stamps the stylesheet, app module, and navigation module URLs with content hashes. This prevents an updated HTML document from loading incompatible assets cached from a previous release. Run `npm run check` or `npm run build` before committing a change; commit the generated version references with the source files. The GitHub Pages site publishes the repository root.

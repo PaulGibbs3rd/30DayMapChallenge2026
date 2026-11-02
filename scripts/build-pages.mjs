@@ -34,6 +34,11 @@ if (existing?.isSymbolicLink()) throw new Error("_site must not be a symbolic li
 await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
 
+const versionDay2 = spawnSync(process.execPath, [resolve(root, "day2/scripts/version-assets.mjs")], {
+  cwd: root, stdio: "inherit"
+});
+if (versionDay2.status !== 0) throw new Error("Day 2 asset versioning failed.");
+
 const render = spawnSync(process.execPath, [resolve(root, "scripts/render-directory.mjs")], {
   cwd: root, stdio: "inherit"
 });

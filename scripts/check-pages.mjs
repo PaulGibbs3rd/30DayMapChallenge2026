@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import assert from "node:assert/strict";
 import { lstat, readFile, readdir } from "node:fs/promises";
 import { dirname, extname, relative, resolve, sep } from "node:path";
@@ -94,3 +95,14 @@ for (const file of files) {
 }
 console.log("PASS: 30 dated entries, per-day source and Pages links, " + checked + " local runtime references, project subpath compatibility, and a clean static artifact.");
 
+
+// Verify deployed HTML and modules request the matching asset revision.
+const day2Html = await readFile(resolve(site,'day2/index.html'),'utf8');
+const day2App = await readFile(resolve(site,'day2/app.js'),'utf8');
+const contentHash = (value) => createHash('sha256').update(value.replace(/\r\n/g,'\n')).digest('hex').slice(0,12);
+for (const [file, source] of [['style.css', await readFile(resolve(site,'day2/style.css'),'utf8')], ['app.js', day2App]]) {
+  assert(day2Html.includes(file + '?v=' + contentHash(source)), 'Day 2 stylesheet version or app version must match published content: ' + file);
+}
+const day2Navigation = await readFile(resolve(site,'day2/navigation.js'),'utf8');
+assert(day2App.includes('./navigation.js?v=' + contentHash(day2Navigation)), 'Day 2 navigation import must have a matching content version.');
+console.log('PASS: Day 2 published asset versions match the HTML, CSS, and JavaScript.');
