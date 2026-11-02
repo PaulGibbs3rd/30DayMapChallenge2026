@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="theme-color" content="#e6d5a0">
+<meta name="description" content="23 nights. One mountain. An interactive Gorillaz tour atlas with setlists and YouTube playback.">
+<title>Gorillaz — The Mountain Tour Atlas · Day 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css"><script type="module" src="https://js.arcgis.com/5.1/"></script><script type="module" src="./js/app.js"></script>
+<link rel="stylesheet" href="./collage.css">
+</head>
+<body>
+<a class="skip-link" href="#setlist-heading">Skip to setlist</a>
+<calcite-shell>
+<header class="masthead" slot="header">
+<a class="brand" href="https://www.gorillaz.com/" target="_blank" rel="noopener noreferrer" aria-label="Gorillaz official website"><span class="logo-crop"><img src="./assets/tour-poster.png" alt="Gorillaz" width="1080" height="1350"></span></a>
+<div class="masthead-title"><span class="eyebrow">A NORTH AMERICAN TOUR ATLAS</span><h1>THE MOUNTAIN <span>TOUR 2026</span></h1></div>
+<div class="header-collage" aria-hidden="true"><span class="crew-caption">ALL ABOARD<br>THE GEEP!</span><div class="crew-film"><i></i><i></i><i></i><i></i></div><span class="header-star">LOUD<br>& CLEAR</span></div>
+<div class="header-right"><span class="challenge">#30DAYMAPCHALLENGE<br><strong>DAY 01 / POINTS</strong></span><calcite-button id="about-button" appearance="outline" kind="neutral" scale="s" icon-start="information">The project</calcite-button></div>
+</header>
+<main class="atlas">
+<aside class="tour-rail" aria-label="Tour dates">
+<div class="tour-intro"><span class="red-tag">US & CANADA</span><span class="tour-scribble" aria-hidden="true">good music.<br>strange company. ✷</span><h2>23 NIGHTS.<br>ONE MOUNTAIN.</h2><p>September 17 — October 31, 2026</p><span class="intro-zigzag" aria-hidden="true"></span></div>
+<div class="tour-search"><calcite-input-text id="stop-search" placeholder="Find a city or venue" icon="search" clearable scale="s" aria-label="Find a city or venue"></calcite-input-text>
+<calcite-segmented-control id="country-filter" scale="s" width="full" label="Filter tour stops by country"><calcite-segmented-control-item value="all" checked>All stops</calcite-segmented-control-item><calcite-segmented-control-item value="US">USA</calcite-segmented-control-item><calcite-segmented-control-item value="CA">Canada</calcite-segmented-control-item></calcite-segmented-control></div>
+<div class="rail-caption"><span>THE DATES</span><span id="stop-count">23 STOPS</span></div><nav id="tour-list" aria-label="Select a concert"></nav><p id="no-results" hidden>No stops match your search.</p>
+<div class="rail-bottom"><span class="support-label">ALONG FOR THE RIDE</span><strong>LITTLE SIMZ <span>&</span> DELTRON 3030</strong></div></aside>
+<section class="map-stage" aria-label="Interactive tour map">
+<div class="map-topline"><div><span class="live-dot"></span><strong>THE TOUR, MAPPED.</strong><span class="map-hint">Pick a point. Press play.</span></div><span class="map-edition">VOL. 01 — 2026</span></div>
+<div class="mobile-selector"><calcite-select id="mobile-stop" label="Choose a tour stop" scale="m"></calcite-select></div>
+<arcgis-map id="tour-map" popup-disabled attribution-mode="dark"><arcgis-zoom slot="top-right"></arcgis-zoom></arcgis-map><div class="map-grain" aria-hidden="true"></div>
+<div id="map-loading" class="map-loading" role="status"><calcite-loader scale="s" label="Loading tour map"></calcite-loader><span>UNFOLDING THE MAP…</span></div>
+<div id="map-error" class="map-error" role="status" hidden>The map could not load. Explore every show using the tour list.</div>
+<div class="map-tools"><calcite-button id="fit-tour" kind="neutral" scale="s" icon-start="extent">Full tour</calcite-button><calcite-label layout="inline" scale="s"><calcite-switch id="route-switch" scale="s"></calcite-switch>Connect stops</calcite-label></div>
+<div class="map-collage" aria-hidden="true">
+  <div class="map-doodles"><svg viewBox="0 0 800 700" preserveAspectRatio="none"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M70 125q18-25 50-8m-5-9 8 11-13 3M655 76l3 13m-9-6 14 1M71 532l17-13-5 20 17-9-8 22M590 567q40 42 98 9m-5-7 9 4-5 11M420 90q-8-22 5-30 14 5 8 29m-9 1q-11-4-14 4 2 13 17 18 13-7 13-17-5-8-12-4"/><path d="m277 127 5-13 5 13 14 1-11 8 3 14-11-8-12 7 4-13-11-8ZM107 433l1 13m-7-6 14-1M710 380l8 17m-13-5 17-8"/></g><g fill="currentColor"><circle cx="155" cy="178" r="2"/><circle cx="168" cy="171" r="1.5"/><circle cx="685" cy="496" r="2"/><circle cx="700" cy="505" r="1.5"/></g></svg><span class="ocean-note">strange tides,<br>good vibrations.</span><span class="map-corner-mark">✶</span></div>
+  <figure class="map-sticker sticker-jellyfish" data-art-corner="nw"><span class="washi-tape"></span><img src="./assets/collage/superfast-jellyfish.png" width="315" height="315" alt="" draggable="false"><figcaption>DEEP CUTS. DEEP WATER.</figcaption></figure>
+  <figure class="map-sticker sticker-now-now" data-art-corner="ne"><img src="./assets/collage/the-now-now.jpg" width="1000" height="1000" alt="" draggable="false"><figcaption>2-D / ON THE ROAD</figcaption><span class="sticker-spark">✷</span></figure>
+  <figure class="map-sticker sticker-geep" data-art-corner="sw"><img src="./assets/collage/gorillaz-geep.jpg" width="1000" height="1000" alt="" draggable="false"><figcaption>ROAD TRIP MODE ↗</figcaption></figure>
+  <figure class="map-sticker sticker-postcard" data-art-corner="se"><span class="washi-tape"></span><div class="postcard-photo"><img src="./assets/collage/plastic-beach.jpg" width="1000" height="1000" alt="" draggable="false"></div><figcaption><span>WISH YOU WERE HERE.</span><strong>PLASTIC BEACH</strong><i class="postcard-postmark">GZ<br>2010</i></figcaption></figure>
+  <span class="tour-ticket">23 STOPS <b>✦</b> NO ORDINARY ROAD TRIP</span>
+</div>
+<div class="map-legend"><span><i class="legend-dot"></i>Tour stop</span><span><i class="legend-dot selected"></i>Selected show</span></div><div class="map-coordinates" id="map-coordinates">23 STOPS / 2 COUNTRIES</div>
+</section>
+<aside class="show-panel" aria-label="Selected show and music player">
+<div class="show-heading"><div class="show-top"><span id="stop-label" class="eyebrow">STOP 01 / 23</span><div class="show-nav"><calcite-action id="previous-stop" text="Previous show" icon="chevron-left" scale="s"></calcite-action><calcite-action id="next-stop" text="Next show" icon="chevron-right" scale="s"></calcite-action></div></div><div class="city-date"><h2 id="show-city">Orlando<span>FL, USA</span></h2><span class="date-stamp" id="show-date">SEP<strong>17</strong></span></div><p id="show-venue">Kia Center</p><div class="show-metadata"><span id="song-count">24 SONG ENTRIES</span><a id="setlist-source" href="https://www.setlist.fm/setlists/gorillaz-13d681d1.html" target="_blank" rel="noopener noreferrer">setlist.fm ↗</a></div></div>
+<div class="setlist-title"><h3 id="setlist-heading" tabindex="-1">THE SETLIST</h3><span>SELECT A TRACK TO PLAY</span></div><div class="setlist-scroll"><ol id="setlist"></ol><div id="show-notes" class="show-notes"></div></div>
+<section class="player" aria-label="Music player"><div class="player-label"><span class="live-dot"></span> THE SOUNDTRACK <calcite-action id="stop-player" text="Stop playback" icon="x" scale="s"></calcite-action></div><calcite-segmented-control id="music-provider" scale="s" width="full" label="Music service"><calcite-segmented-control-item value="spotify" checked>Spotify</calcite-segmented-control-item><calcite-segmented-control-item value="youtube">YouTube</calcite-segmented-control-item></calcite-segmented-control><div id="player-embed"><div class="player-idle"><span class="play-triangle">▶</span><strong>YOUR NEXT TRACK<br>STARTS HERE.</strong><span>Choose a song from the setlist</span></div></div><p id="player-title">Pick your soundtrack.</p><p id="player-subtitle">Spotify player · Select a track above</p><div id="player-status" role="status" aria-live="polite"></div></section></aside>
+</main>
+<footer slot="footer" class="footer"><span>GORILLAZ / THE MOUNTAIN TOUR 2026</span><span>Fan-made atlas by Paul Gibbs · Setlists: setlist.fm · Geography: Natural Earth</span><a href="./readme.md" target="_blank">Credits & sources ↗</a></footer>
+<calcite-dialog id="about-dialog" slot="dialogs" heading="The Mountain Tour Atlas" width-scale="m" modal>
+<div class="about-content"><img class="about-poster" src="./assets/tour-poster.png" alt="Gorillaz The Mountain Tour 2026 US and Canada poster with 23 dates."><div><span class="red-tag">DAY 01 / POINTS</span><h2>23 nights.<br>One mountain.</h2><p>A fan-made map of the 23 US and Canada dates on the supplied tour poster. Select a venue point to explore its setlist, then choose a song to play in Spotify or YouTube.</p><p>Setlists are community-maintained records from <a href="https://www.setlist.fm/setlists/gorillaz-13d681d1.html" target="_blank" rel="noopener noreferrer">setlist.fm</a>, researched November 1, 2026. Counts exclude tape interludes and soundchecks. Show notes flag partial songs and unusual entries.</p><p>Spotify is the default music service. Its native player may provide previews; full playback depends on your Spotify account and browser. YouTube is an alternative, but can block embedded videos. Recordings are not audio from the selected concert. The 911 track uses a clearly labeled Live in NYC recording. Each song has a provider link.</p><p>Venue points are approximate. The optional line connects stops in show order and does not represent a travel route. All geography is client-side GeoJSON, displayed with ArcGIS Maps SDK for JavaScript and Calcite UI without ArcGIS authentication.</p><p>Tour and album artwork © Gorillaz / Jamie Hewlett / respective rights holders. Additional artwork comes from the official Gorillaz website; see the artwork source notes. Natural Earth geography is public domain. Unofficial project; not endorsed by Gorillaz.</p><a href="./research/README.md" target="_blank">Research notes ↗</a> · <a href="./research/artwork-sources.md" target="_blank">Artwork credits ↗</a></div></div>
+<calcite-button slot="footer-end" id="close-about">Back to the tour</calcite-button></calcite-dialog>
+</calcite-shell><noscript>This atlas needs JavaScript. <a href="./research/README.md">Read the source notes.</a></noscript>
+</body></html>
+
+

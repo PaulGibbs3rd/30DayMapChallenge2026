@@ -1,0 +1,21 @@
+# Generated output and dependencies
+_site/
+**/dist/
+**/node_modules/
+
+# Local hosting and agent metadata
+**/.openai/
+**/.agents/
+**/.codex/
+
+# Local-only settings and credentials
+.env
+.env.*
+!.env.example
+*.local
+*.log
+*.tgz
+*.tar.gz
+.DS_Store
+Thumbs.db
+

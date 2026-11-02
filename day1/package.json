@@ -1,0 +1,12 @@
+{
+  "name": "gorillaz-mountain-tour-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Day 1 · Points — ArcGIS and Calcite tour atlas",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}

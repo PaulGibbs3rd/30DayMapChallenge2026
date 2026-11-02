@@ -1,0 +1,257 @@
+{
+  "year": 2026,
+  "author": "Paul Gibbs",
+  "repository": "https://github.com/PaulGibbs3rd/30DayMapChallenge2026",
+  "branch": "main",
+  "pagesBase": "https://paulgibbs3rd.github.io/30DayMapChallenge2026/",
+  "themeSource": "https://30daymapchallenge.com/2026/",
+  "days": [
+    {
+      "day": 1,
+      "date": "2026-11-01",
+      "theme": "Points",
+      "title": "Gorillaz — The Mountain Tour Atlas",
+      "description": "Follow Gorillaz across 23 US and Canada venues, explore each concert’s setlist, and play the songs through Spotify or YouTube.",
+      "status": "complete",
+      "image": "assets/day1-gorillaz.jpg",
+      "tags": [
+        "ArcGIS JavaScript",
+        "Calcite",
+        "Spotify",
+        "GeoJSON"
+      ]
+    },
+    {
+      "day": 2,
+      "date": "2026-11-02",
+      "theme": "Lines",
+      "title": "Lines",
+      "description": "Explore paths, connections, or movement through a map built around line features.",
+      "status": "planned"
+    },
+    {
+      "day": 3,
+      "date": "2026-11-03",
+      "theme": "Polygons",
+      "title": "Polygons",
+      "description": "Use areas and boundaries to reveal how places divide, overlap, or fit together.",
+      "status": "planned"
+    },
+    {
+      "day": 4,
+      "date": "2026-11-04",
+      "theme": "Clusters",
+      "title": "Clusters",
+      "description": "Look for concentrations, shared patterns, or groups that emerge when locations are seen together.",
+      "status": "planned"
+    },
+    {
+      "day": 5,
+      "date": "2026-11-05",
+      "theme": "Senses: Sight",
+      "title": "Sight",
+      "description": "Explore what can be seen from a place, or how vision changes our experience of a landscape.",
+      "status": "planned"
+    },
+    {
+      "day": 6,
+      "date": "2026-11-06",
+      "theme": "Vintage",
+      "title": "Vintage",
+      "description": "Experiment with historical cartographic styles, older geography, or a visual language borrowed from another era.",
+      "status": "planned"
+    },
+    {
+      "day": 7,
+      "date": "2026-11-07",
+      "theme": "10 minute map",
+      "title": "10 minute map",
+      "description": "Create a complete map within ten minutes and record the decisions made under that constraint.",
+      "status": "planned"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-08",
+      "theme": "Utopia",
+      "title": "Utopia",
+      "description": "Imagine a possible place or a different future, and use a map to give that vision form.",
+      "status": "planned"
+    },
+    {
+      "day": 9,
+      "date": "2026-11-09",
+      "theme": "Urban-rural",
+      "title": "Urban-rural",
+      "description": "Explore the relationships, differences, and transitions between cities, countryside, and the places in between.",
+      "status": "planned"
+    },
+    {
+      "day": 10,
+      "date": "2026-11-10",
+      "theme": "Prompting only",
+      "title": "Prompting only",
+      "description": "Produce a map through prompts in a chat or command-line workflow, documenting the process and its limits.",
+      "status": "planned"
+    },
+    {
+      "day": 11,
+      "date": "2026-11-11",
+      "theme": "Senses: Sound",
+      "title": "Sound",
+      "description": "Map a soundscape, a pattern of noise, or the ways a place is heard.",
+      "status": "planned"
+    },
+    {
+      "day": 12,
+      "date": "2026-11-12",
+      "theme": "Power",
+      "title": "Power",
+      "description": "Explore energy, influence, or physical force through a geographic interpretation of power.",
+      "status": "planned"
+    },
+    {
+      "day": 13,
+      "date": "2026-11-13",
+      "theme": "Interactions",
+      "title": "Interactions",
+      "description": "Show how places and systems affect one another, or invite the viewer to interact with the map.",
+      "status": "planned"
+    },
+    {
+      "day": 14,
+      "date": "2026-11-14",
+      "theme": "Borgesian map",
+      "title": "Borgesian map",
+      "description": "Explore the boundary between a place and its representation, inspired by the idea of a map at impossible detail.",
+      "status": "planned"
+    },
+    {
+      "day": 15,
+      "date": "2026-11-15",
+      "theme": "Inside out",
+      "title": "Inside out",
+      "description": "Reverse a familiar perspective, reveal an interior, or turn a conventional map’s logic inside out.",
+      "status": "planned"
+    },
+    {
+      "day": 16,
+      "date": "2026-11-16",
+      "theme": "Collaborative map",
+      "title": "Collaborative map",
+      "description": "Make a map with another person and document how the shared decisions shaped the result.",
+      "status": "planned"
+    },
+    {
+      "day": 17,
+      "date": "2026-11-17",
+      "theme": "Light & dark",
+      "title": "Light & dark",
+      "description": "Use illumination, shadows, or contrasting tones to reveal a geographic story.",
+      "status": "planned"
+    },
+    {
+      "day": 18,
+      "date": "2026-11-18",
+      "theme": "NULL",
+      "title": "NULL",
+      "description": "Interpret absence, missing values, or an intentionally open theme through a map.",
+      "status": "planned"
+    },
+    {
+      "day": 19,
+      "date": "2026-11-19",
+      "theme": "Senses: Smell",
+      "title": "Smell",
+      "description": "Consider how scents, their sources, and the experience of smell can be represented geographically.",
+      "status": "planned"
+    },
+    {
+      "day": 20,
+      "date": "2026-11-20",
+      "theme": "Hexagons",
+      "title": "Hexagons",
+      "description": "Use hexagonal shapes or grids to organize locations, compare values, or explore a spatial pattern.",
+      "status": "planned"
+    },
+    {
+      "day": 21,
+      "date": "2026-11-21",
+      "theme": "OpenStreetMap",
+      "title": "OpenStreetMap",
+      "description": "Build from OpenStreetMap data or contribute to the shared geographic record through mapping.",
+      "status": "planned"
+    },
+    {
+      "day": 22,
+      "date": "2026-11-22",
+      "theme": "Projections",
+      "title": "Projections",
+      "description": "Explore how representing a globe on a flat surface changes shape, distance, direction, or perspective.",
+      "status": "planned"
+    },
+    {
+      "day": 23,
+      "date": "2026-11-23",
+      "theme": "Senses: Taste",
+      "title": "Taste",
+      "description": "Explore food, drink, ingredients, or the places and experiences connected with taste.",
+      "status": "planned"
+    },
+    {
+      "day": 24,
+      "date": "2026-11-24",
+      "theme": "Network",
+      "title": "Network",
+      "description": "Map the connections that link places, people, routes, or other parts of a system.",
+      "status": "planned"
+    },
+    {
+      "day": 25,
+      "date": "2026-11-25",
+      "theme": "Is this a map?",
+      "title": "Is this a map?",
+      "description": "Test the edges of cartography with an experiment that blends geographic thinking, art, and visualization.",
+      "status": "planned"
+    },
+    {
+      "day": 26,
+      "date": "2026-11-26",
+      "theme": "Water",
+      "title": "Water",
+      "description": "Explore water’s places, movement, boundaries, or role in shaping the landscape.",
+      "status": "planned"
+    },
+    {
+      "day": 27,
+      "date": "2026-11-27",
+      "theme": "New tool",
+      "title": "New tool",
+      "description": "Try an unfamiliar tool in the mapmaking process and document what the experiment teaches.",
+      "status": "planned"
+    },
+    {
+      "day": 28,
+      "date": "2026-11-28",
+      "theme": "Senses: Feeling",
+      "title": "Feeling",
+      "description": "Translate an emotion, atmosphere, or felt experience of place into a geographic expression.",
+      "status": "planned"
+    },
+    {
+      "day": 29,
+      "date": "2026-11-29",
+      "theme": "Raster",
+      "title": "Raster",
+      "description": "Build a geographic story with pixels, imagery, or another continuous gridded surface.",
+      "status": "planned"
+    },
+    {
+      "day": 30,
+      "date": "2026-11-30",
+      "theme": "Pen & paper",
+      "title": "Pen & paper",
+      "description": "Make an analog map by hand, then photograph or scan the finished work for the collection.",
+      "status": "planned"
+    }
+  ]
+}

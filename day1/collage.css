@@ -1,0 +1,47 @@
+/* Tour scrapbook: original artwork, paper scraps and hand-drawn details. */
+.header-collage{display:flex;align-items:center;gap:13px;margin-left:auto;pointer-events:none;flex-shrink:0}
+.crew-caption{font-family:'Barlow Condensed',sans-serif;font-size:12px;line-height:.92;color:#94382d;transform:rotate(-8deg);letter-spacing:.8px;font-weight:700;text-align:right}
+.crew-film{display:flex;padding:7px 6px;gap:4px;background:#22271f;transform:rotate(4deg);box-shadow:3px 4px 0 #a7864f70;position:relative}
+.crew-film:before,.crew-film:after{content:'';position:absolute;height:3px;left:5px;right:5px;background:repeating-linear-gradient(90deg,var(--paper) 0 3px,transparent 3px 10px)}.crew-film:before{top:2px}.crew-film:after{bottom:2px}
+.crew-film i{width:34px;height:34px;display:block;background-image:url('./assets/collage/demon-days.jpg');background-size:213% 213%}
+.crew-film i:nth-child(1){background-position:0 0}.crew-film i:nth-child(2){background-position:100% 0}.crew-film i:nth-child(3){background-position:0 100%}.crew-film i:nth-child(4){background-position:100% 100%}
+.header-star{width:68px;height:68px;background:#c3342b;color:#f7e2a1;display:grid;place-content:center;text-align:center;line-height:.9;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;transform:rotate(10deg);clip-path:polygon(50% 0,60% 16%,78% 6%,80% 26%,100% 28%,89% 45%,100% 61%,79% 67%,78% 89%,59% 83%,48% 100%,38% 82%,17% 91%,18% 69%,0 62%,12% 45%,0 30%,23% 25%,22% 7%,41% 17%)}
+.header-right{margin-left:0}.masthead{background-image:radial-gradient(#7867431a .65px,transparent .8px);background-size:4px 4px}
+.tour-intro{position:relative;overflow:hidden;background-image:radial-gradient(#9e804b2a .75px,transparent .9px);background-size:5px 5px}
+.tour-intro:after{content:'✶';position:absolute;right:9px;bottom:8px;font-size:45px;line-height:1;color:#ba302620;transform:rotate(10deg)}
+.tour-scribble{position:absolute;right:12px;top:16px;transform:rotate(8deg);font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:600;font-size:13px;line-height:1;color:#a2362a;text-align:center}
+.intro-zigzag{position:absolute;bottom:0;left:0;width:100%;height:5px;background:repeating-linear-gradient(135deg,var(--red) 0 4px,transparent 4px 9px);opacity:.7}
+.tour-intro h2{position:relative;z-index:1}.tour-intro h2:after{content:'';position:absolute;left:-4px;bottom:-2px;width:84%;height:5px;border-bottom:2px solid #ba3026;transform:rotate(-2deg);border-radius:50%}
+.rail-bottom{position:relative;background-image:repeating-linear-gradient(-5deg,transparent 0 5px,#ad834b12 5px 6px)}.rail-bottom:after{content:'✷';position:absolute;right:8px;top:5px;color:#bb3026;font-size:18px}
+.map-collage{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.map-sticker{position:absolute;margin:0;pointer-events:none;visibility:hidden;filter:drop-shadow(3px 6px 0 #131d1b66);transition:opacity .22s;isolation:isolate}
+.map-sticker img{display:block;width:100%;height:auto;user-select:none}.map-collage.is-navigating .map-sticker{opacity:.22}
+.map-sticker figcaption{font-family:'Space Mono',monospace;font-weight:700;letter-spacing:.4px;font-size:7px;text-align:center}
+.sticker-jellyfish{width:142px;background:#efdfb0;padding:5px 5px 8px;transform:rotate(-8deg);box-shadow:inset 0 0 0 1px #bd9b62;z-index:3}
+.sticker-jellyfish img{aspect-ratio:1;object-fit:cover;mix-blend-mode:multiply}.sticker-jellyfish figcaption{color:#853a2c;padding-top:5px;font-size:6.4px}
+.washi-tape{position:absolute;top:-9px;left:30%;width:47%;height:20px;z-index:2;background:repeating-linear-gradient(32deg,#c8c4a5aa 0 4px,#ddd7b5bb 4px 7px);transform:rotate(4deg);clip-path:polygon(2% 0,97% 4%,94% 24%,100% 47%,95% 68%,100% 100%,1% 95%,5% 67%,0 38%);mix-blend-mode:screen}
+.sticker-now-now{width:155px;transform:rotate(9deg);filter:drop-shadow(2px 0 0 #edda9a) drop-shadow(-2px 1px 0 #edda9a) drop-shadow(4px 6px 0 #17271b80)}
+.sticker-now-now img{clip-path:polygon(40% 1%,71% 1%,79% 12%,95% 23%,99% 43%,93% 70%,77% 79%,60% 99%,35% 95%,26% 78%,4% 63%,0 34%,9% 14%)}.sticker-now-now figcaption{display:inline-block;background:#f16ea5;color:#29242d;padding:4px 6px;position:relative;left:12px;top:-6px;transform:rotate(-5deg)}
+.sticker-spark{position:absolute;right:-13px;top:2px;color:#e7c162;font-size:42px;text-shadow:2px 2px 0 #223429;transform:rotate(10deg)}
+.sticker-geep{width:207px;transform:rotate(-7deg);filter:drop-shadow(2px 1px 0 #e5d9b0) drop-shadow(-2px 0 0 #e5d9b0) drop-shadow(3px 6px 0 #17271b80)}
+.sticker-geep img{clip-path:polygon(34% 8%,44% 7%,49% 13%,49% 29%,64% 28%,67% 35%,84% 46%,91% 55%,93% 70%,86% 74%,63% 71%,60% 85%,45% 86%,39% 77%,36% 65%,28% 60%,23% 67%,9% 68%,3% 59%,3% 47%,9% 38%,21% 32%,26% 21%)}
+.sticker-geep figcaption{color:#e8d59a;background:#c5342b;display:inline-block;position:relative;left:25px;top:-22px;transform:rotate(3deg);font-family:'Barlow Condensed',sans-serif;font-size:16px;letter-spacing:1px;padding:4px 10px;box-shadow:2px 3px 0 #14261c66}
+.sticker-postcard{width:174px;transform:rotate(7deg);padding:7px 7px 8px;background:#efe0ae;border:1px solid #bba678}
+.postcard-photo{height:103px;overflow:hidden}.postcard-photo img{width:100%;height:100%;object-fit:cover;object-position:center 48%}
+.sticker-postcard figcaption{text-align:left;padding-top:7px;color:#5a462e;position:relative;min-height:37px}
+.sticker-postcard figcaption>span{font-size:6px;display:block;letter-spacing:.5px}.sticker-postcard strong{display:block;font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;letter-spacing:1px;margin-top:2px}.postcard-postmark{font-family:'Space Mono',monospace;font-size:7px;font-style:normal;position:absolute;right:0;bottom:-3px;display:grid;place-content:center;text-align:center;border:1px solid #a44b37;border-radius:50%;width:31px;height:31px;line-height:1.2;color:#a44b37;transform:rotate(-15deg)}
+.map-doodles{position:absolute;inset:0;pointer-events:none;color:#e9d39966}.map-doodles svg{width:100%;height:100%;opacity:.7}
+.ocean-note{position:absolute;left:28px;bottom:43%;font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:500;font-size:20px;line-height:.9;transform:rotate(-10deg);color:#c5c69b77}.map-corner-mark{position:absolute;right:15px;bottom:54px;font-size:62px;color:#e7c16d66;transform:rotate(12deg)}
+.tour-ticket{position:absolute;top:20px;left:50%;transform:translateX(-50%) rotate(3deg);background:#e6bf5b;color:#26312a;padding:6px 14px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;clip-path:polygon(0 0,100% 0,100% 29%,97% 50%,100% 72%,100% 100%,0 100%,0 72%,3% 50%,0 28%);white-space:nowrap}.tour-ticket b{padding:0 8px}
+.show-heading{background-image:radial-gradient(#93744516 .65px,transparent .9px);background-size:4px 4px;position:relative}.show-heading:after{content:'✶';position:absolute;font-size:60px;color:#b22f2110;right:70px;top:45px;pointer-events:none;transform:rotate(12deg)}
+.date-stamp{background:#e8dbaa;box-shadow:2px 3px 0 #aa765b33}.setlist-title{background:repeating-linear-gradient(-45deg,transparent 0 8px,#d7be7b1f 8px 9px)}.setlist-title h3{border-bottom:2px solid #b33928;transform:rotate(-2deg)}
+.player-idle{position:relative;isolation:isolate;background:#151e19}.player-idle:before{content:'';position:absolute;inset:0;background:url('./assets/collage/cracker-island.jpg') center 47%/cover;opacity:.26;z-index:-1}.player-idle strong{color:#f1dbb0;text-shadow:2px 2px 0 #1a231d}
+@media(min-width:1650px){.sticker-jellyfish{width:160px}.sticker-now-now{width:175px}.sticker-postcard{width:190px}.sticker-geep{width:230px}.postcard-photo{height:115px}}
+@media(max-width:1350px){.header-star,.crew-caption{display:none}.header-collage{margin-left:15px}.crew-film i{width:29px;height:29px}.header-right{margin-left:auto}.sticker-jellyfish{width:124px}.sticker-now-now{width:132px}.sticker-geep{width:177px}.sticker-postcard{width:145px}.postcard-photo{height:85px}.sticker-postcard strong{font-size:15px}.postcard-postmark{width:25px;height:25px;font-size:6px}.tour-ticket{display:none}}
+@media(max-width:1100px){.header-collage{display:none}.sticker-jellyfish{width:112px}.sticker-now-now{width:114px}.sticker-postcard{width:125px}.sticker-postcard strong{font-size:13px}.sticker-postcard figcaption>span{font-size:5px}.postcard-photo{height:70px}.postcard-postmark{display:none}.sticker-geep{width:155px}.ocean-note{display:none}}
+@media(max-width:700px){.logo-crop{height:56px}.map-sticker.sticker-now-now,.map-sticker.sticker-postcard{display:none}.sticker-jellyfish{width:85px;padding:3px 3px 5px}.sticker-jellyfish figcaption{font-size:4px;letter-spacing:0}.sticker-geep{width:111px}.sticker-geep figcaption{font-size:9px;left:15px;top:-12px;padding:3px 5px}.washi-tape{height:12px;top:-6px}.map-doodles svg{opacity:.4}.tour-intro .tour-scribble{display:none}.header-right{margin-left:auto}}
+@media(prefers-reduced-motion:reduce){.map-sticker{transition:none}}
+.tour-ticket{top:67px;left:70%}
+@media(min-width:961px) and (max-width:1100px){.header-collage{display:flex;margin-left:auto;margin-right:12px}}
+@media(max-width:700px){.sticker-jellyfish{width:70px}.sticker-geep{width:94px}.sticker-jellyfish figcaption{font-size:3.7px}}
+

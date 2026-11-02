@@ -1,0 +1,12 @@
+{
+  "name": "30daymapchallenge2026",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Paul Gibbs’s 30 daily cartographic experiments for November 2026, with interactive maps, source code and documented data sources.",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build-pages.mjs",
+    "check": "node scripts/check-project.mjs"
+  }
+}
