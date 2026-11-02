@@ -15,7 +15,8 @@ const between = (a) => [a.XSTRLO?.trim() || 'Unknown endpoint', a.XSTRHI?.trim()
 function errorMessage(id, message, error) {
   console.error(message, error);
   $(id).textContent = message;
-  $(id).hidden = false;
+  $(id === 'scene-status' ? 'scene-notice' : 'ranking-notice').hidden = false;
+  $(id === 'scene-status' ? 'scene-notice' : 'ranking-notice').kind = 'danger';
 }
 function rankFor(a) { return ranked.findIndex((r) => r.SLOPE_PCT === a.SLOPE_PCT) + 1; }
 function rankLabel() {
@@ -41,11 +42,11 @@ function renderRanking() {
     item.description = between(a) + ' · ' + fmt.format(a.SEGLENGTH) + ' ft';
     item.value = String(a.OBJECTID);
     item.selected = current?.attributes.OBJECTID === a.OBJECTID;
-    const number = document.createElement('span');
-    number.slot = 'content-start'; number.className = 'rank-number';
+    const number = document.createElement('calcite-chip');
+    number.scale = 's'; number.slot = 'content-start'; number.className = 'rank-number';
     number.textContent = String(rankFor(a)).padStart(2,'0');
     const grade = document.createElement('span');
-    grade.slot = 'content-end'; grade.className = 'rank-grade'; grade.textContent = a.SLOPE_PCT + '%';
+    grade.scale = 's'; grade.slot = 'content-end'; grade.className = 'rank-grade'; grade.textContent = a.SLOPE_PCT + '%';
     item.append(number, grade);
     item.addEventListener('calciteListItemSelect', () => selectStreet(a.OBJECTID));
     $('ranking').append(item);
@@ -55,6 +56,7 @@ function renderRanking() {
   updateMarkers();
 }
 async function loadRanking() {
+  $('ranking-notice').kind = 'info';
   $('retry').hidden = true;
   $('ranking-status').textContent = 'Reading Seattle’s street records…';
   try {
@@ -166,7 +168,8 @@ function displayEndpoints(geometry, directed, reason) {
 async function selectStreet(id, zoom = true) {
   selectionRequest?.abort();
   const controller = selectionRequest = new AbortController();
-  $('scene-status').textContent = 'Sampling terrain for the uphill view…'; $('scene-status').hidden = false;
+  $('scene-notice').kind = 'info';
+  $('scene-status').textContent = 'Sampling terrain for the uphill view…'; $('scene-notice').hidden = false;
   endpoints.removeAll(); climb = null; $('locate').disabled = true;
   try {
     let f = geometryCache.get(id);
@@ -193,18 +196,39 @@ async function selectStreet(id, zoom = true) {
     current = f; climb = { paths: geometry.paths, directed };
     highlight?.remove(); highlight = layerView.highlight(f);
     const a = f.attributes;
-    $('street-heading').textContent = title(a); $('cross-streets').textContent = between(a);
-    $('grade').textContent = a.SLOPE_PCT == null ? 'No data' : a.SLOPE_PCT + '%';
-    $('length').textContent = a.SEGLENGTH == null ? 'No data' : fmt.format(a.SEGLENGTH) + ' ft';
+    $('street-heading').heading = title(a); $('street-heading').description = between(a);
+    $('grade').textContent = a.SLOPE_PCT == null ? 'Grade unavailable' : a.SLOPE_PCT + '% recorded grade';
+    $('length').textContent = a.SEGLENGTH == null ? 'Length unavailable' : fmt.format(a.SEGLENGTH) + ' ft segment';
     profile.geometry = geometry;
     displayEndpoints(geometry, directed, reason);
     for (const item of $('ranking').children) item.selected = item.value === String(id);
-    rankLabel(); $('locate').disabled = false; $('scene-status').hidden = true;
+    rankLabel(); $('locate').disabled = false; $('scene-notice').hidden = true;
+    if (compactLayout.matches && !$('ranking-shell').collapsed) { $('ranking-shell').collapsed = true; $('ranking-toggle').active = false; $('ranking-toggle').setFocus(); }
     if (zoom) await zoomToCurrent();
   } catch (error) {
     if (error.name !== 'AbortError') errorMessage('scene-status', 'This street could not load. Select it again to retry.', error);
   }
 }
+const compactLayout = matchMedia('(max-width: 700px)');
+function adaptLayout() {
+  const shell = $('ranking-shell');
+  shell.displayMode = compactLayout.matches ? 'overlay' : 'dock';
+  shell.collapsed = compactLayout.matches;
+  shell.resizable = !compactLayout.matches;
+  $('grade-legend').expanded = !compactLayout.matches;
+  $('ranking-toggle').active = !shell.collapsed;
+}
+function toggleRanking() {
+  $('ranking-shell').collapsed = !$('ranking-shell').collapsed;
+  $('ranking-toggle').active = !$('ranking-shell').collapsed;
+}
+$('ranking-toggle').addEventListener('click', toggleRanking);
+$('ranking-close').addEventListener('click', () => {
+  $('ranking-shell').collapsed = true;
+  $('ranking-toggle').active = false;
+  $('ranking-toggle').setFocus();
+});
+compactLayout.addEventListener('change', adaptLayout);
 $('about').addEventListener('click', () => { $('about-dialog').open = true; });
 $('min-length').addEventListener('calciteSelectChange', renderRanking);
 $('unique').addEventListener('calciteSwitchChange', renderRanking);
@@ -216,6 +240,8 @@ try {
     '@arcgis/core/layers/FeatureLayer.js', '@arcgis/core/layers/GraphicsLayer.js',
     '@arcgis/core/Graphic.js', '@arcgis/core/geometry/Point.js', '@arcgis/core/Camera.js', '@arcgis/core/core/reactiveUtils.js'
   ]);
+  await customElements.whenDefined('calcite-shell-panel');
+  adaptLayout();
   scene = $('scene'); profile = $('profile');
   await scene.viewOnReady(); await profile.componentOnReady();
   scene.environment = { background: { type: 'color', color: '#172b37' }, atmosphereEnabled: false, starsEnabled: false, lighting: { type: 'virtual' } };
@@ -256,11 +282,9 @@ try {
       else if (street) await selectStreet(street.attributes.OBJECTID);
     } catch (error) { console.warn('Street selection failed', error); }
   });
-  $('scene-status').hidden = true;
+  $('scene-notice').hidden = true;
   await loadRanking();
 } catch (error) {
   errorMessage('scene-status', 'The 3D scene could not start. Check your connection and WebGL support, then reload.', error);
   $('ranking-status').textContent = 'Street ranking is unavailable until the scene starts.';
 }
-
-

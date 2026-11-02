@@ -1,13 +1,90 @@
-:root{font-family:"Avenir Next","Segoe UI",sans-serif;color:#e6eef0;background:#101e27;--calcite-color-brand:#90decf;--calcite-color-brand-hover:#b1eee2;--calcite-color-brand-press:#61bcae;--calcite-color-text-inverse:#101e27;--calcite-color-background:#101e27;--calcite-color-foreground-1:#142630;--calcite-color-foreground-2:#1a303c;--calcite-color-foreground-3:#203947;--calcite-color-border-1:#304550;--calcite-color-border-2:#263d49}
-*{box-sizing:border-box}html,body{height:100%;margin:0}a{color:#a0e4d8}p{line-height:1.55}.skip{position:absolute;top:-100px;z-index:100;background:white;color:#123;padding:12px}.skip:focus{top:4px}header{height:94px;display:flex;align-items:center;gap:25px;padding:0 28px;border-bottom:1px solid #304550;background:#101e27}.day{font-size:35px;font-weight:300;text-decoration:none;line-height:1;display:grid;gap:5px;border-right:1px solid #304550;padding-right:24px}.day small{font-size:10px;letter-spacing:3px}.identity{flex:1}.eyebrow{font-size:10px;letter-spacing:2px;font-weight:600;color:#98b3bf;margin:0 0 9px}h1{font-size:clamp(20px,2.3vw,32px);font-weight:500;letter-spacing:-1px;margin:0}h1 span{color:#98ddcf;margin-left:10px}main{display:grid;grid-template-columns:340px minmax(0,1fr);height:100%;min-height:0;overflow:hidden}aside{min-height:0;overflow:auto;border-right:1px solid #304550;background:#12242e}.intro{padding:26px 25px 16px}.intro h2{font-size:28px;line-height:1.18;font-weight:400;letter-spacing:-.7px;margin:12px 0}.intro>p:last-child{color:#a8bec8;font-size:13px;margin-bottom:0}.filters{padding:10px 25px 12px}.list-heading{display:flex;justify-content:space-between;padding:14px 25px;border-block:1px solid #304550;font-size:10px;letter-spacing:1.8px;color:#b2c4cb}#ranking-status{padding:0 25px;font-size:11px;color:#a8bec8}#retry{margin:8px 25px}.rank-number{width:26px;color:#89a3af;font:12px monospace;text-align:center}.rank-grade{font-size:19px;font-weight:500;color:#f2bd8b;min-width:49px;text-align:right;padding-right:5px}calcite-list-item{--calcite-list-item-spacing-block:14px;--calcite-list-item-spacing-inline:16px}.footnote{font-size:10px;color:#9ab1bc}aside>.footnote{padding:8px 25px 20px}.scene-workspace{display:grid;grid-template-rows:minmax(260px,1fr) 330px;min-width:0;min-height:0}.stage{position:relative;min-height:0;background:#192d39}arcgis-scene{display:block;width:100%;height:100%}.caption{pointer-events:none;position:absolute;top:24px;left:27px;text-shadow:0 1px 5px #101e27}.caption>span{font-size:11px;color:#b2c7d0}#scene-status{position:absolute;left:50%;top:40%;transform:translateX(-50%);padding:14px 20px;background:#101e27e8;border:1px solid #42606e;font-size:13px;max-width:85%}[hidden]{display:none!important}.tools{position:absolute;left:24px;bottom:32px;display:flex;align-items:center;gap:18px;background:#101e27ed;padding:8px 12px;border:1px solid #304550}.tools calcite-label{margin:0}.legend{position:absolute;right:20px;bottom:32px;width:210px;padding:13px 16px;background:#101e27ed;border:1px solid #304550}.legend>span{font-size:9px;letter-spacing:1.5px}.ramp{height:5px;margin-top:11px;background:linear-gradient(to right,#5c929f 0 25%,#91d2bd 25% 50%,#f0ce84 50% 70%,#ed9975 70% 90%,#de6a91 90%)}.ticks{display:flex;justify-content:space-between;font-size:10px;color:#bed0d6;margin-top:6px}.legend small{font-size:10px;color:#93a9b5;display:block;margin-top:5px}.profile-panel{padding:20px 26px 10px;border-top:1px solid #304550;background:#101e27;overflow:auto;min-width:0}.selection{display:flex;justify-content:space-between;gap:20px}.selection h2{font-size:21px;font-weight:500;margin:0;letter-spacing:-.4px}#cross-streets{font-size:11px;color:#9fb6c1;margin:5px 0 0}.metrics{display:flex;gap:28px;flex-shrink:0}.metrics>div{display:grid;align-content:start;gap:3px}.metrics strong{font-size:26px;font-weight:400;color:#f0be90}.metrics span{font-size:10px;color:#a4bac4}.profile-heading{display:flex;align-items:center;justify-content:space-between;margin-top:10px}.profile-heading h3{font-size:11px;font-weight:500;color:#b6c9d0;margin:0}arcgis-elevation-profile{display:block;width:100%;height:155px;--calcite-color-foreground-1:#101e27}.profile-panel>.footnote{margin:2px 0 0}calcite-dialog{--calcite-dialog-content-space:24px}calcite-dialog p{margin:0 0 18px}code{color:#abdccc}
-@media(max-width:1000px){main{grid-template-columns:285px minmax(0,1fr)}.legend{width:170px}.tools{bottom:130px}.selection{gap:10px}.metrics{gap:12px}.metrics strong{font-size:21px}header{padding:0 18px;gap:15px}.identity .eyebrow{font-size:8px}}
-@media(max-width:700px){html,body{height:auto;min-height:100%}calcite-shell{position:relative;min-height:100dvh;height:auto}header{height:85px;padding:0 14px;gap:12px}.day{font-size:28px;padding-right:12px}h1{font-size:20px;letter-spacing:-.6px}h1 span{display:none}.identity .eyebrow{font-size:7px;letter-spacing:1px}header>calcite-button{max-width:90px}main{height:auto;overflow:visible;grid-template-columns:1fr}.scene-workspace{grid-row:1;grid-template-rows:460px auto}aside{border-right:0;overflow:visible}.profile-panel{padding:17px 16px 12px}.selection{flex-wrap:wrap}.selection h2{font-size:19px}.metrics{gap:24px}arcgis-elevation-profile{height:185px}.caption{left:16px;top:18px}.tools{left:14px;bottom:120px;gap:8px}.legend{right:14px;bottom:32px;width:195px}}
-/* Keep the chart and controls readable at compact sizes. */
-.scene-workspace{grid-template-rows:minmax(260px,1fr) 400px}
-arcgis-elevation-profile{height:210px}
-@media(max-width:700px){.scene-workspace{grid-template-rows:460px auto}.profile-panel{overflow:visible}.tools{bottom:165px}.legend{width:185px}arcgis-elevation-profile{height:235px}}
-.caption #marker-status{font-size:11px;color:#b2c7d0;margin:8px 0;max-width:340px;line-height:1.5}
-.endpoint-guide{display:flex;justify-content:space-between;gap:16px;margin-top:8px;font-size:11px;color:#90decf}
-.endpoint-guide>span:last-child{color:#f0be90;text-align:right}
-#direction-status{margin:6px 0 0}.scene-workspace{grid-template-rows:minmax(260px,1fr) 445px}
-@media(max-width:700px){.scene-workspace{grid-template-rows:460px auto}.caption #marker-status{max-width:240px}.endpoint-guide{font-size:10px}}
+:root {
+  color-scheme: dark;
+  scrollbar-color: #496574 #101e27;
+  scrollbar-width: thin;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  color: #e6eef0;
+  background: #101e27;
+  --calcite-color-brand: #90decf;
+  --calcite-color-brand-hover: #b1eee2;
+  --calcite-color-brand-press: #61bcae;
+  --calcite-color-text-inverse: #101e27;
+  --calcite-color-background: #101e27;
+  --calcite-color-foreground-1: #142630;
+  --calcite-color-foreground-2: #1a303c;
+  --calcite-color-foreground-3: #203947;
+  --calcite-color-border-1: #304550;
+  --calcite-color-border-2: #263d49;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body, calcite-shell, calcite-shell-panel, calcite-panel, calcite-block, calcite-dialog, arcgis-elevation-profile {
+  color-scheme: dark;
+  scrollbar-color: #496574 #101e27;
+  scrollbar-width: thin;
+}
+*::-webkit-scrollbar { width: 9px; height: 9px; }
+*::-webkit-scrollbar-track { background: #101e27; }
+*::-webkit-scrollbar-thumb { background: #496574; border: 2px solid #101e27; border-radius: 6px; }
+*::-webkit-scrollbar-thumb:hover { background: #6b8b98; }
+[hidden] { display: none !important; }
+.skip { position: absolute; top: -100px; z-index: 100; padding: 12px; background: var(--calcite-color-foreground-1); }
+.skip:focus-within { top: 4px; }
+calcite-navigation { --calcite-navigation-background-color: #101e27; }
+calcite-navigation-logo { --calcite-navigation-logo-heading-color: #edf6f5; }
+#ranking-shell {
+  --calcite-shell-panel-width: 340px;
+  --calcite-shell-panel-min-width: 285px;
+  --calcite-shell-panel-max-width: 450px;
+}
+calcite-panel { min-height: 0; }
+calcite-block { margin: 0; }
+#ranking-notice { margin-bottom: 10px; }
+.rank-number { width: 40px; min-width: 40px; color: #a8c0cb; font: 12px monospace; text-align: center; }
+.rank-grade { color: #f2bd8b; font-size: 18px; min-width: 60px; text-align: right; padding-inline-end: 4px; }
+calcite-list-item { --calcite-list-item-spacing-block: 13px; --calcite-list-item-spacing-inline: 8px; }
+.scene-workspace { display: grid; grid-template-rows: minmax(260px, 1fr) 460px; width: 100%; height: 100%; min-height: 0; min-width: 0; overflow: hidden; }
+.stage { position: relative; min-height: 0; background: #192d39; }
+arcgis-scene { display: block; width: 100%; height: 100%; }
+.caption { position: absolute; top: 14px; left: 16px; max-width: 350px; pointer-events: none; --calcite-block-background-color: #101e27d9; }
+.caption calcite-label { margin: 0; font-size: 11px; color: #b2c7d0; }
+.scene-notice { position: absolute; top: 35%; left: 50%; transform: translateX(-50%); max-width: 85%; width: 340px; }
+.tools { position: absolute; left: 16px; bottom: 28px; width: 245px; }
+.tools calcite-label { margin: 10px 0 0; }
+.legend { position: absolute; right: 16px; bottom: 28px; width: 255px; }
+.legend calcite-chip-group { display: flex; flex-wrap: wrap; gap: 5px; }
+calcite-swatch { width: 12px; height: 12px; }
+.metrics { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+#grade, #length { --calcite-chip-text-color: #f0be90; }
+.endpoint-guide { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-block: 10px; }
+#endpoint-a { --calcite-chip-text-color: #90decf; }
+#endpoint-b { --calcite-chip-text-color: #f0be90; }
+.footnote { font-size: 11px; color: #a5bac4; }
+arcgis-elevation-profile { display: block; width: 100%; height: 210px; --calcite-color-foreground-1: #142630; }
+calcite-dialog { --calcite-dialog-content-space: 24px; }
+calcite-dialog p { line-height: 1.6; margin: 0 0 18px; }
+code { color: #abdccc; }
+@media (max-width: 1100px) {
+  .caption { max-width: 270px; }
+  .tools { width: 215px; }
+  .legend { width: 215px; }
+}
+@media (max-width: 700px) {
+  .collection-link { display: none; }
+  calcite-navigation-logo { max-width: 235px; }
+  #ranking-shell { --calcite-shell-panel-width: min(340px, calc(100vw - 42px)); }
+  .scene-workspace { grid-template-rows: minmax(285px, 1fr) 380px; }
+  .caption { max-width: 225px; top: 8px; left: 8px; }
+  .caption calcite-label { font-size: 10px; }
+  .tools { left: 8px; bottom: 24px; width: 175px; }
+  .legend { right: 8px; bottom: 24px; width: 165px; }
+  .legend calcite-chip { font-size: 10px; }
+  .endpoint-guide { justify-content: flex-start; }
+}
+
+
+
+
+/* Contain map/component stacking so the ranking overlay covers every scene control. */
+.scene-workspace { position: relative; isolation: isolate; z-index: 0; }
+#ranking-shell { z-index: 10; }

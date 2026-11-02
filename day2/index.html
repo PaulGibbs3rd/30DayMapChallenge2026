@@ -1,39 +1,78 @@
 <!doctype html>
-<html lang="en" class="calcite-mode-dark"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101e27">
+<html lang="en" class="calcite-mode-dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101e27">
 <meta name="description" content="Seattle's steep streets in 3D, ranked by recorded grade, with interactive terrain elevation profiles.">
 <title>Seattle, a City of Climbs · Day 02 / Lines</title>
 <link rel="icon" href="data:;base64,="><link rel="stylesheet" href="style.css">
 <script type="module" src="https://js.arcgis.com/5.1/"></script><script type="module" src="app.js"></script>
-</head><body>
-<a class="skip" href="#ranking-heading">Skip to street ranking</a>
+</head>
+<body>
+<calcite-link class="skip" href="#ranking-heading">Skip to street ranking</calcite-link>
 <calcite-shell>
-<header slot="header"><a class="day" href="../directory/" aria-label="All challenge days">02<small>LINES</small></a><div class="identity"><p class="eyebrow">THE TOPOGRAPHY OF EVERYDAY STREETS</p><h1>Seattle, a City of Climbs <span>↗</span></h1></div><calcite-button id="about" appearance="transparent" kind="neutral" icon-start="information" scale="s">About the data</calcite-button></header>
-<main>
-<aside aria-label="Ranked Seattle streets">
-<div class="intro"><p class="eyebrow">47.61° N / 122.33° W</p><h2 id="ranking-heading" tabindex="-1">A little distance.<br>A lot of uphill.</h2><p>Discover the city's steepest recorded street segments. Choose a climb to explore its terrain in 3D.</p></div>
-<div class="filters"><calcite-label scale="s">Minimum segment length<calcite-select id="min-length" label="Minimum segment length" scale="s"><calcite-option value="0">Any length</calcite-option><calcite-option value="100" selected>100 feet</calcite-option><calcite-option value="250">250 feet</calcite-option><calcite-option value="500">500 feet</calcite-option></calcite-select></calcite-label><calcite-label layout="inline" scale="s"><calcite-switch id="unique" checked scale="s"></calcite-switch>One segment per street</calcite-label></div>
-<div class="list-heading"><span>THE STEEPEST 20</span><span>GRADE ↓</span></div>
-<p id="ranking-status" role="status">Reading street records…</p><calcite-button id="retry" hidden scale="s" appearance="outline">Retry data</calcite-button>
-<calcite-list id="ranking" label="Steepest street segments" selection-mode="single-persist" selection-appearance="border"></calcite-list>
-<p class="footnote">Recorded segment grades, not whole-street averages. Ties share a rank. In-service, classified streets only; alleys excluded.</p>
-</aside>
-<section class="scene-workspace" aria-label="3D streets and elevation profile"><div class="stage">
-<arcgis-scene id="scene" basemap="dark-gray-vector" ground="world-elevation" camera-position="-122.39,47.46,16000" camera-tilt="46" camera-heading="0" popup-disabled attribution-mode="dark"><arcgis-zoom slot="top-right"></arcgis-zoom><arcgis-navigation-toggle slot="top-right"></arcgis-navigation-toggle><arcgis-compass slot="top-right"></arcgis-compass></arcgis-scene>
-<div class="caption"><p class="eyebrow">SEATTLE / WASHINGTON</p><span>Terrain at true scale · drag to explore</span><p id="marker-status" role="status">Locating ranked climbs…</p></div>
-<div id="scene-status" role="status">Preparing the 3D terrain…</div>
-<div class="tools"><calcite-button id="overview" scale="s" kind="neutral" icon-start="extent">City overview</calcite-button><calcite-label layout="inline" scale="s"><calcite-switch id="steep-only" scale="s"></calcite-switch>Grades ≥ 15%</calcite-label></div>
-<div class="legend" aria-label="Recorded street grade"><span>RECORDED GRADE</span><div class="ramp"></div><div class="ticks"><span>0%</span><span>5</span><span>10</span><span>15</span><span>20%+</span></div><small>Unrecorded: gray</small></div>
-</div>
-<section class="profile-panel" aria-labelledby="street-heading"><div class="selection"><div><p id="selected-rank" class="eyebrow">SELECT A CLIMB</p><h2 id="street-heading">Every hill has a story.</h2><p id="cross-streets">Choose a ranked street or click a line in the scene.</p></div><div class="metrics"><div><strong id="grade">—</strong><span>recorded grade</span></div><div><strong id="length">—</strong><span>segment length</span></div></div></div>
-<div class="profile-heading"><h3>Terrain elevation along street</h3><calcite-button id="locate" appearance="transparent" scale="s" icon-start="zoom-to-object" disabled>Zoom to segment</calcite-button></div>
-<div class="endpoint-guide" aria-label="Elevation profile endpoints"><span id="endpoint-a">A · Profile start</span><span id="endpoint-b">B · Profile end</span></div><p id="direction-status" class="footnote" role="status">Choose a climb to sample endpoint elevations.</p><arcgis-elevation-profile id="profile" reference-element="scene" distance-unit="feet" elevation-unit="feet" hide-start-button hide-select-button hide-clear-button></arcgis-elevation-profile>
-<p class="footnote">Hover over the chart to locate a point in the scene. Terrain can differ from roadway elevation, especially at bridges. Chart axes scale independently.</p></section>
-</section></main>
-<calcite-dialog id="about-dialog" slot="dialogs" heading="Reading the climbs" modal>
+  <calcite-navigation slot="header" label="Seattle climbs navigation">
+    <calcite-action id="ranking-toggle" slot="navigation-action" icon="list" text="Ranked climbs"></calcite-action>
+    <calcite-navigation-logo slot="logo" heading="Seattle, a City of Climbs" description="Day 02 / Lines · #30DayMapChallenge 2026" heading-level="1"></calcite-navigation-logo>
+    <calcite-button slot="content-end" appearance="transparent" kind="neutral" icon-start="home" scale="s" href="../directory/" class="collection-link">All days</calcite-button>
+    <calcite-button id="about" slot="content-end" appearance="transparent" kind="neutral" icon-start="information" scale="s">About the data</calcite-button>
+  </calcite-navigation>
+  <calcite-shell-panel id="ranking-shell" slot="panel-start" resizable>
+    <calcite-panel id="ranking-heading" heading="Ranked climbs" description="Seattle / Washington" heading-level="2" tabindex="-1">
+      <calcite-action id="ranking-close" slot="header-actions-end" icon="chevron-left" text="Hide ranked climbs"></calcite-action>
+      <calcite-block heading="A little distance. A lot of uphill." description="Choose a street segment to explore its terrain in 3D." heading-level="3" expanded>
+        <calcite-label scale="s">Minimum segment length
+          <calcite-select id="min-length" label="Minimum segment length" scale="s">
+            <calcite-option value="0">Any length</calcite-option><calcite-option value="100" selected>100 feet</calcite-option><calcite-option value="250">250 feet</calcite-option><calcite-option value="500">500 feet</calcite-option>
+          </calcite-select>
+        </calcite-label>
+        <calcite-label layout="inline" scale="s"><calcite-switch id="unique" checked scale="s"></calcite-switch>One segment per street</calcite-label>
+      </calcite-block>
+      <calcite-block heading="The steepest 20" description="Recorded segment grade · highest first" heading-level="3" expanded class="ranking-block">
+        <calcite-notice id="ranking-notice" open scale="s" kind="info"><span id="ranking-status" slot="message" role="status">Reading street records…</span><calcite-button id="retry" slot="link" hidden scale="s" appearance="outline">Retry data</calcite-button></calcite-notice>
+        <calcite-list id="ranking" label="Steepest street segments" selection-mode="single-persist" selection-appearance="border"></calcite-list>
+      </calcite-block>
+      <calcite-notice slot="footer" open scale="s" kind="info" icon="information"><span slot="message">Recorded segment grades, not whole-street averages. Ties share a rank. In-service, classified streets only; alleys excluded.</span></calcite-notice>
+    </calcite-panel>
+  </calcite-shell-panel>
+  <main class="scene-workspace" aria-label="3D streets and elevation profile">
+    <section class="stage" aria-label="Seattle 3D scene">
+      <arcgis-scene id="scene" basemap="dark-gray-vector" ground="world-elevation" camera-position="-122.39,47.46,16000" camera-tilt="46" camera-heading="0" popup-disabled attribution-mode="dark">
+        <arcgis-zoom slot="top-right"></arcgis-zoom><arcgis-navigation-toggle slot="top-right"></arcgis-navigation-toggle><arcgis-compass slot="top-right"></arcgis-compass>
+      </arcgis-scene>
+      <calcite-block class="caption" heading="Seattle / Washington" description="Terrain at true scale · drag to explore" expanded scale="s"><calcite-label id="marker-status" scale="s" role="status">Locating ranked climbs…</calcite-label></calcite-block>
+      <calcite-notice id="scene-notice" class="scene-notice" open scale="s" kind="info" icon="information"><span id="scene-status" slot="message" role="status">Preparing the 3D terrain…</span></calcite-notice>
+      <calcite-block class="tools" label="Scene controls" expanded scale="s"><calcite-button id="overview" scale="s" kind="neutral" icon-start="extent">City overview</calcite-button><calcite-label layout="inline" scale="s"><calcite-switch id="steep-only" scale="s"></calcite-switch>Grades ≥ 15%</calcite-label></calcite-block>
+      <calcite-block id="grade-legend" class="legend" heading="Recorded grade" collapsible expanded scale="s">
+        <calcite-chip-group label="Recorded street grade legend" selection-mode="none">
+          <calcite-chip scale="s"><calcite-swatch slot="image" color="#5c929f"></calcite-swatch>0–&lt;5%</calcite-chip>
+          <calcite-chip scale="s"><calcite-swatch slot="image" color="#91d2bd"></calcite-swatch>5–&lt;10%</calcite-chip>
+          <calcite-chip scale="s"><calcite-swatch slot="image" color="#f0ce84"></calcite-swatch>10–&lt;15%</calcite-chip>
+          <calcite-chip scale="s"><calcite-swatch slot="image" color="#ed9975"></calcite-swatch>15–&lt;20%</calcite-chip>
+          <calcite-chip scale="s"><calcite-swatch slot="image" color="#de6a91"></calcite-swatch>20%+</calcite-chip>
+          <calcite-chip scale="s"><calcite-swatch slot="image" color="#64727c"></calcite-swatch>Unrecorded</calcite-chip>
+        </calcite-chip-group>
+      </calcite-block>
+    </section>
+    <calcite-panel id="profile-panel" heading="Terrain elevation profile" heading-level="2">
+      <calcite-button id="locate" slot="header-actions-end" appearance="transparent" scale="s" icon-start="zoom-to-object" disabled>Zoom to segment</calcite-button>
+      <calcite-block id="street-heading" heading="Every hill has a story." description="Choose a ranked street or click a line in the scene." heading-level="3" expanded>
+        <calcite-chip-group class="metrics" label="Selected street measurements" selection-mode="none">
+          <calcite-chip id="selected-rank" scale="s">Select a climb</calcite-chip>
+          <calcite-chip id="grade" scale="s">Grade unavailable</calcite-chip>
+          <calcite-chip id="length" scale="s">Length unavailable</calcite-chip>
+        </calcite-chip-group>
+        <calcite-chip-group class="endpoint-guide" label="Elevation profile endpoints" selection-mode="none"><calcite-chip id="endpoint-a" scale="s">A · Profile start</calcite-chip><calcite-chip id="endpoint-b" scale="s">B · Profile end</calcite-chip></calcite-chip-group>
+        <arcgis-elevation-profile id="profile" reference-element="scene" distance-unit="feet" elevation-unit="feet" hide-start-button hide-select-button hide-clear-button></arcgis-elevation-profile>
+      </calcite-block>
+      <calcite-notice slot="footer" open scale="s" kind="info" icon="information"><span slot="message"><span id="direction-status" role="status">Choose a climb to sample endpoint elevations.</span> Hover over the chart to locate a point in the scene. Terrain can differ from roadway elevation, especially at bridges. Chart axes scale independently.</span></calcite-notice>
+    </calcite-panel>
+  </main>
+  <calcite-dialog id="about-dialog" slot="dialogs" heading="Reading the climbs" modal>
 <p>This map ranks street segments by Seattle Department of Transportation's <code>SLOPE_PCT</code>. A 20% grade means 20 feet of rise per 100 horizontal feet, not 20 degrees.</p>
 <p>Eligible records are marked <code>INSVC</code>, have a street classification, and are not alleys. Missing slopes are excluded. Minimum length uses SDOT's <code>SEGLENGTH</code> in feet. One segment per street retains the steepest eligible segment for each street name.</p>
 <p>Grades are source records, not independently verified measurements. Short segments can have extreme values. Lines follow the ground; bridges may appear at terrain height. The elevation profile samples Esri World Elevation independently of recorded grade and is not a roadway survey. The scene has no vertical exaggeration. Numbered circles match the current ranking and hide at block scale, where A/B labels mark the profile endpoints. When terrain data is available, A is the lower endpoint, B the higher, and the camera looks from the lower side. This is terrain direction, not permitted traffic direction. Similar elevations or disconnected geometry use a neutral view.</p>
-<p><a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/seattle-streets/explore" target="_blank" rel="noopener noreferrer">Seattle Streets · Seattle Department of Transportation ↗</a></p><p><a href="readme.md">Project notes</a> · Paul Gibbs · #30DayMapChallenge 2026</p>
-</calcite-dialog></calcite-shell><noscript>This map requires JavaScript and an internet connection.</noscript>
+<p><calcite-link href="https://data-seattlecitygis.opendata.arcgis.com/datasets/seattle-streets/explore" target="_blank" rel="noopener noreferrer">Seattle Streets · Seattle Department of Transportation ↗</calcite-link></p><p><calcite-link href="readme.md">Project notes</calcite-link> · Paul Gibbs · #30DayMapChallenge 2026</p>
+</calcite-dialog>
+</calcite-shell>
+<noscript>This map requires JavaScript and an internet connection.</noscript>
 </body></html>

@@ -63,3 +63,11 @@ The uphill update was checked in Chrome: reversed-source profiles rise from A to
 [Download the animated demo](media/seattle-climbs-linkedin.gif) — a 20-second looping GIF, 1080 × 1080, approximately 4.7 MB. It shows the city ranking, selection of 22nd Ave E, the uphill camera, and the linked chart/scene indicator. [Still preview](media/seattle-climbs-linkedin.png).
 
 The animation uses real browser captures with explanatory captions and source credits. The assembly script is [scripts/make-demo.py](https://github.com/PaulGibbs3rd/30DayMapChallenge2026/blob/main/day2/scripts/make-demo.py); it takes a folder of captured PNG frames and a timing manifest. Temporary capture frames are kept outside the repository.
+
+## Calcite interface
+
+The application shell, navigation, resizable ranking sidebar, profile panel, content blocks, measurement chips, ranking/endpoint chips, legend swatches, notices, actions, links, and form controls use Calcite components. The ArcGIS scene and elevation profile remain SDK components. Semantic HTML is retained for page structure and explanatory text.
+
+The ranking panel docks on desktop and opens as an overlay on narrow screens; the legend collapses on mobile. Dark `color-scheme` and inherited scrollbar colors cover native scrolling inside the components as well as the page. Component styling uses theme tokens and host styles without reaching into shadow DOM internals.
+
+The LinkedIn GIF records the earlier interface and remains available as a demo of the mapping functionality.
