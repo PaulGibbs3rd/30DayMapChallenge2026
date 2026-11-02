@@ -1,80 +1,84 @@
-# GitHub Pages deployment
+# Publishing on GitHub Pages
 
-This repository is prepared for **PaulGibbs3rd/30DayMapChallenge2026**. GitHub Pages has not been verified as live during preparation. These are the intended URLs after the first successful deployment:
+The collection is hosted from **PaulGibbs3rd/30DayMapChallenge2026**, using **Deploy from a branch → main → / (root)**.
 
-| Page | Expected URL |
+| Page | URL |
 | --- | --- |
 | Collection entry point | https://paulgibbs3rd.github.io/30DayMapChallenge2026/ |
 | Directory | https://paulgibbs3rd.github.io/30DayMapChallenge2026/directory/ |
 | Day 1 map | https://paulgibbs3rd.github.io/30DayMapChallenge2026/day1/ |
-| Other day pages | `https://paulgibbs3rd.github.io/30DayMapChallenge2026/dayN/` |
 
-The repository entry point opens the directory. Day 1 is implemented; days 2–30 currently contain documented placeholder pages.
+Other day pages use the same address followed by `dayN/`. Day 1 is implemented. Days 2–30 are clearly labeled placeholders until their maps are created.
 
-## Check and preview locally
+## How publication works
 
-Use Node.js 24. The site has no npm dependencies, so there is no install step.
+GitHub publishes the committed files at the repository root whenever changes reach `main`. The root `index.html` opens the directory. A committed `.nojekyll` file keeps the site as plain static files, including the GeoJSON and JavaScript modules.
+
+The separate **Validate challenge collection** workflow checks data, assets, local links, and the generated directory. It runs on pushes, pull requests, and manual dispatch. It does not deploy or change the repository's Pages settings. GitHub's **pages build and deployment** workflow performs the actual branch publication.
+
+## Run and check locally
+
+Use Node.js 24. There are no npm dependencies to install.
 
 ```sh
 npm run check
 npm run dev
 ```
 
-`npm run check` validates Day 1, builds the directory and static artifact, and checks local links. The preview prints a URL under `/30DayMapChallenge2026/`, matching GitHub's project-site subpath. Source edits appear after reloading. To rebuild without checks, use `npm run build`. To inspect the exact staged artifact:
+The preview prints a URL under `/30DayMapChallenge2026/`, matching the GitHub Pages project prefix. Reload after source changes.
+
+The check command validates Day 1 data and song mappings, regenerates `directory/index.html`, stages the public runtime and notes in `_site/`, and verifies local references. The staged directory is a validation/preview artifact, not the branch publishing source.
+
+To preview that staged output:
 
 ```sh
 node scripts/serve.mjs --site
 ```
 
-The build regenerates the directory from `directory/days.json` and copies only web runtime files and public documentation into `_site/`. Local Sites metadata, Git metadata, node_modules, nested build output, and developer scripts are excluded. Do not commit `_site/` or `day1/dist/`.
+## Publish an update
 
-## First push
-
-Review the prepared files and the initial Git state before committing. The target repository was empty when preparation began. A typical first-push sequence is:
+1. Edit the day's `dayN/` page, data, assets and README.
+2. Update its title, description, status and optional tags in `directory/days.json`.
+3. Run `npm run check`. This regenerates the directory; include the updated `directory/index.html` in the commit.
+4. Preview the collection and the affected day page.
+5. Commit and push the reviewed changes to `main`.
 
 ```sh
 git status --short
 git add .
-git commit -m "Add the 2026 map challenge directory and Day 1 atlas"
-git branch -M main
-git remote add origin https://github.com/PaulGibbs3rd/30DayMapChallenge2026.git
-git push -u origin main
+git commit -m "Describe the map update"
+git push origin main
 ```
 
-If `origin` already exists, inspect it with `git remote -v` and use the existing matching remote. Do not add a second remote or overwrite a different destination without checking it.
+The local checkout's `origin` points to `https://github.com/PaulGibbs3rd/30DayMapChallenge2026.git`. On a fresh computer, clone that repository before editing.
 
-## Enable GitHub Pages
+Do not commit `_site/`, nested `dist/` folders, `node_modules/`, local `.openai/` hosting metadata, or credentials. The repository's ignore rules cover these generated and local-only paths.
 
-After the initial push:
+## Verify publication
 
-1. Open the repository's **Settings → Pages**.
-2. Under **Build and deployment → Source**, select **GitHub Actions**.
-3. Open **Actions → Check and publish GitHub Pages**. Run the workflow on `main` if the initial run happened before Pages was enabled.
-4. Wait for the **Publish GitHub Pages** job to succeed, then use its deployment URL to verify the directory and Day 1 app.
+Open **Actions** in the GitHub repository and check both the validation run and **pages build and deployment**. Once Pages succeeds, open the directory, select a day, and verify its assets and interactions.
 
-The workflow builds and validates pull requests without publishing. A push to `main` or a manual run on `main` publishes the checked artifact. Branch or environment protection rules may require the repository owner to approve the deployment.
+If the page still shows an older version, wait for the Pages deployment to finish and reload. Keep resource URLs relative so they resolve beneath `/30DayMapChallenge2026/`; a root-absolute path such as `/assets/map.png` would point to the account site's root instead.
 
-## Daily updates
+## Settings for a fresh setup
 
-1. Add the day's map and supporting files to its `dayN/` folder.
-2. Record data sources, credits, instructions, and checks in that day's `readme.md`.
-3. Update its title, description, status, and optional image/tags in `directory/days.json`.
-4. Run the checks/build and preview the collection under the repository subpath.
-5. Commit and push to `main` when the update is ready.
+The current configuration is already set. If the site needs to be recreated:
 
-Keep asset and navigation paths relative to the page or module so they work beneath the project prefix. An absolute URL such as `/assets/map.png` would point to the account site root, not this repository.
+1. Open **Settings → Pages**.
+2. Set **Source** to **Deploy from a branch**.
+3. Choose **main** and **/ (root)**, then save.
+4. Wait for GitHub's branch Pages workflow to complete.
 
-## Hosting behavior and limits
+## Day 1 hosting behavior
 
-GitHub Pages serves static HTML, CSS, JavaScript, local data, and media. The Day 1 app does not require a backend or ArcGIS credentials: its geographic layers are local GeoJSON. ArcGIS libraries, fonts, Spotify, and YouTube still require internet access. Spotify controls preview/full-song availability; external media restrictions remain in effect.
+The app uses client-side GeoJSON and does not need ArcGIS credentials or a backend. Esri's CDN, Google Fonts, Spotify and YouTube require internet access. Native music players control preview/full-song availability and regional restrictions.
 
-The earlier owner-private Sites preview is a separate deployment. Its `.openai/` identity and local deployment records are excluded from this repository's Pages artifact and should remain out of public Git commits. GitHub Pages does not inherit the private preview's access gate.
+The earlier owner-private Sites preview is a separate deployment. Its identity and deployment records stay local and are ignored by Git. GitHub Pages uses the public repository configuration.
 
-The [Day 1 notes](../day1/readme.md) document source and artwork credits. Gorillaz artwork and third-party content retain their owners' rights; the public project is unofficial and does not grant a blanket asset license.
+[Artwork credits](../day1/research/artwork-sources.md), [data sources](../day1/research/README.md), and [repository notices](../NOTICE.md) remain with the project.
 
-## Official references
+## References
 
-- [GitHub: using custom workflows with Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
 - [GitHub: configuring a publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
-- [Official Node setup action](https://github.com/actions/setup-node)
+- [GitHub: publishing with a branch](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch)
 

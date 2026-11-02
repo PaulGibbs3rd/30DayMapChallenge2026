@@ -13,7 +13,7 @@ This collection follows the [2026 #30DayMapChallenge](https://30daymapchallenge.
 - [Day 1: Gorillaz tour atlas](https://paulgibbs3rd.github.io/30DayMapChallenge2026/day1/)
 - [Repository](https://github.com/PaulGibbs3rd/30DayMapChallenge2026)
 
-These are the prepared GitHub Pages addresses. The repository was empty and Pages was not enabled when this publishing setup was prepared; the addresses become live after the first successful deployment. The root page opens the directory.
+GitHub Pages publishes directly from the `main` branch and repository root. The root page opens the directory.
 
 The directory includes a description, implementation status, source-folder link, hosted day-page link, and project notes for every day. Search by theme or subject, or filter the collection to completed and planned entries.
 
@@ -49,7 +49,7 @@ The directory and planned pages are static HTML/CSS/JavaScript. Day 1 additional
 | `day1/research/` | Source URLs, data interpretation, geography, and playback notes. |
 | `docs/` | Deployment and project documentation. |
 | `scripts/` | Dependency-free directory generation, static packaging, preview, and checks. |
-| `.github/workflows/pages.yml` | GitHub Actions checks and Pages publication. |
+| `.github/workflows/check.yml` | Validates the data, generated directory and public links. GitHub's branch-based Pages workflow handles publication. |
 | `_site/` | Generated Pages artifact; ignored by Git. |
 
 ## Daily collection
@@ -99,9 +99,9 @@ Pages for planned days are placeholders until those maps are implemented. All 30
 
 ## Publish with GitHub Pages
 
-The target is [PaulGibbs3rd/30DayMapChallenge2026](https://github.com/PaulGibbs3rd/30DayMapChallenge2026), using its default branch, `main`. The workflow checks pull requests and publishes pushes to `main`, with an optional manual run.
+The repository is [PaulGibbs3rd/30DayMapChallenge2026](https://github.com/PaulGibbs3rd/30DayMapChallenge2026), using its default branch, `main`. Pages is configured as **Deploy from a branch → main → / (root)**. GitHub publishes changes pushed to that branch.
 
-After the first push, select **Settings → Pages → Source → GitHub Actions**. [Deployment instructions](docs/deployment.md) cover the initial Git setup, exact URLs, workflow behavior, and later updates.
+The validation workflow checks the data and links on pushes and pull requests. `.nojekyll` keeps these buildless pages and local data files static. Run `npm run check` before committing so the generated directory is current. [Deployment instructions](docs/deployment.md) cover the URLs, publishing settings and later updates.
 
 ## Data, artwork, and credits
 

@@ -45,6 +45,5 @@ Browser checks cover clicking a map point, filtering Oakland, filtering Canada, 
 - [Day 1 source folder](https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day1)
 - [All daily maps](../directory/index.html)
 - Local map entry point: [index.html](index.html)
-- The GitHub Pages URL becomes available after the repository's first successful Pages deployment. The earlier private Sites preview is separate; its local hosting configuration is excluded from Git.
+- The earlier private Sites preview is separate; its local hosting configuration is excluded from Git.
 - Social post: not created
-

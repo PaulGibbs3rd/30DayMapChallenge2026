@@ -20,7 +20,7 @@ Record the source links, access dates, licenses, credits, and processing decisio
 - Replace [the placeholder page](index.html) with the map or a presentation of the finished output.
 - Document the tools, rendering approach, and any setup requirements here as they are chosen.
 - [Source folder on GitHub](https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day13)
-- [GitHub Pages URL](https://paulgibbs3rd.github.io/30DayMapChallenge2026/day13/) — reserved for this day; serves this placeholder after the repository's first Pages deployment, until the map is implemented.
+- [GitHub Pages URL](https://paulgibbs3rd.github.io/30DayMapChallenge2026/day13/) — serves this placeholder until the map is implemented.
 - [All challenge days](../directory/index.html)
 
 ## Validation

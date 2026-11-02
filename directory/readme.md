@@ -33,4 +33,4 @@ Top-level `repository`, `branch`, and `pagesBase` set the source-link destinatio
 
 Expected hosted directory: https://paulgibbs3rd.github.io/30DayMapChallenge2026/directory/
 
-Run `npm run dev` at the repository root to preview using the GitHub Pages subpath. [Publishing instructions](../docs/deployment.md) explain the initial deployment. The expected GitHub Pages URLs are prepared links until that first deployment succeeds.
+Run `npm run dev` at the repository root to preview using the GitHub Pages subpath. [Publishing instructions](../docs/deployment.md) explain the initial deployment. Pages publishes from the main branch and repository root.
