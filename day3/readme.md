@@ -1,34 +1,65 @@
-# Day 3: Polygons
+# Day 03 · Election night atlas
 
-**Date:** November 3, 2026  
-**Status:** Planned — map not implemented.
+**Theme: Polygons · November 3, 2026**
 
-## Theme
+An interactive atlas of US House, US Senate and gubernatorial contests happening on Election Day. Blue identifies Democratic candidates, red Republican candidates, gold other parties, violet ties and gray awaiting results. Dark states have no contest supplied for the selected office.
 
-Use areas and shapes to tell a geographic story, exploring how regions, footprints, or territories divide and describe space.
+## Run
 
-## Map idea
+From the repository root, run `npm run dev`, then open `http://127.0.0.1:4174/30DayMapChallenge2026/day3/`. The app is buildless and works under the existing GitHub Pages subpath. Internet access is required for ArcGIS, Calcite, state and congressional polygons, fonts and live data. It requires no ArcGIS key or sign-in because all requested resources are public and read-only.
 
-A polygon dataset and the meaning of its boundaries will be selected for this day. No finished map or selected dataset is claimed by this placeholder.
+## Start and stack
 
-## Data and attribution
+Started with the official interactive `npx @arcgis/create`, project `starter`, template `cdn`. The generated original is retained in [starter/](starter/index.html). Its ArcGIS Maps SDK for JavaScript 5.1 CDN bootstrap supplies Calcite and map components. The app adapts the starter’s Calcite Shell and ArcGIS map component, using core FeatureLayer queries and a client-side results renderer.
 
-Record the source links, access dates, licenses, credits, and processing decisions when the subject and data are selected. Keep shareable data and supporting assets in this folder.
+## Explore
 
-## Implementation and output
+- Switch among Senate, House and Governor; counts cover contests supplied in the selected feed, not overall chamber control.
+- House view uses individual congressional district polygons. Select a polygon, district selector option, or race title to open one district; select a state to browse all its districts. Results and the map stay synchronized. Alaska and Hawaii have dedicated navigation buttons; Lower 48 restores the national extent.
+- Search state names, abbreviations, district codes or candidate names. Filter to called, uncalled or close races (reported votes, no call, top-two margin at most five percentage points).
+- Read all candidates, party labels, incumbent flags, reported vote totals, calculated vote percentages, provider reporting percentages and direct links to the source race.
+- Auto-refresh polls the active office every 60 seconds while the page is visible. Manual Refresh retries immediately. Each office maintains its own data and connection status.
+- The URL hash retains office, selected state and selected House district for bookmarking. Reset clears geographic selection, search and race filters.
 
-- Replace [the placeholder page](index.html) with the map or a presentation of the finished output.
-- Document the tools, rendering approach, and any setup requirements here as they are chosen.
-- [Source folder on GitHub](https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day3)
-- [GitHub Pages URL](https://paulgibbs3rd.github.io/30DayMapChallenge2026/day3/) — serves this placeholder until the map is implemented.
-- [All challenge days](../directory/index.html)
+## Sources and interpretation
+
+[US State Boundaries, supplied ArcGIS Online item](https://www.arcgis.com/home/item.html?id=1612d351695b467eba75fdf82c10884f) is queried at runtime. State outlines derive from the US Census Bureau’s 2006 TIGER/Line data. Esri restricts this item to educational, demonstration and training use. This challenge is educational. The app preserves source attribution. These state polygons remain in the Senate and governor views.
+
+[CivicAPI results](https://civicapi.org/results) and [API documentation](https://civicapi.org/api-documentation/) supply the following verified national feeds:
+
+| Office | Endpoint | Contests in initial feed |
+| --- | --- | --- |
+| House | [87524](https://civicapi.org/api/v2/race/87524) | 435 |
+| Senate | [87528](https://civicapi.org/api/v2/race/87528) | 35 |
+| Governor | [87535](https://civicapi.org/api/v2/race/87535) | 36 |
+
+The Senate feed includes Florida and Ohio special elections; the initial catalogue was cross-checked against the date-filtered Senate search. The map covers the 50 states and contests in these feeds; it excludes DC, territories, state legislative contests, primaries and future runoffs. Coverage changes trigger a visible warning. Test payloads, wrong dates, different offices and unrecognized state joins are rejected.
+
+**House map fill shows the leading candidate’s party for each district**, using the supplied [USA 119th Congressional Districts layer](https://www.arcgis.com/home/item.html?id=2bdcd2410ac34b1c859025d49cacaf87). The layer represents the Congress beginning January 3, 2025, with membership current October 1, 2026. Its 119th Congress geography may differ from district boundaries used to elect the 120th Congress in November 2026 after redistricting. This caveat stays visible in House view; an identifier match does not prove identical election geography. Esri, the US Census Bureau and House of Representatives are credited. The layer’s representative names and party attributes are not used as election results.
+
+The service includes DC; it is excluded to match the 435 voting-seat feed. All 435 voting polygons join one-to-one using `STATE_ABBR` and `CDFIPS`. Census code `00` maps to CivicAPI’s `al` suffix for the six at-large states. [The verified join manifest](data/district-join.json) supports offline coverage checks. The map lazily loads the congressional layer on first entry to House view. ArcGIS streams geometry at the map’s current resolution and projects it to Albers; the app queries only district identifiers up front. Selecting a district queries its extent for zoom. Failed geometry loads have a separate map warning and manual Refresh retry; candidate results remain usable. Senate and governor use the leading individual candidate; if more than one contest is supplied for a state, fill combines those contests’ votes by party.
+
+A lead never creates a call. Calls use only a boolean `winner: true` from CivicAPI. No independent projections or forecasts are made. Called counts exclude seats not on the ballot. Reporting percentages are passed through from CivicAPI and are not assumed to equal ballots counted. Candidate percentages are calculated from reported candidate vote totals and may sum to slightly more or less than 100% after rounding. Early close-race margins can change. Other-party candidates are not automatically assigned to either major party or caucus.
+
+## Freshness and fallback
+
+The source returned zero votes during development on November 3, 2026; all three initial payloads had source update timestamps on October 23, 2026. The initial snapshots contain real provider payloads, not fabricated results. Each [saved snapshot](data/senate.json) records its exact source URL and fetch time. They are used only when the API is unavailable and are prominently labeled **Saved snapshot**, with an explicit not-live notice. A failed refresh retains the last successful payload with a warning. The app displays both source update time and last successful fetch time, and warns when a source update is over 15 minutes old.
+
+The provider intermittently returned HTTP 502 while this app was developed. Browser verification exercised the saved fallback and subsequent recovery to a connected live feed. No credentials, backend proxy, or polling automation is needed. Refreshes occur only while the page is open.
+
+To intentionally replace saved snapshots, run `node day3/scripts/update-snapshots.mjs`. It validates all three responses and expected coverage before writing them. A failed download or validation preserves existing files. This command is separate from the normal offline build/check.
 
 ## Validation
 
-Map-specific validation has not been run because the map is not implemented. Record the relevant data, interaction, accessibility, and layout checks when an output exists.
+Run `node day3/scripts/check.mjs` for 16 election data and boundary-join checks covering source identity and coverage, zero-vote handling, strict call flags, close races, ties, other parties, individual candidate leads, House district colors and counts, all 435 boundary joins and at-large normalization, filters, special elections, rejected test data and escaped provider text. `npm run check` also runs this suite, builds the collection, and checks local links and assets.
 
-## Reflection
+Browser checks cover the rendered polygons, race switches, state selectors, candidate search, race filters, reset, Alaska/Hawaii navigation, About dialog, timestamps, fallback/recovery, desktop and mobile layouts, and console errors. The live map uses an Albers equal-area projection (WKID 102003) with no paid basemap or location service.
 
-Pending completion: describe what worked, the decisions made, and what to try next.
+## Files
 
-Theme reference: [Official 2026 challenge](https://30daymapchallenge.com/2026/).
+- [index.html](index.html), [styles.css](styles.css), [app.js](app.js): application and UI.
+- [model.js](model.js): independently testable data validation and result interpretation.
+- [requirements handoff](research/requirements.md): scope, stack, authentication and setup record.
+- [starter](starter/README.md): retained official generated scaffold.
+
+Results are unofficial and remain attributable to CivicAPI. Do not use this educational map as an official election certification source.

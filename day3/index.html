@@ -1,27 +1,61 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="calcite-mode-dark">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Day 3 of Paul Gibbs's 30DayMapChallenge 2026: Polygons. Planned map; explore the theme and project links.">
-  <meta name="theme-color" content="#f5f0e5">
-  <title>Day 3: Polygons | 30DayMapChallenge 2026</title>
-  <link rel="stylesheet" href="../directory/placeholder.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#111b28">
+<meta name="description" content="November 3, 2026 US House, Senate and governor results. An interactive state polygon atlas powered by CivicAPI and ArcGIS.">
+<title>Election night atlas · Day 03</title>
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./styles.css">
+<!-- Official @arcgis/create CDN starter; SDK 5.1 includes Calcite and map components. -->
+<script type="module" src="https://js.arcgis.com/5.1/"></script><script type="module" src="./app.js"></script>
 </head>
-<body class="placeholder-page">
-  <main class="day-placeholder">
-    <header>
-      <p class="eyebrow">PAUL GIBBS · NOVEMBER 3, 2026</p>
-      <h1><span>Day 03</span> Polygons</h1>
-      <p class="theme-description">Use areas and shapes to tell a geographic story, exploring how regions, footprints, or territories divide and describe space.</p>
-    </header>
-    <p class="status-badge">Planned · Map not implemented</p>
-    <p class="placeholder-note">This day's map is still to come. The theme is ready; the subject, data, and final output will be documented as the project takes shape.</p>
-    <nav class="placeholder-links" aria-label="Day 3 project links">
-      <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day3" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
-      <a href="readme.md">Project notes</a>
-      <a href="../directory/index.html">All days</a>
-    </nav>
-  </main>
-</body>
-</html>
+<body><calcite-shell>
+<header slot="header" class="masthead">
+<a class="collection" href="../directory/" aria-label="Back to the map challenge collection">30<span>DAY</span><br>MAP CHALLENGE</a>
+<div class="masthead-title"><span class="eyebrow">DAY 03 / POLYGONS</span><h1>Election night atlas<span class="title-dot">.</span></h1></div>
+<div class="edition"><span class="eyebrow">THE 2026 MIDTERMS</span><strong>Tuesday, November 3</strong></div>
+<calcite-button id="about" appearance="transparent" icon-start="information" scale="s">About</calcite-button>
+</header>
+<main class="workspace">
+<section class="map-workspace" aria-label="Election results map">
+<div class="race-toolbar"><calcite-segmented-control id="office" label-text="Choose an election" scale="l" width="full">
+<calcite-segmented-control-item value="senate" checked>Senate</calcite-segmented-control-item><calcite-segmented-control-item value="house">House</calcite-segmented-control-item><calcite-segmented-control-item value="governor">Governor</calcite-segmented-control-item>
+</calcite-segmented-control><div class="connection"><span id="connection-dot" class="connection-dot"></span><span id="connection-text" role="status">Connecting to CivicAPI</span></div></div>
+<div class="map-heading"><div><span class="eyebrow">A COUNTRY, CONTEST BY CONTEST</span><h2 id="map-title">The race for the Senate</h2></div><span id="race-count" class="race-count">— contests</span></div>
+<div class="scoreboard" aria-label="Called races in this election">
+<div class="score democratic"><span>DEMOCRATIC</span><strong id="dem-called">—</strong><small>called</small></div>
+<div class="score-center"><span id="uncalled">—</span><small>not yet called</small><div class="seat-track" id="seat-track"></div></div>
+<div class="score republican"><span>REPUBLICAN</span><strong id="gop-called">—</strong><small>called</small></div></div>
+<p class="score-note">Election Day contests only · Other parties: <span id="other-called">0</span> called · Not total chamber control</p>
+<div class="map-frame"><arcgis-map id="map" aria-label="Select a state to explore its election results"><arcgis-zoom slot="top-left"></arcgis-zoom></arcgis-map>
+<div id="map-loading" class="map-loading" role="status">Loading state polygons…</div>
+<div class="map-geography" aria-label="Map extent"><calcite-button id="home" scale="s" appearance="outline" icon-start="extent">Lower 48</calcite-button><calcite-button id="alaska" scale="s" appearance="outline">Alaska</calcite-button><calcite-button id="hawaii" scale="s" appearance="outline">Hawaii</calcite-button></div>
+<div id="hover" class="map-hover" role="status">Choose a state on the map or in the list</div>
+<div class="map-caption"><span id="boundary-caption">STATE BOUNDARIES · US CENSUS / ESRI</span><span>Albers equal-area projection</span></div></div>
+<div class="legend" aria-label="Map legend"><span><i class="swatch dem"></i>Democratic lead</span><span><i class="swatch gop"></i>Republican lead</span><span><i class="swatch other"></i>Other lead</span><span><i class="swatch tie"></i>Tied</span><span><i class="swatch awaiting"></i>Awaiting results</span><span><i class="swatch no-race"></i>No contest in feed</span></div>
+<p id="map-note" class="map-note">Fill shows the leading candidate’s party. A lead is not a call. Calls appear in the results panel.</p>
+<p id="boundary-notice" class="boundary-notice" hidden><a href="https://www.arcgis.com/home/item.html?id=2bdcd2410ac34b1c859025d49cacaf87" target="_blank" rel="noopener">119th Congress boundaries (2025–2027)</a> · May differ from 2026 election districts after redistricting.</p>
+<footer class="map-footer"><span>Results: <a href="https://civicapi.org/results" target="_blank" rel="noopener">CivicAPI ↗</a> · Unofficial returns</span><span id="source-time">Source timestamp pending</span></footer>
+</section>
+<aside class="results-workspace" aria-label="State election results">
+<div class="results-heading"><span class="eyebrow">EXPLORE THE RETURNS</span><h2>Every state. Every race.</h2><p>Follow the votes as the picture takes shape.</p></div>
+<div class="filters"><calcite-select id="state" label-text="Select a state"><calcite-option value="">All states</calcite-option></calcite-select>
+<calcite-select id="district" label-text="Select a House district" hidden><calcite-option value="">All districts</calcite-option></calcite-select>
+<calcite-input-text id="search" label-text="Search states, candidates or districts" placeholder="Search state, candidate, district…" icon="search" clearable></calcite-input-text>
+<calcite-select id="filter" label-text="Filter races"><calcite-option value="all">All races</calcite-option><calcite-option value="close">Close races · within 5 points</calcite-option><calcite-option value="called">Called races</calcite-option><calcite-option value="uncalled">Not yet called</calcite-option></calcite-select></div>
+<div id="feed-alert" class="feed-alert" role="status" hidden></div>
+<div class="results-meta"><span id="results-label">Loading races…</span><calcite-button id="clear" appearance="transparent" scale="s">Reset</calcite-button></div>
+<div id="results" class="results-list" aria-live="polite" aria-busy="true"><p class="empty">Connecting to the Election Day feeds…</p></div>
+<div class="refresh-bar"><calcite-label layout="inline"><calcite-switch id="auto" checked scale="s"></calcite-switch>Refresh every 60s</calcite-label><calcite-button id="refresh" appearance="outline" scale="s" icon-start="refresh">Refresh</calcite-button></div><div class="fetch-time" id="fetch-time">Waiting for first fetch</div>
+</aside></main>
+<calcite-dialog id="about-dialog" slot="dialogs" heading="Reading the election night atlas" width-scale="m" modal>
+<div class="about-content"><span class="eyebrow">30 DAY MAP CHALLENGE · DAY 03: POLYGONS</span><h2>Boundaries hold the story.</h2>
+<p>This educational map follows US House, US Senate and gubernatorial contests on <strong>November 3, 2026</strong>, using CivicAPI’s national feeds. Candidates and calls are supplied by CivicAPI; this app makes no independent calls.</p>
+<p><strong>Blue = Democratic. Red = Republican.</strong> Gold means another party leads, violet means tied, gray means awaiting results, and dark gray means no contest supplied for this office. Use the text labels as well as color.</p>
+<p><strong>House view:</strong> each congressional district is colored by its leading candidate’s party. Select a polygon, a district in the selector, or a race title to open that district’s candidates. State selection shows all of its districts. Calls still come only from CivicAPI.</p>
+<p><strong>Senate and governor:</strong> fill shows the leading candidate’s party. If multiple contests are supplied for one state, fill summarizes their reported votes by party; individual calls remain separate.</p>
+<p>Calls use the provider’s <code>winner</code> flag. Vote percentages use reported candidate vote totals. Reporting percentages come from the provider and do not necessarily measure ballots counted. Zero votes never imply a winner. Close races have reported votes, no call, and a top-two margin of at most 5 percentage points; early margins can change.</p>
+<p>Called counts include only contests in these Election Day feeds. They exclude seats not up for election and do not indicate control of Congress. The app rejects test data and a mismatched election date. API failures use an explicitly labeled saved snapshot when available. Check both the fetch time and source update time.</p>
+<p>Senate and governor polygons use the supplied <a href="https://www.arcgis.com/home/item.html?id=1612d351695b467eba75fdf82c10884f" target="_blank" rel="noopener">US State Boundaries layer</a>, derived from 2006 Census TIGER/Line geography and shared by Esri for educational use. House uses the supplied <a href="https://www.arcgis.com/home/item.html?id=2bdcd2410ac34b1c859025d49cacaf87" target="_blank" rel="noopener">USA 119th Congressional Districts layer</a>, credited to Esri, the US Census Bureau and House of Representatives. This boundary vintage represents the Congress beginning January 3, 2025; the 2026 election elects the 120th Congress, and redistricting may change boundaries. A matching district identifier does not verify identical 2026 geography. The layer’s incumbent name and party fields are not election results and are not used to color the map. DC and territories are excluded to match the 435 voting-seat feed. Alaska and Hawaii have dedicated extent controls.</p>
+<p><a href="https://civicapi.org/api-documentation/" target="_blank" rel="noopener">CivicAPI documentation ↗</a> · <a href="./readme.md" target="_blank">Project notes ↗</a></p></div>
+<calcite-button id="close-about" slot="footer-end">Back to the map</calcite-button></calcite-dialog>
+</calcite-shell><noscript>This map requires JavaScript. Visit <a href="https://civicapi.org/results">CivicAPI results</a>.</noscript></body></html>

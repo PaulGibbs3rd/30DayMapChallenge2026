@@ -4,7 +4,7 @@
 
 This collection follows the [2026 #30DayMapChallenge](https://30daymapchallenge.com/2026/), with a different theme for every day of November. Each project has its own page, source folder, and README documenting the idea, data, credits, process, and limitations. The collection is organized for browsing on GitHub Pages and for reading the implementation on GitHub.
 
-**Day 1 is complete:** [Gorillaz — The Mountain Tour Atlas](day1/readme.md) maps 23 US and Canada concert venues, connects each show to its sourced setlist, and lets visitors play songs through Spotify or YouTube. It uses the ArcGIS Maps SDK for JavaScript, Calcite UI, local GeoJSON, and a playful collage of Gorillaz artwork. Day 2 is an interactive 3D Seattle street-grade explorer with ranked segments and terrain elevation profiles. Days 3–30 have theme descriptions and clearly labeled placeholder pages.
+**Day 1 is complete:** [Gorillaz — The Mountain Tour Atlas](day1/readme.md) maps 23 US and Canada concert venues, connects each show to its sourced setlist, and lets visitors play songs through Spotify or YouTube. It uses the ArcGIS Maps SDK for JavaScript, Calcite UI, local GeoJSON, and a playful collage of Gorillaz artwork. Day 2 is an interactive 3D Seattle street-grade explorer with ranked segments and terrain elevation profiles. [Day 3: Election Night Atlas](day3/readme.md) follows US House, Senate and governor contests with congressional district and state polygons and CivicAPI results. Days 4–30 have theme descriptions and clearly labeled placeholder pages.
 
 ## Browse the collection
 
@@ -60,7 +60,7 @@ Pages for planned days are placeholders until those maps are implemented. All 30
 | --- | --- | --- | --- |
 | 01 | Points | Complete — Gorillaz tour atlas | [Page](https://paulgibbs3rd.github.io/30DayMapChallenge2026/day1/) · [Source](https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day1) · [Notes](day1/readme.md) |
 | 02 | Lines | Complete — Seattle, a City of Climbs | [Page](https://paulgibbs3rd.github.io/30DayMapChallenge2026/day2/) · [Source](https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day2) · [Notes](day2/readme.md) |
-| 03 | Polygons | Planned | [Page](https://paulgibbs3rd.github.io/30DayMapChallenge2026/day3/) · [Source](https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day3) · [Notes](day3/readme.md) |
+| 03 | Polygons | Complete — Election Night Atlas | [Page](https://paulgibbs3rd.github.io/30DayMapChallenge2026/day3/) · [Source](https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day3) · [Notes](day3/readme.md) |
 | 04 | Clusters | Planned | [Page](https://paulgibbs3rd.github.io/30DayMapChallenge2026/day4/) · [Source](https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day4) · [Notes](day4/readme.md) |
 | 05 | Senses: Sight | Planned | [Page](https://paulgibbs3rd.github.io/30DayMapChallenge2026/day5/) · [Source](https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day5) · [Notes](day5/readme.md) |
 | 06 | Vintage | Planned | [Page](https://paulgibbs3rd.github.io/30DayMapChallenge2026/day6/) · [Source](https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day6) · [Notes](day6/readme.md) |

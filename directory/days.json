@@ -39,9 +39,16 @@
       "day": 3,
       "date": "2026-11-03",
       "theme": "Polygons",
-      "title": "Polygons",
-      "description": "Use areas and boundaries to reveal how places divide, overlap, or fit together.",
-      "status": "planned"
+      "title": "Election Night Atlas",
+      "description": "Follow 2026 US House, Senate and governor races with congressional district and state polygons, candidate returns, filters and source timestamps.",
+      "status": "complete",
+      "tags": [
+        "ArcGIS JavaScript",
+        "Calcite",
+        "Elections",
+        "Live data",
+        "Polygons"
+      ]
     },
     {
       "day": 4,

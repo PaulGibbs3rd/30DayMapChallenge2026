@@ -1,0 +1,3058 @@
+{
+  "fetchedAt": "2026-11-03T17:55:27.7374348Z",
+  "districts": [
+    {
+      "OBJECTID": 1,
+      "DISTRICTID": "0101",
+      "STFIPS": "01",
+      "CDFIPS": "01",
+      "STATE_ABBR": "AL"
+    },
+    {
+      "OBJECTID": 2,
+      "DISTRICTID": "0102",
+      "STFIPS": "01",
+      "CDFIPS": "02",
+      "STATE_ABBR": "AL"
+    },
+    {
+      "OBJECTID": 3,
+      "DISTRICTID": "0103",
+      "STFIPS": "01",
+      "CDFIPS": "03",
+      "STATE_ABBR": "AL"
+    },
+    {
+      "OBJECTID": 4,
+      "DISTRICTID": "0104",
+      "STFIPS": "01",
+      "CDFIPS": "04",
+      "STATE_ABBR": "AL"
+    },
+    {
+      "OBJECTID": 5,
+      "DISTRICTID": "0105",
+      "STFIPS": "01",
+      "CDFIPS": "05",
+      "STATE_ABBR": "AL"
+    },
+    {
+      "OBJECTID": 6,
+      "DISTRICTID": "0106",
+      "STFIPS": "01",
+      "CDFIPS": "06",
+      "STATE_ABBR": "AL"
+    },
+    {
+      "OBJECTID": 7,
+      "DISTRICTID": "0107",
+      "STFIPS": "01",
+      "CDFIPS": "07",
+      "STATE_ABBR": "AL"
+    },
+    {
+      "OBJECTID": 8,
+      "DISTRICTID": "0200",
+      "STFIPS": "02",
+      "CDFIPS": "00",
+      "STATE_ABBR": "AK"
+    },
+    {
+      "OBJECTID": 9,
+      "DISTRICTID": "0401",
+      "STFIPS": "04",
+      "CDFIPS": "01",
+      "STATE_ABBR": "AZ"
+    },
+    {
+      "OBJECTID": 10,
+      "DISTRICTID": "0402",
+      "STFIPS": "04",
+      "CDFIPS": "02",
+      "STATE_ABBR": "AZ"
+    },
+    {
+      "OBJECTID": 11,
+      "DISTRICTID": "0403",
+      "STFIPS": "04",
+      "CDFIPS": "03",
+      "STATE_ABBR": "AZ"
+    },
+    {
+      "OBJECTID": 12,
+      "DISTRICTID": "0404",
+      "STFIPS": "04",
+      "CDFIPS": "04",
+      "STATE_ABBR": "AZ"
+    },
+    {
+      "OBJECTID": 13,
+      "DISTRICTID": "0405",
+      "STFIPS": "04",
+      "CDFIPS": "05",
+      "STATE_ABBR": "AZ"
+    },
+    {
+      "OBJECTID": 14,
+      "DISTRICTID": "0406",
+      "STFIPS": "04",
+      "CDFIPS": "06",
+      "STATE_ABBR": "AZ"
+    },
+    {
+      "OBJECTID": 15,
+      "DISTRICTID": "0407",
+      "STFIPS": "04",
+      "CDFIPS": "07",
+      "STATE_ABBR": "AZ"
+    },
+    {
+      "OBJECTID": 16,
+      "DISTRICTID": "0408",
+      "STFIPS": "04",
+      "CDFIPS": "08",
+      "STATE_ABBR": "AZ"
+    },
+    {
+      "OBJECTID": 17,
+      "DISTRICTID": "0409",
+      "STFIPS": "04",
+      "CDFIPS": "09",
+      "STATE_ABBR": "AZ"
+    },
+    {
+      "OBJECTID": 18,
+      "DISTRICTID": "0501",
+      "STFIPS": "05",
+      "CDFIPS": "01",
+      "STATE_ABBR": "AR"
+    },
+    {
+      "OBJECTID": 19,
+      "DISTRICTID": "0502",
+      "STFIPS": "05",
+      "CDFIPS": "02",
+      "STATE_ABBR": "AR"
+    },
+    {
+      "OBJECTID": 20,
+      "DISTRICTID": "0503",
+      "STFIPS": "05",
+      "CDFIPS": "03",
+      "STATE_ABBR": "AR"
+    },
+    {
+      "OBJECTID": 21,
+      "DISTRICTID": "0504",
+      "STFIPS": "05",
+      "CDFIPS": "04",
+      "STATE_ABBR": "AR"
+    },
+    {
+      "OBJECTID": 22,
+      "DISTRICTID": "0601",
+      "STFIPS": "06",
+      "CDFIPS": "01",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 23,
+      "DISTRICTID": "0602",
+      "STFIPS": "06",
+      "CDFIPS": "02",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 24,
+      "DISTRICTID": "0603",
+      "STFIPS": "06",
+      "CDFIPS": "03",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 25,
+      "DISTRICTID": "0604",
+      "STFIPS": "06",
+      "CDFIPS": "04",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 26,
+      "DISTRICTID": "0605",
+      "STFIPS": "06",
+      "CDFIPS": "05",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 27,
+      "DISTRICTID": "0606",
+      "STFIPS": "06",
+      "CDFIPS": "06",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 28,
+      "DISTRICTID": "0607",
+      "STFIPS": "06",
+      "CDFIPS": "07",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 29,
+      "DISTRICTID": "0608",
+      "STFIPS": "06",
+      "CDFIPS": "08",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 30,
+      "DISTRICTID": "0609",
+      "STFIPS": "06",
+      "CDFIPS": "09",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 31,
+      "DISTRICTID": "0610",
+      "STFIPS": "06",
+      "CDFIPS": "10",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 32,
+      "DISTRICTID": "0611",
+      "STFIPS": "06",
+      "CDFIPS": "11",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 33,
+      "DISTRICTID": "0612",
+      "STFIPS": "06",
+      "CDFIPS": "12",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 34,
+      "DISTRICTID": "0613",
+      "STFIPS": "06",
+      "CDFIPS": "13",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 35,
+      "DISTRICTID": "0614",
+      "STFIPS": "06",
+      "CDFIPS": "14",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 36,
+      "DISTRICTID": "0615",
+      "STFIPS": "06",
+      "CDFIPS": "15",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 37,
+      "DISTRICTID": "0616",
+      "STFIPS": "06",
+      "CDFIPS": "16",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 38,
+      "DISTRICTID": "0617",
+      "STFIPS": "06",
+      "CDFIPS": "17",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 39,
+      "DISTRICTID": "0618",
+      "STFIPS": "06",
+      "CDFIPS": "18",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 40,
+      "DISTRICTID": "0619",
+      "STFIPS": "06",
+      "CDFIPS": "19",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 41,
+      "DISTRICTID": "0620",
+      "STFIPS": "06",
+      "CDFIPS": "20",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 42,
+      "DISTRICTID": "0621",
+      "STFIPS": "06",
+      "CDFIPS": "21",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 43,
+      "DISTRICTID": "0622",
+      "STFIPS": "06",
+      "CDFIPS": "22",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 44,
+      "DISTRICTID": "0623",
+      "STFIPS": "06",
+      "CDFIPS": "23",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 45,
+      "DISTRICTID": "0624",
+      "STFIPS": "06",
+      "CDFIPS": "24",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 46,
+      "DISTRICTID": "0625",
+      "STFIPS": "06",
+      "CDFIPS": "25",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 47,
+      "DISTRICTID": "0626",
+      "STFIPS": "06",
+      "CDFIPS": "26",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 48,
+      "DISTRICTID": "0627",
+      "STFIPS": "06",
+      "CDFIPS": "27",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 49,
+      "DISTRICTID": "0628",
+      "STFIPS": "06",
+      "CDFIPS": "28",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 50,
+      "DISTRICTID": "0629",
+      "STFIPS": "06",
+      "CDFIPS": "29",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 51,
+      "DISTRICTID": "0630",
+      "STFIPS": "06",
+      "CDFIPS": "30",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 52,
+      "DISTRICTID": "0631",
+      "STFIPS": "06",
+      "CDFIPS": "31",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 53,
+      "DISTRICTID": "0632",
+      "STFIPS": "06",
+      "CDFIPS": "32",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 54,
+      "DISTRICTID": "0633",
+      "STFIPS": "06",
+      "CDFIPS": "33",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 55,
+      "DISTRICTID": "0634",
+      "STFIPS": "06",
+      "CDFIPS": "34",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 56,
+      "DISTRICTID": "0635",
+      "STFIPS": "06",
+      "CDFIPS": "35",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 57,
+      "DISTRICTID": "0636",
+      "STFIPS": "06",
+      "CDFIPS": "36",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 58,
+      "DISTRICTID": "0637",
+      "STFIPS": "06",
+      "CDFIPS": "37",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 59,
+      "DISTRICTID": "0638",
+      "STFIPS": "06",
+      "CDFIPS": "38",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 60,
+      "DISTRICTID": "0639",
+      "STFIPS": "06",
+      "CDFIPS": "39",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 61,
+      "DISTRICTID": "0640",
+      "STFIPS": "06",
+      "CDFIPS": "40",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 62,
+      "DISTRICTID": "0641",
+      "STFIPS": "06",
+      "CDFIPS": "41",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 63,
+      "DISTRICTID": "0642",
+      "STFIPS": "06",
+      "CDFIPS": "42",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 64,
+      "DISTRICTID": "0643",
+      "STFIPS": "06",
+      "CDFIPS": "43",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 65,
+      "DISTRICTID": "0644",
+      "STFIPS": "06",
+      "CDFIPS": "44",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 66,
+      "DISTRICTID": "0645",
+      "STFIPS": "06",
+      "CDFIPS": "45",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 67,
+      "DISTRICTID": "0646",
+      "STFIPS": "06",
+      "CDFIPS": "46",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 68,
+      "DISTRICTID": "0647",
+      "STFIPS": "06",
+      "CDFIPS": "47",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 69,
+      "DISTRICTID": "0648",
+      "STFIPS": "06",
+      "CDFIPS": "48",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 70,
+      "DISTRICTID": "0649",
+      "STFIPS": "06",
+      "CDFIPS": "49",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 71,
+      "DISTRICTID": "0650",
+      "STFIPS": "06",
+      "CDFIPS": "50",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 72,
+      "DISTRICTID": "0651",
+      "STFIPS": "06",
+      "CDFIPS": "51",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 73,
+      "DISTRICTID": "0652",
+      "STFIPS": "06",
+      "CDFIPS": "52",
+      "STATE_ABBR": "CA"
+    },
+    {
+      "OBJECTID": 74,
+      "DISTRICTID": "0801",
+      "STFIPS": "08",
+      "CDFIPS": "01",
+      "STATE_ABBR": "CO"
+    },
+    {
+      "OBJECTID": 75,
+      "DISTRICTID": "0802",
+      "STFIPS": "08",
+      "CDFIPS": "02",
+      "STATE_ABBR": "CO"
+    },
+    {
+      "OBJECTID": 76,
+      "DISTRICTID": "0803",
+      "STFIPS": "08",
+      "CDFIPS": "03",
+      "STATE_ABBR": "CO"
+    },
+    {
+      "OBJECTID": 77,
+      "DISTRICTID": "0804",
+      "STFIPS": "08",
+      "CDFIPS": "04",
+      "STATE_ABBR": "CO"
+    },
+    {
+      "OBJECTID": 78,
+      "DISTRICTID": "0805",
+      "STFIPS": "08",
+      "CDFIPS": "05",
+      "STATE_ABBR": "CO"
+    },
+    {
+      "OBJECTID": 79,
+      "DISTRICTID": "0806",
+      "STFIPS": "08",
+      "CDFIPS": "06",
+      "STATE_ABBR": "CO"
+    },
+    {
+      "OBJECTID": 80,
+      "DISTRICTID": "0807",
+      "STFIPS": "08",
+      "CDFIPS": "07",
+      "STATE_ABBR": "CO"
+    },
+    {
+      "OBJECTID": 81,
+      "DISTRICTID": "0808",
+      "STFIPS": "08",
+      "CDFIPS": "08",
+      "STATE_ABBR": "CO"
+    },
+    {
+      "OBJECTID": 82,
+      "DISTRICTID": "0901",
+      "STFIPS": "09",
+      "CDFIPS": "01",
+      "STATE_ABBR": "CT"
+    },
+    {
+      "OBJECTID": 83,
+      "DISTRICTID": "0902",
+      "STFIPS": "09",
+      "CDFIPS": "02",
+      "STATE_ABBR": "CT"
+    },
+    {
+      "OBJECTID": 84,
+      "DISTRICTID": "0903",
+      "STFIPS": "09",
+      "CDFIPS": "03",
+      "STATE_ABBR": "CT"
+    },
+    {
+      "OBJECTID": 85,
+      "DISTRICTID": "0904",
+      "STFIPS": "09",
+      "CDFIPS": "04",
+      "STATE_ABBR": "CT"
+    },
+    {
+      "OBJECTID": 86,
+      "DISTRICTID": "0905",
+      "STFIPS": "09",
+      "CDFIPS": "05",
+      "STATE_ABBR": "CT"
+    },
+    {
+      "OBJECTID": 87,
+      "DISTRICTID": "1000",
+      "STFIPS": "10",
+      "CDFIPS": "00",
+      "STATE_ABBR": "DE"
+    },
+    {
+      "OBJECTID": 88,
+      "DISTRICTID": "1198",
+      "STFIPS": "11",
+      "CDFIPS": "98",
+      "STATE_ABBR": "DC"
+    },
+    {
+      "OBJECTID": 89,
+      "DISTRICTID": "1201",
+      "STFIPS": "12",
+      "CDFIPS": "01",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 90,
+      "DISTRICTID": "1202",
+      "STFIPS": "12",
+      "CDFIPS": "02",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 91,
+      "DISTRICTID": "1203",
+      "STFIPS": "12",
+      "CDFIPS": "03",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 92,
+      "DISTRICTID": "1204",
+      "STFIPS": "12",
+      "CDFIPS": "04",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 93,
+      "DISTRICTID": "1205",
+      "STFIPS": "12",
+      "CDFIPS": "05",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 94,
+      "DISTRICTID": "1206",
+      "STFIPS": "12",
+      "CDFIPS": "06",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 95,
+      "DISTRICTID": "1207",
+      "STFIPS": "12",
+      "CDFIPS": "07",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 96,
+      "DISTRICTID": "1208",
+      "STFIPS": "12",
+      "CDFIPS": "08",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 97,
+      "DISTRICTID": "1209",
+      "STFIPS": "12",
+      "CDFIPS": "09",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 98,
+      "DISTRICTID": "1210",
+      "STFIPS": "12",
+      "CDFIPS": "10",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 99,
+      "DISTRICTID": "1211",
+      "STFIPS": "12",
+      "CDFIPS": "11",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 100,
+      "DISTRICTID": "1212",
+      "STFIPS": "12",
+      "CDFIPS": "12",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 101,
+      "DISTRICTID": "1213",
+      "STFIPS": "12",
+      "CDFIPS": "13",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 102,
+      "DISTRICTID": "1214",
+      "STFIPS": "12",
+      "CDFIPS": "14",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 103,
+      "DISTRICTID": "1215",
+      "STFIPS": "12",
+      "CDFIPS": "15",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 104,
+      "DISTRICTID": "1216",
+      "STFIPS": "12",
+      "CDFIPS": "16",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 105,
+      "DISTRICTID": "1217",
+      "STFIPS": "12",
+      "CDFIPS": "17",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 106,
+      "DISTRICTID": "1218",
+      "STFIPS": "12",
+      "CDFIPS": "18",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 107,
+      "DISTRICTID": "1219",
+      "STFIPS": "12",
+      "CDFIPS": "19",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 108,
+      "DISTRICTID": "1220",
+      "STFIPS": "12",
+      "CDFIPS": "20",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 109,
+      "DISTRICTID": "1221",
+      "STFIPS": "12",
+      "CDFIPS": "21",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 110,
+      "DISTRICTID": "1222",
+      "STFIPS": "12",
+      "CDFIPS": "22",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 111,
+      "DISTRICTID": "1223",
+      "STFIPS": "12",
+      "CDFIPS": "23",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 112,
+      "DISTRICTID": "1224",
+      "STFIPS": "12",
+      "CDFIPS": "24",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 113,
+      "DISTRICTID": "1225",
+      "STFIPS": "12",
+      "CDFIPS": "25",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 114,
+      "DISTRICTID": "1226",
+      "STFIPS": "12",
+      "CDFIPS": "26",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 115,
+      "DISTRICTID": "1227",
+      "STFIPS": "12",
+      "CDFIPS": "27",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 116,
+      "DISTRICTID": "1228",
+      "STFIPS": "12",
+      "CDFIPS": "28",
+      "STATE_ABBR": "FL"
+    },
+    {
+      "OBJECTID": 117,
+      "DISTRICTID": "1301",
+      "STFIPS": "13",
+      "CDFIPS": "01",
+      "STATE_ABBR": "GA"
+    },
+    {
+      "OBJECTID": 118,
+      "DISTRICTID": "1302",
+      "STFIPS": "13",
+      "CDFIPS": "02",
+      "STATE_ABBR": "GA"
+    },
+    {
+      "OBJECTID": 119,
+      "DISTRICTID": "1303",
+      "STFIPS": "13",
+      "CDFIPS": "03",
+      "STATE_ABBR": "GA"
+    },
+    {
+      "OBJECTID": 120,
+      "DISTRICTID": "1304",
+      "STFIPS": "13",
+      "CDFIPS": "04",
+      "STATE_ABBR": "GA"
+    },
+    {
+      "OBJECTID": 121,
+      "DISTRICTID": "1305",
+      "STFIPS": "13",
+      "CDFIPS": "05",
+      "STATE_ABBR": "GA"
+    },
+    {
+      "OBJECTID": 122,
+      "DISTRICTID": "1306",
+      "STFIPS": "13",
+      "CDFIPS": "06",
+      "STATE_ABBR": "GA"
+    },
+    {
+      "OBJECTID": 123,
+      "DISTRICTID": "1307",
+      "STFIPS": "13",
+      "CDFIPS": "07",
+      "STATE_ABBR": "GA"
+    },
+    {
+      "OBJECTID": 124,
+      "DISTRICTID": "1308",
+      "STFIPS": "13",
+      "CDFIPS": "08",
+      "STATE_ABBR": "GA"
+    },
+    {
+      "OBJECTID": 125,
+      "DISTRICTID": "1309",
+      "STFIPS": "13",
+      "CDFIPS": "09",
+      "STATE_ABBR": "GA"
+    },
+    {
+      "OBJECTID": 126,
+      "DISTRICTID": "1310",
+      "STFIPS": "13",
+      "CDFIPS": "10",
+      "STATE_ABBR": "GA"
+    },
+    {
+      "OBJECTID": 127,
+      "DISTRICTID": "1311",
+      "STFIPS": "13",
+      "CDFIPS": "11",
+      "STATE_ABBR": "GA"
+    },
+    {
+      "OBJECTID": 128,
+      "DISTRICTID": "1312",
+      "STFIPS": "13",
+      "CDFIPS": "12",
+      "STATE_ABBR": "GA"
+    },
+    {
+      "OBJECTID": 129,
+      "DISTRICTID": "1313",
+      "STFIPS": "13",
+      "CDFIPS": "13",
+      "STATE_ABBR": "GA"
+    },
+    {
+      "OBJECTID": 130,
+      "DISTRICTID": "1314",
+      "STFIPS": "13",
+      "CDFIPS": "14",
+      "STATE_ABBR": "GA"
+    },
+    {
+      "OBJECTID": 131,
+      "DISTRICTID": "1501",
+      "STFIPS": "15",
+      "CDFIPS": "01",
+      "STATE_ABBR": "HI"
+    },
+    {
+      "OBJECTID": 132,
+      "DISTRICTID": "1502",
+      "STFIPS": "15",
+      "CDFIPS": "02",
+      "STATE_ABBR": "HI"
+    },
+    {
+      "OBJECTID": 133,
+      "DISTRICTID": "1601",
+      "STFIPS": "16",
+      "CDFIPS": "01",
+      "STATE_ABBR": "ID"
+    },
+    {
+      "OBJECTID": 134,
+      "DISTRICTID": "1602",
+      "STFIPS": "16",
+      "CDFIPS": "02",
+      "STATE_ABBR": "ID"
+    },
+    {
+      "OBJECTID": 135,
+      "DISTRICTID": "1701",
+      "STFIPS": "17",
+      "CDFIPS": "01",
+      "STATE_ABBR": "IL"
+    },
+    {
+      "OBJECTID": 136,
+      "DISTRICTID": "1702",
+      "STFIPS": "17",
+      "CDFIPS": "02",
+      "STATE_ABBR": "IL"
+    },
+    {
+      "OBJECTID": 137,
+      "DISTRICTID": "1703",
+      "STFIPS": "17",
+      "CDFIPS": "03",
+      "STATE_ABBR": "IL"
+    },
+    {
+      "OBJECTID": 138,
+      "DISTRICTID": "1704",
+      "STFIPS": "17",
+      "CDFIPS": "04",
+      "STATE_ABBR": "IL"
+    },
+    {
+      "OBJECTID": 139,
+      "DISTRICTID": "1705",
+      "STFIPS": "17",
+      "CDFIPS": "05",
+      "STATE_ABBR": "IL"
+    },
+    {
+      "OBJECTID": 140,
+      "DISTRICTID": "1706",
+      "STFIPS": "17",
+      "CDFIPS": "06",
+      "STATE_ABBR": "IL"
+    },
+    {
+      "OBJECTID": 141,
+      "DISTRICTID": "1707",
+      "STFIPS": "17",
+      "CDFIPS": "07",
+      "STATE_ABBR": "IL"
+    },
+    {
+      "OBJECTID": 142,
+      "DISTRICTID": "1708",
+      "STFIPS": "17",
+      "CDFIPS": "08",
+      "STATE_ABBR": "IL"
+    },
+    {
+      "OBJECTID": 143,
+      "DISTRICTID": "1709",
+      "STFIPS": "17",
+      "CDFIPS": "09",
+      "STATE_ABBR": "IL"
+    },
+    {
+      "OBJECTID": 144,
+      "DISTRICTID": "1710",
+      "STFIPS": "17",
+      "CDFIPS": "10",
+      "STATE_ABBR": "IL"
+    },
+    {
+      "OBJECTID": 145,
+      "DISTRICTID": "1711",
+      "STFIPS": "17",
+      "CDFIPS": "11",
+      "STATE_ABBR": "IL"
+    },
+    {
+      "OBJECTID": 146,
+      "DISTRICTID": "1712",
+      "STFIPS": "17",
+      "CDFIPS": "12",
+      "STATE_ABBR": "IL"
+    },
+    {
+      "OBJECTID": 147,
+      "DISTRICTID": "1713",
+      "STFIPS": "17",
+      "CDFIPS": "13",
+      "STATE_ABBR": "IL"
+    },
+    {
+      "OBJECTID": 148,
+      "DISTRICTID": "1714",
+      "STFIPS": "17",
+      "CDFIPS": "14",
+      "STATE_ABBR": "IL"
+    },
+    {
+      "OBJECTID": 149,
+      "DISTRICTID": "1715",
+      "STFIPS": "17",
+      "CDFIPS": "15",
+      "STATE_ABBR": "IL"
+    },
+    {
+      "OBJECTID": 150,
+      "DISTRICTID": "1716",
+      "STFIPS": "17",
+      "CDFIPS": "16",
+      "STATE_ABBR": "IL"
+    },
+    {
+      "OBJECTID": 151,
+      "DISTRICTID": "1717",
+      "STFIPS": "17",
+      "CDFIPS": "17",
+      "STATE_ABBR": "IL"
+    },
+    {
+      "OBJECTID": 152,
+      "DISTRICTID": "1801",
+      "STFIPS": "18",
+      "CDFIPS": "01",
+      "STATE_ABBR": "IN"
+    },
+    {
+      "OBJECTID": 153,
+      "DISTRICTID": "1802",
+      "STFIPS": "18",
+      "CDFIPS": "02",
+      "STATE_ABBR": "IN"
+    },
+    {
+      "OBJECTID": 154,
+      "DISTRICTID": "1803",
+      "STFIPS": "18",
+      "CDFIPS": "03",
+      "STATE_ABBR": "IN"
+    },
+    {
+      "OBJECTID": 155,
+      "DISTRICTID": "1804",
+      "STFIPS": "18",
+      "CDFIPS": "04",
+      "STATE_ABBR": "IN"
+    },
+    {
+      "OBJECTID": 156,
+      "DISTRICTID": "1805",
+      "STFIPS": "18",
+      "CDFIPS": "05",
+      "STATE_ABBR": "IN"
+    },
+    {
+      "OBJECTID": 157,
+      "DISTRICTID": "1806",
+      "STFIPS": "18",
+      "CDFIPS": "06",
+      "STATE_ABBR": "IN"
+    },
+    {
+      "OBJECTID": 158,
+      "DISTRICTID": "1807",
+      "STFIPS": "18",
+      "CDFIPS": "07",
+      "STATE_ABBR": "IN"
+    },
+    {
+      "OBJECTID": 159,
+      "DISTRICTID": "1808",
+      "STFIPS": "18",
+      "CDFIPS": "08",
+      "STATE_ABBR": "IN"
+    },
+    {
+      "OBJECTID": 160,
+      "DISTRICTID": "1809",
+      "STFIPS": "18",
+      "CDFIPS": "09",
+      "STATE_ABBR": "IN"
+    },
+    {
+      "OBJECTID": 161,
+      "DISTRICTID": "1901",
+      "STFIPS": "19",
+      "CDFIPS": "01",
+      "STATE_ABBR": "IA"
+    },
+    {
+      "OBJECTID": 162,
+      "DISTRICTID": "1902",
+      "STFIPS": "19",
+      "CDFIPS": "02",
+      "STATE_ABBR": "IA"
+    },
+    {
+      "OBJECTID": 163,
+      "DISTRICTID": "1903",
+      "STFIPS": "19",
+      "CDFIPS": "03",
+      "STATE_ABBR": "IA"
+    },
+    {
+      "OBJECTID": 164,
+      "DISTRICTID": "1904",
+      "STFIPS": "19",
+      "CDFIPS": "04",
+      "STATE_ABBR": "IA"
+    },
+    {
+      "OBJECTID": 165,
+      "DISTRICTID": "2001",
+      "STFIPS": "20",
+      "CDFIPS": "01",
+      "STATE_ABBR": "KS"
+    },
+    {
+      "OBJECTID": 166,
+      "DISTRICTID": "2002",
+      "STFIPS": "20",
+      "CDFIPS": "02",
+      "STATE_ABBR": "KS"
+    },
+    {
+      "OBJECTID": 167,
+      "DISTRICTID": "2003",
+      "STFIPS": "20",
+      "CDFIPS": "03",
+      "STATE_ABBR": "KS"
+    },
+    {
+      "OBJECTID": 168,
+      "DISTRICTID": "2004",
+      "STFIPS": "20",
+      "CDFIPS": "04",
+      "STATE_ABBR": "KS"
+    },
+    {
+      "OBJECTID": 169,
+      "DISTRICTID": "2101",
+      "STFIPS": "21",
+      "CDFIPS": "01",
+      "STATE_ABBR": "KY"
+    },
+    {
+      "OBJECTID": 170,
+      "DISTRICTID": "2102",
+      "STFIPS": "21",
+      "CDFIPS": "02",
+      "STATE_ABBR": "KY"
+    },
+    {
+      "OBJECTID": 171,
+      "DISTRICTID": "2103",
+      "STFIPS": "21",
+      "CDFIPS": "03",
+      "STATE_ABBR": "KY"
+    },
+    {
+      "OBJECTID": 172,
+      "DISTRICTID": "2104",
+      "STFIPS": "21",
+      "CDFIPS": "04",
+      "STATE_ABBR": "KY"
+    },
+    {
+      "OBJECTID": 173,
+      "DISTRICTID": "2105",
+      "STFIPS": "21",
+      "CDFIPS": "05",
+      "STATE_ABBR": "KY"
+    },
+    {
+      "OBJECTID": 174,
+      "DISTRICTID": "2106",
+      "STFIPS": "21",
+      "CDFIPS": "06",
+      "STATE_ABBR": "KY"
+    },
+    {
+      "OBJECTID": 175,
+      "DISTRICTID": "2201",
+      "STFIPS": "22",
+      "CDFIPS": "01",
+      "STATE_ABBR": "LA"
+    },
+    {
+      "OBJECTID": 176,
+      "DISTRICTID": "2202",
+      "STFIPS": "22",
+      "CDFIPS": "02",
+      "STATE_ABBR": "LA"
+    },
+    {
+      "OBJECTID": 177,
+      "DISTRICTID": "2203",
+      "STFIPS": "22",
+      "CDFIPS": "03",
+      "STATE_ABBR": "LA"
+    },
+    {
+      "OBJECTID": 178,
+      "DISTRICTID": "2204",
+      "STFIPS": "22",
+      "CDFIPS": "04",
+      "STATE_ABBR": "LA"
+    },
+    {
+      "OBJECTID": 179,
+      "DISTRICTID": "2205",
+      "STFIPS": "22",
+      "CDFIPS": "05",
+      "STATE_ABBR": "LA"
+    },
+    {
+      "OBJECTID": 180,
+      "DISTRICTID": "2206",
+      "STFIPS": "22",
+      "CDFIPS": "06",
+      "STATE_ABBR": "LA"
+    },
+    {
+      "OBJECTID": 181,
+      "DISTRICTID": "2301",
+      "STFIPS": "23",
+      "CDFIPS": "01",
+      "STATE_ABBR": "ME"
+    },
+    {
+      "OBJECTID": 182,
+      "DISTRICTID": "2302",
+      "STFIPS": "23",
+      "CDFIPS": "02",
+      "STATE_ABBR": "ME"
+    },
+    {
+      "OBJECTID": 183,
+      "DISTRICTID": "2401",
+      "STFIPS": "24",
+      "CDFIPS": "01",
+      "STATE_ABBR": "MD"
+    },
+    {
+      "OBJECTID": 184,
+      "DISTRICTID": "2402",
+      "STFIPS": "24",
+      "CDFIPS": "02",
+      "STATE_ABBR": "MD"
+    },
+    {
+      "OBJECTID": 185,
+      "DISTRICTID": "2403",
+      "STFIPS": "24",
+      "CDFIPS": "03",
+      "STATE_ABBR": "MD"
+    },
+    {
+      "OBJECTID": 186,
+      "DISTRICTID": "2404",
+      "STFIPS": "24",
+      "CDFIPS": "04",
+      "STATE_ABBR": "MD"
+    },
+    {
+      "OBJECTID": 187,
+      "DISTRICTID": "2405",
+      "STFIPS": "24",
+      "CDFIPS": "05",
+      "STATE_ABBR": "MD"
+    },
+    {
+      "OBJECTID": 188,
+      "DISTRICTID": "2406",
+      "STFIPS": "24",
+      "CDFIPS": "06",
+      "STATE_ABBR": "MD"
+    },
+    {
+      "OBJECTID": 189,
+      "DISTRICTID": "2407",
+      "STFIPS": "24",
+      "CDFIPS": "07",
+      "STATE_ABBR": "MD"
+    },
+    {
+      "OBJECTID": 190,
+      "DISTRICTID": "2408",
+      "STFIPS": "24",
+      "CDFIPS": "08",
+      "STATE_ABBR": "MD"
+    },
+    {
+      "OBJECTID": 191,
+      "DISTRICTID": "2501",
+      "STFIPS": "25",
+      "CDFIPS": "01",
+      "STATE_ABBR": "MA"
+    },
+    {
+      "OBJECTID": 192,
+      "DISTRICTID": "2502",
+      "STFIPS": "25",
+      "CDFIPS": "02",
+      "STATE_ABBR": "MA"
+    },
+    {
+      "OBJECTID": 193,
+      "DISTRICTID": "2503",
+      "STFIPS": "25",
+      "CDFIPS": "03",
+      "STATE_ABBR": "MA"
+    },
+    {
+      "OBJECTID": 194,
+      "DISTRICTID": "2504",
+      "STFIPS": "25",
+      "CDFIPS": "04",
+      "STATE_ABBR": "MA"
+    },
+    {
+      "OBJECTID": 195,
+      "DISTRICTID": "2505",
+      "STFIPS": "25",
+      "CDFIPS": "05",
+      "STATE_ABBR": "MA"
+    },
+    {
+      "OBJECTID": 196,
+      "DISTRICTID": "2506",
+      "STFIPS": "25",
+      "CDFIPS": "06",
+      "STATE_ABBR": "MA"
+    },
+    {
+      "OBJECTID": 197,
+      "DISTRICTID": "2507",
+      "STFIPS": "25",
+      "CDFIPS": "07",
+      "STATE_ABBR": "MA"
+    },
+    {
+      "OBJECTID": 198,
+      "DISTRICTID": "2508",
+      "STFIPS": "25",
+      "CDFIPS": "08",
+      "STATE_ABBR": "MA"
+    },
+    {
+      "OBJECTID": 199,
+      "DISTRICTID": "2509",
+      "STFIPS": "25",
+      "CDFIPS": "09",
+      "STATE_ABBR": "MA"
+    },
+    {
+      "OBJECTID": 200,
+      "DISTRICTID": "2601",
+      "STFIPS": "26",
+      "CDFIPS": "01",
+      "STATE_ABBR": "MI"
+    },
+    {
+      "OBJECTID": 201,
+      "DISTRICTID": "2602",
+      "STFIPS": "26",
+      "CDFIPS": "02",
+      "STATE_ABBR": "MI"
+    },
+    {
+      "OBJECTID": 202,
+      "DISTRICTID": "2603",
+      "STFIPS": "26",
+      "CDFIPS": "03",
+      "STATE_ABBR": "MI"
+    },
+    {
+      "OBJECTID": 203,
+      "DISTRICTID": "2604",
+      "STFIPS": "26",
+      "CDFIPS": "04",
+      "STATE_ABBR": "MI"
+    },
+    {
+      "OBJECTID": 204,
+      "DISTRICTID": "2605",
+      "STFIPS": "26",
+      "CDFIPS": "05",
+      "STATE_ABBR": "MI"
+    },
+    {
+      "OBJECTID": 205,
+      "DISTRICTID": "2606",
+      "STFIPS": "26",
+      "CDFIPS": "06",
+      "STATE_ABBR": "MI"
+    },
+    {
+      "OBJECTID": 206,
+      "DISTRICTID": "2607",
+      "STFIPS": "26",
+      "CDFIPS": "07",
+      "STATE_ABBR": "MI"
+    },
+    {
+      "OBJECTID": 207,
+      "DISTRICTID": "2608",
+      "STFIPS": "26",
+      "CDFIPS": "08",
+      "STATE_ABBR": "MI"
+    },
+    {
+      "OBJECTID": 208,
+      "DISTRICTID": "2609",
+      "STFIPS": "26",
+      "CDFIPS": "09",
+      "STATE_ABBR": "MI"
+    },
+    {
+      "OBJECTID": 209,
+      "DISTRICTID": "2610",
+      "STFIPS": "26",
+      "CDFIPS": "10",
+      "STATE_ABBR": "MI"
+    },
+    {
+      "OBJECTID": 210,
+      "DISTRICTID": "2611",
+      "STFIPS": "26",
+      "CDFIPS": "11",
+      "STATE_ABBR": "MI"
+    },
+    {
+      "OBJECTID": 211,
+      "DISTRICTID": "2612",
+      "STFIPS": "26",
+      "CDFIPS": "12",
+      "STATE_ABBR": "MI"
+    },
+    {
+      "OBJECTID": 212,
+      "DISTRICTID": "2613",
+      "STFIPS": "26",
+      "CDFIPS": "13",
+      "STATE_ABBR": "MI"
+    },
+    {
+      "OBJECTID": 213,
+      "DISTRICTID": "2701",
+      "STFIPS": "27",
+      "CDFIPS": "01",
+      "STATE_ABBR": "MN"
+    },
+    {
+      "OBJECTID": 214,
+      "DISTRICTID": "2702",
+      "STFIPS": "27",
+      "CDFIPS": "02",
+      "STATE_ABBR": "MN"
+    },
+    {
+      "OBJECTID": 215,
+      "DISTRICTID": "2703",
+      "STFIPS": "27",
+      "CDFIPS": "03",
+      "STATE_ABBR": "MN"
+    },
+    {
+      "OBJECTID": 216,
+      "DISTRICTID": "2704",
+      "STFIPS": "27",
+      "CDFIPS": "04",
+      "STATE_ABBR": "MN"
+    },
+    {
+      "OBJECTID": 217,
+      "DISTRICTID": "2705",
+      "STFIPS": "27",
+      "CDFIPS": "05",
+      "STATE_ABBR": "MN"
+    },
+    {
+      "OBJECTID": 218,
+      "DISTRICTID": "2706",
+      "STFIPS": "27",
+      "CDFIPS": "06",
+      "STATE_ABBR": "MN"
+    },
+    {
+      "OBJECTID": 219,
+      "DISTRICTID": "2707",
+      "STFIPS": "27",
+      "CDFIPS": "07",
+      "STATE_ABBR": "MN"
+    },
+    {
+      "OBJECTID": 220,
+      "DISTRICTID": "2708",
+      "STFIPS": "27",
+      "CDFIPS": "08",
+      "STATE_ABBR": "MN"
+    },
+    {
+      "OBJECTID": 221,
+      "DISTRICTID": "2801",
+      "STFIPS": "28",
+      "CDFIPS": "01",
+      "STATE_ABBR": "MS"
+    },
+    {
+      "OBJECTID": 222,
+      "DISTRICTID": "2802",
+      "STFIPS": "28",
+      "CDFIPS": "02",
+      "STATE_ABBR": "MS"
+    },
+    {
+      "OBJECTID": 223,
+      "DISTRICTID": "2803",
+      "STFIPS": "28",
+      "CDFIPS": "03",
+      "STATE_ABBR": "MS"
+    },
+    {
+      "OBJECTID": 224,
+      "DISTRICTID": "2804",
+      "STFIPS": "28",
+      "CDFIPS": "04",
+      "STATE_ABBR": "MS"
+    },
+    {
+      "OBJECTID": 225,
+      "DISTRICTID": "2901",
+      "STFIPS": "29",
+      "CDFIPS": "01",
+      "STATE_ABBR": "MO"
+    },
+    {
+      "OBJECTID": 226,
+      "DISTRICTID": "2902",
+      "STFIPS": "29",
+      "CDFIPS": "02",
+      "STATE_ABBR": "MO"
+    },
+    {
+      "OBJECTID": 227,
+      "DISTRICTID": "2903",
+      "STFIPS": "29",
+      "CDFIPS": "03",
+      "STATE_ABBR": "MO"
+    },
+    {
+      "OBJECTID": 228,
+      "DISTRICTID": "2904",
+      "STFIPS": "29",
+      "CDFIPS": "04",
+      "STATE_ABBR": "MO"
+    },
+    {
+      "OBJECTID": 229,
+      "DISTRICTID": "2905",
+      "STFIPS": "29",
+      "CDFIPS": "05",
+      "STATE_ABBR": "MO"
+    },
+    {
+      "OBJECTID": 230,
+      "DISTRICTID": "2906",
+      "STFIPS": "29",
+      "CDFIPS": "06",
+      "STATE_ABBR": "MO"
+    },
+    {
+      "OBJECTID": 231,
+      "DISTRICTID": "2907",
+      "STFIPS": "29",
+      "CDFIPS": "07",
+      "STATE_ABBR": "MO"
+    },
+    {
+      "OBJECTID": 232,
+      "DISTRICTID": "2908",
+      "STFIPS": "29",
+      "CDFIPS": "08",
+      "STATE_ABBR": "MO"
+    },
+    {
+      "OBJECTID": 233,
+      "DISTRICTID": "3001",
+      "STFIPS": "30",
+      "CDFIPS": "01",
+      "STATE_ABBR": "MT"
+    },
+    {
+      "OBJECTID": 234,
+      "DISTRICTID": "3002",
+      "STFIPS": "30",
+      "CDFIPS": "02",
+      "STATE_ABBR": "MT"
+    },
+    {
+      "OBJECTID": 235,
+      "DISTRICTID": "3101",
+      "STFIPS": "31",
+      "CDFIPS": "01",
+      "STATE_ABBR": "NE"
+    },
+    {
+      "OBJECTID": 236,
+      "DISTRICTID": "3102",
+      "STFIPS": "31",
+      "CDFIPS": "02",
+      "STATE_ABBR": "NE"
+    },
+    {
+      "OBJECTID": 237,
+      "DISTRICTID": "3103",
+      "STFIPS": "31",
+      "CDFIPS": "03",
+      "STATE_ABBR": "NE"
+    },
+    {
+      "OBJECTID": 238,
+      "DISTRICTID": "3201",
+      "STFIPS": "32",
+      "CDFIPS": "01",
+      "STATE_ABBR": "NV"
+    },
+    {
+      "OBJECTID": 239,
+      "DISTRICTID": "3202",
+      "STFIPS": "32",
+      "CDFIPS": "02",
+      "STATE_ABBR": "NV"
+    },
+    {
+      "OBJECTID": 240,
+      "DISTRICTID": "3203",
+      "STFIPS": "32",
+      "CDFIPS": "03",
+      "STATE_ABBR": "NV"
+    },
+    {
+      "OBJECTID": 241,
+      "DISTRICTID": "3204",
+      "STFIPS": "32",
+      "CDFIPS": "04",
+      "STATE_ABBR": "NV"
+    },
+    {
+      "OBJECTID": 242,
+      "DISTRICTID": "3301",
+      "STFIPS": "33",
+      "CDFIPS": "01",
+      "STATE_ABBR": "NH"
+    },
+    {
+      "OBJECTID": 243,
+      "DISTRICTID": "3302",
+      "STFIPS": "33",
+      "CDFIPS": "02",
+      "STATE_ABBR": "NH"
+    },
+    {
+      "OBJECTID": 244,
+      "DISTRICTID": "3401",
+      "STFIPS": "34",
+      "CDFIPS": "01",
+      "STATE_ABBR": "NJ"
+    },
+    {
+      "OBJECTID": 245,
+      "DISTRICTID": "3402",
+      "STFIPS": "34",
+      "CDFIPS": "02",
+      "STATE_ABBR": "NJ"
+    },
+    {
+      "OBJECTID": 246,
+      "DISTRICTID": "3403",
+      "STFIPS": "34",
+      "CDFIPS": "03",
+      "STATE_ABBR": "NJ"
+    },
+    {
+      "OBJECTID": 247,
+      "DISTRICTID": "3404",
+      "STFIPS": "34",
+      "CDFIPS": "04",
+      "STATE_ABBR": "NJ"
+    },
+    {
+      "OBJECTID": 248,
+      "DISTRICTID": "3405",
+      "STFIPS": "34",
+      "CDFIPS": "05",
+      "STATE_ABBR": "NJ"
+    },
+    {
+      "OBJECTID": 249,
+      "DISTRICTID": "3406",
+      "STFIPS": "34",
+      "CDFIPS": "06",
+      "STATE_ABBR": "NJ"
+    },
+    {
+      "OBJECTID": 250,
+      "DISTRICTID": "3407",
+      "STFIPS": "34",
+      "CDFIPS": "07",
+      "STATE_ABBR": "NJ"
+    },
+    {
+      "OBJECTID": 251,
+      "DISTRICTID": "3408",
+      "STFIPS": "34",
+      "CDFIPS": "08",
+      "STATE_ABBR": "NJ"
+    },
+    {
+      "OBJECTID": 252,
+      "DISTRICTID": "3409",
+      "STFIPS": "34",
+      "CDFIPS": "09",
+      "STATE_ABBR": "NJ"
+    },
+    {
+      "OBJECTID": 253,
+      "DISTRICTID": "3410",
+      "STFIPS": "34",
+      "CDFIPS": "10",
+      "STATE_ABBR": "NJ"
+    },
+    {
+      "OBJECTID": 254,
+      "DISTRICTID": "3411",
+      "STFIPS": "34",
+      "CDFIPS": "11",
+      "STATE_ABBR": "NJ"
+    },
+    {
+      "OBJECTID": 255,
+      "DISTRICTID": "3412",
+      "STFIPS": "34",
+      "CDFIPS": "12",
+      "STATE_ABBR": "NJ"
+    },
+    {
+      "OBJECTID": 256,
+      "DISTRICTID": "3501",
+      "STFIPS": "35",
+      "CDFIPS": "01",
+      "STATE_ABBR": "NM"
+    },
+    {
+      "OBJECTID": 257,
+      "DISTRICTID": "3502",
+      "STFIPS": "35",
+      "CDFIPS": "02",
+      "STATE_ABBR": "NM"
+    },
+    {
+      "OBJECTID": 258,
+      "DISTRICTID": "3503",
+      "STFIPS": "35",
+      "CDFIPS": "03",
+      "STATE_ABBR": "NM"
+    },
+    {
+      "OBJECTID": 259,
+      "DISTRICTID": "3601",
+      "STFIPS": "36",
+      "CDFIPS": "01",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 260,
+      "DISTRICTID": "3602",
+      "STFIPS": "36",
+      "CDFIPS": "02",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 261,
+      "DISTRICTID": "3603",
+      "STFIPS": "36",
+      "CDFIPS": "03",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 262,
+      "DISTRICTID": "3604",
+      "STFIPS": "36",
+      "CDFIPS": "04",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 263,
+      "DISTRICTID": "3605",
+      "STFIPS": "36",
+      "CDFIPS": "05",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 264,
+      "DISTRICTID": "3606",
+      "STFIPS": "36",
+      "CDFIPS": "06",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 265,
+      "DISTRICTID": "3607",
+      "STFIPS": "36",
+      "CDFIPS": "07",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 266,
+      "DISTRICTID": "3608",
+      "STFIPS": "36",
+      "CDFIPS": "08",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 267,
+      "DISTRICTID": "3609",
+      "STFIPS": "36",
+      "CDFIPS": "09",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 268,
+      "DISTRICTID": "3610",
+      "STFIPS": "36",
+      "CDFIPS": "10",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 269,
+      "DISTRICTID": "3611",
+      "STFIPS": "36",
+      "CDFIPS": "11",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 270,
+      "DISTRICTID": "3612",
+      "STFIPS": "36",
+      "CDFIPS": "12",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 271,
+      "DISTRICTID": "3613",
+      "STFIPS": "36",
+      "CDFIPS": "13",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 272,
+      "DISTRICTID": "3614",
+      "STFIPS": "36",
+      "CDFIPS": "14",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 273,
+      "DISTRICTID": "3615",
+      "STFIPS": "36",
+      "CDFIPS": "15",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 274,
+      "DISTRICTID": "3616",
+      "STFIPS": "36",
+      "CDFIPS": "16",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 275,
+      "DISTRICTID": "3617",
+      "STFIPS": "36",
+      "CDFIPS": "17",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 276,
+      "DISTRICTID": "3618",
+      "STFIPS": "36",
+      "CDFIPS": "18",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 277,
+      "DISTRICTID": "3619",
+      "STFIPS": "36",
+      "CDFIPS": "19",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 278,
+      "DISTRICTID": "3620",
+      "STFIPS": "36",
+      "CDFIPS": "20",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 279,
+      "DISTRICTID": "3621",
+      "STFIPS": "36",
+      "CDFIPS": "21",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 280,
+      "DISTRICTID": "3622",
+      "STFIPS": "36",
+      "CDFIPS": "22",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 281,
+      "DISTRICTID": "3623",
+      "STFIPS": "36",
+      "CDFIPS": "23",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 282,
+      "DISTRICTID": "3624",
+      "STFIPS": "36",
+      "CDFIPS": "24",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 283,
+      "DISTRICTID": "3625",
+      "STFIPS": "36",
+      "CDFIPS": "25",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 284,
+      "DISTRICTID": "3626",
+      "STFIPS": "36",
+      "CDFIPS": "26",
+      "STATE_ABBR": "NY"
+    },
+    {
+      "OBJECTID": 285,
+      "DISTRICTID": "3701",
+      "STFIPS": "37",
+      "CDFIPS": "01",
+      "STATE_ABBR": "NC"
+    },
+    {
+      "OBJECTID": 286,
+      "DISTRICTID": "3702",
+      "STFIPS": "37",
+      "CDFIPS": "02",
+      "STATE_ABBR": "NC"
+    },
+    {
+      "OBJECTID": 287,
+      "DISTRICTID": "3703",
+      "STFIPS": "37",
+      "CDFIPS": "03",
+      "STATE_ABBR": "NC"
+    },
+    {
+      "OBJECTID": 288,
+      "DISTRICTID": "3704",
+      "STFIPS": "37",
+      "CDFIPS": "04",
+      "STATE_ABBR": "NC"
+    },
+    {
+      "OBJECTID": 289,
+      "DISTRICTID": "3705",
+      "STFIPS": "37",
+      "CDFIPS": "05",
+      "STATE_ABBR": "NC"
+    },
+    {
+      "OBJECTID": 290,
+      "DISTRICTID": "3706",
+      "STFIPS": "37",
+      "CDFIPS": "06",
+      "STATE_ABBR": "NC"
+    },
+    {
+      "OBJECTID": 291,
+      "DISTRICTID": "3707",
+      "STFIPS": "37",
+      "CDFIPS": "07",
+      "STATE_ABBR": "NC"
+    },
+    {
+      "OBJECTID": 292,
+      "DISTRICTID": "3708",
+      "STFIPS": "37",
+      "CDFIPS": "08",
+      "STATE_ABBR": "NC"
+    },
+    {
+      "OBJECTID": 293,
+      "DISTRICTID": "3709",
+      "STFIPS": "37",
+      "CDFIPS": "09",
+      "STATE_ABBR": "NC"
+    },
+    {
+      "OBJECTID": 294,
+      "DISTRICTID": "3710",
+      "STFIPS": "37",
+      "CDFIPS": "10",
+      "STATE_ABBR": "NC"
+    },
+    {
+      "OBJECTID": 295,
+      "DISTRICTID": "3711",
+      "STFIPS": "37",
+      "CDFIPS": "11",
+      "STATE_ABBR": "NC"
+    },
+    {
+      "OBJECTID": 296,
+      "DISTRICTID": "3712",
+      "STFIPS": "37",
+      "CDFIPS": "12",
+      "STATE_ABBR": "NC"
+    },
+    {
+      "OBJECTID": 297,
+      "DISTRICTID": "3713",
+      "STFIPS": "37",
+      "CDFIPS": "13",
+      "STATE_ABBR": "NC"
+    },
+    {
+      "OBJECTID": 298,
+      "DISTRICTID": "3714",
+      "STFIPS": "37",
+      "CDFIPS": "14",
+      "STATE_ABBR": "NC"
+    },
+    {
+      "OBJECTID": 299,
+      "DISTRICTID": "3800",
+      "STFIPS": "38",
+      "CDFIPS": "00",
+      "STATE_ABBR": "ND"
+    },
+    {
+      "OBJECTID": 300,
+      "DISTRICTID": "3901",
+      "STFIPS": "39",
+      "CDFIPS": "01",
+      "STATE_ABBR": "OH"
+    },
+    {
+      "OBJECTID": 301,
+      "DISTRICTID": "3902",
+      "STFIPS": "39",
+      "CDFIPS": "02",
+      "STATE_ABBR": "OH"
+    },
+    {
+      "OBJECTID": 302,
+      "DISTRICTID": "3903",
+      "STFIPS": "39",
+      "CDFIPS": "03",
+      "STATE_ABBR": "OH"
+    },
+    {
+      "OBJECTID": 303,
+      "DISTRICTID": "3904",
+      "STFIPS": "39",
+      "CDFIPS": "04",
+      "STATE_ABBR": "OH"
+    },
+    {
+      "OBJECTID": 304,
+      "DISTRICTID": "3905",
+      "STFIPS": "39",
+      "CDFIPS": "05",
+      "STATE_ABBR": "OH"
+    },
+    {
+      "OBJECTID": 305,
+      "DISTRICTID": "3906",
+      "STFIPS": "39",
+      "CDFIPS": "06",
+      "STATE_ABBR": "OH"
+    },
+    {
+      "OBJECTID": 306,
+      "DISTRICTID": "3907",
+      "STFIPS": "39",
+      "CDFIPS": "07",
+      "STATE_ABBR": "OH"
+    },
+    {
+      "OBJECTID": 307,
+      "DISTRICTID": "3908",
+      "STFIPS": "39",
+      "CDFIPS": "08",
+      "STATE_ABBR": "OH"
+    },
+    {
+      "OBJECTID": 308,
+      "DISTRICTID": "3909",
+      "STFIPS": "39",
+      "CDFIPS": "09",
+      "STATE_ABBR": "OH"
+    },
+    {
+      "OBJECTID": 309,
+      "DISTRICTID": "3910",
+      "STFIPS": "39",
+      "CDFIPS": "10",
+      "STATE_ABBR": "OH"
+    },
+    {
+      "OBJECTID": 310,
+      "DISTRICTID": "3911",
+      "STFIPS": "39",
+      "CDFIPS": "11",
+      "STATE_ABBR": "OH"
+    },
+    {
+      "OBJECTID": 311,
+      "DISTRICTID": "3912",
+      "STFIPS": "39",
+      "CDFIPS": "12",
+      "STATE_ABBR": "OH"
+    },
+    {
+      "OBJECTID": 312,
+      "DISTRICTID": "3913",
+      "STFIPS": "39",
+      "CDFIPS": "13",
+      "STATE_ABBR": "OH"
+    },
+    {
+      "OBJECTID": 313,
+      "DISTRICTID": "3914",
+      "STFIPS": "39",
+      "CDFIPS": "14",
+      "STATE_ABBR": "OH"
+    },
+    {
+      "OBJECTID": 314,
+      "DISTRICTID": "3915",
+      "STFIPS": "39",
+      "CDFIPS": "15",
+      "STATE_ABBR": "OH"
+    },
+    {
+      "OBJECTID": 315,
+      "DISTRICTID": "4001",
+      "STFIPS": "40",
+      "CDFIPS": "01",
+      "STATE_ABBR": "OK"
+    },
+    {
+      "OBJECTID": 316,
+      "DISTRICTID": "4002",
+      "STFIPS": "40",
+      "CDFIPS": "02",
+      "STATE_ABBR": "OK"
+    },
+    {
+      "OBJECTID": 317,
+      "DISTRICTID": "4003",
+      "STFIPS": "40",
+      "CDFIPS": "03",
+      "STATE_ABBR": "OK"
+    },
+    {
+      "OBJECTID": 318,
+      "DISTRICTID": "4004",
+      "STFIPS": "40",
+      "CDFIPS": "04",
+      "STATE_ABBR": "OK"
+    },
+    {
+      "OBJECTID": 319,
+      "DISTRICTID": "4005",
+      "STFIPS": "40",
+      "CDFIPS": "05",
+      "STATE_ABBR": "OK"
+    },
+    {
+      "OBJECTID": 320,
+      "DISTRICTID": "4101",
+      "STFIPS": "41",
+      "CDFIPS": "01",
+      "STATE_ABBR": "OR"
+    },
+    {
+      "OBJECTID": 321,
+      "DISTRICTID": "4102",
+      "STFIPS": "41",
+      "CDFIPS": "02",
+      "STATE_ABBR": "OR"
+    },
+    {
+      "OBJECTID": 322,
+      "DISTRICTID": "4103",
+      "STFIPS": "41",
+      "CDFIPS": "03",
+      "STATE_ABBR": "OR"
+    },
+    {
+      "OBJECTID": 323,
+      "DISTRICTID": "4104",
+      "STFIPS": "41",
+      "CDFIPS": "04",
+      "STATE_ABBR": "OR"
+    },
+    {
+      "OBJECTID": 324,
+      "DISTRICTID": "4105",
+      "STFIPS": "41",
+      "CDFIPS": "05",
+      "STATE_ABBR": "OR"
+    },
+    {
+      "OBJECTID": 325,
+      "DISTRICTID": "4106",
+      "STFIPS": "41",
+      "CDFIPS": "06",
+      "STATE_ABBR": "OR"
+    },
+    {
+      "OBJECTID": 326,
+      "DISTRICTID": "4201",
+      "STFIPS": "42",
+      "CDFIPS": "01",
+      "STATE_ABBR": "PA"
+    },
+    {
+      "OBJECTID": 327,
+      "DISTRICTID": "4202",
+      "STFIPS": "42",
+      "CDFIPS": "02",
+      "STATE_ABBR": "PA"
+    },
+    {
+      "OBJECTID": 328,
+      "DISTRICTID": "4203",
+      "STFIPS": "42",
+      "CDFIPS": "03",
+      "STATE_ABBR": "PA"
+    },
+    {
+      "OBJECTID": 329,
+      "DISTRICTID": "4204",
+      "STFIPS": "42",
+      "CDFIPS": "04",
+      "STATE_ABBR": "PA"
+    },
+    {
+      "OBJECTID": 330,
+      "DISTRICTID": "4205",
+      "STFIPS": "42",
+      "CDFIPS": "05",
+      "STATE_ABBR": "PA"
+    },
+    {
+      "OBJECTID": 331,
+      "DISTRICTID": "4206",
+      "STFIPS": "42",
+      "CDFIPS": "06",
+      "STATE_ABBR": "PA"
+    },
+    {
+      "OBJECTID": 332,
+      "DISTRICTID": "4207",
+      "STFIPS": "42",
+      "CDFIPS": "07",
+      "STATE_ABBR": "PA"
+    },
+    {
+      "OBJECTID": 333,
+      "DISTRICTID": "4208",
+      "STFIPS": "42",
+      "CDFIPS": "08",
+      "STATE_ABBR": "PA"
+    },
+    {
+      "OBJECTID": 334,
+      "DISTRICTID": "4209",
+      "STFIPS": "42",
+      "CDFIPS": "09",
+      "STATE_ABBR": "PA"
+    },
+    {
+      "OBJECTID": 335,
+      "DISTRICTID": "4210",
+      "STFIPS": "42",
+      "CDFIPS": "10",
+      "STATE_ABBR": "PA"
+    },
+    {
+      "OBJECTID": 336,
+      "DISTRICTID": "4211",
+      "STFIPS": "42",
+      "CDFIPS": "11",
+      "STATE_ABBR": "PA"
+    },
+    {
+      "OBJECTID": 337,
+      "DISTRICTID": "4212",
+      "STFIPS": "42",
+      "CDFIPS": "12",
+      "STATE_ABBR": "PA"
+    },
+    {
+      "OBJECTID": 338,
+      "DISTRICTID": "4213",
+      "STFIPS": "42",
+      "CDFIPS": "13",
+      "STATE_ABBR": "PA"
+    },
+    {
+      "OBJECTID": 339,
+      "DISTRICTID": "4214",
+      "STFIPS": "42",
+      "CDFIPS": "14",
+      "STATE_ABBR": "PA"
+    },
+    {
+      "OBJECTID": 340,
+      "DISTRICTID": "4215",
+      "STFIPS": "42",
+      "CDFIPS": "15",
+      "STATE_ABBR": "PA"
+    },
+    {
+      "OBJECTID": 341,
+      "DISTRICTID": "4216",
+      "STFIPS": "42",
+      "CDFIPS": "16",
+      "STATE_ABBR": "PA"
+    },
+    {
+      "OBJECTID": 342,
+      "DISTRICTID": "4217",
+      "STFIPS": "42",
+      "CDFIPS": "17",
+      "STATE_ABBR": "PA"
+    },
+    {
+      "OBJECTID": 343,
+      "DISTRICTID": "4401",
+      "STFIPS": "44",
+      "CDFIPS": "01",
+      "STATE_ABBR": "RI"
+    },
+    {
+      "OBJECTID": 344,
+      "DISTRICTID": "4402",
+      "STFIPS": "44",
+      "CDFIPS": "02",
+      "STATE_ABBR": "RI"
+    },
+    {
+      "OBJECTID": 345,
+      "DISTRICTID": "4501",
+      "STFIPS": "45",
+      "CDFIPS": "01",
+      "STATE_ABBR": "SC"
+    },
+    {
+      "OBJECTID": 346,
+      "DISTRICTID": "4502",
+      "STFIPS": "45",
+      "CDFIPS": "02",
+      "STATE_ABBR": "SC"
+    },
+    {
+      "OBJECTID": 347,
+      "DISTRICTID": "4503",
+      "STFIPS": "45",
+      "CDFIPS": "03",
+      "STATE_ABBR": "SC"
+    },
+    {
+      "OBJECTID": 348,
+      "DISTRICTID": "4504",
+      "STFIPS": "45",
+      "CDFIPS": "04",
+      "STATE_ABBR": "SC"
+    },
+    {
+      "OBJECTID": 349,
+      "DISTRICTID": "4505",
+      "STFIPS": "45",
+      "CDFIPS": "05",
+      "STATE_ABBR": "SC"
+    },
+    {
+      "OBJECTID": 350,
+      "DISTRICTID": "4506",
+      "STFIPS": "45",
+      "CDFIPS": "06",
+      "STATE_ABBR": "SC"
+    },
+    {
+      "OBJECTID": 351,
+      "DISTRICTID": "4507",
+      "STFIPS": "45",
+      "CDFIPS": "07",
+      "STATE_ABBR": "SC"
+    },
+    {
+      "OBJECTID": 352,
+      "DISTRICTID": "4600",
+      "STFIPS": "46",
+      "CDFIPS": "00",
+      "STATE_ABBR": "SD"
+    },
+    {
+      "OBJECTID": 353,
+      "DISTRICTID": "4701",
+      "STFIPS": "47",
+      "CDFIPS": "01",
+      "STATE_ABBR": "TN"
+    },
+    {
+      "OBJECTID": 354,
+      "DISTRICTID": "4702",
+      "STFIPS": "47",
+      "CDFIPS": "02",
+      "STATE_ABBR": "TN"
+    },
+    {
+      "OBJECTID": 355,
+      "DISTRICTID": "4703",
+      "STFIPS": "47",
+      "CDFIPS": "03",
+      "STATE_ABBR": "TN"
+    },
+    {
+      "OBJECTID": 356,
+      "DISTRICTID": "4704",
+      "STFIPS": "47",
+      "CDFIPS": "04",
+      "STATE_ABBR": "TN"
+    },
+    {
+      "OBJECTID": 357,
+      "DISTRICTID": "4705",
+      "STFIPS": "47",
+      "CDFIPS": "05",
+      "STATE_ABBR": "TN"
+    },
+    {
+      "OBJECTID": 358,
+      "DISTRICTID": "4706",
+      "STFIPS": "47",
+      "CDFIPS": "06",
+      "STATE_ABBR": "TN"
+    },
+    {
+      "OBJECTID": 359,
+      "DISTRICTID": "4707",
+      "STFIPS": "47",
+      "CDFIPS": "07",
+      "STATE_ABBR": "TN"
+    },
+    {
+      "OBJECTID": 360,
+      "DISTRICTID": "4708",
+      "STFIPS": "47",
+      "CDFIPS": "08",
+      "STATE_ABBR": "TN"
+    },
+    {
+      "OBJECTID": 361,
+      "DISTRICTID": "4709",
+      "STFIPS": "47",
+      "CDFIPS": "09",
+      "STATE_ABBR": "TN"
+    },
+    {
+      "OBJECTID": 362,
+      "DISTRICTID": "4801",
+      "STFIPS": "48",
+      "CDFIPS": "01",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 363,
+      "DISTRICTID": "4802",
+      "STFIPS": "48",
+      "CDFIPS": "02",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 364,
+      "DISTRICTID": "4803",
+      "STFIPS": "48",
+      "CDFIPS": "03",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 365,
+      "DISTRICTID": "4804",
+      "STFIPS": "48",
+      "CDFIPS": "04",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 366,
+      "DISTRICTID": "4805",
+      "STFIPS": "48",
+      "CDFIPS": "05",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 367,
+      "DISTRICTID": "4806",
+      "STFIPS": "48",
+      "CDFIPS": "06",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 368,
+      "DISTRICTID": "4807",
+      "STFIPS": "48",
+      "CDFIPS": "07",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 369,
+      "DISTRICTID": "4808",
+      "STFIPS": "48",
+      "CDFIPS": "08",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 370,
+      "DISTRICTID": "4809",
+      "STFIPS": "48",
+      "CDFIPS": "09",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 371,
+      "DISTRICTID": "4810",
+      "STFIPS": "48",
+      "CDFIPS": "10",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 372,
+      "DISTRICTID": "4811",
+      "STFIPS": "48",
+      "CDFIPS": "11",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 373,
+      "DISTRICTID": "4812",
+      "STFIPS": "48",
+      "CDFIPS": "12",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 374,
+      "DISTRICTID": "4813",
+      "STFIPS": "48",
+      "CDFIPS": "13",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 375,
+      "DISTRICTID": "4814",
+      "STFIPS": "48",
+      "CDFIPS": "14",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 376,
+      "DISTRICTID": "4815",
+      "STFIPS": "48",
+      "CDFIPS": "15",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 377,
+      "DISTRICTID": "4816",
+      "STFIPS": "48",
+      "CDFIPS": "16",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 378,
+      "DISTRICTID": "4817",
+      "STFIPS": "48",
+      "CDFIPS": "17",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 379,
+      "DISTRICTID": "4818",
+      "STFIPS": "48",
+      "CDFIPS": "18",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 380,
+      "DISTRICTID": "4819",
+      "STFIPS": "48",
+      "CDFIPS": "19",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 381,
+      "DISTRICTID": "4820",
+      "STFIPS": "48",
+      "CDFIPS": "20",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 382,
+      "DISTRICTID": "4821",
+      "STFIPS": "48",
+      "CDFIPS": "21",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 383,
+      "DISTRICTID": "4822",
+      "STFIPS": "48",
+      "CDFIPS": "22",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 384,
+      "DISTRICTID": "4823",
+      "STFIPS": "48",
+      "CDFIPS": "23",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 385,
+      "DISTRICTID": "4824",
+      "STFIPS": "48",
+      "CDFIPS": "24",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 386,
+      "DISTRICTID": "4825",
+      "STFIPS": "48",
+      "CDFIPS": "25",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 387,
+      "DISTRICTID": "4826",
+      "STFIPS": "48",
+      "CDFIPS": "26",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 388,
+      "DISTRICTID": "4827",
+      "STFIPS": "48",
+      "CDFIPS": "27",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 389,
+      "DISTRICTID": "4828",
+      "STFIPS": "48",
+      "CDFIPS": "28",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 390,
+      "DISTRICTID": "4829",
+      "STFIPS": "48",
+      "CDFIPS": "29",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 391,
+      "DISTRICTID": "4830",
+      "STFIPS": "48",
+      "CDFIPS": "30",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 392,
+      "DISTRICTID": "4831",
+      "STFIPS": "48",
+      "CDFIPS": "31",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 393,
+      "DISTRICTID": "4832",
+      "STFIPS": "48",
+      "CDFIPS": "32",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 394,
+      "DISTRICTID": "4833",
+      "STFIPS": "48",
+      "CDFIPS": "33",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 395,
+      "DISTRICTID": "4834",
+      "STFIPS": "48",
+      "CDFIPS": "34",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 396,
+      "DISTRICTID": "4835",
+      "STFIPS": "48",
+      "CDFIPS": "35",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 397,
+      "DISTRICTID": "4836",
+      "STFIPS": "48",
+      "CDFIPS": "36",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 398,
+      "DISTRICTID": "4837",
+      "STFIPS": "48",
+      "CDFIPS": "37",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 399,
+      "DISTRICTID": "4838",
+      "STFIPS": "48",
+      "CDFIPS": "38",
+      "STATE_ABBR": "TX"
+    },
+    {
+      "OBJECTID": 400,
+      "DISTRICTID": "4901",
+      "STFIPS": "49",
+      "CDFIPS": "01",
+      "STATE_ABBR": "UT"
+    },
+    {
+      "OBJECTID": 401,
+      "DISTRICTID": "4902",
+      "STFIPS": "49",
+      "CDFIPS": "02",
+      "STATE_ABBR": "UT"
+    },
+    {
+      "OBJECTID": 402,
+      "DISTRICTID": "4903",
+      "STFIPS": "49",
+      "CDFIPS": "03",
+      "STATE_ABBR": "UT"
+    },
+    {
+      "OBJECTID": 403,
+      "DISTRICTID": "4904",
+      "STFIPS": "49",
+      "CDFIPS": "04",
+      "STATE_ABBR": "UT"
+    },
+    {
+      "OBJECTID": 404,
+      "DISTRICTID": "5000",
+      "STFIPS": "50",
+      "CDFIPS": "00",
+      "STATE_ABBR": "VT"
+    },
+    {
+      "OBJECTID": 405,
+      "DISTRICTID": "5101",
+      "STFIPS": "51",
+      "CDFIPS": "01",
+      "STATE_ABBR": "VA"
+    },
+    {
+      "OBJECTID": 406,
+      "DISTRICTID": "5102",
+      "STFIPS": "51",
+      "CDFIPS": "02",
+      "STATE_ABBR": "VA"
+    },
+    {
+      "OBJECTID": 407,
+      "DISTRICTID": "5103",
+      "STFIPS": "51",
+      "CDFIPS": "03",
+      "STATE_ABBR": "VA"
+    },
+    {
+      "OBJECTID": 408,
+      "DISTRICTID": "5104",
+      "STFIPS": "51",
+      "CDFIPS": "04",
+      "STATE_ABBR": "VA"
+    },
+    {
+      "OBJECTID": 409,
+      "DISTRICTID": "5105",
+      "STFIPS": "51",
+      "CDFIPS": "05",
+      "STATE_ABBR": "VA"
+    },
+    {
+      "OBJECTID": 410,
+      "DISTRICTID": "5106",
+      "STFIPS": "51",
+      "CDFIPS": "06",
+      "STATE_ABBR": "VA"
+    },
+    {
+      "OBJECTID": 411,
+      "DISTRICTID": "5107",
+      "STFIPS": "51",
+      "CDFIPS": "07",
+      "STATE_ABBR": "VA"
+    },
+    {
+      "OBJECTID": 412,
+      "DISTRICTID": "5108",
+      "STFIPS": "51",
+      "CDFIPS": "08",
+      "STATE_ABBR": "VA"
+    },
+    {
+      "OBJECTID": 413,
+      "DISTRICTID": "5109",
+      "STFIPS": "51",
+      "CDFIPS": "09",
+      "STATE_ABBR": "VA"
+    },
+    {
+      "OBJECTID": 414,
+      "DISTRICTID": "5110",
+      "STFIPS": "51",
+      "CDFIPS": "10",
+      "STATE_ABBR": "VA"
+    },
+    {
+      "OBJECTID": 415,
+      "DISTRICTID": "5111",
+      "STFIPS": "51",
+      "CDFIPS": "11",
+      "STATE_ABBR": "VA"
+    },
+    {
+      "OBJECTID": 416,
+      "DISTRICTID": "5301",
+      "STFIPS": "53",
+      "CDFIPS": "01",
+      "STATE_ABBR": "WA"
+    },
+    {
+      "OBJECTID": 417,
+      "DISTRICTID": "5302",
+      "STFIPS": "53",
+      "CDFIPS": "02",
+      "STATE_ABBR": "WA"
+    },
+    {
+      "OBJECTID": 418,
+      "DISTRICTID": "5303",
+      "STFIPS": "53",
+      "CDFIPS": "03",
+      "STATE_ABBR": "WA"
+    },
+    {
+      "OBJECTID": 419,
+      "DISTRICTID": "5304",
+      "STFIPS": "53",
+      "CDFIPS": "04",
+      "STATE_ABBR": "WA"
+    },
+    {
+      "OBJECTID": 420,
+      "DISTRICTID": "5305",
+      "STFIPS": "53",
+      "CDFIPS": "05",
+      "STATE_ABBR": "WA"
+    },
+    {
+      "OBJECTID": 421,
+      "DISTRICTID": "5306",
+      "STFIPS": "53",
+      "CDFIPS": "06",
+      "STATE_ABBR": "WA"
+    },
+    {
+      "OBJECTID": 422,
+      "DISTRICTID": "5307",
+      "STFIPS": "53",
+      "CDFIPS": "07",
+      "STATE_ABBR": "WA"
+    },
+    {
+      "OBJECTID": 423,
+      "DISTRICTID": "5308",
+      "STFIPS": "53",
+      "CDFIPS": "08",
+      "STATE_ABBR": "WA"
+    },
+    {
+      "OBJECTID": 424,
+      "DISTRICTID": "5309",
+      "STFIPS": "53",
+      "CDFIPS": "09",
+      "STATE_ABBR": "WA"
+    },
+    {
+      "OBJECTID": 425,
+      "DISTRICTID": "5310",
+      "STFIPS": "53",
+      "CDFIPS": "10",
+      "STATE_ABBR": "WA"
+    },
+    {
+      "OBJECTID": 426,
+      "DISTRICTID": "5401",
+      "STFIPS": "54",
+      "CDFIPS": "01",
+      "STATE_ABBR": "WV"
+    },
+    {
+      "OBJECTID": 427,
+      "DISTRICTID": "5402",
+      "STFIPS": "54",
+      "CDFIPS": "02",
+      "STATE_ABBR": "WV"
+    },
+    {
+      "OBJECTID": 428,
+      "DISTRICTID": "5501",
+      "STFIPS": "55",
+      "CDFIPS": "01",
+      "STATE_ABBR": "WI"
+    },
+    {
+      "OBJECTID": 429,
+      "DISTRICTID": "5502",
+      "STFIPS": "55",
+      "CDFIPS": "02",
+      "STATE_ABBR": "WI"
+    },
+    {
+      "OBJECTID": 430,
+      "DISTRICTID": "5503",
+      "STFIPS": "55",
+      "CDFIPS": "03",
+      "STATE_ABBR": "WI"
+    },
+    {
+      "OBJECTID": 431,
+      "DISTRICTID": "5504",
+      "STFIPS": "55",
+      "CDFIPS": "04",
+      "STATE_ABBR": "WI"
+    },
+    {
+      "OBJECTID": 432,
+      "DISTRICTID": "5505",
+      "STFIPS": "55",
+      "CDFIPS": "05",
+      "STATE_ABBR": "WI"
+    },
+    {
+      "OBJECTID": 433,
+      "DISTRICTID": "5506",
+      "STFIPS": "55",
+      "CDFIPS": "06",
+      "STATE_ABBR": "WI"
+    },
+    {
+      "OBJECTID": 434,
+      "DISTRICTID": "5507",
+      "STFIPS": "55",
+      "CDFIPS": "07",
+      "STATE_ABBR": "WI"
+    },
+    {
+      "OBJECTID": 435,
+      "DISTRICTID": "5508",
+      "STFIPS": "55",
+      "CDFIPS": "08",
+      "STATE_ABBR": "WI"
+    },
+    {
+      "OBJECTID": 436,
+      "DISTRICTID": "5600",
+      "STFIPS": "56",
+      "CDFIPS": "00",
+      "STATE_ABBR": "WY"
+    }
+  ],
+  "source": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/USA_119th_Congressional_Districts_no_territories/FeatureServer/0/query?where=1%3D1&outFields=OBJECTID,DISTRICTID,STFIPS,CDFIPS,STATE_ABBR&returnGeometry=false&f=json"
+}
