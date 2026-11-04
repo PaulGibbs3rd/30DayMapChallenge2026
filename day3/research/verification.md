@@ -27,3 +27,7 @@ The provider reported zero votes during QA. Positive vote leaders, ties, close r
 - Alaska’s at-large seat selected as `ak-al`. Mobile checks at 390 × 844 showed no horizontal overflow.
 - The House map includes an always-visible 119th Congress vintage notice; its boundaries are not asserted to be identical to 2026 election geography.
 - The expanded election suite contains 16 checks.
+
+## 120th Congress replacement
+
+Replaced the previous layer with Census TIGERweb Labels/MapServer/40 (120th Congress, January 1, 2026 vintage). Verified all 435 voting district joins using STATE/CD120 and rendering via GEOID. Excluded non-voting 98 and water-only ZZ records. The existing 16 data checks pass against the refreshed Census join manifest.

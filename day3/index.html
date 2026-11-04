@@ -6,7 +6,7 @@
 <title>Election night atlas · Day 03</title>
 <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./styles.css">
 <!-- Official @arcgis/create CDN starter; SDK 5.1 includes Calcite and map components. -->
-<script type="module" src="https://js.arcgis.com/5.1/"></script><script type="module" src="./app.js"></script>
+<script type="module" src="https://js.arcgis.com/5.1/"></script><script type="module" src="./app.js?v=120-20261103"></script>
 </head>
 <body><calcite-shell>
 <header slot="header" class="masthead">
@@ -33,7 +33,7 @@
 <div class="map-caption"><span id="boundary-caption">STATE BOUNDARIES · US CENSUS / ESRI</span><span>Albers equal-area projection</span></div></div>
 <div class="legend" aria-label="Map legend"><span><i class="swatch dem"></i>Democratic lead</span><span><i class="swatch gop"></i>Republican lead</span><span><i class="swatch other"></i>Other lead</span><span><i class="swatch tie"></i>Tied</span><span><i class="swatch awaiting"></i>Awaiting results</span><span><i class="swatch no-race"></i>No contest in feed</span></div>
 <p id="map-note" class="map-note">Fill shows the leading candidate’s party. A lead is not a call. Calls appear in the results panel.</p>
-<p id="boundary-notice" class="boundary-notice" hidden><a href="https://www.arcgis.com/home/item.html?id=2bdcd2410ac34b1c859025d49cacaf87" target="_blank" rel="noopener">119th Congress boundaries (2025–2027)</a> · May differ from 2026 election districts after redistricting.</p>
+<p id="boundary-notice" class="boundary-notice" hidden><a href="https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Labels/MapServer/40" target="_blank" rel="noopener">120th Congress boundaries · US Census TIGERweb</a> · January 1, 2026 vintage</p>
 <footer class="map-footer"><span>Results: <a href="https://civicapi.org/results" target="_blank" rel="noopener">CivicAPI ↗</a> · Unofficial returns</span><span id="source-time">Source timestamp pending</span></footer>
 </section>
 <aside class="results-workspace" aria-label="State election results">
@@ -55,7 +55,7 @@
 <p><strong>Senate and governor:</strong> fill shows the leading candidate’s party. If multiple contests are supplied for one state, fill summarizes their reported votes by party; individual calls remain separate.</p>
 <p>Calls use the provider’s <code>winner</code> flag. Vote percentages use reported candidate vote totals. Reporting percentages come from the provider and do not necessarily measure ballots counted. Zero votes never imply a winner. Close races have reported votes, no call, and a top-two margin of at most 5 percentage points; early margins can change.</p>
 <p>Called counts include only contests in these Election Day feeds. They exclude seats not up for election and do not indicate control of Congress. The app rejects test data and a mismatched election date. API failures use an explicitly labeled saved snapshot when available. Check both the fetch time and source update time.</p>
-<p>Senate and governor polygons use the supplied <a href="https://www.arcgis.com/home/item.html?id=1612d351695b467eba75fdf82c10884f" target="_blank" rel="noopener">US State Boundaries layer</a>, derived from 2006 Census TIGER/Line geography and shared by Esri for educational use. House uses the supplied <a href="https://www.arcgis.com/home/item.html?id=2bdcd2410ac34b1c859025d49cacaf87" target="_blank" rel="noopener">USA 119th Congressional Districts layer</a>, credited to Esri, the US Census Bureau and House of Representatives. This boundary vintage represents the Congress beginning January 3, 2025; the 2026 election elects the 120th Congress, and redistricting may change boundaries. A matching district identifier does not verify identical 2026 geography. The layer’s incumbent name and party fields are not election results and are not used to color the map. DC and territories are excluded to match the 435 voting-seat feed. Alaska and Hawaii have dedicated extent controls.</p>
+<p>Senate and governor polygons use the supplied <a href="https://www.arcgis.com/home/item.html?id=1612d351695b467eba75fdf82c10884f" target="_blank" rel="noopener">US State Boundaries layer</a>, derived from 2006 Census TIGER/Line geography and shared by Esri for educational use. House uses the supplied <a href="https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Labels/MapServer/40" target="_blank" rel="noopener">US Census TIGERweb 120th Congressional Districts layer</a>, identified by the Census service as January 1, 2026 vintage. State FIPS and congressional district codes join boundaries to CivicAPI results. Non-voting districts and water-only areas are excluded to match the 435 voting-seat feed. Alaska and Hawaii have dedicated extent controls.</p>
 <p><a href="https://civicapi.org/api-documentation/" target="_blank" rel="noopener">CivicAPI documentation ↗</a> · <a href="./readme.md" target="_blank">Project notes ↗</a></p></div>
 <calcite-button id="close-about" slot="footer-end">Back to the map</calcite-button></calcite-dialog>
 </calcite-shell><noscript>This map requires JavaScript. Visit <a href="https://civicapi.org/results">CivicAPI results</a>.</noscript></body></html>

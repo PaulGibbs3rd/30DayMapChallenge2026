@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { OFFICES, validateFeed, racesFromFeed, raceStatus, stateSummary, filterRaces, callCounts, districtRaceKey, party, escapeHTML } from '../model.js';
+import { OFFICES, validateFeed, racesFromFeed, raceStatus, stateSummary, filterRaces, callCounts, districtRaceKey, DISTRICT_LAYER_URL, party, escapeHTML } from '../model.js';
 
 const candidate = (name, p, votes, winner = false) => ({ name, party: p, votes, winner });
 let checks = 0;
@@ -77,13 +77,17 @@ check('test data, wrong dates, wrong offices and malformed geographies are rejec
 check('provider text is escaped before insertion in markup', () => assert.equal(escapeHTML('<img src=x onerror="alert(1)">'), '&lt;img src=x onerror=&quot;alert(1)&quot;&gt;'));
 const districtJoin = JSON.parse(await readFile(new URL('../data/district-join.json',import.meta.url),'utf8'));
 check('all 435 supplied voting district IDs join one-to-one to House races', () => {
+  assert.equal(districtJoin.source,DISTRICT_LAYER_URL);
+  assert(districtJoin.districts.every(d=>d.CDSESSN==='120'));
   const keys=districtJoin.districts.map(districtRaceKey).filter(Boolean);
   assert.equal(keys.length,435); assert.equal(new Set(keys).size,435);
   assert.deepEqual([...keys].sort(),racesFromFeed(snapshots.house,'house').map(r=>r.key).sort());
 });
 check('at-large districts normalize 00 to al and exclude DC and invalid codes', () => {
-  for (const abbr of ['AK','DE','ND','SD','VT','WY']) assert.equal(districtRaceKey({STATE_ABBR:abbr,CDFIPS:'00'}),abbr.toLowerCase()+'-al');
-  assert.equal(districtRaceKey({STATE_ABBR:'CA',CDFIPS:'1'}),'ca-01');
+  for (const [fips,abbr] of [['02','AK'],['10','DE'],['38','ND'],['46','SD'],['50','VT'],['56','WY']]) assert.equal(districtRaceKey({STATE:fips,CD120:'00'}),abbr.toLowerCase()+'-al');
+  assert.equal(districtRaceKey({STATE:'06',CD120:'1'}),'ca-01');
+  assert.equal(districtRaceKey({STATE:'17',CD120:'ZZ'}),null);
+  assert.equal(districtRaceKey({STATE:'72',CD120:'98'}),null);
   for(const attributes of [{STATE_ABBR:'DC',CDFIPS:'98'},{STATE_ABBR:'CA',CDFIPS:'x'},{STATE_ABBR:'CA',CDFIPS:'99'},{STATE_ABBR:'XX',CDFIPS:'01'}]) assert.equal(districtRaceKey(attributes),null);
 });
 console.log(`Passed ${checks} election data and interpretation checks.`);

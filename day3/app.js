@@ -1,4 +1,4 @@
-import { API, OFFICES, COLORS, STATES, validateFeed, racesFromFeed, stateSummary, filterRaces, callCounts, districtRaceKey, party, number, escapeHTML as esc } from './model.js';
+import { API, OFFICES, COLORS, STATES, validateFeed, racesFromFeed, stateSummary, filterRaces, callCounts, districtRaceKey, districtState, DISTRICT_LAYER_URL, party, number, escapeHTML as esc } from './model.js?v=120-20261103';
 
 const $ = id => document.getElementById(id);
 const fmt = n => new Intl.NumberFormat('en-US').format(n);
@@ -43,7 +43,7 @@ function render() {
   $('seat-track').innerHTML = ['DEM','OTHER','uncalled','GOP'].map(k => `<span style="width:${races.length ? counts[k]/races.length*100 : 0}%;background:${COLORS[k] || '#3f4d60'}"></span>`).join('');
   $('map-note').textContent = office === 'house' ? 'District fill shows the leading candidate’s party. Select a district for its race. A lead is not a call.' : 'Fill shows the leading candidate’s party. A lead is not a call. Calls appear in the results panel.';
   $('boundary-notice').hidden = office !== 'house';
-  $('boundary-caption').textContent = office === 'house' ? '119TH CONGRESS DISTRICTS · ESRI / US CENSUS' : 'STATE BOUNDARIES · US CENSUS / ESRI';
+  $('boundary-caption').textContent = office === 'house' ? '120TH CONGRESS DISTRICTS · US CENSUS TIGERWEB' : 'STATE BOUNDARIES · US CENSUS / ESRI';
   $('district').hidden = office !== 'house';
   const hintContext = `${office}/${selectedState}/${selectedDistrict}`;
   if (hintContext !== mapHintContext) {
@@ -116,16 +116,16 @@ function updateMap(races, filtered) {
   highlight?.remove(); highlight = null;
   if (!activeLayer) return;
   const byKey = new Map(races.map(r => [r.key, r]));
-  activeLayer.renderer = { type: 'unique-value', field: house ? 'DISTRICTID' : 'STATE_ABBR', defaultSymbol: symbol(COLORS.ERROR), uniqueValueInfos: features.map(g => {
-    const abbr = g.attributes.STATE_ABBR, key = g.attributes.RACE_KEY;
+  activeLayer.renderer = { type: 'unique-value', field: house ? 'GEOID' : 'STATE_ABBR', defaultSymbol: symbol(COLORS.ERROR), uniqueValueInfos: features.map(g => {
+    const abbr = districtState(g.attributes), key = g.attributes.RACE_KEY;
     const summary = !feeds[office].data ? { color: 'ERROR', text: 'Feed unavailable' } : house ? byKey.get(key) || { color: 'NONE', text: 'No contest in this feed' } : stateSummary(races.filter(r => r.state === abbr), office);
-    return { value: house ? g.attributes.DISTRICTID : abbr, label: house ? key.toUpperCase() : STATES[abbr], symbol: symbol(COLORS[summary.color]) };
+    return { value: house ? g.attributes.GEOID : abbr, label: house ? key.toUpperCase() : STATES[abbr], symbol: symbol(COLORS[summary.color]) };
   }) };
   if (view) {
     const active = selectedState || selectedDistrict || $('search').value || $('filter').value !== 'all';
     const matching = new Set(filtered.map(r => house ? r.key : r.state));
-    view.featureEffect = active ? { filter: { objectIds: features.filter(g => matching.has(house ? g.attributes.RACE_KEY : g.attributes.STATE_ABBR)).map(g => g.getObjectId()) }, excludedEffect: 'opacity(23%)' } : null;
-    const selected = house ? features.filter(g => selectedDistrict ? g.attributes.RACE_KEY === selectedDistrict : g.attributes.STATE_ABBR === selectedState) : features.filter(g => g.attributes.STATE_ABBR === selectedState);
+    view.featureEffect = active ? { filter: { objectIds: features.filter(g => matching.has(house ? g.attributes.RACE_KEY : districtState(g.attributes))).map(g => g.getObjectId()) }, excludedEffect: 'opacity(23%)' } : null;
+    const selected = house ? features.filter(g => selectedDistrict ? g.attributes.RACE_KEY === selectedDistrict : districtState(g.attributes) === selectedState) : features.filter(g => districtState(g.attributes) === selectedState);
     if (selected.length) highlight = view.highlight(selected.map(g => g.getObjectId()));
   }
 }
@@ -134,11 +134,11 @@ async function loadDistricts() {
   if (!mapReady || districtLayer || districtLoading) return;
   districtLoading = true; districtError = ''; render();
   try {
-    const source = new FeatureLayerClass({ portalItem: { id: '2bdcd2410ac34b1c859025d49cacaf87' }, layerId: 0, definitionExpression: "STATE_ABBR <> 'DC'", outFields: ['OBJECTID','DISTRICTID','CDFIPS','STATE_ABBR'], popupEnabled: false, minScale: 0 });
+    const source = new FeatureLayerClass({ url: DISTRICT_LAYER_URL, definitionExpression: "CDSESSN = '120' AND CD120 NOT IN ('98', 'ZZ')", outFields: ['OBJECTID','GEOID','STATE','CD120','CDSESSN'], popupEnabled: false, minScale: 0 });
     await source.load();
     const query = source.createQuery();
-    query.where = "STATE_ABBR <> 'DC'";
-    query.outFields = ['OBJECTID', 'DISTRICTID', 'CDFIPS', 'STATE_ABBR'];
+    query.where = "CDSESSN = '120' AND CD120 NOT IN ('98', 'ZZ')";
+    query.outFields = ['OBJECTID', 'GEOID', 'STATE', 'CD120', 'CDSESSN'];
     query.returnGeometry = false; // Let FeatureLayer stream geometry at the view's resolution.
     const response = await source.queryFeatures(query);
     if (response.exceededTransferLimit) throw new Error('District identifier response was truncated.');
@@ -146,7 +146,7 @@ async function loadDistricts() {
     for (const g of districtGraphics) g.attributes.RACE_KEY = districtRaceKey(g.attributes);
     if (districtGraphics.length !== 435 || new Set(districtGraphics.map(g => g.attributes.RACE_KEY)).size !== 435) throw new Error('Expected 435 distinct voting district boundaries.');
     districtLayer = source;
-    districtLayer.title = '119th Congress district boundaries · House results';
+    districtLayer.title = '120th Congress district boundaries · House results';
     districtLayer.visible = office === 'house';
     districtLayer.renderer = {type:'simple',symbol:symbol(COLORS.WAIT)};
     $('map').map.add(districtLayer);
@@ -182,7 +182,7 @@ const home = { target: { xmin: -2500000, ymin: -1500000, xmax: 2350000, ymax: 15
 function zoomState(abbr) {
   // The service has already projected every polygon to Albers, so even Alaska's
   // antimeridian islands have a usable projected extent. Fit it at every size.
-  const g = graphics.find(g => g.attributes.STATE_ABBR === abbr);
+  const g = graphics.find(g => districtState(g.attributes) === abbr);
   if (g) go(g.geometry.extent.expand(1.3));
 }
 function selectState(abbr, zoom = true) { districtZoomSequence++; selectedDistrict = ''; selectedState = abbr; $('state').value = abbr; $('results').scrollTop = 0; shareState(); render(); if (zoom && abbr) zoomState(abbr); }
@@ -213,7 +213,7 @@ try {
   await source.load();
   const query = source.createQuery(); query.where = '1=1'; query.outFields = ['FID', 'NAME', 'STATE_ABBR']; query.returnGeometry = true; query.outSpatialReference = { wkid: 102003 };
   const response = await source.queryFeatures(query);
-  graphics = response.features.filter(g => Object.hasOwn(STATES, g.attributes.STATE_ABBR));
+  graphics = response.features.filter(g => Object.hasOwn(STATES, districtState(g.attributes)));
   if (graphics.length !== 50) throw new Error(`Expected 50 state polygons, received ${graphics.length}.`);
   layer = new FeatureLayer({ source: graphics, objectIdField: 'FID', geometryType: 'polygon', spatialReference: { wkid: 102003 }, fields: [{ name: 'FID', type: 'oid' }, { name: 'NAME', type: 'string' }, { name: 'STATE_ABBR', type: 'string' }], title: 'Election Day state results', copyright: 'US Census Bureau / Esri · Educational use', popupEnabled: false, renderer: { type: 'simple', symbol: symbol(COLORS.WAIT) } });
   const mapElement = $('map'); mapElement.spatialReference = { wkid: 102003 }; mapElement.background = { color: [16,25,37,0] }; mapElement.map = new Map({ basemap: { baseLayers: [] }, layers: [layer] }); mapElement.extent = homeExtent;
@@ -221,13 +221,13 @@ try {
   mapElement.constraints = { minScale: 120000000, maxScale: 100000, rotationEnabled: false };
   layerView = await mapElement.whenLayerView(layer);
   $('map-loading').hidden = true; render(); if (selectedState) zoomState(selectedState);
-  mapElement.addEventListener('arcgisViewClick', async event => { const clickedOffice = office; const hit = await mapElement.hitTest(event.detail, { include: [office === 'house' ? districtLayer : layer].filter(Boolean) }); if (clickedOffice !== office) return; const g = hit.results.find(r => r.graphic)?.graphic; if (g) { if (office === 'house') selectDistrict(districtRaceKey(g.attributes), false); else selectState(g.attributes.STATE_ABBR, false); } });
+  mapElement.addEventListener('arcgisViewClick', async event => { const clickedOffice = office; const hit = await mapElement.hitTest(event.detail, { include: [office === 'house' ? districtLayer : layer].filter(Boolean) }); if (clickedOffice !== office) return; const g = hit.results.find(r => r.graphic)?.graphic; if (g) { if (office === 'house') selectDistrict(districtRaceKey(g.attributes), false); else selectState(districtState(g.attributes), false); } });
   mapElement.addEventListener('arcgisViewPointerMove', async event => {
     const sequence = ++pointerSequence, hoveredOffice = office;
     const hit = await mapElement.hitTest(event.detail, { include: [office === 'house' ? districtLayer : layer].filter(Boolean) }); if (sequence !== pointerSequence || hoveredOffice !== office) return;
     const g = hit.results.find(r => r.graphic)?.graphic;
     if (!g) { $('hover').textContent = office === 'house' ? 'Choose a congressional district on the map or in the list' : 'Choose a state on the map or in the list'; return; }
-    const abbr = g.attributes.STATE_ABBR;
+    const abbr = districtState(g.attributes);
     if (office === 'house') {
       const key = districtRaceKey(g.attributes), r = getRaces().find(r => r.key === key);
       const status = !feeds.house.data ? 'Feed unavailable' : !r ? 'No contest in this feed' : r.winner ? r.winner.name + ' called by CivicAPI' : r.total === 0 ? 'Awaiting results' : r.color === 'TIE' ? 'Tied' : r.leader.name + ' leads (' + r.leader.party + ')';

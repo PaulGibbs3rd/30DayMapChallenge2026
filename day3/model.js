@@ -11,10 +11,13 @@ export const number = v => Number.isFinite(Number(v)) && Number(v) >= 0 ? Number
 export const party = value => /^democrat(ic)?(?:$|[ -])/i.test(value || '') ? 'DEM' : /^republican(?:$|[ -])/i.test(value || '') ? 'GOP' : 'OTHER';
 export const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
+export const DISTRICT_LAYER_URL = 'https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Labels/MapServer/40';
+const FIPS_TO_STATE = Object.fromEntries('01:AL|02:AK|04:AZ|05:AR|06:CA|08:CO|09:CT|10:DE|12:FL|13:GA|15:HI|16:ID|17:IL|18:IN|19:IA|20:KS|21:KY|22:LA|23:ME|24:MD|25:MA|26:MI|27:MN|28:MS|29:MO|30:MT|31:NE|32:NV|33:NH|34:NJ|35:NM|36:NY|37:NC|38:ND|39:OH|40:OK|41:OR|42:PA|44:RI|45:SC|46:SD|47:TN|48:TX|49:UT|50:VT|51:VA|53:WA|54:WV|55:WI|56:WY'.split('|').map(v=>v.split(':')));
+export const districtState = attributes => attributes.STATE_ABBR || FIPS_TO_STATE[String(attributes.STATE ?? '').padStart(2,'0')] || '';
 // Census uses 00 for at-large seats; CivicAPI uses the suffix "al".
 export function districtRaceKey(attributes) {
-  const state = String(attributes.STATE_ABBR || '').toUpperCase();
-  const district = String(attributes.CDFIPS ?? '').trim();
+  const state = String(districtState(attributes)).toUpperCase();
+  const district = String(attributes.CD120 ?? attributes.CDFIPS ?? '').trim();
   if (!Object.hasOwn(STATES, state) || !/^\d{1,2}$/.test(district) || Number(district) > 52) return null;
   return `${state.toLowerCase()}-${Number(district) === 0 ? 'al' : district.padStart(2, '0')}`;
 }

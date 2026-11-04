@@ -1,3058 +1,3114 @@
 {
-  "fetchedAt": "2026-11-03T17:55:27.7374348Z",
   "districts": [
     {
       "OBJECTID": 1,
-      "DISTRICTID": "0101",
-      "STFIPS": "01",
-      "CDFIPS": "01",
-      "STATE_ABBR": "AL"
+      "GEOID": "1309",
+      "STATE": "13",
+      "CD120": "09",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 2,
-      "DISTRICTID": "0102",
-      "STFIPS": "01",
-      "CDFIPS": "02",
-      "STATE_ABBR": "AL"
+      "GEOID": "1313",
+      "STATE": "13",
+      "CD120": "13",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 3,
-      "DISTRICTID": "0103",
-      "STFIPS": "01",
-      "CDFIPS": "03",
-      "STATE_ABBR": "AL"
+      "GEOID": "1303",
+      "STATE": "13",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 4,
-      "DISTRICTID": "0104",
-      "STFIPS": "01",
-      "CDFIPS": "04",
-      "STATE_ABBR": "AL"
+      "GEOID": "1314",
+      "STATE": "13",
+      "CD120": "14",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 5,
-      "DISTRICTID": "0105",
-      "STFIPS": "01",
-      "CDFIPS": "05",
-      "STATE_ABBR": "AL"
+      "GEOID": "1301",
+      "STATE": "13",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 6,
-      "DISTRICTID": "0106",
-      "STFIPS": "01",
-      "CDFIPS": "06",
-      "STATE_ABBR": "AL"
+      "GEOID": "1308",
+      "STATE": "13",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 7,
-      "DISTRICTID": "0107",
-      "STFIPS": "01",
-      "CDFIPS": "07",
-      "STATE_ABBR": "AL"
+      "GEOID": "1312",
+      "STATE": "13",
+      "CD120": "12",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 8,
-      "DISTRICTID": "0200",
-      "STFIPS": "02",
-      "CDFIPS": "00",
-      "STATE_ABBR": "AK"
+      "GEOID": "1305",
+      "STATE": "13",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 9,
-      "DISTRICTID": "0401",
-      "STFIPS": "04",
-      "CDFIPS": "01",
-      "STATE_ABBR": "AZ"
+      "GEOID": "1306",
+      "STATE": "13",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 10,
-      "DISTRICTID": "0402",
-      "STFIPS": "04",
-      "CDFIPS": "02",
-      "STATE_ABBR": "AZ"
+      "GEOID": "1302",
+      "STATE": "13",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 11,
-      "DISTRICTID": "0403",
-      "STFIPS": "04",
-      "CDFIPS": "03",
-      "STATE_ABBR": "AZ"
+      "GEOID": "1310",
+      "STATE": "13",
+      "CD120": "10",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 12,
-      "DISTRICTID": "0404",
-      "STFIPS": "04",
-      "CDFIPS": "04",
-      "STATE_ABBR": "AZ"
+      "GEOID": "1304",
+      "STATE": "13",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 13,
-      "DISTRICTID": "0405",
-      "STFIPS": "04",
-      "CDFIPS": "05",
-      "STATE_ABBR": "AZ"
+      "GEOID": "1307",
+      "STATE": "13",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 14,
-      "DISTRICTID": "0406",
-      "STFIPS": "04",
-      "CDFIPS": "06",
-      "STATE_ABBR": "AZ"
+      "GEOID": "1311",
+      "STATE": "13",
+      "CD120": "11",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 15,
-      "DISTRICTID": "0407",
-      "STFIPS": "04",
-      "CDFIPS": "07",
-      "STATE_ABBR": "AZ"
+      "GEOID": "1709",
+      "STATE": "17",
+      "CD120": "09",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 16,
-      "DISTRICTID": "0408",
-      "STFIPS": "04",
-      "CDFIPS": "08",
-      "STATE_ABBR": "AZ"
+      "GEOID": "1713",
+      "STATE": "17",
+      "CD120": "13",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 17,
-      "DISTRICTID": "0409",
-      "STFIPS": "04",
-      "CDFIPS": "09",
-      "STATE_ABBR": "AZ"
+      "GEOID": "1703",
+      "STATE": "17",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 18,
-      "DISTRICTID": "0501",
-      "STFIPS": "05",
-      "CDFIPS": "01",
-      "STATE_ABBR": "AR"
+      "GEOID": "1714",
+      "STATE": "17",
+      "CD120": "14",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 19,
-      "DISTRICTID": "0502",
-      "STFIPS": "05",
-      "CDFIPS": "02",
-      "STATE_ABBR": "AR"
+      "GEOID": "1716",
+      "STATE": "17",
+      "CD120": "16",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 20,
-      "DISTRICTID": "0503",
-      "STFIPS": "05",
-      "CDFIPS": "03",
-      "STATE_ABBR": "AR"
+      "GEOID": "1205",
+      "STATE": "12",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 21,
-      "DISTRICTID": "0504",
-      "STFIPS": "05",
-      "CDFIPS": "04",
-      "STATE_ABBR": "AR"
+      "GEOID": "1227",
+      "STATE": "12",
+      "CD120": "27",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 22,
-      "DISTRICTID": "0601",
-      "STFIPS": "06",
-      "CDFIPS": "01",
-      "STATE_ABBR": "CA"
+      "GEOID": "1206",
+      "STATE": "12",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 23,
-      "DISTRICTID": "0602",
-      "STFIPS": "06",
-      "CDFIPS": "02",
-      "STATE_ABBR": "CA"
+      "GEOID": "1228",
+      "STATE": "12",
+      "CD120": "28",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 24,
-      "DISTRICTID": "0603",
-      "STFIPS": "06",
-      "CDFIPS": "03",
-      "STATE_ABBR": "CA"
+      "GEOID": "1207",
+      "STATE": "12",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 25,
-      "DISTRICTID": "0604",
-      "STFIPS": "06",
-      "CDFIPS": "04",
-      "STATE_ABBR": "CA"
+      "GEOID": "1208",
+      "STATE": "12",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 26,
-      "DISTRICTID": "0605",
-      "STFIPS": "06",
-      "CDFIPS": "05",
-      "STATE_ABBR": "CA"
+      "GEOID": "1209",
+      "STATE": "12",
+      "CD120": "09",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 27,
-      "DISTRICTID": "0606",
-      "STFIPS": "06",
-      "CDFIPS": "06",
-      "STATE_ABBR": "CA"
+      "GEOID": "1210",
+      "STATE": "12",
+      "CD120": "10",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 28,
-      "DISTRICTID": "0607",
-      "STFIPS": "06",
-      "CDFIPS": "07",
-      "STATE_ABBR": "CA"
+      "GEOID": "1211",
+      "STATE": "12",
+      "CD120": "11",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 29,
-      "DISTRICTID": "0608",
-      "STFIPS": "06",
-      "CDFIPS": "08",
-      "STATE_ABBR": "CA"
+      "GEOID": "1212",
+      "STATE": "12",
+      "CD120": "12",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 30,
-      "DISTRICTID": "0609",
-      "STFIPS": "06",
-      "CDFIPS": "09",
-      "STATE_ABBR": "CA"
+      "GEOID": "1213",
+      "STATE": "12",
+      "CD120": "13",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 31,
-      "DISTRICTID": "0610",
-      "STFIPS": "06",
-      "CDFIPS": "10",
-      "STATE_ABBR": "CA"
+      "GEOID": "1214",
+      "STATE": "12",
+      "CD120": "14",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 32,
-      "DISTRICTID": "0611",
-      "STFIPS": "06",
-      "CDFIPS": "11",
-      "STATE_ABBR": "CA"
+      "GEOID": "1215",
+      "STATE": "12",
+      "CD120": "15",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 33,
-      "DISTRICTID": "0612",
-      "STFIPS": "06",
-      "CDFIPS": "12",
-      "STATE_ABBR": "CA"
+      "GEOID": "1216",
+      "STATE": "12",
+      "CD120": "16",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 34,
-      "DISTRICTID": "0613",
-      "STFIPS": "06",
-      "CDFIPS": "13",
-      "STATE_ABBR": "CA"
+      "GEOID": "1217",
+      "STATE": "12",
+      "CD120": "17",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 35,
-      "DISTRICTID": "0614",
-      "STFIPS": "06",
-      "CDFIPS": "14",
-      "STATE_ABBR": "CA"
+      "GEOID": "1218",
+      "STATE": "12",
+      "CD120": "18",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 36,
-      "DISTRICTID": "0615",
-      "STFIPS": "06",
-      "CDFIPS": "15",
-      "STATE_ABBR": "CA"
+      "GEOID": "1219",
+      "STATE": "12",
+      "CD120": "19",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 37,
-      "DISTRICTID": "0616",
-      "STFIPS": "06",
-      "CDFIPS": "16",
-      "STATE_ABBR": "CA"
+      "GEOID": "1220",
+      "STATE": "12",
+      "CD120": "20",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 38,
-      "DISTRICTID": "0617",
-      "STFIPS": "06",
-      "CDFIPS": "17",
-      "STATE_ABBR": "CA"
+      "GEOID": "1221",
+      "STATE": "12",
+      "CD120": "21",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 39,
-      "DISTRICTID": "0618",
-      "STFIPS": "06",
-      "CDFIPS": "18",
-      "STATE_ABBR": "CA"
+      "GEOID": "1701",
+      "STATE": "17",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 40,
-      "DISTRICTID": "0619",
-      "STFIPS": "06",
-      "CDFIPS": "19",
-      "STATE_ABBR": "CA"
+      "GEOID": "1708",
+      "STATE": "17",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 41,
-      "DISTRICTID": "0620",
-      "STFIPS": "06",
-      "CDFIPS": "20",
-      "STATE_ABBR": "CA"
+      "GEOID": "1712",
+      "STATE": "17",
+      "CD120": "12",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 42,
-      "DISTRICTID": "0621",
-      "STFIPS": "06",
-      "CDFIPS": "21",
-      "STATE_ABBR": "CA"
+      "GEOID": "1705",
+      "STATE": "17",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 43,
-      "DISTRICTID": "0622",
-      "STFIPS": "06",
-      "CDFIPS": "22",
-      "STATE_ABBR": "CA"
+      "GEOID": "1706",
+      "STATE": "17",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 44,
-      "DISTRICTID": "0623",
-      "STFIPS": "06",
-      "CDFIPS": "23",
-      "STATE_ABBR": "CA"
+      "GEOID": "1715",
+      "STATE": "17",
+      "CD120": "15",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 45,
-      "DISTRICTID": "0624",
-      "STFIPS": "06",
-      "CDFIPS": "24",
-      "STATE_ABBR": "CA"
+      "GEOID": "1717",
+      "STATE": "17",
+      "CD120": "17",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 46,
-      "DISTRICTID": "0625",
-      "STFIPS": "06",
-      "CDFIPS": "25",
-      "STATE_ABBR": "CA"
+      "GEOID": "1702",
+      "STATE": "17",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 47,
-      "DISTRICTID": "0626",
-      "STFIPS": "06",
-      "CDFIPS": "26",
-      "STATE_ABBR": "CA"
+      "GEOID": "1710",
+      "STATE": "17",
+      "CD120": "10",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 48,
-      "DISTRICTID": "0627",
-      "STFIPS": "06",
-      "CDFIPS": "27",
-      "STATE_ABBR": "CA"
+      "GEOID": "1704",
+      "STATE": "17",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 49,
-      "DISTRICTID": "0628",
-      "STFIPS": "06",
-      "CDFIPS": "28",
-      "STATE_ABBR": "CA"
+      "GEOID": "2901",
+      "STATE": "29",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 50,
-      "DISTRICTID": "0629",
-      "STFIPS": "06",
-      "CDFIPS": "29",
-      "STATE_ABBR": "CA"
+      "GEOID": "2902",
+      "STATE": "29",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 51,
-      "DISTRICTID": "0630",
-      "STFIPS": "06",
-      "CDFIPS": "30",
-      "STATE_ABBR": "CA"
+      "GEOID": "2903",
+      "STATE": "29",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 52,
-      "DISTRICTID": "0631",
-      "STFIPS": "06",
-      "CDFIPS": "31",
-      "STATE_ABBR": "CA"
+      "GEOID": "1707",
+      "STATE": "17",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 53,
-      "DISTRICTID": "0632",
-      "STFIPS": "06",
-      "CDFIPS": "32",
-      "STATE_ABBR": "CA"
+      "GEOID": "17ZZ",
+      "STATE": "17",
+      "CD120": "ZZ",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 54,
-      "DISTRICTID": "0633",
-      "STFIPS": "06",
-      "CDFIPS": "33",
-      "STATE_ABBR": "CA"
+      "GEOID": "1711",
+      "STATE": "17",
+      "CD120": "11",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 55,
-      "DISTRICTID": "0634",
-      "STFIPS": "06",
-      "CDFIPS": "34",
-      "STATE_ABBR": "CA"
+      "GEOID": "2904",
+      "STATE": "29",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 56,
-      "DISTRICTID": "0635",
-      "STFIPS": "06",
-      "CDFIPS": "35",
-      "STATE_ABBR": "CA"
+      "GEOID": "2905",
+      "STATE": "29",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 57,
-      "DISTRICTID": "0636",
-      "STFIPS": "06",
-      "CDFIPS": "36",
-      "STATE_ABBR": "CA"
+      "GEOID": "2906",
+      "STATE": "29",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 58,
-      "DISTRICTID": "0637",
-      "STFIPS": "06",
-      "CDFIPS": "37",
-      "STATE_ABBR": "CA"
+      "GEOID": "2907",
+      "STATE": "29",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 59,
-      "DISTRICTID": "0638",
-      "STFIPS": "06",
-      "CDFIPS": "38",
-      "STATE_ABBR": "CA"
+      "GEOID": "2908",
+      "STATE": "29",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 60,
-      "DISTRICTID": "0639",
-      "STFIPS": "06",
-      "CDFIPS": "39",
-      "STATE_ABBR": "CA"
+      "GEOID": "4901",
+      "STATE": "49",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 61,
-      "DISTRICTID": "0640",
-      "STFIPS": "06",
-      "CDFIPS": "40",
-      "STATE_ABBR": "CA"
+      "GEOID": "4902",
+      "STATE": "49",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 62,
-      "DISTRICTID": "0641",
-      "STFIPS": "06",
-      "CDFIPS": "41",
-      "STATE_ABBR": "CA"
+      "GEOID": "4903",
+      "STATE": "49",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 63,
-      "DISTRICTID": "0642",
-      "STFIPS": "06",
-      "CDFIPS": "42",
-      "STATE_ABBR": "CA"
+      "GEOID": "4904",
+      "STATE": "49",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 64,
-      "DISTRICTID": "0643",
-      "STFIPS": "06",
-      "CDFIPS": "43",
-      "STATE_ABBR": "CA"
+      "GEOID": "1903",
+      "STATE": "19",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 65,
-      "DISTRICTID": "0644",
-      "STFIPS": "06",
-      "CDFIPS": "44",
-      "STATE_ABBR": "CA"
+      "GEOID": "1901",
+      "STATE": "19",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 66,
-      "DISTRICTID": "0645",
-      "STFIPS": "06",
-      "CDFIPS": "45",
-      "STATE_ABBR": "CA"
+      "GEOID": "1902",
+      "STATE": "19",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 67,
-      "DISTRICTID": "0646",
-      "STFIPS": "06",
-      "CDFIPS": "46",
-      "STATE_ABBR": "CA"
+      "GEOID": "1904",
+      "STATE": "19",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 68,
-      "DISTRICTID": "0647",
-      "STFIPS": "06",
-      "CDFIPS": "47",
-      "STATE_ABBR": "CA"
+      "GEOID": "4709",
+      "STATE": "47",
+      "CD120": "09",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 69,
-      "DISTRICTID": "0648",
-      "STFIPS": "06",
-      "CDFIPS": "48",
-      "STATE_ABBR": "CA"
+      "GEOID": "4703",
+      "STATE": "47",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 70,
-      "DISTRICTID": "0649",
-      "STFIPS": "06",
-      "CDFIPS": "49",
-      "STATE_ABBR": "CA"
+      "GEOID": "4701",
+      "STATE": "47",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 71,
-      "DISTRICTID": "0650",
-      "STFIPS": "06",
-      "CDFIPS": "50",
-      "STATE_ABBR": "CA"
+      "GEOID": "4708",
+      "STATE": "47",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 72,
-      "DISTRICTID": "0651",
-      "STFIPS": "06",
-      "CDFIPS": "51",
-      "STATE_ABBR": "CA"
+      "GEOID": "4705",
+      "STATE": "47",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 73,
-      "DISTRICTID": "0652",
-      "STFIPS": "06",
-      "CDFIPS": "52",
-      "STATE_ABBR": "CA"
+      "GEOID": "4706",
+      "STATE": "47",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 74,
-      "DISTRICTID": "0801",
-      "STFIPS": "08",
-      "CDFIPS": "01",
-      "STATE_ABBR": "CO"
+      "GEOID": "4702",
+      "STATE": "47",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 75,
-      "DISTRICTID": "0802",
-      "STFIPS": "08",
-      "CDFIPS": "02",
-      "STATE_ABBR": "CO"
+      "GEOID": "4704",
+      "STATE": "47",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 76,
-      "DISTRICTID": "0803",
-      "STFIPS": "08",
-      "CDFIPS": "03",
-      "STATE_ABBR": "CO"
+      "GEOID": "4707",
+      "STATE": "47",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 77,
-      "DISTRICTID": "0804",
-      "STFIPS": "08",
-      "CDFIPS": "04",
-      "STATE_ABBR": "CO"
+      "GEOID": "1198",
+      "STATE": "11",
+      "CD120": "98",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 78,
-      "DISTRICTID": "0805",
-      "STFIPS": "08",
-      "CDFIPS": "05",
-      "STATE_ABBR": "CO"
+      "GEOID": "1601",
+      "STATE": "16",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 79,
-      "DISTRICTID": "0806",
-      "STFIPS": "08",
-      "CDFIPS": "06",
-      "STATE_ABBR": "CO"
+      "GEOID": "1602",
+      "STATE": "16",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 80,
-      "DISTRICTID": "0807",
-      "STFIPS": "08",
-      "CDFIPS": "07",
-      "STATE_ABBR": "CO"
+      "GEOID": "1000",
+      "STATE": "10",
+      "CD120": "00",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 81,
-      "DISTRICTID": "0808",
-      "STFIPS": "08",
-      "CDFIPS": "08",
-      "STATE_ABBR": "CO"
+      "GEOID": "2103",
+      "STATE": "21",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 82,
-      "DISTRICTID": "0901",
-      "STFIPS": "09",
-      "CDFIPS": "01",
-      "STATE_ABBR": "CT"
+      "GEOID": "2101",
+      "STATE": "21",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 83,
-      "DISTRICTID": "0902",
-      "STFIPS": "09",
-      "CDFIPS": "02",
-      "STATE_ABBR": "CT"
+      "GEOID": "2105",
+      "STATE": "21",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 84,
-      "DISTRICTID": "0903",
-      "STFIPS": "09",
-      "CDFIPS": "03",
-      "STATE_ABBR": "CT"
+      "GEOID": "2106",
+      "STATE": "21",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 85,
-      "DISTRICTID": "0904",
-      "STFIPS": "09",
-      "CDFIPS": "04",
-      "STATE_ABBR": "CT"
+      "GEOID": "2102",
+      "STATE": "21",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 86,
-      "DISTRICTID": "0905",
-      "STFIPS": "09",
-      "CDFIPS": "05",
-      "STATE_ABBR": "CT"
+      "GEOID": "2104",
+      "STATE": "21",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 87,
-      "DISTRICTID": "1000",
-      "STFIPS": "10",
-      "CDFIPS": "00",
-      "STATE_ABBR": "DE"
+      "GEOID": "1222",
+      "STATE": "12",
+      "CD120": "22",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 88,
-      "DISTRICTID": "1198",
-      "STFIPS": "11",
-      "CDFIPS": "98",
-      "STATE_ABBR": "DC"
+      "GEOID": "1201",
+      "STATE": "12",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 89,
-      "DISTRICTID": "1201",
-      "STFIPS": "12",
-      "CDFIPS": "01",
-      "STATE_ABBR": "FL"
+      "GEOID": "1223",
+      "STATE": "12",
+      "CD120": "23",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 90,
-      "DISTRICTID": "1202",
-      "STFIPS": "12",
-      "CDFIPS": "02",
-      "STATE_ABBR": "FL"
+      "GEOID": "1202",
+      "STATE": "12",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 91,
-      "DISTRICTID": "1203",
-      "STFIPS": "12",
-      "CDFIPS": "03",
-      "STATE_ABBR": "FL"
+      "GEOID": "1224",
+      "STATE": "12",
+      "CD120": "24",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 92,
-      "DISTRICTID": "1204",
-      "STFIPS": "12",
-      "CDFIPS": "04",
-      "STATE_ABBR": "FL"
+      "GEOID": "1203",
+      "STATE": "12",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 93,
-      "DISTRICTID": "1205",
-      "STFIPS": "12",
-      "CDFIPS": "05",
-      "STATE_ABBR": "FL"
+      "GEOID": "1225",
+      "STATE": "12",
+      "CD120": "25",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 94,
-      "DISTRICTID": "1206",
-      "STFIPS": "12",
-      "CDFIPS": "06",
-      "STATE_ABBR": "FL"
+      "GEOID": "1226",
+      "STATE": "12",
+      "CD120": "26",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 95,
-      "DISTRICTID": "1207",
-      "STFIPS": "12",
-      "CDFIPS": "07",
-      "STATE_ABBR": "FL"
+      "GEOID": "1204",
+      "STATE": "12",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 96,
-      "DISTRICTID": "1208",
-      "STFIPS": "12",
-      "CDFIPS": "08",
-      "STATE_ABBR": "FL"
+      "GEOID": "4208",
+      "STATE": "42",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 97,
-      "DISTRICTID": "1209",
-      "STFIPS": "12",
-      "CDFIPS": "09",
-      "STATE_ABBR": "FL"
+      "GEOID": "4212",
+      "STATE": "42",
+      "CD120": "12",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 98,
-      "DISTRICTID": "1210",
-      "STFIPS": "12",
-      "CDFIPS": "10",
-      "STATE_ABBR": "FL"
+      "GEOID": "4205",
+      "STATE": "42",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 99,
-      "DISTRICTID": "1211",
-      "STFIPS": "12",
-      "CDFIPS": "11",
-      "STATE_ABBR": "FL"
+      "GEOID": "4215",
+      "STATE": "42",
+      "CD120": "15",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 100,
-      "DISTRICTID": "1212",
-      "STFIPS": "12",
-      "CDFIPS": "12",
-      "STATE_ABBR": "FL"
+      "GEOID": "4217",
+      "STATE": "42",
+      "CD120": "17",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 101,
-      "DISTRICTID": "1213",
-      "STFIPS": "12",
-      "CDFIPS": "13",
-      "STATE_ABBR": "FL"
+      "GEOID": "4206",
+      "STATE": "42",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 102,
-      "DISTRICTID": "1214",
-      "STFIPS": "12",
-      "CDFIPS": "14",
-      "STATE_ABBR": "FL"
+      "GEOID": "4202",
+      "STATE": "42",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 103,
-      "DISTRICTID": "1215",
-      "STFIPS": "12",
-      "CDFIPS": "15",
-      "STATE_ABBR": "FL"
+      "GEOID": "2601",
+      "STATE": "26",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 104,
-      "DISTRICTID": "1216",
-      "STFIPS": "12",
-      "CDFIPS": "16",
-      "STATE_ABBR": "FL"
+      "GEOID": "2608",
+      "STATE": "26",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 105,
-      "DISTRICTID": "1217",
-      "STFIPS": "12",
-      "CDFIPS": "17",
-      "STATE_ABBR": "FL"
+      "GEOID": "2612",
+      "STATE": "26",
+      "CD120": "12",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 106,
-      "DISTRICTID": "1218",
-      "STFIPS": "12",
-      "CDFIPS": "18",
-      "STATE_ABBR": "FL"
+      "GEOID": "2605",
+      "STATE": "26",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 107,
-      "DISTRICTID": "1219",
-      "STFIPS": "12",
-      "CDFIPS": "19",
-      "STATE_ABBR": "FL"
+      "GEOID": "2606",
+      "STATE": "26",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 108,
-      "DISTRICTID": "1220",
-      "STFIPS": "12",
-      "CDFIPS": "20",
-      "STATE_ABBR": "FL"
+      "GEOID": "2602",
+      "STATE": "26",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 109,
-      "DISTRICTID": "1221",
-      "STFIPS": "12",
-      "CDFIPS": "21",
-      "STATE_ABBR": "FL"
+      "GEOID": "2610",
+      "STATE": "26",
+      "CD120": "10",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 110,
-      "DISTRICTID": "1222",
-      "STFIPS": "12",
-      "CDFIPS": "22",
-      "STATE_ABBR": "FL"
+      "GEOID": "2604",
+      "STATE": "26",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 111,
-      "DISTRICTID": "1223",
-      "STFIPS": "12",
-      "CDFIPS": "23",
-      "STATE_ABBR": "FL"
+      "GEOID": "2607",
+      "STATE": "26",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 112,
-      "DISTRICTID": "1224",
-      "STFIPS": "12",
-      "CDFIPS": "24",
-      "STATE_ABBR": "FL"
+      "GEOID": "2611",
+      "STATE": "26",
+      "CD120": "11",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 113,
-      "DISTRICTID": "1225",
-      "STFIPS": "12",
-      "CDFIPS": "25",
-      "STATE_ABBR": "FL"
+      "GEOID": "4210",
+      "STATE": "42",
+      "CD120": "10",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 114,
-      "DISTRICTID": "1226",
-      "STFIPS": "12",
-      "CDFIPS": "26",
-      "STATE_ABBR": "FL"
+      "GEOID": "4204",
+      "STATE": "42",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 115,
-      "DISTRICTID": "1227",
-      "STFIPS": "12",
-      "CDFIPS": "27",
-      "STATE_ABBR": "FL"
+      "GEOID": "4207",
+      "STATE": "42",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 116,
-      "DISTRICTID": "1228",
-      "STFIPS": "12",
-      "CDFIPS": "28",
-      "STATE_ABBR": "FL"
+      "GEOID": "4211",
+      "STATE": "42",
+      "CD120": "11",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 117,
-      "DISTRICTID": "1301",
-      "STFIPS": "13",
-      "CDFIPS": "01",
-      "STATE_ABBR": "GA"
+      "GEOID": "3103",
+      "STATE": "31",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 118,
-      "DISTRICTID": "1302",
-      "STFIPS": "13",
-      "CDFIPS": "02",
-      "STATE_ABBR": "GA"
+      "GEOID": "3101",
+      "STATE": "31",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 119,
-      "DISTRICTID": "1303",
-      "STFIPS": "13",
-      "CDFIPS": "03",
-      "STATE_ABBR": "GA"
+      "GEOID": "3102",
+      "STATE": "31",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 120,
-      "DISTRICTID": "1304",
-      "STFIPS": "13",
-      "CDFIPS": "04",
-      "STATE_ABBR": "GA"
+      "GEOID": "2003",
+      "STATE": "20",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 121,
-      "DISTRICTID": "1305",
-      "STFIPS": "13",
-      "CDFIPS": "05",
-      "STATE_ABBR": "GA"
+      "GEOID": "2001",
+      "STATE": "20",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 122,
-      "DISTRICTID": "1306",
-      "STFIPS": "13",
-      "CDFIPS": "06",
-      "STATE_ABBR": "GA"
+      "GEOID": "2002",
+      "STATE": "20",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 123,
-      "DISTRICTID": "1307",
-      "STFIPS": "13",
-      "CDFIPS": "07",
-      "STATE_ABBR": "GA"
+      "GEOID": "2004",
+      "STATE": "20",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 124,
-      "DISTRICTID": "1308",
-      "STFIPS": "13",
-      "CDFIPS": "08",
-      "STATE_ABBR": "GA"
+      "GEOID": "2609",
+      "STATE": "26",
+      "CD120": "09",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 125,
-      "DISTRICTID": "1309",
-      "STFIPS": "13",
-      "CDFIPS": "09",
-      "STATE_ABBR": "GA"
+      "GEOID": "2613",
+      "STATE": "26",
+      "CD120": "13",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 126,
-      "DISTRICTID": "1310",
-      "STFIPS": "13",
-      "CDFIPS": "10",
-      "STATE_ABBR": "GA"
+      "GEOID": "2603",
+      "STATE": "26",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 127,
-      "DISTRICTID": "1311",
-      "STFIPS": "13",
-      "CDFIPS": "11",
-      "STATE_ABBR": "GA"
+      "GEOID": "5309",
+      "STATE": "53",
+      "CD120": "09",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 128,
-      "DISTRICTID": "1312",
-      "STFIPS": "13",
-      "CDFIPS": "12",
-      "STATE_ABBR": "GA"
+      "GEOID": "5303",
+      "STATE": "53",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 129,
-      "DISTRICTID": "1313",
-      "STFIPS": "13",
-      "CDFIPS": "13",
-      "STATE_ABBR": "GA"
+      "GEOID": "0629",
+      "STATE": "06",
+      "CD120": "29",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 130,
-      "DISTRICTID": "1314",
-      "STFIPS": "13",
-      "CDFIPS": "14",
-      "STATE_ABBR": "GA"
+      "GEOID": "0630",
+      "STATE": "06",
+      "CD120": "30",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 131,
-      "DISTRICTID": "1501",
-      "STFIPS": "15",
-      "CDFIPS": "01",
-      "STATE_ABBR": "HI"
+      "GEOID": "0631",
+      "STATE": "06",
+      "CD120": "31",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 132,
-      "DISTRICTID": "1502",
-      "STFIPS": "15",
-      "CDFIPS": "02",
-      "STATE_ABBR": "HI"
+      "GEOID": "0632",
+      "STATE": "06",
+      "CD120": "32",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 133,
-      "DISTRICTID": "1601",
-      "STFIPS": "16",
-      "CDFIPS": "01",
-      "STATE_ABBR": "ID"
+      "GEOID": "0633",
+      "STATE": "06",
+      "CD120": "33",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 134,
-      "DISTRICTID": "1602",
-      "STFIPS": "16",
-      "CDFIPS": "02",
-      "STATE_ABBR": "ID"
+      "GEOID": "4502",
+      "STATE": "45",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 135,
-      "DISTRICTID": "1701",
-      "STFIPS": "17",
-      "CDFIPS": "01",
-      "STATE_ABBR": "IL"
+      "GEOID": "4504",
+      "STATE": "45",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 136,
-      "DISTRICTID": "1702",
-      "STFIPS": "17",
-      "CDFIPS": "02",
-      "STATE_ABBR": "IL"
+      "GEOID": "4507",
+      "STATE": "45",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 137,
-      "DISTRICTID": "1703",
-      "STFIPS": "17",
-      "CDFIPS": "03",
-      "STATE_ABBR": "IL"
+      "GEOID": "3910",
+      "STATE": "39",
+      "CD120": "10",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 138,
-      "DISTRICTID": "1704",
-      "STFIPS": "17",
-      "CDFIPS": "04",
-      "STATE_ABBR": "IL"
+      "GEOID": "0903",
+      "STATE": "09",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 139,
-      "DISTRICTID": "1705",
-      "STFIPS": "17",
-      "CDFIPS": "05",
-      "STATE_ABBR": "IL"
+      "GEOID": "0901",
+      "STATE": "09",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 140,
-      "DISTRICTID": "1706",
-      "STFIPS": "17",
-      "CDFIPS": "06",
-      "STATE_ABBR": "IL"
+      "GEOID": "0905",
+      "STATE": "09",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 141,
-      "DISTRICTID": "1707",
-      "STFIPS": "17",
-      "CDFIPS": "07",
-      "STATE_ABBR": "IL"
+      "GEOID": "0902",
+      "STATE": "09",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 142,
-      "DISTRICTID": "1708",
-      "STFIPS": "17",
-      "CDFIPS": "08",
-      "STATE_ABBR": "IL"
+      "GEOID": "0904",
+      "STATE": "09",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 143,
-      "DISTRICTID": "1709",
-      "STFIPS": "17",
-      "CDFIPS": "09",
-      "STATE_ABBR": "IL"
+      "GEOID": "09ZZ",
+      "STATE": "09",
+      "CD120": "ZZ",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 144,
-      "DISTRICTID": "1710",
-      "STFIPS": "17",
-      "CDFIPS": "10",
-      "STATE_ABBR": "IL"
+      "GEOID": "0805",
+      "STATE": "08",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 145,
-      "DISTRICTID": "1711",
-      "STFIPS": "17",
-      "CDFIPS": "11",
-      "STATE_ABBR": "IL"
+      "GEOID": "2703",
+      "STATE": "27",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 146,
-      "DISTRICTID": "1712",
-      "STFIPS": "17",
-      "CDFIPS": "12",
-      "STATE_ABBR": "IL"
+      "GEOID": "2701",
+      "STATE": "27",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 147,
-      "DISTRICTID": "1713",
-      "STFIPS": "17",
-      "CDFIPS": "13",
-      "STATE_ABBR": "IL"
+      "GEOID": "2708",
+      "STATE": "27",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 148,
-      "DISTRICTID": "1714",
-      "STFIPS": "17",
-      "CDFIPS": "14",
-      "STATE_ABBR": "IL"
+      "GEOID": "2705",
+      "STATE": "27",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 149,
-      "DISTRICTID": "1715",
-      "STFIPS": "17",
-      "CDFIPS": "15",
-      "STATE_ABBR": "IL"
+      "GEOID": "2706",
+      "STATE": "27",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 150,
-      "DISTRICTID": "1716",
-      "STFIPS": "17",
-      "CDFIPS": "16",
-      "STATE_ABBR": "IL"
+      "GEOID": "2702",
+      "STATE": "27",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 151,
-      "DISTRICTID": "1717",
-      "STFIPS": "17",
-      "CDFIPS": "17",
-      "STATE_ABBR": "IL"
+      "GEOID": "2704",
+      "STATE": "27",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 152,
-      "DISTRICTID": "1801",
-      "STFIPS": "18",
-      "CDFIPS": "01",
-      "STATE_ABBR": "IN"
+      "GEOID": "2707",
+      "STATE": "27",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 153,
-      "DISTRICTID": "1802",
-      "STFIPS": "18",
-      "CDFIPS": "02",
-      "STATE_ABBR": "IN"
+      "GEOID": "0634",
+      "STATE": "06",
+      "CD120": "34",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 154,
-      "DISTRICTID": "1803",
-      "STFIPS": "18",
-      "CDFIPS": "03",
-      "STATE_ABBR": "IN"
+      "GEOID": "0635",
+      "STATE": "06",
+      "CD120": "35",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 155,
-      "DISTRICTID": "1804",
-      "STFIPS": "18",
-      "CDFIPS": "04",
-      "STATE_ABBR": "IN"
+      "GEOID": "0636",
+      "STATE": "06",
+      "CD120": "36",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 156,
-      "DISTRICTID": "1805",
-      "STFIPS": "18",
-      "CDFIPS": "05",
-      "STATE_ABBR": "IN"
+      "GEOID": "0637",
+      "STATE": "06",
+      "CD120": "37",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 157,
-      "DISTRICTID": "1806",
-      "STFIPS": "18",
-      "CDFIPS": "06",
-      "STATE_ABBR": "IN"
+      "GEOID": "0639",
+      "STATE": "06",
+      "CD120": "39",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 158,
-      "DISTRICTID": "1807",
-      "STFIPS": "18",
-      "CDFIPS": "07",
-      "STATE_ABBR": "IN"
+      "GEOID": "0640",
+      "STATE": "06",
+      "CD120": "40",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 159,
-      "DISTRICTID": "1808",
-      "STFIPS": "18",
-      "CDFIPS": "08",
-      "STATE_ABBR": "IN"
+      "GEOID": "0641",
+      "STATE": "06",
+      "CD120": "41",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 160,
-      "DISTRICTID": "1809",
-      "STFIPS": "18",
-      "CDFIPS": "09",
-      "STATE_ABBR": "IN"
+      "GEOID": "0642",
+      "STATE": "06",
+      "CD120": "42",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 161,
-      "DISTRICTID": "1901",
-      "STFIPS": "19",
-      "CDFIPS": "01",
-      "STATE_ABBR": "IA"
+      "GEOID": "0643",
+      "STATE": "06",
+      "CD120": "43",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 162,
-      "DISTRICTID": "1902",
-      "STFIPS": "19",
-      "CDFIPS": "02",
-      "STATE_ABBR": "IA"
+      "GEOID": "0803",
+      "STATE": "08",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 163,
-      "DISTRICTID": "1903",
-      "STFIPS": "19",
-      "CDFIPS": "03",
-      "STATE_ABBR": "IA"
+      "GEOID": "0801",
+      "STATE": "08",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 164,
-      "DISTRICTID": "1904",
-      "STFIPS": "19",
-      "CDFIPS": "04",
-      "STATE_ABBR": "IA"
+      "GEOID": "0808",
+      "STATE": "08",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 165,
-      "DISTRICTID": "2001",
-      "STFIPS": "20",
-      "CDFIPS": "01",
-      "STATE_ABBR": "KS"
+      "GEOID": "0103",
+      "STATE": "01",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 166,
-      "DISTRICTID": "2002",
-      "STFIPS": "20",
-      "CDFIPS": "02",
-      "STATE_ABBR": "KS"
+      "GEOID": "0101",
+      "STATE": "01",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 167,
-      "DISTRICTID": "2003",
-      "STFIPS": "20",
-      "CDFIPS": "03",
-      "STATE_ABBR": "KS"
+      "GEOID": "0105",
+      "STATE": "01",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 168,
-      "DISTRICTID": "2004",
-      "STFIPS": "20",
-      "CDFIPS": "04",
-      "STATE_ABBR": "KS"
+      "GEOID": "0106",
+      "STATE": "01",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 169,
-      "DISTRICTID": "2101",
-      "STFIPS": "21",
-      "CDFIPS": "01",
-      "STATE_ABBR": "KY"
+      "GEOID": "0102",
+      "STATE": "01",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 170,
-      "DISTRICTID": "2102",
-      "STFIPS": "21",
-      "CDFIPS": "02",
-      "STATE_ABBR": "KY"
+      "GEOID": "0104",
+      "STATE": "01",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 171,
-      "DISTRICTID": "2103",
-      "STFIPS": "21",
-      "CDFIPS": "03",
-      "STATE_ABBR": "KY"
+      "GEOID": "0107",
+      "STATE": "01",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 172,
-      "DISTRICTID": "2104",
-      "STFIPS": "21",
-      "CDFIPS": "04",
-      "STATE_ABBR": "KY"
+      "GEOID": "0503",
+      "STATE": "05",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 173,
-      "DISTRICTID": "2105",
-      "STFIPS": "21",
-      "CDFIPS": "05",
-      "STATE_ABBR": "KY"
+      "GEOID": "0501",
+      "STATE": "05",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 174,
-      "DISTRICTID": "2106",
-      "STFIPS": "21",
-      "CDFIPS": "06",
-      "STATE_ABBR": "KY"
+      "GEOID": "0502",
+      "STATE": "05",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 175,
-      "DISTRICTID": "2201",
-      "STFIPS": "22",
-      "CDFIPS": "01",
-      "STATE_ABBR": "LA"
+      "GEOID": "0504",
+      "STATE": "05",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 176,
-      "DISTRICTID": "2202",
-      "STFIPS": "22",
-      "CDFIPS": "02",
-      "STATE_ABBR": "LA"
+      "GEOID": "3301",
+      "STATE": "33",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 177,
-      "DISTRICTID": "2203",
-      "STFIPS": "22",
-      "CDFIPS": "03",
-      "STATE_ABBR": "LA"
+      "GEOID": "3302",
+      "STATE": "33",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 178,
-      "DISTRICTID": "2204",
-      "STFIPS": "22",
-      "CDFIPS": "04",
-      "STATE_ABBR": "LA"
+      "GEOID": "33ZZ",
+      "STATE": "33",
+      "CD120": "ZZ",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 179,
-      "DISTRICTID": "2205",
-      "STFIPS": "22",
-      "CDFIPS": "05",
-      "STATE_ABBR": "LA"
+      "GEOID": "0638",
+      "STATE": "06",
+      "CD120": "38",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 180,
-      "DISTRICTID": "2206",
-      "STFIPS": "22",
-      "CDFIPS": "06",
-      "STATE_ABBR": "LA"
+      "GEOID": "0806",
+      "STATE": "08",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 181,
-      "DISTRICTID": "2301",
-      "STFIPS": "23",
-      "CDFIPS": "01",
-      "STATE_ABBR": "ME"
+      "GEOID": "0802",
+      "STATE": "08",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 182,
-      "DISTRICTID": "2302",
-      "STFIPS": "23",
-      "CDFIPS": "02",
-      "STATE_ABBR": "ME"
+      "GEOID": "0804",
+      "STATE": "08",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 183,
-      "DISTRICTID": "2401",
-      "STFIPS": "24",
-      "CDFIPS": "01",
-      "STATE_ABBR": "MD"
+      "GEOID": "0807",
+      "STATE": "08",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 184,
-      "DISTRICTID": "2402",
-      "STFIPS": "24",
-      "CDFIPS": "02",
-      "STATE_ABBR": "MD"
+      "GEOID": "4503",
+      "STATE": "45",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 185,
-      "DISTRICTID": "2403",
-      "STFIPS": "24",
-      "CDFIPS": "03",
-      "STATE_ABBR": "MD"
+      "GEOID": "4501",
+      "STATE": "45",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 186,
-      "DISTRICTID": "2404",
-      "STFIPS": "24",
-      "CDFIPS": "04",
-      "STATE_ABBR": "MD"
+      "GEOID": "4505",
+      "STATE": "45",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 187,
-      "DISTRICTID": "2405",
-      "STFIPS": "24",
-      "CDFIPS": "05",
-      "STATE_ABBR": "MD"
+      "GEOID": "4506",
+      "STATE": "45",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 188,
-      "DISTRICTID": "2406",
-      "STFIPS": "24",
-      "CDFIPS": "06",
-      "STATE_ABBR": "MD"
+      "GEOID": "3710",
+      "STATE": "37",
+      "CD120": "10",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 189,
-      "DISTRICTID": "2407",
-      "STFIPS": "24",
-      "CDFIPS": "07",
-      "STATE_ABBR": "MD"
+      "GEOID": "2509",
+      "STATE": "25",
+      "CD120": "09",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 190,
-      "DISTRICTID": "2408",
-      "STFIPS": "24",
-      "CDFIPS": "08",
-      "STATE_ABBR": "MD"
+      "GEOID": "2503",
+      "STATE": "25",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 191,
-      "DISTRICTID": "2501",
-      "STFIPS": "25",
-      "CDFIPS": "01",
-      "STATE_ABBR": "MA"
+      "GEOID": "2501",
+      "STATE": "25",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 192,
-      "DISTRICTID": "2502",
-      "STFIPS": "25",
-      "CDFIPS": "02",
-      "STATE_ABBR": "MA"
+      "GEOID": "2508",
+      "STATE": "25",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 193,
-      "DISTRICTID": "2503",
-      "STFIPS": "25",
-      "CDFIPS": "03",
-      "STATE_ABBR": "MA"
+      "GEOID": "2505",
+      "STATE": "25",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 194,
-      "DISTRICTID": "2504",
-      "STFIPS": "25",
-      "CDFIPS": "04",
-      "STATE_ABBR": "MA"
+      "GEOID": "2506",
+      "STATE": "25",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 195,
-      "DISTRICTID": "2505",
-      "STFIPS": "25",
-      "CDFIPS": "05",
-      "STATE_ABBR": "MA"
+      "GEOID": "2502",
+      "STATE": "25",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 196,
-      "DISTRICTID": "2506",
-      "STFIPS": "25",
-      "CDFIPS": "06",
-      "STATE_ABBR": "MA"
+      "GEOID": "2504",
+      "STATE": "25",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 197,
-      "DISTRICTID": "2507",
-      "STFIPS": "25",
-      "CDFIPS": "07",
-      "STATE_ABBR": "MA"
+      "GEOID": "2507",
+      "STATE": "25",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 198,
-      "DISTRICTID": "2508",
-      "STFIPS": "25",
-      "CDFIPS": "08",
-      "STATE_ABBR": "MA"
+      "GEOID": "2301",
+      "STATE": "23",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 199,
-      "DISTRICTID": "2509",
-      "STFIPS": "25",
-      "CDFIPS": "09",
-      "STATE_ABBR": "MA"
+      "GEOID": "2201",
+      "STATE": "22",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 200,
-      "DISTRICTID": "2601",
-      "STFIPS": "26",
-      "CDFIPS": "01",
-      "STATE_ABBR": "MI"
+      "GEOID": "2202",
+      "STATE": "22",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 201,
-      "DISTRICTID": "2602",
-      "STFIPS": "26",
-      "CDFIPS": "02",
-      "STATE_ABBR": "MI"
+      "GEOID": "2302",
+      "STATE": "23",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 202,
-      "DISTRICTID": "2603",
-      "STFIPS": "26",
-      "CDFIPS": "03",
-      "STATE_ABBR": "MI"
+      "GEOID": "2203",
+      "STATE": "22",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 203,
-      "DISTRICTID": "2604",
-      "STFIPS": "26",
-      "CDFIPS": "04",
-      "STATE_ABBR": "MI"
+      "GEOID": "2204",
+      "STATE": "22",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 204,
-      "DISTRICTID": "2605",
-      "STFIPS": "26",
-      "CDFIPS": "05",
-      "STATE_ABBR": "MI"
+      "GEOID": "2205",
+      "STATE": "22",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 205,
-      "DISTRICTID": "2606",
-      "STFIPS": "26",
-      "CDFIPS": "06",
-      "STATE_ABBR": "MI"
+      "GEOID": "2206",
+      "STATE": "22",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 206,
-      "DISTRICTID": "2607",
-      "STFIPS": "26",
-      "CDFIPS": "07",
-      "STATE_ABBR": "MI"
+      "GEOID": "3800",
+      "STATE": "38",
+      "CD120": "00",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 207,
-      "DISTRICTID": "2608",
-      "STFIPS": "26",
-      "CDFIPS": "08",
-      "STATE_ABBR": "MI"
+      "GEOID": "4600",
+      "STATE": "46",
+      "CD120": "00",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 208,
-      "DISTRICTID": "2609",
-      "STFIPS": "26",
-      "CDFIPS": "09",
-      "STATE_ABBR": "MI"
+      "GEOID": "5600",
+      "STATE": "56",
+      "CD120": "00",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 209,
-      "DISTRICTID": "2610",
-      "STFIPS": "26",
-      "CDFIPS": "10",
-      "STATE_ABBR": "MI"
+      "GEOID": "0200",
+      "STATE": "02",
+      "CD120": "00",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 210,
-      "DISTRICTID": "2611",
-      "STFIPS": "26",
-      "CDFIPS": "11",
-      "STATE_ABBR": "MI"
+      "GEOID": "7298",
+      "STATE": "72",
+      "CD120": "98",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 211,
-      "DISTRICTID": "2612",
-      "STFIPS": "26",
-      "CDFIPS": "12",
-      "STATE_ABBR": "MI"
+      "GEOID": "3711",
+      "STATE": "37",
+      "CD120": "11",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 212,
-      "DISTRICTID": "2613",
-      "STFIPS": "26",
-      "CDFIPS": "13",
-      "STATE_ABBR": "MI"
+      "GEOID": "3701",
+      "STATE": "37",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 213,
-      "DISTRICTID": "2701",
-      "STFIPS": "27",
-      "CDFIPS": "01",
-      "STATE_ABBR": "MN"
+      "GEOID": "3712",
+      "STATE": "37",
+      "CD120": "12",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 214,
-      "DISTRICTID": "2702",
-      "STFIPS": "27",
-      "CDFIPS": "02",
-      "STATE_ABBR": "MN"
+      "GEOID": "3713",
+      "STATE": "37",
+      "CD120": "13",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 215,
-      "DISTRICTID": "2703",
-      "STFIPS": "27",
-      "CDFIPS": "03",
-      "STATE_ABBR": "MN"
+      "GEOID": "3702",
+      "STATE": "37",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 216,
-      "DISTRICTID": "2704",
-      "STFIPS": "27",
-      "CDFIPS": "04",
-      "STATE_ABBR": "MN"
+      "GEOID": "3703",
+      "STATE": "37",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 217,
-      "DISTRICTID": "2705",
-      "STFIPS": "27",
-      "CDFIPS": "05",
-      "STATE_ABBR": "MN"
+      "GEOID": "3714",
+      "STATE": "37",
+      "CD120": "14",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 218,
-      "DISTRICTID": "2706",
-      "STFIPS": "27",
-      "CDFIPS": "06",
-      "STATE_ABBR": "MN"
+      "GEOID": "3704",
+      "STATE": "37",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 219,
-      "DISTRICTID": "2707",
-      "STFIPS": "27",
-      "CDFIPS": "07",
-      "STATE_ABBR": "MN"
+      "GEOID": "3705",
+      "STATE": "37",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 220,
-      "DISTRICTID": "2708",
-      "STFIPS": "27",
-      "CDFIPS": "08",
-      "STATE_ABBR": "MN"
+      "GEOID": "3706",
+      "STATE": "37",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 221,
-      "DISTRICTID": "2801",
-      "STFIPS": "28",
-      "CDFIPS": "01",
-      "STATE_ABBR": "MS"
+      "GEOID": "3707",
+      "STATE": "37",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 222,
-      "DISTRICTID": "2802",
-      "STFIPS": "28",
-      "CDFIPS": "02",
-      "STATE_ABBR": "MS"
+      "GEOID": "3708",
+      "STATE": "37",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 223,
-      "DISTRICTID": "2803",
-      "STFIPS": "28",
-      "CDFIPS": "03",
-      "STATE_ABBR": "MS"
+      "GEOID": "3709",
+      "STATE": "37",
+      "CD120": "09",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 224,
-      "DISTRICTID": "2804",
-      "STFIPS": "28",
-      "CDFIPS": "04",
-      "STATE_ABBR": "MS"
+      "GEOID": "5306",
+      "STATE": "53",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 225,
-      "DISTRICTID": "2901",
-      "STFIPS": "29",
-      "CDFIPS": "01",
-      "STATE_ABBR": "MO"
+      "GEOID": "5310",
+      "STATE": "53",
+      "CD120": "10",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 226,
-      "DISTRICTID": "2902",
-      "STFIPS": "29",
-      "CDFIPS": "02",
-      "STATE_ABBR": "MO"
+      "GEOID": "5302",
+      "STATE": "53",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 227,
-      "DISTRICTID": "2903",
-      "STFIPS": "29",
-      "CDFIPS": "03",
-      "STATE_ABBR": "MO"
+      "GEOID": "5301",
+      "STATE": "53",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 228,
-      "DISTRICTID": "2904",
-      "STFIPS": "29",
-      "CDFIPS": "04",
-      "STATE_ABBR": "MO"
+      "GEOID": "5308",
+      "STATE": "53",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 229,
-      "DISTRICTID": "2905",
-      "STFIPS": "29",
-      "CDFIPS": "05",
-      "STATE_ABBR": "MO"
+      "GEOID": "5305",
+      "STATE": "53",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 230,
-      "DISTRICTID": "2906",
-      "STFIPS": "29",
-      "CDFIPS": "06",
-      "STATE_ABBR": "MO"
+      "GEOID": "5304",
+      "STATE": "53",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 231,
-      "DISTRICTID": "2907",
-      "STFIPS": "29",
-      "CDFIPS": "07",
-      "STATE_ABBR": "MO"
+      "GEOID": "5307",
+      "STATE": "53",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 232,
-      "DISTRICTID": "2908",
-      "STFIPS": "29",
-      "CDFIPS": "08",
-      "STATE_ABBR": "MO"
+      "GEOID": "1501",
+      "STATE": "15",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 233,
-      "DISTRICTID": "3001",
-      "STFIPS": "30",
-      "CDFIPS": "01",
-      "STATE_ABBR": "MT"
+      "GEOID": "1502",
+      "STATE": "15",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 234,
-      "DISTRICTID": "3002",
-      "STFIPS": "30",
-      "CDFIPS": "02",
-      "STATE_ABBR": "MT"
+      "GEOID": "3203",
+      "STATE": "32",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 235,
-      "DISTRICTID": "3101",
-      "STFIPS": "31",
-      "CDFIPS": "01",
-      "STATE_ABBR": "NE"
+      "GEOID": "3201",
+      "STATE": "32",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 236,
-      "DISTRICTID": "3102",
-      "STFIPS": "31",
-      "CDFIPS": "02",
-      "STATE_ABBR": "NE"
+      "GEOID": "3202",
+      "STATE": "32",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 237,
-      "DISTRICTID": "3103",
-      "STFIPS": "31",
-      "CDFIPS": "03",
-      "STATE_ABBR": "NE"
+      "GEOID": "4209",
+      "STATE": "42",
+      "CD120": "09",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 238,
-      "DISTRICTID": "3201",
-      "STFIPS": "32",
-      "CDFIPS": "01",
-      "STATE_ABBR": "NV"
+      "GEOID": "4213",
+      "STATE": "42",
+      "CD120": "13",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 239,
-      "DISTRICTID": "3202",
-      "STFIPS": "32",
-      "CDFIPS": "02",
-      "STATE_ABBR": "NV"
+      "GEOID": "4203",
+      "STATE": "42",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 240,
-      "DISTRICTID": "3203",
-      "STFIPS": "32",
-      "CDFIPS": "03",
-      "STATE_ABBR": "NV"
+      "GEOID": "4201",
+      "STATE": "42",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 241,
-      "DISTRICTID": "3204",
-      "STFIPS": "32",
-      "CDFIPS": "04",
-      "STATE_ABBR": "NV"
+      "GEOID": "3204",
+      "STATE": "32",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 242,
-      "DISTRICTID": "3301",
-      "STFIPS": "33",
-      "CDFIPS": "01",
-      "STATE_ABBR": "NH"
+      "GEOID": "4214",
+      "STATE": "42",
+      "CD120": "14",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 243,
-      "DISTRICTID": "3302",
-      "STFIPS": "33",
-      "CDFIPS": "02",
-      "STATE_ABBR": "NH"
+      "GEOID": "4216",
+      "STATE": "42",
+      "CD120": "16",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 244,
-      "DISTRICTID": "3401",
-      "STFIPS": "34",
-      "CDFIPS": "01",
-      "STATE_ABBR": "NJ"
+      "GEOID": "3403",
+      "STATE": "34",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 245,
-      "DISTRICTID": "3402",
-      "STFIPS": "34",
-      "CDFIPS": "02",
-      "STATE_ABBR": "NJ"
+      "GEOID": "3408",
+      "STATE": "34",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 246,
-      "DISTRICTID": "3403",
-      "STFIPS": "34",
-      "CDFIPS": "03",
-      "STATE_ABBR": "NJ"
+      "GEOID": "3412",
+      "STATE": "34",
+      "CD120": "12",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 247,
-      "DISTRICTID": "3404",
-      "STFIPS": "34",
-      "CDFIPS": "04",
-      "STATE_ABBR": "NJ"
+      "GEOID": "3405",
+      "STATE": "34",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 248,
-      "DISTRICTID": "3405",
-      "STFIPS": "34",
-      "CDFIPS": "05",
-      "STATE_ABBR": "NJ"
+      "GEOID": "3406",
+      "STATE": "34",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 249,
-      "DISTRICTID": "3406",
-      "STFIPS": "34",
-      "CDFIPS": "06",
-      "STATE_ABBR": "NJ"
+      "GEOID": "3402",
+      "STATE": "34",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 250,
-      "DISTRICTID": "3407",
-      "STFIPS": "34",
-      "CDFIPS": "07",
-      "STATE_ABBR": "NJ"
+      "GEOID": "3410",
+      "STATE": "34",
+      "CD120": "10",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 251,
-      "DISTRICTID": "3408",
-      "STFIPS": "34",
-      "CDFIPS": "08",
-      "STATE_ABBR": "NJ"
+      "GEOID": "3404",
+      "STATE": "34",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 252,
-      "DISTRICTID": "3409",
-      "STFIPS": "34",
-      "CDFIPS": "09",
-      "STATE_ABBR": "NJ"
+      "GEOID": "3407",
+      "STATE": "34",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 253,
-      "DISTRICTID": "3410",
-      "STFIPS": "34",
-      "CDFIPS": "10",
-      "STATE_ABBR": "NJ"
+      "GEOID": "3411",
+      "STATE": "34",
+      "CD120": "11",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 254,
-      "DISTRICTID": "3411",
-      "STFIPS": "34",
-      "CDFIPS": "11",
-      "STATE_ABBR": "NJ"
+      "GEOID": "5503",
+      "STATE": "55",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 255,
-      "DISTRICTID": "3412",
-      "STFIPS": "34",
-      "CDFIPS": "12",
-      "STATE_ABBR": "NJ"
+      "GEOID": "5501",
+      "STATE": "55",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 256,
-      "DISTRICTID": "3501",
-      "STFIPS": "35",
-      "CDFIPS": "01",
-      "STATE_ABBR": "NM"
+      "GEOID": "5508",
+      "STATE": "55",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 257,
-      "DISTRICTID": "3502",
-      "STFIPS": "35",
-      "CDFIPS": "02",
-      "STATE_ABBR": "NM"
+      "GEOID": "5505",
+      "STATE": "55",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 258,
-      "DISTRICTID": "3503",
-      "STFIPS": "35",
-      "CDFIPS": "03",
-      "STATE_ABBR": "NM"
+      "GEOID": "5506",
+      "STATE": "55",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 259,
-      "DISTRICTID": "3601",
-      "STFIPS": "36",
-      "CDFIPS": "01",
-      "STATE_ABBR": "NY"
+      "GEOID": "5502",
+      "STATE": "55",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 260,
-      "DISTRICTID": "3602",
-      "STFIPS": "36",
-      "CDFIPS": "02",
-      "STATE_ABBR": "NY"
+      "GEOID": "5504",
+      "STATE": "55",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 261,
-      "DISTRICTID": "3603",
-      "STFIPS": "36",
-      "CDFIPS": "03",
-      "STATE_ABBR": "NY"
+      "GEOID": "5507",
+      "STATE": "55",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 262,
-      "DISTRICTID": "3604",
-      "STFIPS": "36",
-      "CDFIPS": "04",
-      "STATE_ABBR": "NY"
+      "GEOID": "1809",
+      "STATE": "18",
+      "CD120": "09",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 263,
-      "DISTRICTID": "3605",
-      "STFIPS": "36",
-      "CDFIPS": "05",
-      "STATE_ABBR": "NY"
+      "GEOID": "1803",
+      "STATE": "18",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 264,
-      "DISTRICTID": "3606",
-      "STFIPS": "36",
-      "CDFIPS": "06",
-      "STATE_ABBR": "NY"
+      "GEOID": "1801",
+      "STATE": "18",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 265,
-      "DISTRICTID": "3607",
-      "STFIPS": "36",
-      "CDFIPS": "07",
-      "STATE_ABBR": "NY"
+      "GEOID": "0610",
+      "STATE": "06",
+      "CD120": "10",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 266,
-      "DISTRICTID": "3608",
-      "STFIPS": "36",
-      "CDFIPS": "08",
-      "STATE_ABBR": "NY"
+      "GEOID": "0611",
+      "STATE": "06",
+      "CD120": "11",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 267,
-      "DISTRICTID": "3609",
-      "STFIPS": "36",
-      "CDFIPS": "09",
-      "STATE_ABBR": "NY"
+      "GEOID": "0612",
+      "STATE": "06",
+      "CD120": "12",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 268,
-      "DISTRICTID": "3610",
-      "STFIPS": "36",
-      "CDFIPS": "10",
-      "STATE_ABBR": "NY"
+      "GEOID": "0613",
+      "STATE": "06",
+      "CD120": "13",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 269,
-      "DISTRICTID": "3611",
-      "STFIPS": "36",
-      "CDFIPS": "11",
-      "STATE_ABBR": "NY"
+      "GEOID": "0614",
+      "STATE": "06",
+      "CD120": "14",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 270,
-      "DISTRICTID": "3612",
-      "STFIPS": "36",
-      "CDFIPS": "12",
-      "STATE_ABBR": "NY"
+      "GEOID": "0615",
+      "STATE": "06",
+      "CD120": "15",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 271,
-      "DISTRICTID": "3613",
-      "STFIPS": "36",
-      "CDFIPS": "13",
-      "STATE_ABBR": "NY"
+      "GEOID": "0616",
+      "STATE": "06",
+      "CD120": "16",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 272,
-      "DISTRICTID": "3614",
-      "STFIPS": "36",
-      "CDFIPS": "14",
-      "STATE_ABBR": "NY"
+      "GEOID": "0617",
+      "STATE": "06",
+      "CD120": "17",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 273,
-      "DISTRICTID": "3615",
-      "STFIPS": "36",
-      "CDFIPS": "15",
-      "STATE_ABBR": "NY"
+      "GEOID": "0618",
+      "STATE": "06",
+      "CD120": "18",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 274,
-      "DISTRICTID": "3616",
-      "STFIPS": "36",
-      "CDFIPS": "16",
-      "STATE_ABBR": "NY"
+      "GEOID": "0619",
+      "STATE": "06",
+      "CD120": "19",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 275,
-      "DISTRICTID": "3617",
-      "STFIPS": "36",
-      "CDFIPS": "17",
-      "STATE_ABBR": "NY"
+      "GEOID": "0620",
+      "STATE": "06",
+      "CD120": "20",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 276,
-      "DISTRICTID": "3618",
-      "STFIPS": "36",
-      "CDFIPS": "18",
-      "STATE_ABBR": "NY"
+      "GEOID": "0621",
+      "STATE": "06",
+      "CD120": "21",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 277,
-      "DISTRICTID": "3619",
-      "STFIPS": "36",
-      "CDFIPS": "19",
-      "STATE_ABBR": "NY"
+      "GEOID": "0622",
+      "STATE": "06",
+      "CD120": "22",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 278,
-      "DISTRICTID": "3620",
-      "STFIPS": "36",
-      "CDFIPS": "20",
-      "STATE_ABBR": "NY"
+      "GEOID": "0623",
+      "STATE": "06",
+      "CD120": "23",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 279,
-      "DISTRICTID": "3621",
-      "STFIPS": "36",
-      "CDFIPS": "21",
-      "STATE_ABBR": "NY"
+      "GEOID": "0624",
+      "STATE": "06",
+      "CD120": "24",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 280,
-      "DISTRICTID": "3622",
-      "STFIPS": "36",
-      "CDFIPS": "22",
-      "STATE_ABBR": "NY"
+      "GEOID": "0625",
+      "STATE": "06",
+      "CD120": "25",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 281,
-      "DISTRICTID": "3623",
-      "STFIPS": "36",
-      "CDFIPS": "23",
-      "STATE_ABBR": "NY"
+      "GEOID": "0626",
+      "STATE": "06",
+      "CD120": "26",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 282,
-      "DISTRICTID": "3624",
-      "STFIPS": "36",
-      "CDFIPS": "24",
-      "STATE_ABBR": "NY"
+      "GEOID": "1808",
+      "STATE": "18",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 283,
-      "DISTRICTID": "3625",
-      "STFIPS": "36",
-      "CDFIPS": "25",
-      "STATE_ABBR": "NY"
+      "GEOID": "1805",
+      "STATE": "18",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 284,
-      "DISTRICTID": "3626",
-      "STFIPS": "36",
-      "CDFIPS": "26",
-      "STATE_ABBR": "NY"
+      "GEOID": "1806",
+      "STATE": "18",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 285,
-      "DISTRICTID": "3701",
-      "STFIPS": "37",
-      "CDFIPS": "01",
-      "STATE_ABBR": "NC"
+      "GEOID": "1802",
+      "STATE": "18",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 286,
-      "DISTRICTID": "3702",
-      "STFIPS": "37",
-      "CDFIPS": "02",
-      "STATE_ABBR": "NC"
+      "GEOID": "1804",
+      "STATE": "18",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 287,
-      "DISTRICTID": "3703",
-      "STFIPS": "37",
-      "CDFIPS": "03",
-      "STATE_ABBR": "NC"
+      "GEOID": "1807",
+      "STATE": "18",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 288,
-      "DISTRICTID": "3704",
-      "STFIPS": "37",
-      "CDFIPS": "04",
-      "STATE_ABBR": "NC"
+      "GEOID": "3503",
+      "STATE": "35",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 289,
-      "DISTRICTID": "3705",
-      "STFIPS": "37",
-      "CDFIPS": "05",
-      "STATE_ABBR": "NC"
+      "GEOID": "3501",
+      "STATE": "35",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 290,
-      "DISTRICTID": "3706",
-      "STFIPS": "37",
-      "CDFIPS": "06",
-      "STATE_ABBR": "NC"
+      "GEOID": "3502",
+      "STATE": "35",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 291,
-      "DISTRICTID": "3707",
-      "STFIPS": "37",
-      "CDFIPS": "07",
-      "STATE_ABBR": "NC"
+      "GEOID": "3911",
+      "STATE": "39",
+      "CD120": "11",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 292,
-      "DISTRICTID": "3708",
-      "STFIPS": "37",
-      "CDFIPS": "08",
-      "STATE_ABBR": "NC"
+      "GEOID": "3912",
+      "STATE": "39",
+      "CD120": "12",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 293,
-      "DISTRICTID": "3709",
-      "STFIPS": "37",
-      "CDFIPS": "09",
-      "STATE_ABBR": "NC"
+      "GEOID": "3901",
+      "STATE": "39",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 294,
-      "DISTRICTID": "3710",
-      "STFIPS": "37",
-      "CDFIPS": "10",
-      "STATE_ABBR": "NC"
+      "GEOID": "3902",
+      "STATE": "39",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 295,
-      "DISTRICTID": "3711",
-      "STFIPS": "37",
-      "CDFIPS": "11",
-      "STATE_ABBR": "NC"
+      "GEOID": "3913",
+      "STATE": "39",
+      "CD120": "13",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 296,
-      "DISTRICTID": "3712",
-      "STFIPS": "37",
-      "CDFIPS": "12",
-      "STATE_ABBR": "NC"
+      "GEOID": "3914",
+      "STATE": "39",
+      "CD120": "14",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 297,
-      "DISTRICTID": "3713",
-      "STFIPS": "37",
-      "CDFIPS": "13",
-      "STATE_ABBR": "NC"
+      "GEOID": "3903",
+      "STATE": "39",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 298,
-      "DISTRICTID": "3714",
-      "STFIPS": "37",
-      "CDFIPS": "14",
-      "STATE_ABBR": "NC"
+      "GEOID": "3915",
+      "STATE": "39",
+      "CD120": "15",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 299,
-      "DISTRICTID": "3800",
-      "STFIPS": "38",
-      "CDFIPS": "00",
-      "STATE_ABBR": "ND"
+      "GEOID": "3904",
+      "STATE": "39",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 300,
-      "DISTRICTID": "3901",
-      "STFIPS": "39",
-      "CDFIPS": "01",
-      "STATE_ABBR": "OH"
+      "GEOID": "3905",
+      "STATE": "39",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 301,
-      "DISTRICTID": "3902",
-      "STFIPS": "39",
-      "CDFIPS": "02",
-      "STATE_ABBR": "OH"
+      "GEOID": "3906",
+      "STATE": "39",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 302,
-      "DISTRICTID": "3903",
-      "STFIPS": "39",
-      "CDFIPS": "03",
-      "STATE_ABBR": "OH"
+      "GEOID": "0644",
+      "STATE": "06",
+      "CD120": "44",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 303,
-      "DISTRICTID": "3904",
-      "STFIPS": "39",
-      "CDFIPS": "04",
-      "STATE_ABBR": "OH"
+      "GEOID": "0601",
+      "STATE": "06",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 304,
-      "DISTRICTID": "3905",
-      "STFIPS": "39",
-      "CDFIPS": "05",
-      "STATE_ABBR": "OH"
+      "GEOID": "0645",
+      "STATE": "06",
+      "CD120": "45",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 305,
-      "DISTRICTID": "3906",
-      "STFIPS": "39",
-      "CDFIPS": "06",
-      "STATE_ABBR": "OH"
+      "GEOID": "0602",
+      "STATE": "06",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 306,
-      "DISTRICTID": "3907",
-      "STFIPS": "39",
-      "CDFIPS": "07",
-      "STATE_ABBR": "OH"
+      "GEOID": "0646",
+      "STATE": "06",
+      "CD120": "46",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 307,
-      "DISTRICTID": "3908",
-      "STFIPS": "39",
-      "CDFIPS": "08",
-      "STATE_ABBR": "OH"
+      "GEOID": "0647",
+      "STATE": "06",
+      "CD120": "47",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 308,
-      "DISTRICTID": "3909",
-      "STFIPS": "39",
-      "CDFIPS": "09",
-      "STATE_ABBR": "OH"
+      "GEOID": "0603",
+      "STATE": "06",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 309,
-      "DISTRICTID": "3910",
-      "STFIPS": "39",
-      "CDFIPS": "10",
-      "STATE_ABBR": "OH"
+      "GEOID": "0648",
+      "STATE": "06",
+      "CD120": "48",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 310,
-      "DISTRICTID": "3911",
-      "STFIPS": "39",
-      "CDFIPS": "11",
-      "STATE_ABBR": "OH"
+      "GEOID": "0604",
+      "STATE": "06",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 311,
-      "DISTRICTID": "3912",
-      "STFIPS": "39",
-      "CDFIPS": "12",
-      "STATE_ABBR": "OH"
+      "GEOID": "0649",
+      "STATE": "06",
+      "CD120": "49",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 312,
-      "DISTRICTID": "3913",
-      "STFIPS": "39",
-      "CDFIPS": "13",
-      "STATE_ABBR": "OH"
+      "GEOID": "0605",
+      "STATE": "06",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 313,
-      "DISTRICTID": "3914",
-      "STFIPS": "39",
-      "CDFIPS": "14",
-      "STATE_ABBR": "OH"
+      "GEOID": "0606",
+      "STATE": "06",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 314,
-      "DISTRICTID": "3915",
-      "STFIPS": "39",
-      "CDFIPS": "15",
-      "STATE_ABBR": "OH"
+      "GEOID": "0607",
+      "STATE": "06",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 315,
-      "DISTRICTID": "4001",
-      "STFIPS": "40",
-      "CDFIPS": "01",
-      "STATE_ABBR": "OK"
+      "GEOID": "0608",
+      "STATE": "06",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 316,
-      "DISTRICTID": "4002",
-      "STFIPS": "40",
-      "CDFIPS": "02",
-      "STATE_ABBR": "OK"
+      "GEOID": "0609",
+      "STATE": "06",
+      "CD120": "09",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 317,
-      "DISTRICTID": "4003",
-      "STFIPS": "40",
-      "CDFIPS": "03",
-      "STATE_ABBR": "OK"
+      "GEOID": "0650",
+      "STATE": "06",
+      "CD120": "50",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 318,
-      "DISTRICTID": "4004",
-      "STFIPS": "40",
-      "CDFIPS": "04",
-      "STATE_ABBR": "OK"
+      "GEOID": "0651",
+      "STATE": "06",
+      "CD120": "51",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 319,
-      "DISTRICTID": "4005",
-      "STFIPS": "40",
-      "CDFIPS": "05",
-      "STATE_ABBR": "OK"
+      "GEOID": "0652",
+      "STATE": "06",
+      "CD120": "52",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 320,
-      "DISTRICTID": "4101",
-      "STFIPS": "41",
-      "CDFIPS": "01",
-      "STATE_ABBR": "OR"
+      "GEOID": "0403",
+      "STATE": "04",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 321,
-      "DISTRICTID": "4102",
-      "STFIPS": "41",
-      "CDFIPS": "02",
-      "STATE_ABBR": "OR"
+      "GEOID": "0401",
+      "STATE": "04",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 322,
-      "DISTRICTID": "4103",
-      "STFIPS": "41",
-      "CDFIPS": "03",
-      "STATE_ABBR": "OR"
+      "GEOID": "0408",
+      "STATE": "04",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 323,
-      "DISTRICTID": "4104",
-      "STFIPS": "41",
-      "CDFIPS": "04",
-      "STATE_ABBR": "OR"
+      "GEOID": "0405",
+      "STATE": "04",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 324,
-      "DISTRICTID": "4105",
-      "STFIPS": "41",
-      "CDFIPS": "05",
-      "STATE_ABBR": "OR"
+      "GEOID": "0406",
+      "STATE": "04",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 325,
-      "DISTRICTID": "4106",
-      "STFIPS": "41",
-      "CDFIPS": "06",
-      "STATE_ABBR": "OR"
+      "GEOID": "0402",
+      "STATE": "04",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 326,
-      "DISTRICTID": "4201",
-      "STFIPS": "42",
-      "CDFIPS": "01",
-      "STATE_ABBR": "PA"
+      "GEOID": "0404",
+      "STATE": "04",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 327,
-      "DISTRICTID": "4202",
-      "STFIPS": "42",
-      "CDFIPS": "02",
-      "STATE_ABBR": "PA"
+      "GEOID": "0407",
+      "STATE": "04",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 328,
-      "DISTRICTID": "4203",
-      "STFIPS": "42",
-      "CDFIPS": "03",
-      "STATE_ABBR": "PA"
+      "GEOID": "0409",
+      "STATE": "04",
+      "CD120": "09",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 329,
-      "DISTRICTID": "4204",
-      "STFIPS": "42",
-      "CDFIPS": "04",
-      "STATE_ABBR": "PA"
+      "GEOID": "4822",
+      "STATE": "48",
+      "CD120": "22",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 330,
-      "DISTRICTID": "4205",
-      "STFIPS": "42",
-      "CDFIPS": "05",
-      "STATE_ABBR": "PA"
+      "GEOID": "4823",
+      "STATE": "48",
+      "CD120": "23",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 331,
-      "DISTRICTID": "4206",
-      "STFIPS": "42",
-      "CDFIPS": "06",
-      "STATE_ABBR": "PA"
+      "GEOID": "4801",
+      "STATE": "48",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 332,
-      "DISTRICTID": "4207",
-      "STFIPS": "42",
-      "CDFIPS": "07",
-      "STATE_ABBR": "PA"
+      "GEOID": "4824",
+      "STATE": "48",
+      "CD120": "24",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 333,
-      "DISTRICTID": "4208",
-      "STFIPS": "42",
-      "CDFIPS": "08",
-      "STATE_ABBR": "PA"
+      "GEOID": "4802",
+      "STATE": "48",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 334,
-      "DISTRICTID": "4209",
-      "STFIPS": "42",
-      "CDFIPS": "09",
-      "STATE_ABBR": "PA"
+      "GEOID": "4825",
+      "STATE": "48",
+      "CD120": "25",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 335,
-      "DISTRICTID": "4210",
-      "STFIPS": "42",
-      "CDFIPS": "10",
-      "STATE_ABBR": "PA"
+      "GEOID": "4803",
+      "STATE": "48",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 336,
-      "DISTRICTID": "4211",
-      "STFIPS": "42",
-      "CDFIPS": "11",
-      "STATE_ABBR": "PA"
+      "GEOID": "4804",
+      "STATE": "48",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 337,
-      "DISTRICTID": "4212",
-      "STFIPS": "42",
-      "CDFIPS": "12",
-      "STATE_ABBR": "PA"
+      "GEOID": "4826",
+      "STATE": "48",
+      "CD120": "26",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 338,
-      "DISTRICTID": "4213",
-      "STFIPS": "42",
-      "CDFIPS": "13",
-      "STATE_ABBR": "PA"
+      "GEOID": "4805",
+      "STATE": "48",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 339,
-      "DISTRICTID": "4214",
-      "STFIPS": "42",
-      "CDFIPS": "14",
-      "STATE_ABBR": "PA"
+      "GEOID": "4827",
+      "STATE": "48",
+      "CD120": "27",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 340,
-      "DISTRICTID": "4215",
-      "STFIPS": "42",
-      "CDFIPS": "15",
-      "STATE_ABBR": "PA"
+      "GEOID": "4828",
+      "STATE": "48",
+      "CD120": "28",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 341,
-      "DISTRICTID": "4216",
-      "STFIPS": "42",
-      "CDFIPS": "16",
-      "STATE_ABBR": "PA"
+      "GEOID": "4806",
+      "STATE": "48",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 342,
-      "DISTRICTID": "4217",
-      "STFIPS": "42",
-      "CDFIPS": "17",
-      "STATE_ABBR": "PA"
+      "GEOID": "4807",
+      "STATE": "48",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 343,
-      "DISTRICTID": "4401",
-      "STFIPS": "44",
-      "CDFIPS": "01",
-      "STATE_ABBR": "RI"
+      "GEOID": "4829",
+      "STATE": "48",
+      "CD120": "29",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 344,
-      "DISTRICTID": "4402",
-      "STFIPS": "44",
-      "CDFIPS": "02",
-      "STATE_ABBR": "RI"
+      "GEOID": "4808",
+      "STATE": "48",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 345,
-      "DISTRICTID": "4501",
-      "STFIPS": "45",
-      "CDFIPS": "01",
-      "STATE_ABBR": "SC"
+      "GEOID": "4809",
+      "STATE": "48",
+      "CD120": "09",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 346,
-      "DISTRICTID": "4502",
-      "STFIPS": "45",
-      "CDFIPS": "02",
-      "STATE_ABBR": "SC"
+      "GEOID": "4830",
+      "STATE": "48",
+      "CD120": "30",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 347,
-      "DISTRICTID": "4503",
-      "STFIPS": "45",
-      "CDFIPS": "03",
-      "STATE_ABBR": "SC"
+      "GEOID": "4831",
+      "STATE": "48",
+      "CD120": "31",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 348,
-      "DISTRICTID": "4504",
-      "STFIPS": "45",
-      "CDFIPS": "04",
-      "STATE_ABBR": "SC"
+      "GEOID": "4810",
+      "STATE": "48",
+      "CD120": "10",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 349,
-      "DISTRICTID": "4505",
-      "STFIPS": "45",
-      "CDFIPS": "05",
-      "STATE_ABBR": "SC"
+      "GEOID": "4832",
+      "STATE": "48",
+      "CD120": "32",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 350,
-      "DISTRICTID": "4506",
-      "STFIPS": "45",
-      "CDFIPS": "06",
-      "STATE_ABBR": "SC"
+      "GEOID": "2403",
+      "STATE": "24",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 351,
-      "DISTRICTID": "4507",
-      "STFIPS": "45",
-      "CDFIPS": "07",
-      "STATE_ABBR": "SC"
+      "GEOID": "2401",
+      "STATE": "24",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 352,
-      "DISTRICTID": "4600",
-      "STFIPS": "46",
-      "CDFIPS": "00",
-      "STATE_ABBR": "SD"
+      "GEOID": "2408",
+      "STATE": "24",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 353,
-      "DISTRICTID": "4701",
-      "STFIPS": "47",
-      "CDFIPS": "01",
-      "STATE_ABBR": "TN"
+      "GEOID": "2405",
+      "STATE": "24",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 354,
-      "DISTRICTID": "4702",
-      "STFIPS": "47",
-      "CDFIPS": "02",
-      "STATE_ABBR": "TN"
+      "GEOID": "2406",
+      "STATE": "24",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 355,
-      "DISTRICTID": "4703",
-      "STFIPS": "47",
-      "CDFIPS": "03",
-      "STATE_ABBR": "TN"
+      "GEOID": "4834",
+      "STATE": "48",
+      "CD120": "34",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 356,
-      "DISTRICTID": "4704",
-      "STFIPS": "47",
-      "CDFIPS": "04",
-      "STATE_ABBR": "TN"
+      "GEOID": "4812",
+      "STATE": "48",
+      "CD120": "12",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 357,
-      "DISTRICTID": "4705",
-      "STFIPS": "47",
-      "CDFIPS": "05",
-      "STATE_ABBR": "TN"
+      "GEOID": "4813",
+      "STATE": "48",
+      "CD120": "13",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 358,
-      "DISTRICTID": "4706",
-      "STFIPS": "47",
-      "CDFIPS": "06",
-      "STATE_ABBR": "TN"
+      "GEOID": "4835",
+      "STATE": "48",
+      "CD120": "35",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 359,
-      "DISTRICTID": "4707",
-      "STFIPS": "47",
-      "CDFIPS": "07",
-      "STATE_ABBR": "TN"
+      "GEOID": "4811",
+      "STATE": "48",
+      "CD120": "11",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 360,
-      "DISTRICTID": "4708",
-      "STFIPS": "47",
-      "CDFIPS": "08",
-      "STATE_ABBR": "TN"
+      "GEOID": "4833",
+      "STATE": "48",
+      "CD120": "33",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 361,
-      "DISTRICTID": "4709",
-      "STFIPS": "47",
-      "CDFIPS": "09",
-      "STATE_ABBR": "TN"
+      "GEOID": "4836",
+      "STATE": "48",
+      "CD120": "36",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 362,
-      "DISTRICTID": "4801",
-      "STFIPS": "48",
-      "CDFIPS": "01",
-      "STATE_ABBR": "TX"
+      "GEOID": "4814",
+      "STATE": "48",
+      "CD120": "14",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 363,
-      "DISTRICTID": "4802",
-      "STFIPS": "48",
-      "CDFIPS": "02",
-      "STATE_ABBR": "TX"
+      "GEOID": "4815",
+      "STATE": "48",
+      "CD120": "15",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 364,
-      "DISTRICTID": "4803",
-      "STFIPS": "48",
-      "CDFIPS": "03",
-      "STATE_ABBR": "TX"
+      "GEOID": "4837",
+      "STATE": "48",
+      "CD120": "37",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 365,
-      "DISTRICTID": "4804",
-      "STFIPS": "48",
-      "CDFIPS": "04",
-      "STATE_ABBR": "TX"
+      "GEOID": "4816",
+      "STATE": "48",
+      "CD120": "16",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 366,
-      "DISTRICTID": "4805",
-      "STFIPS": "48",
-      "CDFIPS": "05",
-      "STATE_ABBR": "TX"
+      "GEOID": "4838",
+      "STATE": "48",
+      "CD120": "38",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 367,
-      "DISTRICTID": "4806",
-      "STFIPS": "48",
-      "CDFIPS": "06",
-      "STATE_ABBR": "TX"
+      "GEOID": "4817",
+      "STATE": "48",
+      "CD120": "17",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 368,
-      "DISTRICTID": "4807",
-      "STFIPS": "48",
-      "CDFIPS": "07",
-      "STATE_ABBR": "TX"
+      "GEOID": "4818",
+      "STATE": "48",
+      "CD120": "18",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 369,
-      "DISTRICTID": "4808",
-      "STFIPS": "48",
-      "CDFIPS": "08",
-      "STATE_ABBR": "TX"
+      "GEOID": "4819",
+      "STATE": "48",
+      "CD120": "19",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 370,
-      "DISTRICTID": "4809",
-      "STFIPS": "48",
-      "CDFIPS": "09",
-      "STATE_ABBR": "TX"
+      "GEOID": "4820",
+      "STATE": "48",
+      "CD120": "20",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 371,
-      "DISTRICTID": "4810",
-      "STFIPS": "48",
-      "CDFIPS": "10",
-      "STATE_ABBR": "TX"
+      "GEOID": "4821",
+      "STATE": "48",
+      "CD120": "21",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 372,
-      "DISTRICTID": "4811",
-      "STFIPS": "48",
-      "CDFIPS": "11",
-      "STATE_ABBR": "TX"
+      "GEOID": "2402",
+      "STATE": "24",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 373,
-      "DISTRICTID": "4812",
-      "STFIPS": "48",
-      "CDFIPS": "12",
-      "STATE_ABBR": "TX"
+      "GEOID": "2404",
+      "STATE": "24",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 374,
-      "DISTRICTID": "4813",
-      "STFIPS": "48",
-      "CDFIPS": "13",
-      "STATE_ABBR": "TX"
+      "GEOID": "2407",
+      "STATE": "24",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 375,
-      "DISTRICTID": "4814",
-      "STFIPS": "48",
-      "CDFIPS": "14",
-      "STATE_ABBR": "TX"
+      "GEOID": "3409",
+      "STATE": "34",
+      "CD120": "09",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 376,
-      "DISTRICTID": "4815",
-      "STFIPS": "48",
-      "CDFIPS": "15",
-      "STATE_ABBR": "TX"
+      "GEOID": "3401",
+      "STATE": "34",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 377,
-      "DISTRICTID": "4816",
-      "STFIPS": "48",
-      "CDFIPS": "16",
-      "STATE_ABBR": "TX"
+      "GEOID": "3620",
+      "STATE": "36",
+      "CD120": "20",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 378,
-      "DISTRICTID": "4817",
-      "STFIPS": "48",
-      "CDFIPS": "17",
-      "STATE_ABBR": "TX"
+      "GEOID": "3613",
+      "STATE": "36",
+      "CD120": "13",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 379,
-      "DISTRICTID": "4818",
-      "STFIPS": "48",
-      "CDFIPS": "18",
-      "STATE_ABBR": "TX"
+      "GEOID": "3623",
+      "STATE": "36",
+      "CD120": "23",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 380,
-      "DISTRICTID": "4819",
-      "STFIPS": "48",
-      "CDFIPS": "19",
-      "STATE_ABBR": "TX"
+      "GEOID": "3603",
+      "STATE": "36",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 381,
-      "DISTRICTID": "4820",
-      "STFIPS": "48",
-      "CDFIPS": "20",
-      "STATE_ABBR": "TX"
+      "GEOID": "3601",
+      "STATE": "36",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 382,
-      "DISTRICTID": "4821",
-      "STFIPS": "48",
-      "CDFIPS": "21",
-      "STATE_ABBR": "TX"
+      "GEOID": "3614",
+      "STATE": "36",
+      "CD120": "14",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 383,
-      "DISTRICTID": "4822",
-      "STFIPS": "48",
-      "CDFIPS": "22",
-      "STATE_ABBR": "TX"
+      "GEOID": "3616",
+      "STATE": "36",
+      "CD120": "16",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 384,
-      "DISTRICTID": "4823",
-      "STFIPS": "48",
-      "CDFIPS": "23",
-      "STATE_ABBR": "TX"
+      "GEOID": "3608",
+      "STATE": "36",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 385,
-      "DISTRICTID": "4824",
-      "STFIPS": "48",
-      "CDFIPS": "24",
-      "STATE_ABBR": "TX"
+      "GEOID": "3612",
+      "STATE": "36",
+      "CD120": "12",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 386,
-      "DISTRICTID": "4825",
-      "STFIPS": "48",
-      "CDFIPS": "25",
-      "STATE_ABBR": "TX"
+      "GEOID": "3624",
+      "STATE": "36",
+      "CD120": "24",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 387,
-      "DISTRICTID": "4826",
-      "STFIPS": "48",
-      "CDFIPS": "26",
-      "STATE_ABBR": "TX"
+      "GEOID": "3605",
+      "STATE": "36",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 388,
-      "DISTRICTID": "4827",
-      "STFIPS": "48",
-      "CDFIPS": "27",
-      "STATE_ABBR": "TX"
+      "GEOID": "3606",
+      "STATE": "36",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 389,
-      "DISTRICTID": "4828",
-      "STFIPS": "48",
-      "CDFIPS": "28",
-      "STATE_ABBR": "TX"
+      "GEOID": "3615",
+      "STATE": "36",
+      "CD120": "15",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 390,
-      "DISTRICTID": "4829",
-      "STFIPS": "48",
-      "CDFIPS": "29",
-      "STATE_ABBR": "TX"
+      "GEOID": "3617",
+      "STATE": "36",
+      "CD120": "17",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 391,
-      "DISTRICTID": "4830",
-      "STFIPS": "48",
-      "CDFIPS": "30",
-      "STATE_ABBR": "TX"
+      "GEOID": "3618",
+      "STATE": "36",
+      "CD120": "18",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 392,
-      "DISTRICTID": "4831",
-      "STFIPS": "48",
-      "CDFIPS": "31",
-      "STATE_ABBR": "TX"
+      "GEOID": "3625",
+      "STATE": "36",
+      "CD120": "25",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 393,
-      "DISTRICTID": "4832",
-      "STFIPS": "48",
-      "CDFIPS": "32",
-      "STATE_ABBR": "TX"
+      "GEOID": "3602",
+      "STATE": "36",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 394,
-      "DISTRICTID": "4833",
-      "STFIPS": "48",
-      "CDFIPS": "33",
-      "STATE_ABBR": "TX"
+      "GEOID": "3610",
+      "STATE": "36",
+      "CD120": "10",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 395,
-      "DISTRICTID": "4834",
-      "STFIPS": "48",
-      "CDFIPS": "34",
-      "STATE_ABBR": "TX"
+      "GEOID": "3604",
+      "STATE": "36",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 396,
-      "DISTRICTID": "4835",
-      "STFIPS": "48",
-      "CDFIPS": "35",
-      "STATE_ABBR": "TX"
+      "GEOID": "3607",
+      "STATE": "36",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 397,
-      "DISTRICTID": "4836",
-      "STFIPS": "48",
-      "CDFIPS": "36",
-      "STATE_ABBR": "TX"
+      "GEOID": "3621",
+      "STATE": "36",
+      "CD120": "21",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 398,
-      "DISTRICTID": "4837",
-      "STFIPS": "48",
-      "CDFIPS": "37",
-      "STATE_ABBR": "TX"
+      "GEOID": "3622",
+      "STATE": "36",
+      "CD120": "22",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 399,
-      "DISTRICTID": "4838",
-      "STFIPS": "48",
-      "CDFIPS": "38",
-      "STATE_ABBR": "TX"
+      "GEOID": "3619",
+      "STATE": "36",
+      "CD120": "19",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 400,
-      "DISTRICTID": "4901",
-      "STFIPS": "49",
-      "CDFIPS": "01",
-      "STATE_ABBR": "UT"
+      "GEOID": "3611",
+      "STATE": "36",
+      "CD120": "11",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 401,
-      "DISTRICTID": "4902",
-      "STFIPS": "49",
-      "CDFIPS": "02",
-      "STATE_ABBR": "UT"
+      "GEOID": "3626",
+      "STATE": "36",
+      "CD120": "26",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 402,
-      "DISTRICTID": "4903",
-      "STFIPS": "49",
-      "CDFIPS": "03",
-      "STATE_ABBR": "UT"
+      "GEOID": "5109",
+      "STATE": "51",
+      "CD120": "09",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 403,
-      "DISTRICTID": "4904",
-      "STFIPS": "49",
-      "CDFIPS": "04",
-      "STATE_ABBR": "UT"
+      "GEOID": "5103",
+      "STATE": "51",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 404,
-      "DISTRICTID": "5000",
-      "STFIPS": "50",
-      "CDFIPS": "00",
-      "STATE_ABBR": "VT"
+      "GEOID": "5101",
+      "STATE": "51",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 405,
-      "DISTRICTID": "5101",
-      "STFIPS": "51",
-      "CDFIPS": "01",
-      "STATE_ABBR": "VA"
+      "GEOID": "5108",
+      "STATE": "51",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 406,
-      "DISTRICTID": "5102",
-      "STFIPS": "51",
-      "CDFIPS": "02",
-      "STATE_ABBR": "VA"
+      "GEOID": "5105",
+      "STATE": "51",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 407,
-      "DISTRICTID": "5103",
-      "STFIPS": "51",
-      "CDFIPS": "03",
-      "STATE_ABBR": "VA"
+      "GEOID": "5106",
+      "STATE": "51",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 408,
-      "DISTRICTID": "5104",
-      "STFIPS": "51",
-      "CDFIPS": "04",
-      "STATE_ABBR": "VA"
+      "GEOID": "5110",
+      "STATE": "51",
+      "CD120": "10",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 409,
-      "DISTRICTID": "5105",
-      "STFIPS": "51",
-      "CDFIPS": "05",
-      "STATE_ABBR": "VA"
+      "GEOID": "5102",
+      "STATE": "51",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 410,
-      "DISTRICTID": "5106",
-      "STFIPS": "51",
-      "CDFIPS": "06",
-      "STATE_ABBR": "VA"
+      "GEOID": "5104",
+      "STATE": "51",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 411,
-      "DISTRICTID": "5107",
-      "STFIPS": "51",
-      "CDFIPS": "07",
-      "STATE_ABBR": "VA"
+      "GEOID": "5107",
+      "STATE": "51",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 412,
-      "DISTRICTID": "5108",
-      "STFIPS": "51",
-      "CDFIPS": "08",
-      "STATE_ABBR": "VA"
+      "GEOID": "5111",
+      "STATE": "51",
+      "CD120": "11",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 413,
-      "DISTRICTID": "5109",
-      "STFIPS": "51",
-      "CDFIPS": "09",
-      "STATE_ABBR": "VA"
+      "GEOID": "0627",
+      "STATE": "06",
+      "CD120": "27",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 414,
-      "DISTRICTID": "5110",
-      "STFIPS": "51",
-      "CDFIPS": "10",
-      "STATE_ABBR": "VA"
+      "GEOID": "0628",
+      "STATE": "06",
+      "CD120": "28",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 415,
-      "DISTRICTID": "5111",
-      "STFIPS": "51",
-      "CDFIPS": "11",
-      "STATE_ABBR": "VA"
+      "GEOID": "3002",
+      "STATE": "30",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 416,
-      "DISTRICTID": "5301",
-      "STFIPS": "53",
-      "CDFIPS": "01",
-      "STATE_ABBR": "WA"
+      "GEOID": "4003",
+      "STATE": "40",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 417,
-      "DISTRICTID": "5302",
-      "STFIPS": "53",
-      "CDFIPS": "02",
-      "STATE_ABBR": "WA"
+      "GEOID": "3001",
+      "STATE": "30",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 418,
-      "DISTRICTID": "5303",
-      "STFIPS": "53",
-      "CDFIPS": "03",
-      "STATE_ABBR": "WA"
+      "GEOID": "4001",
+      "STATE": "40",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 419,
-      "DISTRICTID": "5304",
-      "STFIPS": "53",
-      "CDFIPS": "04",
-      "STATE_ABBR": "WA"
+      "GEOID": "4005",
+      "STATE": "40",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 420,
-      "DISTRICTID": "5305",
-      "STFIPS": "53",
-      "CDFIPS": "05",
-      "STATE_ABBR": "WA"
+      "GEOID": "4002",
+      "STATE": "40",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 421,
-      "DISTRICTID": "5306",
-      "STFIPS": "53",
-      "CDFIPS": "06",
-      "STATE_ABBR": "WA"
+      "GEOID": "4004",
+      "STATE": "40",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 422,
-      "DISTRICTID": "5307",
-      "STFIPS": "53",
-      "CDFIPS": "07",
-      "STATE_ABBR": "WA"
+      "GEOID": "4103",
+      "STATE": "41",
+      "CD120": "03",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 423,
-      "DISTRICTID": "5308",
-      "STFIPS": "53",
-      "CDFIPS": "08",
-      "STATE_ABBR": "WA"
+      "GEOID": "4101",
+      "STATE": "41",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 424,
-      "DISTRICTID": "5309",
-      "STFIPS": "53",
-      "CDFIPS": "09",
-      "STATE_ABBR": "WA"
+      "GEOID": "4105",
+      "STATE": "41",
+      "CD120": "05",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 425,
-      "DISTRICTID": "5310",
-      "STFIPS": "53",
-      "CDFIPS": "10",
-      "STATE_ABBR": "WA"
+      "GEOID": "4106",
+      "STATE": "41",
+      "CD120": "06",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 426,
-      "DISTRICTID": "5401",
-      "STFIPS": "54",
-      "CDFIPS": "01",
-      "STATE_ABBR": "WV"
+      "GEOID": "4102",
+      "STATE": "41",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 427,
-      "DISTRICTID": "5402",
-      "STFIPS": "54",
-      "CDFIPS": "02",
-      "STATE_ABBR": "WV"
+      "GEOID": "4104",
+      "STATE": "41",
+      "CD120": "04",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 428,
-      "DISTRICTID": "5501",
-      "STFIPS": "55",
-      "CDFIPS": "01",
-      "STATE_ABBR": "WI"
+      "GEOID": "4401",
+      "STATE": "44",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 429,
-      "DISTRICTID": "5502",
-      "STFIPS": "55",
-      "CDFIPS": "02",
-      "STATE_ABBR": "WI"
+      "GEOID": "4402",
+      "STATE": "44",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 430,
-      "DISTRICTID": "5503",
-      "STFIPS": "55",
-      "CDFIPS": "03",
-      "STATE_ABBR": "WI"
+      "GEOID": "5000",
+      "STATE": "50",
+      "CD120": "00",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 431,
-      "DISTRICTID": "5504",
-      "STFIPS": "55",
-      "CDFIPS": "04",
-      "STATE_ABBR": "WI"
+      "GEOID": "5401",
+      "STATE": "54",
+      "CD120": "01",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 432,
-      "DISTRICTID": "5505",
-      "STFIPS": "55",
-      "CDFIPS": "05",
-      "STATE_ABBR": "WI"
+      "GEOID": "5402",
+      "STATE": "54",
+      "CD120": "02",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 433,
-      "DISTRICTID": "5506",
-      "STFIPS": "55",
-      "CDFIPS": "06",
-      "STATE_ABBR": "WI"
+      "GEOID": "3907",
+      "STATE": "39",
+      "CD120": "07",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 434,
-      "DISTRICTID": "5507",
-      "STFIPS": "55",
-      "CDFIPS": "07",
-      "STATE_ABBR": "WI"
+      "GEOID": "3908",
+      "STATE": "39",
+      "CD120": "08",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 435,
-      "DISTRICTID": "5508",
-      "STFIPS": "55",
-      "CDFIPS": "08",
-      "STATE_ABBR": "WI"
+      "GEOID": "3909",
+      "STATE": "39",
+      "CD120": "09",
+      "CDSESSN": "120"
     },
     {
       "OBJECTID": 436,
-      "DISTRICTID": "5600",
-      "STFIPS": "56",
-      "CDFIPS": "00",
-      "STATE_ABBR": "WY"
+      "GEOID": "2803",
+      "STATE": "28",
+      "CD120": "03",
+      "CDSESSN": "120"
+    },
+    {
+      "OBJECTID": 437,
+      "GEOID": "2801",
+      "STATE": "28",
+      "CD120": "01",
+      "CDSESSN": "120"
+    },
+    {
+      "OBJECTID": 438,
+      "GEOID": "2802",
+      "STATE": "28",
+      "CD120": "02",
+      "CDSESSN": "120"
+    },
+    {
+      "OBJECTID": 439,
+      "GEOID": "2804",
+      "STATE": "28",
+      "CD120": "04",
+      "CDSESSN": "120"
+    },
+    {
+      "OBJECTID": 440,
+      "GEOID": "7898",
+      "STATE": "78",
+      "CD120": "98",
+      "CDSESSN": "120"
+    },
+    {
+      "OBJECTID": 441,
+      "GEOID": "6098",
+      "STATE": "60",
+      "CD120": "98",
+      "CDSESSN": "120"
+    },
+    {
+      "OBJECTID": 442,
+      "GEOID": "6698",
+      "STATE": "66",
+      "CD120": "98",
+      "CDSESSN": "120"
+    },
+    {
+      "OBJECTID": 443,
+      "GEOID": "6998",
+      "STATE": "69",
+      "CD120": "98",
+      "CDSESSN": "120"
+    },
+    {
+      "OBJECTID": 444,
+      "GEOID": "3609",
+      "STATE": "36",
+      "CD120": "09",
+      "CDSESSN": "120"
     }
   ],
-  "source": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/USA_119th_Congressional_Districts_no_territories/FeatureServer/0/query?where=1%3D1&outFields=OBJECTID,DISTRICTID,STFIPS,CDFIPS,STATE_ABBR&returnGeometry=false&f=json"
+  "fetchedAt": "2026-11-04T00:39:29.6209710Z",
+  "source": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Labels/MapServer/40"
 }
