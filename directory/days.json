@@ -54,9 +54,10 @@
       "day": 4,
       "date": "2026-11-04",
       "theme": "Clusters",
-      "title": "Clusters",
-      "description": "Look for concentrations, shared patterns, or groups that emerge when locations are seen together.",
-      "status": "planned"
+      "title": "Warehouse / Country",
+      "description": "Explore Inland Empire warehouse concentrations alongside surrounding buildings, with neon clusters, footprint views, and sourced neighborhood context.",
+      "status": "complete",
+      "tags": ["ArcGIS JavaScript", "Calcite", "OpenStreetMap", "Warehouses", "Clustering"]
     },
     {
       "day": 5,

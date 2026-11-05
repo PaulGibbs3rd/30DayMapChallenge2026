@@ -1,0 +1,1 @@
+import"./TriangleTechniqueConfiguration-BFNg1nDp.js";import"./VertexColor.glsl-DHEFr3LO.js";import"./oitResolution.glsl-Jy9NKxv9.js";import"./ShaderBuilder-CTt8qzqL.js";export{n as build}from"./ColorMaterial-M3s9Ywli.js";

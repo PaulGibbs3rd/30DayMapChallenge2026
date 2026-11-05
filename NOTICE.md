@@ -16,3 +16,9 @@ The challenge name and daily themes come from [30DayMapChallenge](https://30daym
 
 The collection's Day 1 preview image is an application screenshot and includes the same credited imagery. No blanket license to third-party data, artwork, music, fonts, or SDKs is implied by this repository.
 
+## Day 4
+
+- Building footprints are © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), distributed under ODbL and accessed through Esri's public OpenStreetMap Buildings for North America service. The app does not bundle a downloaded building database.
+- The runtime bundles ArcGIS Maps SDK for JavaScript and Calcite Design System. Their original license notices and third-party notices are preserved in [Day 4 vendor notices](day4/vendor/README.md).
+- [Research notes](day4/research-notes.md) attribute the neighborhood concerns to CARB, South Coast AQMD, and CCAEJ. Current footprints do not measure historical growth, exposure, or health outcomes.
+

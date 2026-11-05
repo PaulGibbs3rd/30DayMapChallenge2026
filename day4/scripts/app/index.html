@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" class="calcite-mode-dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080c13">
+<meta name="description" content="Warehouse Country: explore the Inland Empire through its mapped warehouse clusters. An OpenStreetMap atlas by Paul Gibbs for Day 4 of the 30DayMapChallenge.">
+<meta property="og:title" content="Warehouse / Country — Inland Empire"><meta property="og:description" content="Follow mapped warehouse concentrations across the Inland Empire, then explore building patterns anywhere in the United States."><meta property="og:type" content="website"><meta property="og:url" content="https://thisismyproject.site/day4/"><meta property="og:image" content="https://thisismyproject.site/day4/warehouse-country.png"><meta property="og:image:width" content="1600"><meta property="og:image:height" content="1000"><meta property="og:image:alt" content="Amber warehouse clusters near Redlands among surrounding building footprints"><meta name="twitter:card" content="summary_large_image">
+<title>Warehouse / Country · Day 04 / Clusters</title>
+</head>
+<body>
+<a class="skip-link" href="#map">Skip to map</a>
+<calcite-shell>
+<header slot="header" class="topbar">
+<a class="challenge-link" href="../directory/index.html"><span class="day-number">04</span><span>30 DAY MAP CHALLENGE<span class="header-sub">2026 / CLUSTERS</span></span></a>
+<div class="header-right"><span class="live-label"><i></i> OPENSTREETMAP EXPLORER</span><calcite-button id="share" appearance="transparent" icon-start="link" scale="s">Share view</calcite-button><calcite-button id="capture" appearance="outline" icon-start="camera" scale="s">Save image</calcite-button></div>
+</header>
+<main class="workspace">
+<aside id="sidebar" aria-label="Explore and filter buildings">
+  <div class="sidebar-heading"><div><p class="eyebrow">DAY 04 / CLUSTERS</p><h1>Warehouse <span>/</span> Country</h1></div><calcite-action id="close-controls" text="Close filters" icon="x"></calcite-action></div>
+  <p class="dek">Where warehouses meet neighborhoods.</p>
+  <section class="explore-controls" aria-label="Choose a location">
+    <calcite-select id="place-select" label="Explore the Inland Empire" label-text="Explore the Inland Empire" scale="m"></calcite-select>
+    <arcgis-search id="search" reference-element="map" include-default-sources-disabled popup-disabled></arcgis-search>
+  </section>
+  <section class="summary" aria-label="Current map statistics"><div class="stat-top"><span id="summary-label" class="eyebrow">WAREHOUSES IN VIEW</span><span id="stats-badge">WAREHOUSES</span></div><div id="total" class="big-number">—</div><p id="stats-note" class="muted">Finding mapped warehouse footprints…</p></section>
+  <section class="cluster-controls"><calcite-segmented-control id="display" label-text="Show selected buildings as" width="full" scale="m"><calcite-segmented-control-item value="clusters" checked>Clusters</calcite-segmented-control-item><calcite-segmented-control-item value="footprints">Footprints</calcite-segmented-control-item></calcite-segmented-control><div class="radius-heading"><span>Cluster reach</span><output id="radius-value">80 px</output></div><calcite-slider id="radius" min="40" max="140" step="10" value="80" label="Cluster radius in screen pixels" snap></calcite-slider><div class="slider-ends"><span>Local detail</span><span>Bigger picture</span></div></section>
+  <section class="category-section"><div class="section-heading"><h2>Building type</h2><calcite-button id="reset" appearance="transparent" scale="s">All types</calcite-button></div><p class="section-hint">Other types remain as neighborhood context.</p><div id="categories"></div></section>
+  <footer class="sidebar-footer"><calcite-button id="about" appearance="transparent" icon-start="information" scale="s">Story & sources</calcite-button><span>BY <strong>PAUL GIBBS</strong></span></footer>
+</aside>
+<section class="map-stage" aria-label="Interactive building map">
+  <header class="map-toolbar">
+    <div class="location-heading"><p class="eyebrow">INLAND EMPIRE EXPLORER</p><h2 id="place-name">Inland Empire<span>CA</span></h2></div>
+    <div class="map-toolbar-actions"><calcite-button id="story-home" appearance="outline" icon-start="home" scale="s">Reset view</calcite-button><calcite-button id="mobile-controls" icon-start="sliders-horizontal" scale="s" aria-expanded="false" aria-controls="sidebar">Filters</calcite-button></div>
+  </header>
+  <div class="map-canvas">
+    <arcgis-map id="map" basemap="dark-gray-vector" center="-117.22,34.075" zoom="13" theme="dark"><arcgis-zoom slot="top-right"></arcgis-zoom></arcgis-map>
+    <section id="inspector" class="inspector" aria-label="Selected building cluster" hidden><div class="inspector-heading"><p id="inspect-kicker" class="eyebrow">BUILDING DETAILS</p><calcite-action id="close-inspector" text="Close details" icon="x" scale="s"></calcite-action></div><h2 id="inspect-title"></h2><p id="inspect-subtitle"></p><div id="inspect-chart"></div><div id="inspect-detail"></div><calcite-button id="inspect-zoom" width="full" icon-end="magnifying-glass-plus" scale="s">Explore these buildings</calcite-button></section>
+    <div id="wide-message" class="wide-message" hidden><p class="eyebrow">A CLOSER LOOK</p><h2>Zoom in for detailed buildings.</h2><p>Warehouse clusters work at regional scales. Zoom in for other building types, surrounding footprints, or Footprints mode.</p><calcite-button id="back-story" scale="s">Return to warehouse clusters</calcite-button></div>
+  </div>
+  <footer class="map-footer">
+    <div class="map-footer-main"><p id="map-status" role="status" aria-live="polite"><i class="status-dot"></i><span>Connecting to building data…</span></p><div class="footer-actions"><details class="legend-menu"><summary>Legend</summary><div class="legend-content"><span id="key-text">Circles summarize the selected building type.</span></div></details><calcite-button id="present" appearance="transparent" icon-start="full-screen" scale="s">Presentation</calcite-button></div></div>
+    <p class="map-credit">Current proximity. Historical growth and pollution are not measured here.</p>
+  </footer>
+</section>
+<button id="controls-backdrop" type="button" tabindex="-1" aria-label="Close filters" hidden></button>
+</main>
+<calcite-dialog id="about-dialog" slot="dialogs" heading="Warehouse Country: the Inland Empire" width="s" close-button-label="Close data information">
+<h3>Why the surrounding neighborhood matters</h3>
+<p><a href="https://ww2.arb.ca.gov/resources/documents/community-driven-assessment-warehouse-activities-and-impacts" target="_blank" rel="noopener">California Air Resources Board</a> links warehouse growth to concentrated truck activity, congestion, and air pollution, and records community concerns about noise, safety, and infrastructure. It also identifies unequal patterns of development as an environmental justice concern.</p>
+<p>In its <a href="https://www.ccaej.org/region-in-crisis-2026" target="_blank" rel="noopener">2026 Region in Crisis report</a>, the Center for Community Action and Environmental Justice reports housing demolitions and residential-to-industrial rezoning in the Inland Empire. This is the community organization's regional assessment; individual sites need their own evidence.</p>
+<p><a href="https://ww2.arb.ca.gov/capp/com/cip/san-bernardino-muscoy" target="_blank" rel="noopener">CARB's San Bernardino / Muscoy community profile</a> identifies freight activity, cumulative pollution burden, and nearby sensitive locations, including schools and daycare facilities.</p>
+<h3>What this map shows</h3>
+<p>In Clusters mode, the selected category appears only as circles. In Footprints mode, it appears only as building shapes. Other categories provide footprint context at neighborhood scales. Mint identifies tagged residential buildings; neutral shapes include other and unspecified types. The same selected buildings are never drawn in both layers. Current proximity can help identify places to investigate, but it does not establish demolition, encroachment over time, truck routes, exposure, or health impacts. Those questions require dated land-use, permitting, traffic, or monitoring records.</p>
+<p>The opening view highlights footprints explicitly tagged as warehouses in OpenStreetMap. Other industrial buildings are a separate category; unspecified buildings are never assumed to be warehouses.</p><p>Nearby building centroids become clusters. Their colors represent the most common building category; ties follow legend order. Choose Footprints to see individual building shapes, or filter by type to discover a different pattern.</p>
+<h3>Read the map honestly</h3><p>Counts describe mapped buildings, not people, homes, floor area, or a complete building census. Cluster reach uses screen pixels, so groups change with zoom. Unknown means no specific building type. OSM's building tag describes architectural type and may differ from current use. Minor types are grouped as Other.</p>
+<p>Zooming out now stops at level 10. Warehouse clusters load at regional scales up to 1:600,000. Surrounding footprints, other building types, and Footprints mode load at 1:80,000 and closer to control the amount of detailed geometry requested. Use place search to travel anywhere in the US, or choose an Inland Empire district from the controls panel. Explore all 50 US states where OSM footprints exist; completeness varies. The source covers North America, so neighboring countries may also appear. Category counts describe all mapped buildings in view; the headline describes the selected category. Counts are server queries for buildings intersecting the map extent; cluster membership is based on centroids.</p>
+<p>Source: <a href="https://www.arcgis.com/home/item.html?id=8573b205d20d4be38b6e11eb05dd151b" target="_blank" rel="noopener">OpenStreetMap Buildings for North America</a>, hosted by Esri. © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>, ODbL. The publisher describes minutely updates; this app does not independently guarantee freshness.</p>
+<p>Built with ArcGIS Maps SDK for JavaScript + Calcite; scaffolded with @arcgis/create. <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day4" target="_blank" rel="noopener">View source</a>.</p>
+</calcite-dialog>
+<calcite-alert id="toast" slot="alerts" kind="info" auto-close auto-close-duration="medium" label="Map notification"><div slot="message" id="toast-message"></div></calcite-alert>
+</calcite-shell>
+<script type="module" src="/src/main.ts"></script>
+</body></html>

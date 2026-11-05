@@ -1,0 +1,1 @@
+import"./units-CK6Oagvq.js";import"./apiConverter-BBieR9n8.js";export{t as execute,n as supportsCurves}from"./areaOperator-BrgNmIG_.js";

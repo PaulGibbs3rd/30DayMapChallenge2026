@@ -1,0 +1,1 @@
+import"./arcadeEnvironment-DLBtaR2P.js";import"./Dictionary-CoaVOxfC.js";import"./enum-Z7QM7SvB.js";import"./deepClone-Bj9zwAKL.js";export{i as BatchTranslationServiceFactory,r as PortalTranslationService,a as getTranslateParametersKey,t as registerFunctions}from"./aiServices-oWzae41J.js";import"./Error-B7BER3ZM.js";
