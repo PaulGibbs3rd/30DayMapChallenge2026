@@ -1,0 +1,1 @@
+import"./HighlightDefaults-BCeSlcEd.js";function e(e){return e?.name??`default`}export{e as t};

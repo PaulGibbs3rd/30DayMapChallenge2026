@@ -1,0 +1,1 @@
+import{t as e}from"./ShaderOutputConfiguration-OQwmiY_Z.js";var t=class extends e{constructor(e){super(),this.spherical=e,this.draped=!1}};function n(e){e.varyings.add(`linearDepth`,`float`,{invariant:!0})}function r(e){n(e),e.vertex.code.add(`void forwardLinearDepth(float _linearDepth) { linearDepth = _linearDepth; }`)}export{r as n,t as r,n as t};

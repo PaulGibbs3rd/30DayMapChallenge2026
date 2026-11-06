@@ -1,0 +1,1 @@
+import"./string-CwEmu9nV.js";import"./Error-DrZZxaMM.js";import{s as e}from"./vec3-DG5QX2aJ.js";import{n as t}from"./LineSnappingHint-BcOGnOth.js";var n=class n extends t{constructor(e,t,n,r=3){super(n,r),this.lineStart=e,this.lineEnd=t}equals(t){return t instanceof n&&e(this.lineStart,t.lineStart)&&e(this.lineEnd,t.lineEnd)}};export{n as t};

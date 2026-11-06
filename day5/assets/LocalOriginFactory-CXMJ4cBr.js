@@ -1,0 +1,1 @@
+import{c as e}from"./vec3f64-BCBDKjuM.js";var t=class{constructor(e,t){this.vec3=e,this.id=t}};function n(n,r,i,a){return new t(e(n,r,i),a)}export{n as t};

@@ -1,0 +1,1 @@
+import{B as e,et as t}from"./UnitFactory-B2VPNF6h.js";var n=class extends t{getOperatorType(){return 2}execute(t,n,r,i){return e(t,n,r,3,i)}};export{n as OperatorEquals};

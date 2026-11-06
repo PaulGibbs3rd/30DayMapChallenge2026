@@ -1,0 +1,1 @@
+import{A as e}from"./units-CLwfvnVS.js";import{o as t,s as n}from"./apiConverter-yMqT7vVX.js";import"./deprecatedOperator-MAKGASLM.js";function r(r,i={}){let{unit:a}=i,o=t(r).calculateLength2D();if(o&&a){let t=n(r);o=e(o,t,a)}return o}export{r as lengthExecute};

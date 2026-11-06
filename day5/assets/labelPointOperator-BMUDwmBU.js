@@ -1,0 +1,1 @@
+import{execute as e,supportsCurves as t}from"./operatorLabelPoint-f0fyGTRQ.js";import{n,o as r,s as i}from"./apiConverter-yMqT7vVX.js";import"./deprecatedOperator-MAKGASLM.js";function a(t){return n(e(r(t)),i(t))}t();export{a as labelPointExecute};

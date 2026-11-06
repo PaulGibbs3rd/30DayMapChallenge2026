@@ -63,9 +63,16 @@
       "day": 5,
       "date": "2026-11-05",
       "theme": "Senses: Sight",
-      "title": "Sight",
-      "description": "Explore what can be seen from a place, or how vision changes our experience of a landscape.",
-      "status": "planned"
+      "title": "Seattle Sightlines",
+      "description": "Trace views from the Space Needle to Seattle landmarks in 3D, test your own points, and explore how terrain and buildings shape what you can see.",
+      "status": "complete",
+      "tags": [
+        "ArcGIS JavaScript",
+        "Calcite",
+        "3D",
+        "Line of sight",
+        "Seattle"
+      ]
     },
     {
       "day": 6,

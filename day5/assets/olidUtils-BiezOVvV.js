@@ -1,0 +1,1 @@
+import{h as e}from"./string-CwEmu9nV.js";function t(){return!!e(`enable-feature:objectAndLayerId-rendering`)}export{t};

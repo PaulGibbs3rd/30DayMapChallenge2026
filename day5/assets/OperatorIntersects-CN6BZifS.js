@@ -1,0 +1,1 @@
+import{t as e}from"./rolldown-runtime-DK3Fl9T5.js";import{B as t,et as n}from"./UnitFactory-B2VPNF6h.js";var r=e({OperatorIntersects:()=>i}),i=class extends n{getOperatorType(){return 4}execute(e,n,r,i){return!t(e,n,r,4,i)}};export{i as n,r as t};

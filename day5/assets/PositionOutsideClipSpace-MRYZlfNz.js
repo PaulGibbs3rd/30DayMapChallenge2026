@@ -1,0 +1,1 @@
+import{t as e}from"./glsl-C7V8msno.js";var t=e`vec4(0.0, 0.0, 2.0, 1.0)`;export{t};
