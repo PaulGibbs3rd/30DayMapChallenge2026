@@ -1,0 +1,1 @@
+import{t as e}from"./rolldown-runtime-DK3Fl9T5.js";import{k as t}from"./units-Dp4hmSMf.js";import{a as n,i as r}from"./apiConverter-wj4qlmNo.js";import"./deprecatedOperator-UBiYizRs.js";var i=e({lengthExecute:()=>a});function a(e,i={}){let{unit:a}=i,o=r(e).calculateLength2D();if(o&&a){let r=n(e);o=t(o,r,a)}return o}export{i as n,a as t};

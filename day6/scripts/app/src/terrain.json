@@ -1,0 +1,23 @@
+{
+  "extent": {
+    "xmin": 13149614.84995544,
+    "xmax": 16906647.66422843,
+    "ymax": 6261721.357121639,
+    "ymin": 2504688.542848654,
+    "spatialReference": {
+      "wkid": 3857
+    }
+  },
+  "pixelGrid": [
+    768,
+    768
+  ],
+  "sourceZoom": 6,
+  "sourceTiles": 36,
+  "sourceDate": "2026-11-06",
+  "sources": [
+    "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_admin_0_countries.geojson",
+    "https://registry.opendata.aws/terrain-tiles/"
+  ],
+  "note": "Generalized elevation and coastlines. Palette, hillshade, and pixel grid are artistic. Not for navigation."
+}

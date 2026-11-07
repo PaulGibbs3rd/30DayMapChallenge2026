@@ -1,0 +1,1 @@
+import"./HighlightDefaults-D739q-o4.js";function e(e){return e?.name??`default`}export{e as t};

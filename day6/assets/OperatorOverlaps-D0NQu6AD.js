@@ -1,0 +1,1 @@
+import{t as e}from"./rolldown-runtime-DK3Fl9T5.js";import{B as t,et as n}from"./UnitFactory-B2VPNF6h.js";var r=e({OperatorOverlaps:()=>i}),i=class extends n{getOperatorType(){return 9}execute(e,n,r,i){return t(e,n,r,32,i)}};export{i as n,r as t};

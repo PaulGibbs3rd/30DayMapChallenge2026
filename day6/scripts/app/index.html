@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" class="calcite-mode-dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090e1f">
+<meta name="description" content="An eight-level, 16-bit expedition across real Japanese geography. Explore pixel terrain, neon cities, sacred mountains, and subtropical islands.">
+<title>Neon Japan — Day 6: Vintage | 30DayMapChallenge 2026</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23090e1f'/%3E%3Cpath d='M6 24V8h4l12 16h4V8h-4v10L14 8H6' fill='%2364f7ce'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip-link" href="#mission-title">Skip to current level</a>
+<calcite-shell>
+<header slot="header" class="masthead">
+<a class="brand" href="../directory/" aria-label="All 30DayMapChallenge maps"><span class="brand-sprite" aria-hidden="true">N</span><span class="brand-copy"><span class="brand-name">NEON JAPAN<span class="brand-cursor" aria-hidden="true">_</span></span><span class="brand-sub">A 16-BIT GEOGRAPHIC EXPEDITION</span></span></a>
+<div class="header-end"><span class="challenge">30 DAY MAP CHALLENGE <b>06 / VINTAGE</b></span><calcite-button id="about" appearance="transparent" scale="s" icon-start="information" label="Field guide"><span class="guide-button-label">Field guide</span></calcite-button><a href="../directory/" class="back-link">All maps <span aria-hidden="true">↗</span></a></div>
+</header>
+<main class="console">
+<div class="console-top"><div><span class="status-light" aria-hidden="true"></span> EXPEDITION SYSTEM <span class="muted">//</span> JP-1994</div><div class="system-right"><span class="muted">CARTRIDGE 006</span><span class="system-rule"></span><span id="progress-caption">01 / 08 LOCATIONS EXPLORED</span></div></div>
+<div class="workspace">
+<section class="map-region" aria-label="Interactive pixel terrain map of Japan">
+<arcgis-map id="map" aria-label="Japan expedition map. Use the level buttons to visit each location."></arcgis-map>
+<div class="scanlines" aria-hidden="true"></div>
+<div class="map-top"><div class="map-readout"><span class="eyebrow">LONG-RANGE SCANNER</span><strong id="map-mode">JAPAN / OVERWORLD</strong><span class="map-subtitle">REAL COASTLINES. ANOTHER ERA.</span></div><calcite-button id="overview" appearance="outline" scale="s" icon-start="extent" disabled>Full map</calcite-button></div>
+<div class="north" aria-hidden="true"><span>N</span><svg viewBox="0 0 30 45"><path d="M15 3L26 31L15 25L4 31Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15 3V40" stroke="currentColor"/></svg></div>
+<div class="ocean-label ocean-north" aria-hidden="true">SEA OF JAPAN</div><div class="ocean-label ocean-south" aria-hidden="true">NORTH PACIFIC<br>OCEAN</div>
+<div class="map-controls"><calcite-button id="zoom-in" icon-start="plus" appearance="outline" scale="s" title="Zoom in" label="Zoom in" disabled></calcite-button><calcite-button id="zoom-out" icon-start="minus" appearance="outline" scale="s" title="Zoom out" label="Zoom out" disabled></calcite-button><calcite-label layout="inline"><calcite-switch id="crt" scale="s" checked></calcite-switch>CRT</calcite-label></div>
+<div class="map-bottom"><div class="terrain-key"><span class="eyebrow">ELEVATION</span><div><span><i class="lowland"></i>LOW</span><span><i class="highland"></i>HIGH</span><span><i class="summit"></i>SUMMIT</span></div></div><div class="map-caption"><span class="cross" aria-hidden="true">+</span> <span id="map-status" role="status">INITIALIZING SCANNER…</span></div></div>
+<div class="corner corner-tl" aria-hidden="true"></div><div class="corner corner-tr" aria-hidden="true"></div><div class="corner corner-bl" aria-hidden="true"></div><div class="corner corner-br" aria-hidden="true"></div>
+<div id="map-failure" hidden><h2>Scanner unavailable</h2><p>The map could not start. You can still explore all eight levels using the controls.</p><calcite-button id="retry" scale="s">Retry map</calcite-button></div>
+</section>
+<aside class="mission-panel" aria-labelledby="mission-title">
+<div class="mission-scroll">
+<div class="mission-system"><span><span class="status-light" aria-hidden="true"></span> INCOMING TRANSMISSION</span><span class="signal-bars" aria-label="Signal received"><i></i><i></i><i></i><i></i></span></div>
+<div class="mission-heading"><div class="level-tag">LEVEL <span id="level-number">01</span><span class="slash">/ 08</span></div><span id="biome" class="biome">NORTHERN CITY</span></div>
+<div class="place-heading"><span id="region" class="eyebrow">HOKKAIDO</span><h1 id="mission-title" tabindex="-1">SAPPORO</h1><span id="japanese-name" lang="ja">札幌</span></div>
+<div class="scene-window"><canvas id="scene" width="240" height="104" role="img" aria-label="Original pixel illustration of Sapporo"></canvas><span id="scene-caption">NORTHERN SIGNAL</span><span class="scene-rec" aria-hidden="true">◆ REC</span></div>
+<div class="mission-copy" aria-live="polite" aria-atomic="true"><h2 id="mission-subtitle">Begin at the northern frontier.</h2><p id="mission-description"></p></div>
+<div class="coordinates"><div><span>LATITUDE</span><strong id="latitude">43.0618° N</strong></div><div><span>LONGITUDE</span><strong id="longitude">141.3545° E</strong></div></div>
+<div class="field-note"><span class="note-label">FIELD NOTE <span aria-hidden="true">+</span></span><p id="field-note"></p><a id="place-source" href="https://www.japan.travel/en/destinations/hokkaido/hokkaido/sapporo-and-around/" target="_blank" rel="noopener noreferrer">Read the place guide <span aria-hidden="true">↗</span></a></div>
+<div id="complete" class="completion" hidden>EXPEDITION COMPLETE <span>All eight signals received.</span></div>
+</div>
+<div class="mission-actions"><calcite-button id="previous" appearance="outline" icon-start="chevron-left" label="Previous level" disabled></calcite-button><calcite-button id="next" icon-end="chevron-right" width="full">NEXT LEVEL</calcite-button></div>
+<div class="mission-footer"><span id="next-destination">UP NEXT: SENDAI</span><calcite-button id="focus" appearance="transparent" scale="s" icon-start="zoom-to-object" disabled>Locate</calcite-button></div>
+</aside>
+</div>
+<nav class="level-deck" aria-label="Expedition levels"><div class="deck-label"><span class="eyebrow">SELECT LEVEL</span><span>NORTH <i aria-hidden="true">→</i> SOUTH</span></div><div id="levels" class="levels"></div></nav>
+<footer class="console-footer"><span>REAL GEOGRAPHY <b>×</b> RETRO IMAGINATION</span><span>PIXEL TERRAIN · SCHEMATIC CONNECTIONS · <a id="credits" href="readme.md">DATA & CREDITS</a></span><span class="footer-year">EST. 2026 <span aria-hidden="true">◆</span> 16-BIT EDITION</span></footer>
+</main>
+<calcite-dialog id="guide" slot="dialogs" heading="Neon Japan / Field guide" modal>
+<div class="guide-content"><p class="eyebrow">DAY 06 · VINTAGE · NOVEMBER 6, 2026</p><h2>A new cartridge. A real archipelago.</h2><p>Travel from Sapporo to Naha in eight levels. Choose <strong>Next level</strong> to follow the expedition, select any level to jump ahead, or select a beacon on the map. <strong>Locate</strong> zooms to the current place; <strong>Full map</strong> restores the overworld. Drag and zoom to explore.</p><p>CRT adds a subtle scanline texture. Switch it off for a cleaner view. Your explored locations are remembered on this device when browser storage is available. The final level offers a replay.</p><h3>What is real?</h3><p>The coastline and terrain come from geographic data. Terrain is generalized onto a 768 × 768 grid, colored in elevation bands, then enlarged with nearest-neighbor sampling. The eight coordinates are approximate representative points. Beacons, pixel illustrations, the expedition sequence, and the neon palette are original design elements. Dashed connections show the story order; they are not roads, transport routes, or travel advice.</p><h3>Sources & credits</h3><ul><li>Coastlines: <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener noreferrer">Natural Earth, 1:50 million, public domain</a>.</li><li>Elevation: <a href="https://registry.opendata.aws/terrain-tiles/" target="_blank" rel="noopener noreferrer">Mapzen / Tilezen Terrain Tiles on AWS</a>. Global GMTED2010 and SRTM data courtesy of the U.S. Geological Survey; ETOPO1 courtesy of NOAA. <a href="https://github.com/tilezen/joerd/blob/master/docs/attribution.md" target="_blank" rel="noopener noreferrer">Provider attribution</a>.</li><li>Place stories: <a href="https://www.japan.travel/en/" target="_blank" rel="noopener noreferrer">Japan National Tourism Organization</a> and <a href="https://whc.unesco.org/en/statesparties/jp" target="_blank" rel="noopener noreferrer">UNESCO World Heritage Centre</a>. Individual guides are linked in each level.</li><li>Press Start 2P font: CodeMan38, SIL Open Font License 1.1. Original pixel illustrations by code.</li><li>Built with ArcGIS Maps SDK for JavaScript and Calcite Design System, scaffolded with <code>@arcgis/create</code>.</li></ul><p>Cartographic generalization can omit small islands and details. This is an artistic exploration map, not a navigation tool. Data retrieved November 6, 2026.</p><p><a href="readme.md">Project notes and reproducible build</a> · <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day6" target="_blank" rel="noopener noreferrer">Source code ↗</a></p><p>Paul Gibbs · #30DayMapChallenge 2026</p></div>
+<calcite-button id="close-guide" slot="footer-end">Return to expedition</calcite-button>
+</calcite-dialog>
+</calcite-shell>
+<noscript><div class="noscript">Neon Japan needs JavaScript for its interactive map. <a href="readme.md">Read the expedition notes</a>.</div></noscript>
+<script type="module" src="/src/main.ts"></script>
+</body></html>

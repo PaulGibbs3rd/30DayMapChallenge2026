@@ -78,9 +78,11 @@
       "day": 6,
       "date": "2026-11-06",
       "theme": "Vintage",
-      "title": "Vintage",
-      "description": "Experiment with historical cartographic styles, older geography, or a visual language borrowed from another era.",
-      "status": "planned"
+      "title": "Neon Japan",
+      "description": "Travel from Sapporo to Okinawa in eight guided levels, exploring real Japanese terrain through a 16-bit sci-fi console with pixel landscapes and neon beacons.",
+      "status": "complete",
+      "image": "../day6/neon-japan-preview.jpg",
+      "tags": ["ArcGIS JavaScript", "Calcite", "16-bit", "Japan", "Guided tour"]
     },
     {
       "day": 7,

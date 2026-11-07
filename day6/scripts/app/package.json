@@ -1,0 +1,22 @@
+{
+  "name": "neon-japan",
+  "description": "Day 6: a 16-bit sci-fi expedition across Japan",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node ../prepare-assets.mjs && vite",
+    "build": "node ../prepare-assets.mjs && tsc && vite build --logLevel warn",
+    "preview": "vite preview",
+    "export": "npm run build && node ../export.mjs"
+  },
+  "dependencies": {
+    "@arcgis/core": "^5.1.0",
+    "@arcgis/map-components": "^5.1.0",
+    "@esri/calcite-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "~24.10.1",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.16"
+  }
+}
