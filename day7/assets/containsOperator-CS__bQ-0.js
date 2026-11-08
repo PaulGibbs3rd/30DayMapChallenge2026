@@ -1,0 +1,1 @@
+import{n as e}from"./operatorContains-C7kMvYJ4.js";import"./deprecatedOperator-UBiYizRs.js";import{c as t,r as n}from"./jsonConverter-BRkzJLkl.js";function r(r,i){let a=n(r);return e(a.getGeometry(),t(i),a.getSpatialReference())}export{r as containsExecute};

@@ -1,0 +1,1 @@
+import{xt as e}from"./UnitFactory-B2VPNF6h.js";import"./deprecatedOperator-UBiYizRs.js";import{c as t,r as n}from"./jsonConverter-BRkzJLkl.js";var r=new e;function i(e,t,n){return r.execute(e,t,n)}function a(e,r){let a=n(e);return i(a.getGeometry(),t(r),a.getSpatialReference())}export{a as disjointExecute};

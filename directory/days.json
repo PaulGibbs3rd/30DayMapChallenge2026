@@ -88,9 +88,17 @@
       "day": 7,
       "date": "2026-11-07",
       "theme": "10 minute map",
-      "title": "10 minute map",
-      "description": "Create a complete map within ten minutes and record the decisions made under that constraint.",
-      "status": "planned"
+      "title": "Seven Days of Shaking",
+      "description": "Explore a week of USGS-reported earthquakes around the Pacific and beyond, with magnitude-sized circles and clickable event details. Built in a ten-minute working window.",
+      "status": "complete",
+      "image": "../day7/earthquake-preview.jpg",
+      "tags": [
+        "ArcGIS JavaScript",
+        "Calcite",
+        "USGS",
+        "Earthquakes",
+        "10 minute map"
+      ]
     },
     {
       "day": 8,
