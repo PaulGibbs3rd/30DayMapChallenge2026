@@ -1,6 +1,7 @@
 import {AtlasScene} from './scene.js';
 import {TRACKS,LOOKS,CHOICES} from './world.js';
-import {JourneyTransport,locateTime,cueAt,cameraAt} from './timeline.js';
+import {JourneyTransport,locateTime,cueAt,cameraAt} from './timeline.js?v=iphone-audio-1';
+import {createPlaybackContext,requestMusicPlayback} from './audio-output.js';
 
 const $=id=>document.getElementById(id);
 const pad=n=>String(n).padStart(2,'0');
@@ -26,7 +27,7 @@ function notify(message,persist=false){clearTimeout(messageTimer);$('message').t
 function markStarted(){started=true;$('welcome').hidden=true;$('journey-nav').hidden=false;}
 function setMode(next){mode=next;$('return-journey').hidden=next!=='explore';$('mode-label').textContent=next==='explore'?'EXPLORING THE ATLAS':'THE JOURNEY';}
 function enterExplore(){playIntent++;markStarted();transport?.pause();setMode('explore');$('choices').hidden=true;}
-function contextForGesture(){if(!context){const AudioContext=window.AudioContext||window.webkitAudioContext;if(!AudioContext)throw new Error('This browser does not support Web Audio. You can still explore the atlas.');context=new AudioContext();context.addEventListener('statechange',()=>{if(context.state==='suspended'&&transport?.state==='playing'){transport.pause();notify('Audio was interrupted. Press play to resume the journey.');}});}return context;}
+function contextForGesture(){if(!context){context=createPlaybackContext();context.addEventListener('statechange',()=>{if(['suspended','interrupted'].includes(context.state)&&transport?.state==='playing'){transport.pause();notify('Audio was interrupted. Press play to resume the journey.');}});}return context;}
 
 async function decodeChapter(audioContext,chapter,arrayBuffer,prepared){
   const decoded=await audioContext.decodeAudioData(arrayBuffer);
@@ -77,8 +78,8 @@ async function playJourney(){
   try{
     const player=transport||await prepareSources(localSources);
     if(!player||request!==playIntent)return;
-    scene.mode='guided';await player.play();
-  }catch(error){$('audio-status').textContent='Select audio to try again';notify(error.message,true);setMode('explore');scene.overview();paint();}
+    requestMusicPlayback();scene.mode='guided';await player.play();
+  }catch(error){$('audio-status').textContent='Audio paused · press play to retry';notify(error.message,true);setMode('explore');scene.overview();paint();}
 }
 
 function jumpChapter(index,autoplay=false){
@@ -200,7 +201,7 @@ async function init(){
     const missing=chapters.filter((_,index)=>!sources[index]);
     if(missing.length){notify(`Select all seven passages. Missing: ${missing.map(chapter=>chapter.trackTitle).join(', ')}.`,true);return;}
     transport?.pause();localSources=sources;loadingGeneration++;loading=null;const request=++playIntent;
-    try{const player=await prepareSources(sources);if(player&&request===playIntent){markStarted();setMode('guided');scene.mode='guided';await player.play();}}catch(error){notify(error.message,true);$('audio-status').textContent='Audio setup needs attention';}
+    try{const player=await prepareSources(sources);if(player&&request===playIntent){markStarted();setMode('guided');requestMusicPlayback();scene.mode='guided';await player.play();}}catch(error){notify(error.message,true);$('audio-status').textContent='Audio setup needs attention';}
   });
   document.addEventListener('visibilitychange',()=>{if(document.hidden&&(loading||transport?.state==='playing')){playIntent++;transport?.pause();notify('Journey paused while you were away. Press play to continue.');}});
   document.addEventListener('keydown',event=>{if(event.code==='Space'&&!['INPUT','BUTTON','A','TEXTAREA'].includes(document.activeElement?.tagName)&&!document.querySelector('dialog[open]')){event.preventDefault();void playJourney();}});

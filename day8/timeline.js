@@ -55,6 +55,7 @@ export class JourneyTransport extends EventTarget {
     const request=++this.generation;
     await this.context.resume();
     if(request!==this.generation)return;
+    if(this.context.state!=='running')throw new Error('Audio is interrupted. Tap play to try again.');
     if(this.offset>=this.total)this.offset=0;
     if(this.state==='playing')return;
     this.state='playing';this.schedule();this.change();

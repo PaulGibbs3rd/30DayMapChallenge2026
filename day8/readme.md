@@ -51,11 +51,13 @@ A custom renderer was selected for this non-geographic atlas so the camera can b
 
 Seven decoded audio buffers are scheduled on one AudioContext epoch. Pause stops their scheduled sources and retains the position. Resume and seeking recreate the remaining schedule. Stale completion callbacks cannot end a newly selected passage. A seek also reconstructs the map and annotations rather than firing only the next event. Camera movement and cues are deterministic, including backward seeking.
 
+The app requests `navigator.audioSession.type = 'playback'` before creating its audio context and when starting or resuming music. This addresses the iPhone symptom of the map and timer advancing while Web Audio is silenced by the Ring/Silent setting: [WebKit explains that default Web Audio is treated as ambient audio](https://bugs.webkit.org/show_bug.cgi?id=252746). The request is feature-detected; browsers without the API retain normal Web Audio playback. On older iPhone browsers without this support, Silent Mode may still need to be turned off, or headphones used. Both `suspended` and iOS `interrupted` output states pause the journey, and playback cannot start its clock unless the context is running. No microphone access is requested.
+
 Source intervals and 23 visual cues live in audio-cues.json. waveforms.json contains small normalized RMS envelopes derived from the local source excerpts; it contains no playable audio. The MY EYES transition near source time 2:26.50 was identified from the supplied recording’s energy rise. Exact downbeats, lyric alignment, phrase endings, and overall artistic pacing still need listening review. Device output latency has not been perceptually measured, and sample-accurate visuals are not claimed.
 
 ## Files and publication
 
-Runtime: index.html, style.css, app.js, scene.js, timeline.js, world.js, audio-cues.json, waveforms.json, and the seven audio/*.mp3 files.
+Runtime: index.html, style.css, app.js, audio-output.js, scene.js, timeline.js, world.js, audio-cues.json, waveforms.json, and the seven audio/*.mp3 files.
 
 Local tools, source inventory, and lossless working audio remain under scripts/.local/, ignored by scripts/.gitignore and excluded by the Pages packager. The seven delivery MP3 excerpts are deliberately included under audio/ so the static app plays after publication. GitHub Pages publishes the collection from the main branch and repository root.
 
@@ -71,7 +73,7 @@ Recordings and musical compositions retain their respective copyrights. This fan
 
 ## Validation
 
-Nine focused transport/timeline tests cover contiguous audio scheduling, pause/resume, seeking, exact chapter and cue boundaries, canceled resume requests, stale completion callbacks, replay state, and deterministic camera reconstruction.
+Twelve focused audio/transport tests cover music-session selection before opening the output, compatibility when Audio Session is absent or inaccessible, refusal to advance on an interrupted output, contiguous audio scheduling, pause/resume, seeking, exact chapter and cue boundaries, canceled resume requests, stale completion callbacks, replay state, and deterministic camera reconstruction.
 
 ```powershell
 node --test day8/scripts/timeline.test.mjs
@@ -82,6 +84,8 @@ npm run check
 ```
 
 The browser was exercised at desktop and phone dimensions: prepared WAV playback, direct import and decoding of the seven original FLAC recordings, bundled MP3 playback under the GitHub Pages project path, pause, seeking to the MY EYES transition, keyboard map exploration, the 19-track dialog, personal ending selection, reduced-motion selection, and natural completion. Browser diagnostics had no warnings or errors at the inspected checkpoints. Subjective listening review and device output latency remain outstanding.
+
+The iPhone audio-session regression is covered with a simulated Silent Mode output policy, not a physical iPhone. Device confirmation remains required: open the new release in Safari, leave Silent Mode on, tap Enter, verify audible output, then pause/resume and seek. Repeat after an interruption or switching away and back, and verify the same controls with Silent Mode off and with headphones. A desktop browser at phone dimensions does not establish iOS audio compatibility.
 
 The Day 8 integrity check validates all track/chapter mappings, 23 cues, bundled MP3s, UI IDs, local asset references, and project-subpath audio URLs. Its --site mode checks that exported runtime files match their sources and excludes FLAC/WAV masters and local tools.
 

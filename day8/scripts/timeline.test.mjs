@@ -1,14 +1,37 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {JourneyTransport,locateTime,cameraAt,cueAt} from '../timeline.js';
+import {createPlaybackContext,requestMusicPlayback} from '../audio-output.js';
 
 class AudioContextDouble {
-  constructor(){this.currentTime=0;this.destination={};this.nodes=[];}
+  constructor(){this.currentTime=0;this.destination={};this.nodes=[];this.state='running';}
   resume(){return Promise.resolve();}
   createGain(){return {gain:{value:0,setTargetAtTime(){}},connect(){},disconnect(){}};}
   createBufferSource(){const node={connect(){},disconnect(){},stop(){this.stopped=true;},start(...args){this.scheduled=args;}};this.nodes.push(node);return node;}
 }
 const make=()=>{const context=new AudioContextDouble();return {context,player:new JourneyTransport(context,[{},{},{}],[34.4,54,43])};};
+test('music category is requested before iPhone opens an output that otherwise obeys Silent Mode',()=>{
+  const session={type:'auto'},platform={navigator:{audioSession:session},AudioContext:class{
+    constructor(){this.suppressedBySilentMode=session.type!=='playback';}
+  }};
+  assert.equal(new platform.AudioContext().suppressedBySilentMode,true);
+  assert.equal(createPlaybackContext(platform).suppressedBySilentMode,false);
+  // Reassert the category when the user resumes after another audio app.
+  session.type='ambient';assert.equal(requestMusicPlayback(platform),true);assert.equal(session.type,'playback');
+});
+test('older browsers without Audio Session, and web views denying it, still create a usable context',()=>{
+  for(const navigator of [{},{get audioSession(){throw new Error('Unavailable');}},{audioSession:{set type(value){throw new Error('Read only');}}}]){
+    const platform={navigator,webkitAudioContext:AudioContextDouble};
+    assert.equal(requestMusicPlayback(platform),false);assert.ok(createPlaybackContext(platform) instanceof AudioContextDouble);
+  }
+  assert.throws(()=>createPlaybackContext({}),/does not support Web Audio/);
+});
+test('an interrupted output cannot report playing or schedule an inaudible journey',async()=>{
+  const {context,player}=make();context.state='interrupted';
+  await assert.rejects(player.play(),/Audio is interrupted/);
+  assert.equal(player.state,'paused');assert.equal(context.nodes.length,0);assert.equal(player.position,0);
+  context.state='running';await player.play();assert.equal(player.state,'playing');assert.equal(context.nodes.length,3);
+});
 test('chapter boundaries, end position, and invalid seeks are unambiguous',()=>{
   assert.equal(locateTime([34.4,54,43],34.4).index,1);
   assert.equal(locateTime([34.4,54,43],88.4).index,2);

@@ -30,7 +30,7 @@ for(const match of app.matchAll(/\$\('([^']+)'\)/g))assert(ids.includes(match[1]
 assert(!app.includes('/__audio/status'),'Bundled app must not require the private development API.');
 if(process.argv.includes('--site')){
   const output=resolve(day,'../_site/day8');
-  const expected=['index.html','style.css','app.js','scene.js','timeline.js','world.js','audio-cues.json','waveforms.json',...sheet.chapters.map(chapter=>chapter.audio)];
+  const expected=['index.html','style.css','app.js','audio-output.js','scene.js','timeline.js','world.js','audio-cues.json','waveforms.json',...sheet.chapters.map(chapter=>chapter.audio)];
   for(const name of expected){const a=await readFile(resolve(day,name)),b=await readFile(resolve(output,name));assert.equal(createHash('sha256').update(a).digest('hex'),createHash('sha256').update(b).digest('hex'),`Packaged file mismatch: ${name}`);}
   const walk=async path=>{for(const item of await readdir(path,{withFileTypes:true})){assert.notEqual(item.name,'scripts');assert(!/\.(?:flac|wav|exe|whl)$/i.test(item.name),`Private working file in export: ${item.name}`);if(item.isDirectory())await walk(resolve(path,item.name));}};
   await walk(output);
