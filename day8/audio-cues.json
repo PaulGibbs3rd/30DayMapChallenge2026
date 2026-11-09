@@ -1,0 +1,223 @@
+{
+  "title": "UTOPIA — No Fixed Destination",
+  "status": "draft-excerpts-awaiting-listening-review",
+  "source": "User-supplied 2023 UTOPIA FLAC recordings; 24-bit, 44100 Hz, stereo",
+  "timingUnits": "seconds",
+  "clock": "chapter-relative audio playback time",
+  "chapters": [
+    {
+      "order": 1,
+      "id": "the-room",
+      "title": "The Room",
+      "trackNumber": 6,
+      "trackTitle": "SIRENS",
+      "sourceIn": 170,
+      "sourceOut": 204.4,
+      "selectionBasis": "Closing passage; dialogue alignment requires listening review.",
+      "cues": [
+        {
+          "at": 0,
+          "scene": "room",
+          "action": "Hold an intimate interior view."
+        },
+        {
+          "at": 12,
+          "scene": "window",
+          "action": "Reveal a landscape beyond the room."
+        },
+        {
+          "at": 25,
+          "scene": "atlas",
+          "action": "Pull back and reveal the journey route."
+        }
+      ],
+      "sourceDuration": 204.447256,
+      "audio": "./audio/01-the-room.mp3"
+    },
+    {
+      "order": 2,
+      "id": "perspective",
+      "title": "Perspective",
+      "trackNumber": 4,
+      "trackTitle": "MY EYES",
+      "sourceIn": 126,
+      "sourceOut": 180,
+      "selectionBasis": "Spans the waveform trough and the strong rise around source time 146.50 seconds; no claim of audited downbeat precision.",
+      "cues": [
+        {
+          "at": 0,
+          "scene": "obscured",
+          "action": "Show the territory through a narrow, obscured view."
+        },
+        {
+          "at": 8,
+          "scene": "suspended",
+          "action": "Ease movement during the quieter passage."
+        },
+        {
+          "at": 20.5,
+          "scene": "revealed",
+          "action": "Reveal the alternate landscape at the measured energy rise.",
+          "basis": "50 ms RMS analysis; strongest 1-second rise in source interval 143–150 seconds"
+        },
+        {
+          "at": 35,
+          "scene": "inner-map",
+          "action": "Introduce the annotation about perspective and inner geography."
+        }
+      ],
+      "sourceDuration": 251.249796,
+      "audio": "./audio/02-perspective.mp3"
+    },
+    {
+      "order": 3,
+      "id": "spectacle",
+      "title": "Spectacle",
+      "trackNumber": 12,
+      "trackTitle": "CIRCUS MAXIMUS",
+      "sourceIn": 0,
+      "sourceOut": 43,
+      "selectionBasis": "Opening introduction and entry into the main section; musical cue positions remain editorial drafts.",
+      "cues": [
+        {
+          "at": 0,
+          "scene": "arena-distant",
+          "action": "Reveal the arena on the horizon."
+        },
+        {
+          "at": 14,
+          "scene": "arena-approach",
+          "action": "Approach along illuminated routes."
+        },
+        {
+          "at": 27,
+          "scene": "arena",
+          "action": "Increase the density of light and surrounding connections."
+        }
+      ],
+      "sourceDuration": 258.842676,
+      "audio": "./audio/03-spectacle.mp3"
+    },
+    {
+      "order": 4,
+      "id": "displacement",
+      "title": "Displacement",
+      "trackNumber": 15,
+      "trackTitle": "LOST FOREVER",
+      "sourceIn": 0,
+      "sourceOut": 43,
+      "selectionBasis": "Opening island/ocean passage; phrase boundaries require listening review.",
+      "cues": [
+        {
+          "at": 0,
+          "scene": "shore",
+          "action": "Leave the dense district behind."
+        },
+        {
+          "at": 13,
+          "scene": "islands",
+          "action": "Separate the landscape into offshore islands."
+        },
+        {
+          "at": 28,
+          "scene": "disconnected",
+          "action": "Reveal unexpected connections between apparently nearby places."
+        }
+      ],
+      "sourceDuration": 163.071973,
+      "audio": "./audio/04-displacement.mp3"
+    },
+    {
+      "order": 5,
+      "id": "refuge",
+      "title": "Refuge",
+      "trackNumber": 13,
+      "trackTitle": "PARASAIL",
+      "sourceIn": 85,
+      "sourceOut": 136,
+      "selectionBasis": "Later passage selected to investigate landscape and recovery motifs; spoken-cue positions require listening review.",
+      "cues": [
+        {
+          "at": 0,
+          "scene": "valley",
+          "action": "Enter an open, shaded valley."
+        },
+        {
+          "at": 15,
+          "scene": "river",
+          "action": "Follow the river while reducing secondary UI detail."
+        },
+        {
+          "at": 34,
+          "scene": "shelter",
+          "action": "Settle the view in a place of refuge."
+        }
+      ],
+      "sourceDuration": 154.964036,
+      "audio": "./audio/05-refuge.mp3"
+    },
+    {
+      "order": 6,
+      "id": "possibility",
+      "title": "Possibility",
+      "trackNumber": 18,
+      "trackTitle": "TELEKINESIS",
+      "sourceIn": 0,
+      "sourceOut": 65,
+      "selectionBasis": "Opening contrast between material success and fulfillment, extending into the first ascent; verify phrase boundaries by listening.",
+      "cues": [
+        {
+          "at": 0,
+          "scene": "monuments",
+          "action": "Show the monuments of the territory below."
+        },
+        {
+          "at": 25,
+          "scene": "ascent",
+          "action": "Begin rising above the earlier regions."
+        },
+        {
+          "at": 46,
+          "scene": "overlook",
+          "action": "Reveal an open horizon while retaining a view of previous places."
+        },
+        {
+          "at": 58,
+          "scene": "choices",
+          "action": "Introduce the visitor's choice of a personal place of utopia."
+        }
+      ],
+      "sourceDuration": 353.754603,
+      "audio": "./audio/06-possibility.mp3"
+    },
+    {
+      "order": 7,
+      "id": "departure",
+      "title": "Departure",
+      "trackNumber": 19,
+      "trackTitle": "TIL FURTHER NOTICE",
+      "sourceIn": 0,
+      "sourceOut": 32,
+      "selectionBasis": "Opening reflection on departure; use as a brief epilogue rather than a claim of narrative resolution.",
+      "cues": [
+        {
+          "at": 0,
+          "scene": "departure",
+          "action": "Open several onward paths."
+        },
+        {
+          "at": 14,
+          "scene": "chosen-place",
+          "action": "Return attention to the visitor's selected place."
+        },
+        {
+          "at": 27,
+          "scene": "open-ending",
+          "action": "Offer free exploration or a replay."
+        }
+      ],
+      "sourceDuration": 314.836009,
+      "audio": "./audio/07-departure.mp3"
+    }
+  ]
+}

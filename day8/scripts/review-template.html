@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UTOPIA — Audio and cue review</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#141412;color:#eee9df}*{box-sizing:border-box}body{margin:0;padding:clamp(18px,4vw,55px)}main{max-width:1150px;margin:auto}header{border-bottom:1px solid #4b463d;padding-bottom:24px}.eyebrow{font:12px monospace;letter-spacing:.15em;color:#dba874}h1{font-size:clamp(30px,5vw,58px);margin:8px 0}p{line-height:1.55;color:#c3bdb1}.layout{display:grid;grid-template-columns:290px 1fr;gap:32px;margin-top:28px}nav{display:grid;gap:8px;align-content:start}button{font:inherit;color:inherit;cursor:pointer;border:1px solid #49463f;background:#201f1b;border-radius:4px;padding:13px;text-align:left}button[aria-current=true]{border-color:#dba874;background:#332a20}button:focus-visible{outline:3px solid #e7bd87;outline-offset:3px}button small{display:block;margin-top:5px;color:#c3bdb1}h2{margin:0 0 8px;font-size:30px}audio{width:100%;margin:18px 0}canvas{width:100%;height:190px;border:1px solid #49463f;background:#1c1c18;border-radius:5px}.time{font:13px monospace;margin:12px 0}.cue{padding:20px;border-left:3px solid #dba874;background:#24221d;min-height:115px}.cue strong{display:block;color:#e3b17d;margin-bottom:10px}.cue p{margin:0}.markers{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0}.markers button{font:12px monospace;padding:9px}.note{font-size:13px;border-top:1px solid #49463f;padding-top:18px}.status{color:#dba874}@media(max-width:750px){.layout{grid-template-columns:1fr}nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+<main>
+<header><div class="eyebrow">PRIVATE LOCAL AUDIO REVIEW · DRAFT 01</div><h1>UTOPIA / No Fixed Destination</h1><p>Seven candidate excerpts and their proposed visual cues. Musical phrase boundaries and cue alignment still need listening review. This screen is an audio workbench; the map experience is not built yet.</p></header>
+<div class="layout"><nav id="chapters" aria-label="Candidate excerpts"></nav><section aria-label="Selected excerpt"><div class="eyebrow" id="chapter-title"></div><h2 id="track"></h2><p id="source"></p><canvas id="waveform" width="1400" height="380" role="img" aria-label="Source audio amplitude with proposed cue markers"></canvas><audio id="audio" controls preload="metadata"></audio><div class="time" id="time" aria-live="off"></div><div class="cue"><strong id="scene"></strong><p id="action"></p></div><div class="markers" id="markers" aria-label="Seek to a proposed cue"></div><p id="basis" class="note"></p><p class="note">Original FLACs are unchanged. WAV review copies use 25 ms entry and 80 ms exit fades, stereo at 44.1 kHz. This screen and its audio stay in the ignored local working folder.</p><p id="error" role="alert" class="status"></p></section></div>
+</main>
+<script>
+const DATA=/* AUDIO_REVIEW_DATA */;
+const audio=document.getElementById('audio'),canvas=document.getElementById('waveform'),ctx=canvas.getContext('2d');
+let selected=0,frame=0;
+const format=s=>`${Math.floor(s/60)}:${(s%60).toFixed(2).padStart(5,'0')}`;
+function select(index){
+ audio.pause();selected=index;const c=DATA.chapters[index],r=DATA.rendered[index];
+ document.getElementById('chapter-title').textContent=`${String(c.order).padStart(2,'0')} / ${c.title.toUpperCase()}`;
+ document.getElementById('track').textContent=c.trackTitle;
+ document.getElementById('source').textContent=`Source ${format(c.sourceIn)}–${format(c.sourceOut)} · ${r.duration.toFixed(2)} seconds`;
+ document.getElementById('basis').textContent=c.selectionBasis;
+ document.getElementById('error').textContent='';
+ audio.src='clips/'+r.file;
+ document.querySelectorAll('nav button').forEach((b,i)=>b.setAttribute('aria-current',String(i===index)));
+ const markers=document.getElementById('markers');markers.replaceChildren();
+ c.cues.forEach(cue=>{const b=document.createElement('button');b.textContent=`${format(cue.at)} / ${cue.scene}`;b.addEventListener('click',()=>{audio.currentTime=cue.at;draw()});markers.append(b)});
+ draw();
+}
+function draw(){
+ const c=DATA.chapters[selected],duration=c.sourceOut-c.sourceIn,t=audio.currentTime||0;
+ const waveform=DATA.waveforms[String(c.trackNumber)],values=waveform.rms;
+ const width=canvas.width,height=canvas.height;ctx.clearRect(0,0,width,height);
+ const start=Math.round(c.sourceIn/waveform.stepSeconds),end=Math.round(c.sourceOut/waveform.stepSeconds);
+ const max=Math.max(.001,...values.slice(start,end));ctx.fillStyle='#a19780';
+ for(let x=0;x<width;x+=2){const p=start+Math.floor((x/width)*(end-start));const h=(values[p]||0)/max*height*.43;ctx.fillRect(x,height/2-h,1.4,h*2)}
+ c.cues.forEach(cue=>{const x=cue.at/duration*width;ctx.strokeStyle='#746249';ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,height);ctx.stroke()});
+ ctx.fillStyle='rgba(219,168,116,.12)';ctx.fillRect(0,0,t/duration*width,height);ctx.fillStyle='#f6ca92';ctx.fillRect(t/duration*width,0,3,height);
+ const cue=[...c.cues].reverse().find(cue=>cue.at<=t)||c.cues[0];
+ document.getElementById('scene').textContent=cue.scene.toUpperCase();document.getElementById('action').textContent=cue.action;
+ document.getElementById('time').textContent=`Clip ${format(t)} / ${format(duration)} · Original recording ${format(c.sourceIn+t)}`;
+}
+function tick(){draw();if(!audio.paused)frame=requestAnimationFrame(tick)}
+DATA.chapters.forEach((c,i)=>{const b=document.createElement('button');b.textContent=`${c.order}. ${c.title}`;const s=document.createElement('small');s.textContent=c.trackTitle;b.append(s);b.addEventListener('click',()=>select(i));document.getElementById('chapters').append(b)});
+audio.addEventListener('play',()=>{cancelAnimationFrame(frame);tick()});['pause','seeked','loadedmetadata','ended'].forEach(name=>audio.addEventListener(name,draw));
+audio.addEventListener('error',()=>{document.getElementById('error').textContent='The local WAV could not be loaded. Keep review.html beside its clips folder.'});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)audio.pause()});select(0);
+</script>
+</html>

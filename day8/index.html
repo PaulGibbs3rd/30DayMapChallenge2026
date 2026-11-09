@@ -1,27 +1,36 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Day 8 of Paul Gibbs's 30DayMapChallenge 2026: Utopia. Planned map; explore the theme and project links.">
-  <meta name="theme-color" content="#f5f0e5">
-  <title>Day 8: Utopia | 30DayMapChallenge 2026</title>
-  <link rel="stylesheet" href="../directory/placeholder.css">
-</head>
-<body class="placeholder-page">
-  <main class="day-placeholder">
-    <header>
-      <p class="eyebrow">PAUL GIBBS · NOVEMBER 8, 2026</p>
-      <h1><span>Day 08</span> Utopia</h1>
-      <p class="theme-description">Imagine a possible geography, using a map to explore an ideal place, a hopeful future, or an alternative arrangement of space.</p>
-    </header>
-    <p class="status-badge">Planned · Map not implemented</p>
-    <p class="placeholder-note">This day's map is still to come. The theme is ready; the subject, data, and final output will be documented as the project takes shape.</p>
-    <nav class="placeholder-links" aria-label="Day 8 project links">
-      <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day8" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
-      <a href="readme.md">Project notes</a>
-      <a href="../directory/index.html">All days</a>
-    </nav>
-  </main>
-</body>
-</html>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#141815">
+<meta name="description" content="UTOPIA: No Fixed Destination. A fictional terrain atlas and synchronized journey through seven album excerpts. Day 8 of the 2026 30DayMapChallenge.">
+<title>UTOPIA — No Fixed Destination | Day 08</title><link rel="stylesheet" href="./style.css"><script type="module" src="./app.js"></script>
+</head><body>
+<svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14" stroke-width="3"/></symbol>
+<symbol id="i-prev" viewBox="0 0 24 24"><path d="M6 5v14m13-14L8 12l11 7Z"/></symbol>
+<symbol id="i-next" viewBox="0 0 24 24"><path d="M18 5v14M5 5l11 7-11 7Z"/></symbol>
+<symbol id="i-volume" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4Zm12-1c3 2 3 6 0 8m3-11c5 4 5 10 0 14"/></symbol>
+<symbol id="i-replay" viewBox="0 0 24 24"><path d="M5 7a8 8 0 1 1-1 8M5 2v6h6"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+<symbol id="i-map" viewBox="0 0 24 24"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3Zm6-3v15m6-12v15"/></symbol>
+<symbol id="i-headphones" viewBox="0 0 24 24"><path d="M4 15v-4a8 8 0 0 1 16 0v4M4 12h4v8H4Zm12 0h4v8h-4Z"/></symbol>
+</defs></svg>
+<header class="masthead"><a class="collection" href="../directory/index.html"><span class="collection-mark" aria-hidden="true">↖</span><span>30 DAY MAP CHALLENGE<span class="subtle">2026 / DAY 08 · UTOPIA</span></span></a><div class="masthead-center">AN ATLAS OF INNER GEOGRAPHIES</div><nav class="header-actions" aria-label="Experience"><button id="atlas-open"><svg><use href="#i-map"/></svg><span>19 tracks</span></button><button id="about-open" aria-label="About this experience">i</button></nav></header>
+<main id="experience">
+<canvas id="map" tabindex="0" aria-label="Fictional UTOPIA atlas. Drag to explore, scroll to zoom, or use arrow keys to pan. Track markers can also be selected from the 19-track index."></canvas><div class="map-shade" aria-hidden="true"></div>
+<aside class="story-panel"><p class="eyebrow"><span class="small-cross">+</span> NO FIXED DESTINATION</p><h1>UTOPIA<span class="title-period">.</span></h1><p class="artist">AN INTERPRETATION OF TRAVIS SCOTT’S ALBUM</p>
+<section id="welcome"><h2>A world you hear<br>your way through.</h2><p class="welcome-copy">Seven passages. One imagined landscape.<br>Follow the sound through spectacle,<br>uncertainty, and places of refuge.</p><button id="enter" class="primary"><svg><use href="#i-play"/></svg><span>Enter the journey</span><span class="button-time">5:22</span></button><button id="silent-explore" class="text-button">Or explore the atlas <span aria-hidden="true">↗</span></button><p class="headphone-note"><svg><use href="#i-headphones"/></svg> Best experienced with headphones</p></section>
+<section id="journey-nav" hidden><div class="journey-heading"><span id="mode-label">THE JOURNEY</span><button id="overview" class="text-button">View atlas ↗</button></div><nav id="chapter-list" aria-label="Journey chapters"></nav><button id="return-journey" class="return-button" hidden>Return to the journey <svg><use href="#i-arrow"/></svg></button></section>
+<div class="panel-foot"><span class="status-dot"></span><span id="audio-status">Preparing the atlas…</span><button id="choose-audio" aria-label="Select local audio files" title="Optionally select your local FLAC files or prepared WAV clips">Select files</button></div></aside>
+<div class="map-toolbar" aria-label="Map tools"><span class="north" aria-label="Map north">N<span>↑</span></span><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button><button id="map-home" aria-label="Show the whole atlas">⌂</button></div>
+<div class="map-badge"><span class="badge-line"></span> IMAGINED TERRITORY / NOT TO SCALE</div>
+<section id="chapter-card" class="chapter-card" aria-label="Current place"><div class="eyebrow"><span id="card-index">01</span><span class="divider"></span><span id="card-region">THE ROOM</span></div><h2 id="card-headline">Somewhere<br>can be here.</h2><p id="card-copy">An ordinary room. An opening into another world.</p><div class="scene-caption"><span id="scene-caption">A PLACE TO BEGIN</span><span id="scene-counter">01 / 07</span></div><button id="play-selected" class="text-button" hidden>Play this chapter <svg><use href="#i-play"/></svg></button></section>
+<section id="choices" class="choices" aria-label="Choose your place of utopia" hidden><div class="eyebrow">WHAT WERE YOU LOOKING FOR?</div><div id="choice-buttons"></div><p id="choice-caption">There is more than one place to arrive.</p></section>
+<div id="message" class="message" role="status" hidden></div><div class="map-coordinate" aria-hidden="true"><span id="map-coordinate">SECTOR 06 / THE ROOM</span><span>FICTIONAL ATLAS · 2026</span></div>
+</main>
+<footer class="transport" aria-label="Soundtrack controls"><div class="playback-buttons"><button id="previous" class="icon-button" aria-label="Previous chapter"><svg><use href="#i-prev"/></svg></button><button id="play" class="play-button" aria-label="Play journey"><svg><use id="play-icon" href="#i-play"/></svg></button><button id="next" class="icon-button" aria-label="Next chapter"><svg><use href="#i-next"/></svg></button></div><div class="now-playing"><div class="now-label"><span id="playback-state">READY TO EXPLORE</span><span class="explicit">E</span></div><strong id="now-track">SIRENS</strong><span id="now-chapter">01 · The Room</span></div><div class="timeline"><div class="timeline-labels"><span id="elapsed">0:00</span><span id="journey-progress">SEVEN CHAPTERS / ONE JOURNEY</span><span id="duration">5:22</span></div><div class="wave-track"><canvas id="waveform" aria-hidden="true"></canvas><label class="sr-only" for="seek">Seek through the journey</label><input id="seek" type="range" min="0" max="322.4" step="0.01" value="0" aria-valuetext="0 minutes 0 seconds"></div></div><div class="sound-controls"><button id="replay" class="icon-button" aria-label="Replay current chapter"><svg><use href="#i-replay"/></svg></button><button id="mute" class="icon-button" aria-label="Mute audio" aria-pressed="false"><svg><use href="#i-volume"/></svg></button><label class="sr-only" for="volume">Volume</label><input id="volume" type="range" min="0" max="1" step="0.01" value="0.72"></div></footer>
+<dialog id="atlas-dialog" aria-labelledby="atlas-title"><div class="dialog-heading"><div><p class="eyebrow">THE FULL ALBUM</p><h2 id="atlas-title">Nineteen inner geographies.</h2></div><button class="dialog-close" data-close="atlas-dialog" aria-label="Close track index">×</button></div><p class="dialog-intro">Explore a place through its track. The seven marked passages form the guided soundtrack; the full index follows the album’s original order.</p><div id="track-index"></div><p class="dialog-note">Places and connections are original interpretations, not real locations or an official explanation of the album.</p></dialog>
+<dialog id="about-dialog" aria-labelledby="about-title"><div class="dialog-heading"><div><p class="eyebrow">DAY 08 / UTOPIA</p><h2 id="about-title">No Fixed Destination.</h2></div><button class="dialog-close" data-close="about-dialog" aria-label="Close about">×</button></div><p>An imagined terrain atlas exploring desire, spectacle, uncertainty, memory, and moments of peace in Travis Scott’s <em>UTOPIA</em>.</p><p>Audio time directs the camera, active place, chapter, lighting, and annotations. Dragging the map pauses the journey so you can explore. Return to the journey to resume from the same moment.</p><div class="about-setting"><label for="motion">Reduced camera motion</label><input id="motion" type="checkbox"></div><p class="dialog-note">Draft excerpt selections · Explicit recordings. Seven edited audio passages are included. You can optionally select local reference recordings; selected files stay in your browser.</p><p>Fictional geography and visual interpretation by Paul Gibbs with Codex. Album recordings © their respective owners. This is an unofficial fan project.</p><div class="about-links"><a href="https://www.sonymusic.ca/press_release/travis-scott-releases-utopia-album" target="_blank" rel="noopener noreferrer">Album & track list ↗</a><a href="https://www.pinupmagazine.org/articles/travis-scott-design-alphabet" target="_blank" rel="noopener noreferrer">Scott on creating utopia ↗</a><a href="readme.md">Project notes ↗</a></div></dialog>
+<input id="audio-files" type="file" accept=".flac,.wav,.mp3,.m4a,.ogg" multiple hidden><noscript>This atlas needs JavaScript for its map and synchronized soundtrack.</noscript>
+</body></html>

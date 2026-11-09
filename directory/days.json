@@ -104,9 +104,11 @@
       "day": 8,
       "date": "2026-11-08",
       "theme": "Utopia",
-      "title": "Utopia",
-      "description": "Imagine a possible place or a different future, and use a map to give that vision form.",
-      "status": "planned"
+      "title": "UTOPIA — No Fixed Destination",
+      "description": "Explore an imagined terrain atlas through seven synchronized album excerpts, with 19 track locations and a personal choice of utopia.",
+      "status": "complete",
+      "tags": ["Music", "Web Audio", "Fictional geography", "Canvas", "Soundtrack"],
+      "image": "../day8/preview.jpg"
     },
     {
       "day": 9,

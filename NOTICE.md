@@ -22,3 +22,10 @@ The collection's Day 1 preview image is an application screenshot and includes t
 - The runtime bundles ArcGIS Maps SDK for JavaScript and Calcite Design System. Their original license notices and third-party notices are preserved in [Day 4 vendor notices](day4/vendor/README.md).
 - [Research notes](day4/research-notes.md) attribute the neighborhood concerns to CARB, South Coast AQMD, and CCAEJ. Current footprints do not measure historical growth, exposure, or health outcomes.
 
+## Day 8
+
+- UTOPIA recordings, song titles, and associated artist identity retain their respective owners' rights. The app is an unofficial fan interpretation.
+- Seven edited MP3 excerpts are included in the Day 8 audio folder and public static export at the user's explicit request. The complete album, source FLACs, and lossless working copies are excluded. No general music license or legal clearance is implied by inclusion.
+- The fictional terrain, track locations, route, interpretive annotations, and interface are original project content. They do not represent real geography, measured elevation, official album geography, or the artist's definitive intent.
+- [Day 8 project notes](day8/readme.md) identify the album and design-research sources. Full lyric transcriptions are not bundled.
+
