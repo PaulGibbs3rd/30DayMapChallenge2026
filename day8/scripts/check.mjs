@@ -23,7 +23,7 @@ const html=await readFile(resolve(day,'index.html'),'utf8');
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(match=>match[1]);assert.equal(new Set(ids).size,ids.length);
 for(const match of html.matchAll(/\b(?:src|href)="([^"#]+)"/g)){
   const path=match[1];if(!/^(?:\.\/|\.\.\/)/.test(path))continue;
-  assert((await stat(resolve(day,path))).isFile(),`Missing HTML asset: ${path}`);
+  assert((await stat(resolve(day,path.split(/[?#]/)[0]))).isFile(),`Missing HTML asset: ${path}`);
 }
 const app=await readFile(resolve(day,'app.js'),'utf8');
 for(const match of app.matchAll(/\$\('([^']+)'\)/g))assert(ids.includes(match[1]),`Missing UI element: ${match[1]}`);
