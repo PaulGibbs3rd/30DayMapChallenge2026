@@ -1,0 +1,25 @@
+{
+  "retrieved": "2026-11-10T06:49:17.238Z",
+  "services": {
+    "growth": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/URBAN_GROWTH_AREA_328/FeatureServer/0",
+    "agriculture": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/AGRPDDST_AREA_203/FeatureServer/0",
+    "tracts": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/TRACTS20_SHORE_AREA_2885/FeatureServer/0",
+    "population": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/TRACTS20_PL94TOTALPOP_2897/FeatureServer/0"
+  },
+  "censusYear": 2020,
+  "tractCount": 494,
+  "population": 2269675,
+  "density": "2020 total population / original Census ALAND20 in square miles; display geography water-clipped by King County and generalized at 0.00003 degrees; no clipped-area population estimates.",
+  "growthValues": [
+    "r",
+    "u"
+  ],
+  "districtNames": [
+    "Enumclaw Plateau APD",
+    "Sammamish River APD",
+    "Lower Green River APD",
+    "Upper Green River APD",
+    "Snoqualmie River APD"
+  ],
+  "attribution": "King County GIS Center; U.S. Census Bureau. Planning designations are distinct from Census urban/rural classification."
+}

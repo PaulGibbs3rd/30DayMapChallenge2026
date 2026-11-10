@@ -1,0 +1,1 @@
+import{k as e}from"./units-Cd_lqaw5.js";import{t}from"./deprecatedOperator-UBiYizRs.js";import{c as n,i as r}from"./jsonConverter-nQ-YASJy.js";function i(t,i={}){let{unit:a}=i,o=n(t).calculateLength2D(),s=r(t);return o&&a&&s&&(o=e(o,s,a)),o}function a(e,n={}){return t(`json.lengthOperator`,`execute`,`lengthExecute`),i(e,n)}export{a as execute,i as lengthExecute};

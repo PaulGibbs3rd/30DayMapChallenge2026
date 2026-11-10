@@ -1,0 +1,1 @@
+import{Kt as e}from"./UnitFactory-B2VPNF6h.js";var t=new e;function n(e,n,r,i){return t.execute(e,n,r,i,null)}function r(){return t.supportsCurves()}export{n as execute,r as supportsCurves};

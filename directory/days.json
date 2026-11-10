@@ -114,9 +114,10 @@
       "day": 9,
       "date": "2026-11-09",
       "theme": "Urban-rural",
-      "title": "Urban-rural",
-      "description": "Explore the relationships, differences, and transitions between cities, countryside, and the places in between.",
-      "status": "planned"
+      "title": "Somewhere Between",
+      "description": "Compare Seattle and the valley on two maps at the same scale, exploring population density, growth boundaries, and designated working land.",
+      "status": "complete",
+      "tags": ["ArcGIS JavaScript", "Calcite", "Seattle", "Urban-rural", "Census", "Agriculture"]
     },
     {
       "day": 10,

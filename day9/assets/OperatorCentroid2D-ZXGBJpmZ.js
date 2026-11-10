@@ -1,0 +1,1 @@
+import{t as e}from"./rolldown-runtime-DK3Fl9T5.js";import{n as t}from"./Centroid-CA-TwbbN-BYs3CPGD.js";var n=e({OperatorCentroid2D:()=>r}),r=class{getOperatorType(){return 10205}accelerateGeometry(e,t,n){return!1}canAccelerateGeometry(e){return!1}supportsCurves(){return!0}execute(e,n){return t(e)}};export{r as n,n as t};

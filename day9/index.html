@@ -1,27 +1,423 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Day 9 of Paul Gibbs's 30DayMapChallenge 2026: Urban-rural. Planned map; explore the theme and project links.">
-  <meta name="theme-color" content="#f5f0e5">
-  <title>Day 9: Urban-rural | 30DayMapChallenge 2026</title>
-  <link rel="stylesheet" href="../directory/placeholder.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f3f0e8">
+  <meta name="description" content="Two places. One county. Compare Seattle's urban and rural landscapes on two maps at the same scale.">
+  <meta property="og:title" content="Somewhere Between — Two places. One county.">
+  <meta property="og:description" content="Compare Seattle and the valley through people, planning, and working land.">
+  <title>Somewhere Between · Two Places, One County</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23242a25'/%3E%3Cpath d='M20 7v26M7 20h26' stroke='%23f5f0e5' stroke-width='2'/%3E%3C/svg%3E">
+  <script type="module" crossorigin src="./assets/index-ybLT0dAO.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-DK3Fl9T5.js">
+  <link rel="modulepreload" crossorigin href="./assets/runtime-E85yxmDO.js">
+  <link rel="modulepreload" crossorigin href="./assets/dom-BO2o430O.js">
+  <link rel="modulepreload" crossorigin href="./assets/controllers-Bm3_UGWb.js">
+  <link rel="modulepreload" crossorigin href="./assets/calcite-loader-D99wthiO.js">
+  <link rel="modulepreload" crossorigin href="./assets/compilerUtils-v_b8Y8TS.js">
+  <link rel="modulepreload" crossorigin href="./assets/arrayUtils-B0XE_S9U.js">
+  <link rel="modulepreload" crossorigin href="./assets/typedArrayUtil-CCxBF8Zf.js">
+  <link rel="modulepreload" crossorigin href="./assets/string-CcDNXFlk.js">
+  <link rel="modulepreload" crossorigin href="./assets/Error-eEZal_Lk.js">
+  <link rel="modulepreload" crossorigin href="./assets/handleUtils-Vk04vr1l.js">
+  <link rel="modulepreload" crossorigin href="./assets/ObservableBase-DWLpb-kT.js">
+  <link rel="modulepreload" crossorigin href="./assets/SimpleObservable-DKMBvYeJ.js">
+  <link rel="modulepreload" crossorigin href="./assets/signal-BXnBqRAm.js">
+  <link rel="modulepreload" crossorigin href="./assets/promiseUtils-CCoBqRoL.js">
+  <link rel="modulepreload" crossorigin href="./assets/MapUtils-deRJXRqb.js">
+  <link rel="modulepreload" crossorigin href="./assets/ensureType-BquIt_hF.js">
+  <link rel="modulepreload" crossorigin href="./assets/nextTick-e2wXLyPh.js">
+  <link rel="modulepreload" crossorigin href="./assets/PooledArray-CTqJLNLZ.js">
+  <link rel="modulepreload" crossorigin href="./assets/time-DFRR6PQm.js">
+  <link rel="modulepreload" crossorigin href="./assets/scheduling-DcUWfPQE.js">
+  <link rel="modulepreload" crossorigin href="./assets/jsonMap-ocnN7hgN.js">
+  <link rel="modulepreload" crossorigin href="./assets/iteratorUtils-DBcVBxFg.js">
+  <link rel="modulepreload" crossorigin href="./assets/decorators-DRaNvcRu.js">
+  <link rel="modulepreload" crossorigin href="./assets/reactiveUtils-CIjO1fIY.js">
+  <link rel="modulepreload" crossorigin href="./assets/GeometryCursor-DCZpDRmr.js">
+  <link rel="modulepreload" crossorigin href="./assets/SimpleGeometryCursor-Bz9Gb7aZ.js">
+  <link rel="modulepreload" crossorigin href="./assets/request-BStjsp5f.js">
+  <link rel="modulepreload" crossorigin href="./assets/assets-BjfC9Xal.js">
+  <link rel="modulepreload" crossorigin href="./assets/pe-Dr-YEg4W.js">
+  <link rel="modulepreload" crossorigin href="./assets/operatorProject-Cy08wW6t.js">
+  <link rel="modulepreload" crossorigin href="./assets/deprecatedOperator-UBiYizRs.js">
+  <link rel="modulepreload" crossorigin href="./assets/jsonTypeUtils-BfCqidaL.js">
+  <link rel="modulepreload" crossorigin href="./assets/Ellipsoid-Co4rBm1M.js">
+  <link rel="modulepreload" crossorigin href="./assets/spatialReferenceUtils-DseSm4SS.js">
+  <link rel="modulepreload" crossorigin href="./assets/units-Cd_lqaw5.js">
+  <link rel="modulepreload" crossorigin href="./assets/curveUtils-Cl8O0kR9.js">
+  <link rel="modulepreload" crossorigin href="./assets/zscale-9QjwGvdZ.js">
+  <link rel="modulepreload" crossorigin href="./assets/projectionZScaling-BPV5qzKI.js">
+  <link rel="modulepreload" crossorigin href="./assets/aria-BVuoaenL.js">
+  <link rel="modulepreload" crossorigin href="./assets/observers-SRPDwnYx.js">
+  <link rel="modulepreload" crossorigin href="./assets/calcite-icon-DxgkbkPX.js">
+  <link rel="modulepreload" crossorigin href="./assets/keyed-B-wYWCOL.js">
+  <link rel="modulepreload" crossorigin href="./assets/dom-CtpT7hIo.js">
+  <link rel="modulepreload" crossorigin href="./assets/useFocusable--pUaIX58.js">
+  <link rel="modulepreload" crossorigin href="./assets/useInteractive-BfquCWxn.js">
+  <link rel="modulepreload" crossorigin href="./assets/useFormTrigger-CXf9urp1.js">
+  <link rel="modulepreload" crossorigin href="./assets/resources3-Dkbe7mZU.js">
+  <link rel="modulepreload" crossorigin href="./assets/calcite-action-DVzN1zH1.js">
+  <link rel="modulepreload" crossorigin href="./assets/debounce-CoJgRzLL.js">
+  <link rel="modulepreload" crossorigin href="./assets/key-_QmfBLzM.js">
+  <link rel="modulepreload" crossorigin href="./assets/manager-Z6fbQ9E7.js">
+  <link rel="modulepreload" crossorigin href="./assets/openCloseComponent-DjL1TkF-.js">
+  <link rel="modulepreload" crossorigin href="./assets/static-html-BLu812PP.js">
+  <link rel="modulepreload" crossorigin href="./assets/resources11-BHHHAvIy.js">
+  <link rel="modulepreload" crossorigin href="./assets/useFocusTrap-wmWLVwUa.js">
+  <link rel="modulepreload" crossorigin href="./assets/calcite-action-menu-96ds2MO4.js">
+  <link rel="modulepreload" crossorigin href="./assets/calcite-action-group-DP6ZS6dq.js">
+  <link rel="modulepreload" crossorigin href="./assets/resources12-C8f2uj2b.js">
+  <link rel="modulepreload" crossorigin href="./assets/dynamicClasses-5T7a6PLK.js">
+  <link rel="modulepreload" crossorigin href="./assets/resources17-DgOv-rKN.js">
+  <link rel="modulepreload" crossorigin href="./assets/resources16-BFhzc9lI.js">
+  <link rel="modulepreload" crossorigin href="./assets/resources34-DQlF5qU6.js">
+  <link rel="modulepreload" crossorigin href="./assets/calcite-scrim-CfnZoM-6.js">
+  <link rel="modulepreload" crossorigin href="./assets/calcite-input-message-BFQyxag6.js">
+  <link rel="modulepreload" crossorigin href="./assets/label-Bb1d2OZg.js">
+  <link rel="modulepreload" crossorigin href="./assets/useLabel-BAAaFWkk.js">
+  <link rel="modulepreload" crossorigin href="./assets/calcite-panel-CWeTuPj8.js">
+  <link rel="modulepreload" crossorigin href="./assets/sanitizerUtils-BTLWEBax.js">
+  <link rel="modulepreload" crossorigin href="./assets/tslib.es6-qUHyP9zl.js">
+  <link rel="modulepreload" crossorigin href="./assets/JSONSupport-BJgINXge.js">
+  <link rel="modulepreload" crossorigin href="./assets/AttachmentInfo-DfoZzrYR.js">
+  <link rel="modulepreload" crossorigin href="./assets/popupTemplateUtils-DSE5r173.js">
+  <link rel="modulepreload" crossorigin href="./assets/asyncUtils-YtvthSVq.js">
+  <link rel="modulepreload" crossorigin href="./assets/luxon-Cz3ywxbI.js">
+  <link rel="modulepreload" crossorigin href="./assets/UnknownTimeZone-XQ-BYk0M.js">
+  <link rel="modulepreload" crossorigin href="./assets/guards-1OFa44Mn.js">
+  <link rel="modulepreload" crossorigin href="./assets/constants-DM5h8YeS.js">
+  <link rel="modulepreload" crossorigin href="./assets/ianaZone-B4qyeaVd.js">
+  <link rel="modulepreload" crossorigin href="./assets/timeZoneUtils-5zzmRIPJ.js">
+  <link rel="modulepreload" crossorigin href="./assets/sql--4Qm5C0h.js">
+  <link rel="modulepreload" crossorigin href="./assets/uuid-xx6QWOZ-.js">
+  <link rel="modulepreload" crossorigin href="./assets/fieldType-DdRe5i-A.js">
+  <link rel="modulepreload" crossorigin href="./assets/Field-BonYUNL0.js">
+  <link rel="modulepreload" crossorigin href="./assets/SpatialReference-CSbruD_3.js">
+  <link rel="modulepreload" crossorigin href="./assets/Point-CaxS6AzF.js">
+  <link rel="modulepreload" crossorigin href="./assets/Extent-DNkqonbD.js">
+  <link rel="modulepreload" crossorigin href="./assets/mathUtils-DR0Fu_aL.js">
+  <link rel="modulepreload" crossorigin href="./assets/aaBoundingRect-CSQV7hH8.js">
+  <link rel="modulepreload" crossorigin href="./assets/common-P5YjxI0E.js">
+  <link rel="modulepreload" crossorigin href="./assets/vec2-BA-LEgcg.js">
+  <link rel="modulepreload" crossorigin href="./assets/mat3-AUeZxTOE.js">
+  <link rel="modulepreload" crossorigin href="./assets/mat3f64-0nIg8LsN.js">
+  <link rel="modulepreload" crossorigin href="./assets/ellipticArc7Utils-uSWcOuhV.js">
+  <link rel="modulepreload" crossorigin href="./assets/curveExtent-BHhisGvP.js">
+  <link rel="modulepreload" crossorigin href="./assets/boundsUtils-D8MD8POp.js">
+  <link rel="modulepreload" crossorigin href="./assets/zmUtils-Dg1hZL7g.js">
+  <link rel="modulepreload" crossorigin href="./assets/coordsUtils-CAt0z213.js">
+  <link rel="modulepreload" crossorigin href="./assets/centroid-DeYgFA4E.js">
+  <link rel="modulepreload" crossorigin href="./assets/Polygon-CxeGJHnr.js">
+  <link rel="modulepreload" crossorigin href="./assets/Multipoint-BIQFWRov.js">
+  <link rel="modulepreload" crossorigin href="./assets/Polyline-DXOmHe7K.js">
+  <link rel="modulepreload" crossorigin href="./assets/jsonUtils-P3IVd20b.js">
+  <link rel="modulepreload" crossorigin href="./assets/typeUtils-CMnxtoEf.js">
+  <link rel="modulepreload" crossorigin href="./assets/Clonable-TD7DQnMl.js">
+  <link rel="modulepreload" crossorigin href="./assets/typeUtils-CHtz6rtu.js">
+  <link rel="modulepreload" crossorigin href="./assets/QuantizationParameters-CkZjE76t.js">
+  <link rel="modulepreload" crossorigin href="./assets/spatialRelationships-CHo4XOEg.js">
+  <link rel="modulepreload" crossorigin href="./assets/StatisticDefinition-Dmynmb0E.js">
+  <link rel="modulepreload" crossorigin href="./assets/locale-oMMq-M4o.js">
+  <link rel="modulepreload" crossorigin href="./assets/date-DwwNIKyc.js">
+  <link rel="modulepreload" crossorigin href="./assets/timeUtils-D2v-ttSM.js">
+  <link rel="modulepreload" crossorigin href="./assets/timeUnitKebabDictionary-BuERJVlu.js">
+  <link rel="modulepreload" crossorigin href="./assets/TimeExtent-DY9BXgzo.js">
+  <link rel="modulepreload" crossorigin href="./assets/Query-DIUPNv-3.js">
+  <link rel="modulepreload" crossorigin href="./assets/loadArcade-tsauYf2a.js">
+  <link rel="modulepreload" crossorigin href="./assets/fieldUtils-BLgiwf_y.js">
+  <link rel="modulepreload" crossorigin href="./assets/labelUtils-B1vFW8Aw.js">
+  <link rel="modulepreload" crossorigin href="./assets/Evented-YplzUp2e.js">
+  <link rel="modulepreload" crossorigin href="./assets/Collection-DHj-mqFD.js">
+  <link rel="modulepreload" crossorigin href="./assets/Identifiable-D7N7BwYP.js">
+  <link rel="modulepreload" crossorigin href="./assets/Promise-npRuJqxj.js">
+  <link rel="modulepreload" crossorigin href="./assets/Loadable-BxPPMEed.js">
+  <link rel="modulepreload" crossorigin href="./assets/Layer-B_qlQfIt.js">
+  <link rel="modulepreload" crossorigin href="./assets/layerUtils-ALzOhZD2.js">
+  <link rel="modulepreload" crossorigin href="./assets/colorUtils-DAQ0jxKw.js">
+  <link rel="modulepreload" crossorigin href="./assets/Color-DdplOewI.js">
+  <link rel="modulepreload" crossorigin href="./assets/colorRamps-n4aTptK9.js">
+  <link rel="modulepreload" crossorigin href="./assets/ColorStop-BHhJTxjn.js">
+  <link rel="modulepreload" crossorigin href="./assets/opacityUtils-CUfa08wL.js">
+  <link rel="modulepreload" crossorigin href="./assets/screenUtils-DvxndvU-.js">
+  <link rel="modulepreload" crossorigin href="./assets/sizeVariableUtils-DxDMy075.js">
+  <link rel="modulepreload" crossorigin href="./assets/SimpleMarkerSymbol-CYGVZsXg.js">
+  <link rel="modulepreload" crossorigin href="./assets/collectionUtils-faTZ8lVw.js">
+  <link rel="modulepreload" crossorigin href="./assets/apiKeyUtils-CvqfgQ-S.js">
+  <link rel="modulepreload" crossorigin href="./assets/Portal-j97kE6dA.js">
+  <link rel="modulepreload" crossorigin href="./assets/dashUtils-CodUDr8M.js">
+  <link rel="modulepreload" crossorigin href="./assets/vec3f64-CbPwldcz.js">
+  <link rel="modulepreload" crossorigin href="./assets/vec3-mgEpaRyZ.js">
+  <link rel="modulepreload" crossorigin href="./assets/mat4f64-E_FXCKxO.js">
+  <link rel="modulepreload" crossorigin href="./assets/DoubleArray-3j18yY5S.js">
+  <link rel="modulepreload" crossorigin href="./assets/aaBoundingBox-I_wvzmmb.js">
+  <link rel="modulepreload" crossorigin href="./assets/symbolLayerUtils3D-C1a4LXbx.js">
+  <link rel="modulepreload" crossorigin href="./assets/TextSymbol-BKw_o2Ho.js">
+  <link rel="modulepreload" crossorigin href="./assets/PictureMarkerSymbol-DS9ZZxJ6.js">
+  <link rel="modulepreload" crossorigin href="./assets/LRUCache-ByZF-LIV.js">
+  <link rel="modulepreload" crossorigin href="./assets/typeUtils-CGUtXyyD.js">
+  <link rel="modulepreload" crossorigin href="./assets/getPopupProvider-BVpEueLq.js">
+  <link rel="modulepreload" crossorigin href="./assets/createFeatureId-KsRPeWV-.js">
+  <link rel="modulepreload" crossorigin href="./assets/graphicInstanceUtils-D6saJ7A1.js">
+  <link rel="modulepreload" crossorigin href="./assets/Graphic-BHS0esc4.js">
+  <link rel="modulepreload" crossorigin href="./assets/lengthUtils-Crq1F_p7.js">
+  <link rel="modulepreload" crossorigin href="./assets/visualVariableUtils-DoDfJTKN.js">
+  <link rel="modulepreload" crossorigin href="./assets/defaultsJSON-B_MeSjqQ.js">
+  <link rel="modulepreload" crossorigin href="./assets/defaults-CWroKrg-.js">
+  <link rel="modulepreload" crossorigin href="./assets/jsonUtils-IkWbc0YT.js">
+  <link rel="modulepreload" crossorigin href="./assets/commonProperties-Dnx5HkHh.js">
+  <link rel="modulepreload" crossorigin href="./assets/SimpleRenderer-A531KtSJ.js">
+  <link rel="modulepreload" crossorigin href="./assets/diffUtils-CkZihs8t.js">
+  <link rel="modulepreload" crossorigin href="./assets/RendererLegendOptions-DE2pMsp9.js">
+  <link rel="modulepreload" crossorigin href="./assets/styleUtils-Iuxw-aPG.js">
+  <link rel="modulepreload" crossorigin href="./assets/UniqueValueRenderer-B3Bz1jYb.js">
+  <link rel="modulepreload" crossorigin href="./assets/NormalizationBinParametersMixin-BJXc_Sui.js">
+  <link rel="modulepreload" crossorigin href="./assets/RelationshipQuery-B_B3ngEc.js">
+  <link rel="modulepreload" crossorigin href="./assets/featureLayerUtils-RRLUV7Dj.js">
+  <link rel="modulepreload" crossorigin href="./assets/ReactiveMap-D9hgAs1h.js">
+  <link rel="modulepreload" crossorigin href="./assets/spatialReferenceEllipsoidUtils-De1NcfI2.js">
+  <link rel="modulepreload" crossorigin href="./assets/GeographicTransformation-BXoyGMs4.js">
+  <link rel="modulepreload" crossorigin href="./assets/geodesicConstants-DgVVJzES.js">
+  <link rel="modulepreload" crossorigin href="./assets/projectBuffer-qQCMUK16.js">
+  <link rel="modulepreload" crossorigin href="./assets/projectionUtils-XcQVfXh5.js">
+  <link rel="modulepreload" crossorigin href="./assets/graphicOriginUtils-BaRNJBCb.js">
+  <link rel="modulepreload" crossorigin href="./assets/number-CXAKQt_t.js">
+  <link rel="modulepreload" crossorigin href="./assets/mat4-CmtBNVDy.js">
+  <link rel="modulepreload" crossorigin href="./assets/utils-BNt5eN5Y.js">
+  <link rel="modulepreload" crossorigin href="./assets/intl-C-sAT_Pc.js">
+  <link rel="modulepreload" crossorigin href="./assets/basemapDefinitions-Dib-talU.js">
+  <link rel="modulepreload" crossorigin href="./assets/basemapUtils-oxF6dPjY.js">
+  <link rel="modulepreload" crossorigin href="./assets/utils-DTJevPRq.js">
+  <link rel="modulepreload" crossorigin href="./assets/featureUtils-C35i9ByA.js">
+  <link rel="modulepreload" crossorigin href="./assets/FeatureSet-D4Nfnupa.js">
+  <link rel="modulepreload" crossorigin href="./assets/parser-DgTheFqe.js">
+  <link rel="modulepreload" crossorigin href="./assets/jsonUtils-DSGB1Fza.js">
+  <link rel="modulepreload" crossorigin href="./assets/defaultCIMValues-ICEwC3RV.js">
+  <link rel="modulepreload" crossorigin href="./assets/utils-CltyBM2V.js">
+  <link rel="modulepreload" crossorigin href="./assets/cimSymbolUtils-Dz22jypm.js">
+  <link rel="modulepreload" crossorigin href="./assets/utils-BVW_TSaf.js">
+  <link rel="modulepreload" crossorigin href="./assets/ClassBreaksRenderer-BCMe11Br.js">
+  <link rel="modulepreload" crossorigin href="./assets/Version-CfC_kBuB.js">
+  <link rel="modulepreload" crossorigin href="./assets/FieldsIndex-BeBawXJh.js">
+  <link rel="modulepreload" crossorigin href="./assets/enum-XpN_B-pz.js">
+  <link rel="modulepreload" crossorigin href="./assets/TimeOnly-BGDj8-RA.js">
+  <link rel="modulepreload" crossorigin href="./assets/geometry-DY2FFFZJ.js">
+  <link rel="modulepreload" crossorigin href="./assets/accessor-ctI85oQp.js">
+  <link rel="modulepreload" crossorigin href="./assets/json-DIoibG84.js">
+  <link rel="modulepreload" crossorigin href="./assets/ArcadeExpression-CnqnF4_q.js">
+  <link rel="modulepreload" crossorigin href="./assets/DictionaryScriptEvaluator-ngQC2X1F.js">
+  <link rel="modulepreload" crossorigin href="./assets/vec4-Xgyc9IxX.js">
+  <link rel="modulepreload" crossorigin href="./assets/vec4f64-BVLRhYcJ.js">
+  <link rel="modulepreload" crossorigin href="./assets/heatmapUtils-h8KDCdwh.js">
+  <link rel="modulepreload" crossorigin href="./assets/typeUtils-CIaOFjCU.js">
+  <link rel="modulepreload" crossorigin href="./assets/shared-0Sy8a-kf.js">
+  <link rel="modulepreload" crossorigin href="./assets/isImageryGraphicOrigin-QUxSQ0x2.js">
+  <link rel="modulepreload" crossorigin href="./assets/isImageryTileGraphicOrigin-uK8NywvW.js">
+  <link rel="modulepreload" crossorigin href="./assets/FormTemplate-DdhJ5yvL.js">
+  <link rel="modulepreload" crossorigin href="./assets/MultiOriginJSONSupport-IA3fpJN5.js">
+  <link rel="modulepreload" crossorigin href="./assets/layerContainerType-BtNSafr-.js">
+  <link rel="modulepreload" crossorigin href="./assets/getArcadeFeatureSource-BzJbRXpC.js">
+  <link rel="modulepreload" crossorigin href="./assets/GraphicOrigin-3fxcQLvm.js">
+  <link rel="modulepreload" crossorigin href="./assets/Queue-eShp4kXo.js">
+  <link rel="modulepreload" crossorigin href="./assets/workers-StNkCinL.js">
+  <link rel="modulepreload" crossorigin href="./assets/workers-DT4ybW1t.js">
+  <link rel="modulepreload" crossorigin href="./assets/editsZScale-DEJOspUF.js">
+  <link rel="modulepreload" crossorigin href="./assets/APIKeyMixin-B7JmA7Pc.js">
+  <link rel="modulepreload" crossorigin href="./assets/ArcGISService-BIB6MuXO.js">
+  <link rel="modulepreload" crossorigin href="./assets/BlendLayer-Cdd7d89p.js">
+  <link rel="modulepreload" crossorigin href="./assets/CustomParametersMixin-qN5uokSM.js">
+  <link rel="modulepreload" crossorigin href="./assets/DataSeriesLayer-CsNL0UUG.js">
+  <link rel="modulepreload" crossorigin href="./assets/displayFilterUtils-BvHdbDOf.js">
+  <link rel="modulepreload" crossorigin href="./assets/DisplayFilteredLayer-BBJgICHI.js">
+  <link rel="modulepreload" crossorigin href="./assets/versionManagementUtils-CYgY1OSA.js">
+  <link rel="modulepreload" crossorigin href="./assets/EditBusLayer-CNA2fo6j.js">
+  <link rel="modulepreload" crossorigin href="./assets/FeatureFilter-CPYwkfCR.js">
+  <link rel="modulepreload" crossorigin href="./assets/FeatureEffect-CaY-_Ao7.js">
+  <link rel="modulepreload" crossorigin href="./assets/FeatureEffectLayer-CSzQkLXM.js">
+  <link rel="modulepreload" crossorigin href="./assets/HeightModelInfo-B7Vw_tld.js">
+  <link rel="modulepreload" crossorigin href="./assets/HeightModelInfoMixin-Cu_r43VR.js">
+  <link rel="modulepreload" crossorigin href="./assets/unitConversionUtils-Bg0NRrXp.js">
+  <link rel="modulepreload" crossorigin href="./assets/ElevationInfo-CZ7VVuEn.js">
+  <link rel="modulepreload" crossorigin href="./assets/layersMapping-DIn_CoH7.js">
+  <link rel="modulepreload" crossorigin href="./assets/OperationalLayer-tR9E3MWu.js">
+  <link rel="modulepreload" crossorigin href="./assets/Relationship-Dk25l1ZC.js">
+  <link rel="modulepreload" crossorigin href="./assets/LayerFloorInfo-B8Kgn_sY.js">
+  <link rel="modulepreload" crossorigin href="./assets/multiLayerServiceUtils-Die1zXuf.js">
+  <link rel="modulepreload" crossorigin href="./assets/infoFor3D-DPbpfWUO.js">
+  <link rel="modulepreload" crossorigin href="./assets/sqlVisitor-BS1bqGqO.js">
+  <link rel="modulepreload" crossorigin href="./assets/relativeTimeQueryUtils-D9cZGXmx.js">
+  <link rel="modulepreload" crossorigin href="./assets/serviceCapabilitiesUtils-l05DueeX.js">
+  <link rel="modulepreload" crossorigin href="./assets/portalItemUtils-D_E6bsEJ.js">
+  <link rel="modulepreload" crossorigin href="./assets/PortalItem-iNd8H9Xh.js">
+  <link rel="modulepreload" crossorigin href="./assets/ReloadableLayer-BgmvMLiH.js">
+  <link rel="modulepreload" crossorigin href="./assets/fieldConfigUtils-M2q_B0n0.js">
+  <link rel="modulepreload" crossorigin href="./assets/labelingInfo-nXLfJq5Z.js">
+  <link rel="modulepreload" crossorigin href="./assets/jsonUtils-CKsc4Nom.js">
+  <link rel="modulepreload" crossorigin href="./assets/FeatureReductionSelection-DlRUFr88.js">
+  <link rel="modulepreload" crossorigin href="./assets/MD5-DYVxvv5N.js">
+  <link rel="modulepreload" crossorigin href="./assets/FeatureReductionLayer-CofCDPa_.js">
+  <link rel="modulepreload" crossorigin href="./assets/OrderByInfo-t7l4Fb4W.js">
+  <link rel="modulepreload" crossorigin href="./assets/OrderedLayer-DTaLxbaU.js">
+  <link rel="modulepreload" crossorigin href="./assets/saveUtils-CKUmoAm8.js">
+  <link rel="modulepreload" crossorigin href="./assets/PortalLayer-cuVviPFv.js">
+  <link rel="modulepreload" crossorigin href="./assets/RefreshableLayer-D070rcXN.js">
+  <link rel="modulepreload" crossorigin href="./assets/ScaleRangeLayer-XSqJZzEV.js">
+  <link rel="modulepreload" crossorigin href="./assets/TemporalLayer-C3IUXetx.js">
+  <link rel="modulepreload" crossorigin href="./assets/TrackableLayer-ysPY9atj.js">
+  <link rel="modulepreload" crossorigin href="./assets/FeatureTemplate-C2maOcKI.js">
+  <link rel="modulepreload" crossorigin href="./assets/FeatureType-Btnxm61t.js">
+  <link rel="modulepreload" crossorigin href="./assets/fieldProperties-B38uQ9Ms.js">
+  <link rel="modulepreload" crossorigin href="./assets/TitleCreator-B4lryNoQ.js">
+  <link rel="modulepreload" crossorigin href="./assets/versionUtils-CSKThQFc.js">
+  <link rel="modulepreload" crossorigin href="./assets/styleUtils-Bl5nVc4g.js">
+  <link rel="modulepreload" crossorigin href="./assets/popupUtils-DNDHPc7J.js">
+  <link rel="modulepreload" crossorigin href="./assets/FeatureLayer-plhxiqbP.js">
+  <link rel="modulepreload" crossorigin href="./assets/streamLayerUtils-fsZLFvgX.js">
+  <link rel="modulepreload" crossorigin href="./assets/throttle-BLR0Po0b.js">
+  <link rel="modulepreload" crossorigin href="./assets/utils-Bce0PnHE.js">
+  <link rel="modulepreload" crossorigin href="./assets/Cyclical-CBU_4nse.js">
+  <link rel="modulepreload" crossorigin href="./assets/importUtils-DFHs3fOH.js">
+  <link rel="modulepreload" crossorigin href="./assets/normalizeUtilsCommon-CH-LIN6t.js">
+  <link rel="modulepreload" crossorigin href="./assets/normalizeUtils-Cr8XyKS_.js">
+  <link rel="modulepreload" crossorigin href="./assets/urlUtils-CXJcRWSN.js">
+  <link rel="modulepreload" crossorigin href="./assets/memoryEstimations-Cr5CjcEd.js">
+  <link rel="modulepreload" crossorigin href="./assets/pbf-CJiiRJf2.js">
+  <link rel="modulepreload" crossorigin href="./assets/pbfQueryUtils-BegGLvpX.js">
+  <link rel="modulepreload" crossorigin href="./assets/queryUtils-DfXVQR5E.js">
+  <link rel="modulepreload" crossorigin href="./assets/queryZScale-Cm5AXd2q.js">
+  <link rel="modulepreload" crossorigin href="./assets/query-Zcox3y1W.js">
+  <link rel="modulepreload" crossorigin href="./assets/executeQueryJSON-BIQlAKhz.js">
+  <link rel="modulepreload" crossorigin href="./assets/NetworkElement-4QDMhJFV.js">
+  <link rel="modulepreload" crossorigin href="./assets/globalCss-CBJm2WD9.js">
+  <link rel="modulepreload" crossorigin href="./assets/legacyIcon-MQMfbZFY.js">
+  <link rel="modulepreload" crossorigin href="./assets/typeUtils-4XNiEh8d.js">
+  <link rel="modulepreload" crossorigin href="./assets/colorUtils-BYgH9k_f.js">
+  <link rel="modulepreload" crossorigin href="./assets/projector-EDaSxRr7.js">
+  <link rel="modulepreload" crossorigin href="./assets/mat2df32-DxRSQG4o.js">
+  <link rel="modulepreload" crossorigin href="./assets/mat2d-DVZF_BcX.js">
+  <link rel="modulepreload" crossorigin href="./assets/widget-BN3R4-RK.js">
+  <link rel="modulepreload" crossorigin href="./assets/devEnvironmentUtils-DPWEfjY9.js">
+  <link rel="modulepreload" crossorigin href="./assets/Camera-DlgCUuYO.js">
+  <link rel="modulepreload" crossorigin href="./assets/CollectionFlattener-CvopRZQa.js">
+  <link rel="modulepreload" crossorigin href="./assets/TileKey-BnkE4cvW.js">
+  <link rel="modulepreload" crossorigin href="./assets/TileInfo-D2BejXY2.js">
+  <link rel="modulepreload" crossorigin href="./assets/screenUtils-ClWgVJ2q.js">
+  <link rel="modulepreload" crossorigin href="./assets/PropertiesPool-puqf5yon.js">
+  <link rel="modulepreload" crossorigin href="./assets/InputManager-BvHvXSFy.js">
+  <link rel="modulepreload" crossorigin href="./assets/loadAll-DC-sekbv.js">
+  <link rel="modulepreload" crossorigin href="./assets/isBasemap-BW48ra-j.js">
+  <link rel="modulepreload" crossorigin href="./assets/multiOriginJSONSupportUtils-KzlGgPiU.js">
+  <link rel="modulepreload" crossorigin href="./assets/resourceExtension-B7VBce6Z.js">
+  <link rel="modulepreload" crossorigin href="./assets/GraphicsCollection-Cp40MUmu.js">
+  <link rel="modulepreload" crossorigin href="./assets/executeForIds-CZb6Cadu.js">
+  <link rel="modulepreload" crossorigin href="./assets/pbfFeatureSetUtils-Bsqt4XIC.js">
+  <link rel="modulepreload" crossorigin href="./assets/executeQueryPBF-aHLurFIO.js">
+  <link rel="modulepreload" crossorigin href="./assets/QueryTask-DnzHLnzJ.js">
+  <link rel="modulepreload" crossorigin href="./assets/sublayerUtils-DCW02eHA.js">
+  <link rel="modulepreload" crossorigin href="./assets/SublayersOwner-u8F-0tXt.js">
+  <link rel="modulepreload" crossorigin href="./assets/keybindings-DhmeUrz9.js">
+  <link rel="modulepreload" crossorigin href="./assets/decorGlyphRect-BA7vuJrC.js">
+  <link rel="modulepreload" crossorigin href="./assets/Rect-wh9S9rwa.js">
+  <link rel="modulepreload" crossorigin href="./assets/enums-DkCFWTlr.js">
+  <link rel="modulepreload" crossorigin href="./assets/Texture-BDCWQt4U.js">
+  <link rel="modulepreload" crossorigin href="./assets/HighlightDefaults-D739q-o4.js">
+  <link rel="modulepreload" crossorigin href="./assets/definitions-C4ZGvTcj.js">
+  <link rel="modulepreload" crossorigin href="./assets/clippingUtils-4tRV4LH6.js">
+  <link rel="modulepreload" crossorigin href="./assets/DebugRendererInfo-IzJAyK7D.js">
+  <link rel="modulepreload" crossorigin href="./assets/vec2f64-C5Ma3aci.js">
+  <link rel="modulepreload" crossorigin href="./assets/debugFlags-B4NMwBeo.js">
+  <link rel="modulepreload" crossorigin href="./assets/TileKey-BUNegmRD.js">
+  <link rel="modulepreload" crossorigin href="./assets/TileInfoView-DHrZP0WA.js">
+  <link rel="modulepreload" crossorigin href="./assets/ScheduledQueueProcessor-Cl3OT3tz.js">
+  <link rel="modulepreload" crossorigin href="./assets/quickselect-DZL_mijX.js">
+  <link rel="modulepreload" crossorigin href="./assets/quantizationUtils-BWtgZ2IW.js">
+  <link rel="modulepreload" crossorigin href="./assets/arcadeUtils-jQM_s3-z.js">
+  <link rel="modulepreload" crossorigin href="./assets/polygonExtentClipping-BrQoU7Ox.js">
+  <link rel="modulepreload" crossorigin href="./assets/rasterProjectionHelper-B4qaAlD6.js">
+  <link rel="modulepreload" crossorigin href="./assets/imageUtils-C502RWkR.js">
+  <link rel="modulepreload" crossorigin href="./assets/ValidateNetworkTopologyResult-DRO3iU5k.js">
+  <link rel="modulepreload" crossorigin href="./assets/UNTraceConfiguration-qf0yahxY.js">
+  <link rel="modulepreload" crossorigin href="./assets/CircuitLocation-DqgIp8UZ.js">
+  <link rel="modulepreload" crossorigin href="./assets/TelecomNetworkElement-DAtFTY6I.js">
+  <link rel="modulepreload" crossorigin href="./assets/TraceLocation-BDnmu9tX.js">
+  <link rel="modulepreload" crossorigin href="./assets/Circuit-DxT03C0W.js">
+  <link rel="modulepreload" crossorigin href="./assets/TileInfoTilemapCache-B4ChQGav.js">
+  <link rel="modulepreload" crossorigin href="./assets/TilemapCache-Bb9j3_cU.js">
+  <link rel="modulepreload" crossorigin href="./assets/ArcGISCachedService-LjfQZcG2.js">
+  <link rel="modulepreload" crossorigin href="./assets/imageBitmapUtils-Y1U2g1o5.js">
+  <link rel="modulepreload" crossorigin href="./assets/QueryEngineCapabilities-BBn5pZsT.js">
+  <link rel="stylesheet" crossorigin href="./assets/runtime-CoBkh1Wu.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-D70Oh7RL.css">
 </head>
-<body class="placeholder-page">
-  <main class="day-placeholder">
-    <header>
-      <p class="eyebrow">PAUL GIBBS · NOVEMBER 9, 2026</p>
-      <h1><span>Day 09</span> Urban-rural</h1>
-      <p class="theme-description">Explore cities, countryside, or the transition between them, considering settlement patterns, landscapes, and the ways people define urban and rural places.</p>
-    </header>
-    <p class="status-badge">Planned · Map not implemented</p>
-    <p class="placeholder-note">This day's map is still to come. The theme is ready; the subject, data, and final output will be documented as the project takes shape.</p>
-    <nav class="placeholder-links" aria-label="Day 9 project links">
-      <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day9" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
-      <a href="readme.md">Project notes</a>
-      <a href="../directory/index.html">All days</a>
+<body>
+<a class="skip-link" href="#select-a">Skip to place selection</a>
+<calcite-shell>
+  <header class="masthead" slot="header">
+    <a href="../directory/" class="brand"><span class="brand-mark" aria-hidden="true">S<span>/</span>B</span><span>Somewhere<br>Between</span></a>
+    <span class="edition">FIELD STUDY 09<span>SEATTLE &amp; KING COUNTY, WA</span></span>
+    <nav aria-label="Map actions" class="header-actions">
+      <calcite-button id="sources-button" appearance="transparent" kind="neutral" scale="s" icon-start="information">Sources &amp; story</calcite-button>
+      <calcite-button id="share-button" appearance="outline" kind="neutral" scale="s" icon-start="share">Share comparison</calcite-button>
     </nav>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">DAY 09 / URBAN–RURAL</p><h1 id="page-title">Two places.<br><span>One county.</span></h1></div>
+      <div class="intro-aside"><p>A skyline, a farm, an urban pocket. <br>Put two places beside each other. <br>See what changes.</p><div class="preset-list" role="group" aria-label="Suggested comparisons"><button type="button" data-pair="city" class="preset active" aria-pressed="true">City / farmland <span aria-hidden="true">↗</span></button><button type="button" data-pair="edge" class="preset" aria-pressed="false">Across the edge <span aria-hidden="true">↗</span></button><button type="button" data-pair="towns" class="preset" aria-pressed="false">Two town centers <span aria-hidden="true">↗</span></button></div></div>
+    </section>
+    <section class="comparison-workspace" aria-label="Two-map place comparison">
+      <div class="toolbar">
+        <div class="mode-tabs" role="group" aria-label="Map view">
+          <button type="button" class="mode-button active" data-mode="people" aria-pressed="true">People</button>
+          <button type="button" class="mode-button" data-mode="growth" aria-pressed="false">Growth boundary</button>
+          <button type="button" class="mode-button" data-mode="land" aria-pressed="false">Working land</button>
+        </div>
+        <div class="zoom-tools"><span class="scale-lock"><svg viewBox="0 0 22 14" aria-hidden="true"><path d="M8 10H6a4 4 0 0 1 0-8h4m4 0h2a4 4 0 0 1 0 8h-4M7 6h8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Same scale</span><button type="button" id="zoom-out" aria-label="Zoom both maps out">−</button><button type="button" id="zoom-in" aria-label="Zoom both maps in">+</button><button type="button" id="reset-view">Recenter both</button></div>
+      </div>
+      <div class="legend-bar" aria-labelledby="legend-title"><span id="legend-title">People per square mile</span><span id="legend-content"></span><span class="legend-date" id="legend-date">2020 Census · tract averages</span></div>
+      <div class="map-pair">
+        <article class="place-panel panel-a" aria-labelledby="title-a">
+          <header class="place-heading"><span class="letter">A</span><div><label for="select-a" class="eyebrow">CHOOSE A PLACE</label><select id="select-a" aria-label="Place A"></select><h2 id="title-a" class="sr-only">Place A</h2></div><button type="button" class="recenter" data-side="a" aria-label="Recenter map A" title="Recenter on selected place">⌖</button></header>
+          <div class="map-frame"><arcgis-map id="map-a" aria-label="Place A interactive map"></arcgis-map><span class="frame-label">A / <span id="map-name-a">SEATTLE</span></span><span class="map-scale" id="scale-a">Loading map…</span></div>
+          <div class="place-stats"><p class="metric-label">PEOPLE / SQUARE MILE <span>2020 CENSUS TRACT</span></p><p class="density-number" id="density-a">—</p><p class="tract-detail" id="tract-a">Loading local data…</p><div class="fact-grid"><div><span>Growth designation</span><strong id="growth-a">—</strong></div><div><span>Agricultural district</span><strong id="land-a">—</strong></div></div><p class="place-description" id="description-a"></p></div>
+        </article>
+        <article class="place-panel panel-b" aria-labelledby="title-b">
+          <header class="place-heading"><span class="letter">B</span><div><label for="select-b" class="eyebrow">CHOOSE A PLACE</label><select id="select-b" aria-label="Place B"></select><h2 id="title-b" class="sr-only">Place B</h2></div><button type="button" class="recenter" data-side="b" aria-label="Recenter map B" title="Recenter on selected place">⌖</button></header>
+          <div class="map-frame"><arcgis-map id="map-b" aria-label="Place B interactive map"></arcgis-map><span class="frame-label">B / <span id="map-name-b">SAMMAMISH VALLEY</span></span><span class="map-scale" id="scale-b">Loading map…</span></div>
+          <div class="place-stats"><p class="metric-label">PEOPLE / SQUARE MILE <span>2020 CENSUS TRACT</span></p><p class="density-number" id="density-b">—</p><p class="tract-detail" id="tract-b">Loading local data…</p><div class="fact-grid"><div><span>Growth designation</span><strong id="growth-b">—</strong></div><div><span>Agricultural district</span><strong id="land-b">—</strong></div></div><p class="place-description" id="description-b"></p></div>
+        </article>
+      </div>
+      <div class="compare-verdict"><div><span class="eyebrow">THE DENSITY DIFFERENCE</span><strong id="ratio">—</strong></div><p id="compare-summary" role="status">The same map scale. Two different landscapes.</p><button type="button" id="swap" aria-label="Swap places A and B">Swap places <span aria-hidden="true">⇄</span></button></div>
+      <p class="method-note">Figures describe the <strong>surrounding Census tract</strong>, not a city, farm, or the visible map window. Click either map to sample a place. Growth designations are county planning categories.</p>
+      <p id="map-status" class="data-status" role="status">Preparing local data and both maps…</p>
+    </section>
+    <footer class="page-footer"><a href="../directory/">↖ All 30 maps</a><span>PAUL GIBBS · NOVEMBER 9, 2026</span><span>PEOPLE / POLICY / WORKING LAND</span></footer>
   </main>
+</calcite-shell>
+<calcite-dialog id="sources-dialog" heading="The places between" modal width-scale="m">
+<div class="source-content">
+      <p class="source-lede">A city’s edge is a patchwork of people, policy, and working landscapes.</p>
+      <p>Compare two places in Seattle and King County at the same map scale. Pan each map independently, zoom either one to change both scales, and click either map to sample a different point. The population figures describe the surrounding Census tracts, not everything visible in the map windows.</p>
+      <h3>People · a 2020 snapshot</h3>
+      <p>494 King County Census tracts, joined to total population from the 2020 Census redistricting data. Density = total population ÷ original Census land area in square miles. Cards describe the entire surrounding tract, not a city, neighborhood, or farm. Large rural tracts can mix settlements with extensive uninhabited land.</p>
+      <p><a href="https://www5.kingcounty.gov/SDC/?Layer=tracts20_shore_area" target="_blank" rel="noopener noreferrer">Tract geography ↗</a> · <a href="https://www5.kingcounty.gov/SDC/?Layer=tracts20_pl94totalpop" target="_blank" rel="noopener noreferrer">Population table ↗</a></p>
+      <h3>Growth boundary · a planning designation</h3>
+      <p>The county’s urban growth area guides where urban growth is accommodated. “Urban growth area” and “Outside urban growth area” here come from King County’s mapped planning designations, not Census urban/rural classification. Outside the county or without coverage, the map reports unavailable. Boundaries are generalized for display and are not parcel-level determinations.</p>
+      <p><a href="https://www5.kingcounty.gov/sdc/?Layer=urban_growth_area" target="_blank" rel="noopener noreferrer">King County growth areas ↗</a> · <a href="https://kingcounty.gov/en/dept/local-services/buildings-property/development-planning-regulations/regional-planning/king-county-comprehensive-plan/current-adopted-plan" target="_blank" rel="noopener noreferrer">Adopted comprehensive plan ↗</a></p>
+      <h3>Working land · designated agricultural districts</h3>
+      <p>Gold areas show the county’s five named Agricultural Production Districts. They indicate land designated primarily for agriculture, not a live inventory of active farms. The Snoqualmie Valley’s Fish, Farm &amp; Flood effort balances agriculture, salmon habitat, and flood risk.</p>
+      <p><a href="https://www5.kingcounty.gov/SDC/?Layer=agrpddst_area" target="_blank" rel="noopener noreferrer">Agricultural districts ↗</a> · <a href="https://kingcounty.gov/en/dept/dnrp/nature-recreation/environment-ecology-conservation/watersheds/snoqualmie-skykomish-river/fish-farm-and-flood" target="_blank" rel="noopener noreferrer">Fish, Farm &amp; Flood ↗</a></p>
+      <h3>Living lands</h3>
+      <p>These are communities and working landscapes, as well as ancestral lands. The Snoqualmie Tribe offers its own interpretation of the valley and its continuing connection to these places. <a href="https://snoqualmietribe.us/snoqualmie-tribe-ancestral-lands-movement/" target="_blank" rel="noopener noreferrer">Explore the Tribe’s Ancestral Lands Movement ↗</a>. Tribal map artwork and place-name data have not been reproduced here.</p>
+      <h3>Dates, coverage, and credits</h3>
+      <p>Population: 2020 Census. Planning layers: King County snapshots retrieved November 9, 2026 (Pacific time); the catalog documents 2025 updates. These layers describe different dates and do not demonstrate historical change. Countywide data is included; guided places focus on Seattle and the Snoqualmie Valley. Missing values are not zero. Water-clipped and generalized display polygons are never used to recalculate Census land area.</p>
+      <p>Data: King County GIS Center and U.S. Census Bureau. Background: Esri and its credited providers. Internet access is needed for the background and SDK assets; thematic geography and comparisons are bundled locally. <a href="./data/sources.json" target="_blank" rel="noopener noreferrer">Snapshot metadata ↗</a> · <a href="readme.md">Project notes ↗</a></p>
+    </div>
+  <calcite-button slot="footer-end" id="close-sources" kind="neutral">Back to the maps</calcite-button>
+</calcite-dialog>
+<div class="toast" id="toast" role="status" hidden></div>
+<noscript><p class="no-script">This comparison needs JavaScript. <a href="readme.md">Read the project notes and sources.</a></p></noscript>
+
 </body>
 </html>

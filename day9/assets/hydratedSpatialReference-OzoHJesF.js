@@ -1,0 +1,1 @@
+import{t as e}from"./SpatialReference-CSbruD_3.js";function t(t){if(t instanceof e)return t;let{wkid:n,wkt:r,wkt2:i,latestWkid:a}=t,o={wkid:n,wkt:r,wkt2:i,latestWkid:a};return e.fromJSON(o)}export{t};
