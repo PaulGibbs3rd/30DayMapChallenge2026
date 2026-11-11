@@ -1,0 +1,1 @@
+import{t as e}from"./Uniform-FnPH-ujw.js";var t=class extends e{constructor(e,t,n,r){super(e,`mat4`,2,(n,i,a,o)=>n.setUniformMatrices4fv(e,t(i,a,o),r),n)}};export{t};

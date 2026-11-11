@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en" class="calcite-mode-dark">
+  <head><meta charset="utf-8"><title>Waterfront Flight · Browser checks</title></head>
+  <body>
+    <header class="flight-header"><h1>Waterfront Flight browser checks</h1><nav aria-label="Verification actions"><button id="run" disabled>Run lifecycle checks</button><button id="benchmark" disabled>Measure 60-second flight</button></nav></header>
+    <main><arcgis-scene><scene-fpv-drone slot="top-end" launch-position="-122.67218,45.51698" follow-drone></scene-fpv-drone></arcgis-scene></main>
+    <footer class="flight-footer"><output id="result" role="status">Waiting for the host scene…</output></footer>
+    <script type="module">
+      import './src/main.ts';
+      const host = document.querySelector('arcgis-scene');
+      const drone = document.querySelector('scene-fpv-drone');
+      const result = document.querySelector('#result');
+      const run = document.querySelector('#run');
+      const benchmark = document.querySelector('#benchmark');
+      const screen = () => drone.shadowRoot.querySelector('.screen');
+      const press = (key, type = 'keydown') => screen().dispatchEvent(new KeyboardEvent(type, { key, bubbles: true, cancelable: true }));
+      const click = (action) => drone.shadowRoot.querySelector(`[data-action="${action}"]`).click();
+      const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+      function check(ok, message) { if (!ok) throw new Error(message); }
+      async function waitFor(state) {
+        const end = performance.now() + 30000;
+        while (drone.state !== state && drone.state !== 'error' && performance.now() < end) await delay(75);
+        check(drone.state === state, `Expected ${state}; got ${drone.state}.`);
+      }
+      let latest;
+      drone.addEventListener('drone-telemetry', (event) => { latest = event.detail; });
+      const busy = (value) => { run.disabled = value; benchmark.disabled = value; };
+      waitFor('ready').then(() => { busy(false); result.textContent = 'Ready. Keep this tab focused while the test runs.'; })
+        .catch((error) => { result.textContent = error.message; });
+      run.addEventListener('click', async () => {
+        busy(true);
+        result.textContent = 'Testing takeoff, flight, pause, reset, and scene ownership…';
+        const view = host.view;
+        const map = host.map;
+        const existingGraphics = view.graphics.length;
+        try {
+          click('takeoff'); await waitFor('flying');
+          check(drone.querySelectorAll('canvas').length === 1, 'Expected exactly one FPV canvas.');
+          check(view.graphics.length === existingGraphics + 1, 'Expected one host-only drone graphic.');
+          const launch = latest;
+          const aircraft = view.graphics.getItemAt(existingGraphics);
+          const launchSymbol = aircraft.symbol;
+          const launchPitch = launchSymbol.symbolLayers.getItemAt(0).tilt;
+          const observerAtLaunch = view.camera.position.latitude;
+          press('w'); press(' ');
+          const moveDeadline = performance.now() + 12000;
+          while (latest.heightAboveGroundM < launch.heightAboveGroundM + 1 && performance.now() < moveDeadline) await delay(150);
+          press('w', 'keyup'); press(' ', 'keyup');
+          press('e'); press('ArrowDown'); press(' ');
+          const turnDeadline = performance.now() + 12000;
+          while (aircraft.symbol.symbolLayers.getItemAt(0).tilt > launchPitch - 5 && performance.now() < turnDeadline) await delay(150);
+          press('e', 'keyup'); press('ArrowDown', 'keyup'); press(' ', 'keyup');
+          press('Escape'); await waitFor('paused');
+          check(latest.latitude > launch.latitude && latest.heightAboveGroundM > launch.heightAboveGroundM, 'Expected W and Space together to move the drone forward and upward.');
+          check(view.camera.position.latitude > observerAtLaunch + .000001, 'The main camera did not track the drone north.');
+          const position = aircraft.geometry;
+          check(Math.abs(position.latitude - latest.latitude) < .000001, 'The aircraft graphic did not follow the flight position.');
+          check(aircraft.symbol !== launchSymbol && latest.headingDeg !== launch.headingDeg, 'Yaw did not refresh the rendered aircraft symbol.');
+          check(aircraft.symbol.symbolLayers.every((layer) => layer.heading === latest.headingDeg && layer.tilt <= launchPitch - 5), 'The aircraft parts did not turn and pitch with the FPV controls.');
+          const hover = latest;
+          await delay(350);
+          check(latest === hover && latest.groundSpeedMps === 0, 'Paused flight must stay at a stopped pose.');
+          const observerAtPause = view.camera.position.latitude;
+          click('follow');
+          check(!drone.hasAttribute('follow-drone'), 'The follow button did not disable tracking.');
+          click('reset');
+          check(latest.longitude === launch.longitude && latest.latitude === launch.latitude && latest.headingDeg === launch.headingDeg && latest.heightAboveGroundM === launch.heightAboveGroundM, 'Reset did not restore the launch pose.');
+          check(aircraft.symbol.symbolLayers.every((layer) => layer.heading === launch.headingDeg && layer.tilt === launchPitch), 'Reset did not restore the model orientation.');
+          check(view.camera.position.latitude === observerAtPause, 'The observer moved with tracking disabled.');
+          click('follow');
+          check(view.camera.position.latitude < observerAtPause - .000001, 'Re-enabling tracking did not center the map at launch.');
+          click('resume'); await waitFor('flying');
+          drone.remove();
+          check(view.ready && host.map === map && view.graphics.length === existingGraphics && !drone.querySelector('canvas'), 'Removing the drone affected host data or left resources behind.');
+          host.append(drone); await waitFor('ready');
+          click('takeoff'); await waitFor('flying');
+          check(drone.querySelectorAll('canvas').length === 1, 'Reattaching left more than one FPV renderer.');
+          click('end'); await waitFor('ready');
+          check(view.ready && host.map === map && view.graphics.length === existingGraphics && !drone.querySelector('canvas'), 'End flight did not restore the host scene.');
+          result.textContent = 'PASS: takeoff, throttle, aircraft yaw and pitch, tracking, manual map mode, pause, reset, removal, reattachment, and end flight.';
+          busy(false);
+        } catch (error) {
+          result.textContent = `FAIL: ${error.message}`;
+        }
+      });
+      benchmark.addEventListener('click', async () => {
+        busy(true);
+        try {
+          click('takeoff'); await waitFor('flying');
+          const feed = drone.querySelector('[slot="fpv-feed"]');
+          const { width, height } = feed.getBoundingClientRect();
+          // Warm the local view and climb into open air before measuring.
+          press(' '); await delay(3200); press(' ', 'keyup');
+          const intervals = [];
+          const keys = ['w', 'q', 'a', 'q', 's', 'q', 'd', 'q'];
+          let key, previous, start, reported = -1;
+          await new Promise((resolve, reject) => {
+            function sample(now) {
+              if (drone.state !== 'flying') { reject(new Error('Flight paused before the benchmark finished.')); return; }
+              start ??= now;
+              if (previous !== undefined) intervals.push(now - previous);
+              previous = now;
+              const elapsed = (now - start) / 1000;
+              if (elapsed >= 60) { if (key) press(key, 'keyup'); resolve(); return; }
+              const next = keys[Math.floor(elapsed / 2) % keys.length];
+              if (key !== next) { if (key) press(key, 'keyup'); press(next); key = next; }
+              if (Math.floor(elapsed) !== reported) {
+                reported = Math.floor(elapsed);
+                result.textContent = `Measuring two-view frame cadence: ${reported}/60 seconds.`;
+              }
+              requestAnimationFrame(sample);
+            }
+            requestAnimationFrame(sample);
+          });
+          press('Escape');
+          click('end');
+          intervals.sort((a, b) => a - b);
+          const medianFps = 1000 / intervals[Math.floor(intervals.length / 2)];
+          const slowFps = 1000 / intervals[Math.floor(intervals.length * .95)];
+          const backgroundThrottle = intervals.filter((ms) => Math.abs(ms - 1000) < 30).length > intervals.length * .9;
+          result.textContent = backgroundThrottle
+            ? '60-second flight: inconclusive. The browser scheduled frames at 1 Hz. Try again with this window in the foreground.'
+            : `60-second flight: ${medianFps.toFixed(1)} FPS median browser frame cadence, ${slowFps.toFixed(1)} FPS at the slow-frame threshold (95th percentile frame time), ${Math.round(width)}×${Math.round(height)} CSS pixel feed.`;
+        } catch (error) {
+          result.textContent = `Benchmark stopped: ${error.message}`;
+        } finally { busy(false); }
+      });
+    </script>
+  </body>
+</html>

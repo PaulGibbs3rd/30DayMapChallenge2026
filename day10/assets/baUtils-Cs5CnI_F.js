@@ -1,0 +1,1 @@
+import"./colorUtils-gVk6c1Sx.js";import{h as e}from"./string-CwEmu9nV.js";import"./number-D0g8iCrW.js";import"./uuid-xx6QWOZ-.js";import"./index-Pb_3voRA.js";function t(t){return e(t)}export{t};

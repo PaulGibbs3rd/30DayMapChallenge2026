@@ -1,0 +1,23 @@
+:root { color-scheme: dark; font: 16px/1.45 system-ui, sans-serif; background: #0e191f; color: #f2f7f7; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100dvh; display: grid; grid-template-rows: auto minmax(26rem, 1fr) auto; }
+a { color: #a4efdb; text-underline-offset: .22em; }
+a:focus-visible { outline: 2px solid #a4efdb; outline-offset: .2rem; }
+.flight-header, .flight-footer { display: flex; align-items: center; justify-content: space-between; gap: .6rem 1.5rem; padding: .75rem 1.25rem; }
+.flight-header { border-bottom: 1px solid #31444c; }
+.flight-header h1 { margin: 0; font-size: clamp(1.55rem, 4vw, 2.1rem); line-height: 1.12; }
+.eyebrow, .subtitle { margin: .2rem 0; }
+.eyebrow { color: #a4efdb; font: 700 .68rem/1.4 ui-monospace, monospace; letter-spacing: .11em; }
+.subtitle { color: #bfced2; font-size: .85rem; }
+.subtitle span { padding-inline: .22em; }
+nav { display: flex; gap: .75rem; flex-wrap: wrap; font-size: .84rem; }
+main { position: relative; background: #14282e; }
+arcgis-scene { display: block; position: absolute; inset: 0; }
+scene-fpv-drone { --drone-accent: #a1e8d5; }
+.flight-footer { font-size: .79rem; border-top: 1px solid #31444c; color: #c6d3d5; flex-wrap: wrap; }
+.flight-footer p { margin: 0; }
+@media (max-width: 570px) {
+  .flight-header { align-items: flex-start; flex-direction: column; }
+  .flight-header, .flight-footer { padding: .55rem .8rem; }
+  body { grid-template-rows: auto minmax(24rem, 1fr) auto; }
+}

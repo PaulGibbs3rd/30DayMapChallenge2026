@@ -1,0 +1,1 @@
+import{r as e}from"./operatorContains-5TPU3wEt.js";import{t}from"./deprecatedOperator-B5jGgg5p.js";import{c as n,r}from"./jsonConverter-BYZZ5YFK.js";function i(t,i){let a=r(t);return e(a.getGeometry(),n(i),a.getSpatialReference())}function a(e,n){return t(`json.containsOperator`,`execute`,`containsExecute`),i(e,n)}export{i as containsExecute,a as execute};

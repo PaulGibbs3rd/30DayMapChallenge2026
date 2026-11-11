@@ -1,0 +1,1 @@
+import{X as e,z as t}from"./units-DtSvQnKx.js";import{n,o as r}from"./spatialReferenceEllipsoidUtils-_vyKIUqw.js";import{c as i,n as a,o}from"./spatialReferenceUtils-CSq9Ep3v.js";function s(s){return e(s)?i(s)||a(s)||o(s)||t(s)?n:s:r(s)}export{s as t};

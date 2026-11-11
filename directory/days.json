@@ -123,9 +123,10 @@
       "day": 10,
       "date": "2026-11-10",
       "theme": "Prompting only",
-      "title": "Prompting only",
-      "description": "Produce a map through prompts in a chat or command-line workflow, documenting the process and its limits.",
-      "status": "planned"
+      "title": "Waterfront Flight",
+      "description": "Pilot a simulated drone above Portland’s Willamette waterfront and watch its live first-person view alongside the 3D city scene.",
+      "status": "complete",
+      "tags": ["ArcGIS JavaScript", "Calcite", "3D", "FPV", "Portland"]
     },
     {
       "day": 11,

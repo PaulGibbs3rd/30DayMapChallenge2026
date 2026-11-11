@@ -1,0 +1,1 @@
+import{t as e}from"./rolldown-runtime-DK3Fl9T5.js";import{Kt as t}from"./UnitFactory-B2VPNF6h.js";var n=e({execute:()=>i}),r=new t;function i(e,t,n,i){return r.execute(e,t,n,i,null)}function a(){return r.supportsCurves()}export{n,i as r,a as t};

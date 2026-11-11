@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" class="calcite-mode-dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0e191f" />
+    <meta name="description" content="Fly a simulated drone along the Willamette waterfront and watch its live first-person view in the same ArcGIS scene." />
+    <title>Waterfront Flight · Day 10 | 30DayMapChallenge 2026</title>
+  </head>
+  <body>
+    <header class="flight-header">
+      <div><p class="eyebrow">30 DAY MAP CHALLENGE / 10 · PROMPTING ONLY</p><h1>Waterfront Flight</h1><p class="subtitle">Portland, Oregon <span>·</span> Simulated first-person flight</p></div>
+      <nav aria-label="Project links"><a href="../directory/index.html">All maps</a><a href="./readme.md">Project notes</a></nav>
+    </header>
+    <main aria-label="Portland waterfront 3D scene">
+      <arcgis-scene aria-label="Portland 3D observer view">
+        <arcgis-compass slot="top-start"></arcgis-compass>
+        <arcgis-zoom slot="top-start"></arcgis-zoom>
+        <scene-fpv-drone slot="top-end" launch-position="-122.67218,45.51698" follow-drone></scene-fpv-drone>
+      </arcgis-scene>
+    </main>
+    <footer class="flight-footer">
+      <p><strong>Try it:</strong> Take off by the west bank. Fly forward along the river, turn toward downtown, and climb for a skyline view.</p>
+      <a href="https://www.portlandmaps.com/metadata/index.cfm?action=DisplayLayer&amp;LayerID=52412">Building data: City of Portland</a>
+    </footer>
+    <noscript>Enable JavaScript to fly the drone and view the 3D scene.</noscript>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

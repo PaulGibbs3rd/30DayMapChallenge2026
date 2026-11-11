@@ -1,0 +1,1 @@
+import{execute as e,supportsCurves as t}from"./operatorDifference-DrutHInO.js";import{c as n,o as r,s as i,t as a}from"./apiConverter-BA1fTBqP.js";import"./deprecatedOperator-B5jGgg5p.js";function o(t,o){let s=i(t);return n(e(r(t),r(o),a(s)),s)}t();export{o as differenceExecute};

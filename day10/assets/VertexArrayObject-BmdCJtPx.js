@@ -1,0 +1,1 @@
+import{n as e}from"./VertexBuffer-BwoS976u.js";var t=class extends e{};export{t};

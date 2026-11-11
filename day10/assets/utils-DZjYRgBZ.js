@@ -1,0 +1,1 @@
+import{t as e}from"./Version-CI_ZxeAl.js";function t(e){return typeof e==`object`&&!!e&&`declaredClass`in e&&e.declaredClass===`esri.WebMap`}new e(2,38,`webmap`);export{t};

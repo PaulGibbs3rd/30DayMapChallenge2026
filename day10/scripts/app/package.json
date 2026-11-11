@@ -1,0 +1,23 @@
+{
+  "name": "day10-scene-fpv-drone",
+  "description": "A simulated FPV drone for ArcGIS scenes",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "node --test ../flight.test.mjs",
+    "preview": "vite preview",
+    "export": "npm run build && node ../export.mjs"
+  },
+  "dependencies": {
+    "@arcgis/core": "5.2.1",
+    "@arcgis/map-components": "5.2.1",
+    "@esri/calcite-components": "5.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.5"
+  }
+}

@@ -1,0 +1,1 @@
+import{r as e}from"./tslib.es6-qUHyP9zl.js";import{n as t,t as n}from"./ShaderTechniqueConfiguration-Zxoo4Lp7.js";var r=class extends t{constructor(){super(...arguments),this.output=0,this.hasEmission=!1,this.useFloatBlend=!0}};e([n({count:12})],r.prototype,`output`,void 0),e([n()],r.prototype,`hasEmission`,void 0),e([n()],r.prototype,`useFloatBlend`,void 0);export{r as t};

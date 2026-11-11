@@ -1,0 +1,1 @@
+import{r as e}from"./tslib.es6-qUHyP9zl.js";import{t}from"./ShaderTechniqueConfiguration-Zxoo4Lp7.js";import{n}from"./applyEmissiveGlow.glsl-DLAGMjrd.js";var r=class extends n{constructor(){super(...arguments),this.hasEmissive=!1}};e([t()],r.prototype,`hasEmissive`,void 0);export{r as t};

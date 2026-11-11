@@ -1,0 +1,17 @@
+{
+  "source": "https://www.portlandmaps.com/od/rest/services/COP_OpenData_Property/MapServer/184",
+  "copyright": "City of Portland, Bureau of Planning and Sustainability",
+  "metadata": "https://www.portlandmaps.com/metadata/index.cfm?action=DisplayLayer&LayerID=52412",
+  "bounds": [
+    -122.685,
+    45.507,
+    -122.658,
+    45.527
+  ],
+  "features": 3314,
+  "filter": "AVG_HEIGHT > 0",
+  "sourceHeightField": "AVG_HEIGHT",
+  "sourceHeightUnit": "US survey feet",
+  "outputHeightUnit": "meters",
+  "retrieved": "2026-11-10"
+}

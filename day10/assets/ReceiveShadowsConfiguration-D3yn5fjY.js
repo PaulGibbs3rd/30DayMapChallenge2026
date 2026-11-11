@@ -1,0 +1,1 @@
+import{r as e}from"./tslib.es6-qUHyP9zl.js";import{n as t,t as n}from"./ShaderTechniqueConfiguration-Zxoo4Lp7.js";var r=class extends t{constructor(){super(...arguments),this.receiveShadows=!0}};e([n()],r.prototype,`receiveShadows`,void 0);function i(e,t){return e.receiveShadows&&t.shadowHighlight?.getTexture()!=null}export{i as t};

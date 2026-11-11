@@ -1,0 +1,1 @@
+function e(e,t,n){for(let r=0;r<n;++r)t[r*2]=e[r],t[r*2+1]=e[r]-t[r*2]}function t(e,t){let n=e.length;for(let i=0;i<n;++i)r[0]=e[i],t[i]=r[0];return t}function n(e,t){let n=e.length;for(let i=0;i<n;++i)r[0]=e[i],r[1]=e[i]-r[0],t[i]=r[1];return t}var r=new Float32Array(2);export{t as n,n as r,e as t};

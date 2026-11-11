@@ -1,0 +1,1 @@
+import{t as e}from"./uid-tFVEb1ZF.js";var t=class{constructor(){this.uid=e()}},n=class extends t{constructor(e){super(),this.highlightName=e,this.channel=0}},r=class extends t{constructor(){super(...arguments),this.channel=1}};export{r as n,n as t};
