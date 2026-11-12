@@ -132,9 +132,10 @@
       "day": 11,
       "date": "2026-11-11",
       "theme": "Senses: Sound",
-      "title": "Sound",
-      "description": "Map a soundscape, a pattern of noise, or the ways a place is heard.",
-      "status": "planned"
+      "title": "Puget Sound, Below the Surface",
+      "description": "Explore four hydrophone sites around Puget Sound and hear narrated examples of orca calls, a ferry, and a harbor seal.",
+      "status": "complete",
+      "tags": ["Puget Sound", "Hydrophones", "Orcasound", "Audio"]
     },
     {
       "day": 12,

@@ -3,25 +3,84 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Day 11 of Paul Gibbs's 30DayMapChallenge 2026: Sound. Planned map; explore the theme and project links.">
-  <meta name="theme-color" content="#f5f0e5">
-  <title>Day 11: Sound | 30DayMapChallenge 2026</title>
-  <link rel="stylesheet" href="../directory/placeholder.css">
+  <meta name="description" content="Listen beneath Puget Sound through Orcasound hydrophones and learn to recognize three sounds of the Salish Sea.">
+  <meta name="theme-color" content="#f2eee3">
+  <title>Puget Sound, Below the Surface | 30DayMapChallenge 2026</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="map.js"></script>
 </head>
-<body class="placeholder-page">
-  <main class="day-placeholder">
-    <header>
-      <p class="eyebrow">PAUL GIBBS · NOVEMBER 11, 2026</p>
-      <h1><span>Day 11</span> Sound</h1>
-      <p class="theme-description">Explore geography through listening, considering soundscapes, noise, music, or other ways that sound gives places a distinctive identity.</p>
+<body>
+  <header class="masthead wrap">
+    <a href="../directory/">← All challenge maps</a>
+    <span>Paul Gibbs · November 11, 2026</span>
+  </header>
+
+  <main class="wrap">
+    <header class="hero">
+      <div>
+        <p class="kicker">Day 11 · Senses: Sound</p>
+        <h1>Puget Sound<span>Below the Surface</span></h1>
+      </div>
+      <p>Whale calls and ferry engines travel through the same water. Choose a hydrophone to listen beneath the surface.</p>
     </header>
-    <p class="status-badge">Planned · Map not implemented</p>
-    <p class="placeholder-note">This day's map is still to come. The theme is ready; the subject, data, and final output will be documented as the project takes shape.</p>
-    <nav class="placeholder-links" aria-label="Day 11 project links">
-      <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day11" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
-      <a href="readme.md">Project notes</a>
-      <a href="../directory/index.html">All days</a>
-    </nav>
+
+    <section class="atlas" aria-label="Puget Sound hydrophone map">
+      <figure class="chart" id="chart">
+        <canvas aria-hidden="true"></canvas>
+        <div class="markers" aria-label="Hydrophones on the map"></div>
+        <figcaption class="map-caption">
+          <span><i></i> Feed page</span>
+          <span><i class="historic-dot"></i> Documented site</span>
+        </figcaption>
+        <p id="map-message" role="status" hidden></p>
+      </figure>
+
+      <aside class="stations">
+        <h2>Listening stations</h2>
+        <div id="station-list" class="station-list"></div>
+        <div id="station-detail" class="station-detail" hidden>
+          <div aria-live="polite" aria-atomic="true">
+            <p class="station-position" id="station-position"></p>
+            <h3 id="station-name"></h3>
+            <p id="station-description"></p>
+          </div>
+          <a class="station-link" id="station-link" href="https://live.orcasound.net/" target="_blank" rel="noopener noreferrer"></a>
+        </div>
+        <noscript><p>Find listening stations in the <a href="https://live.orcasound.net/">Orcasound directory</a>.</p></noscript>
+      </aside>
+    </section>
+
+    <section class="guide" aria-labelledby="guide-title">
+      <div class="guide-intro">
+        <h2 id="guide-title">What to listen for</h2>
+        <p>Narrated examples from the Langley Whale Center’s Salish Sea listening exhibit.</p>
+      </div>
+      <div class="recordings">
+        <article>
+          <h3>Southern Resident orcas</h3>
+          <p>Listen for pulsed calls and changes in pitch.</p>
+          <audio controls preload="none" aria-label="Southern Resident orca example" src="https://orcasound.net/ed/booth/sounds/local/srkw_narrated.mp3"></audio>
+          <p class="audio-error" role="status" hidden>Audio unavailable. <a href="https://orcasound.net/ed/booth/local.html">Open the source exhibit</a>.</p>
+        </article>
+        <article>
+          <h3>Ferry</h3>
+          <p>Listen for the sustained rumble of a passing vessel.</p>
+          <audio controls preload="none" aria-label="Ferry example" src="https://orcasound.net/ed/booth/sounds/local/ferry_narrated.mp3"></audio>
+          <p class="audio-error" role="status" hidden>Audio unavailable. <a href="https://orcasound.net/ed/booth/local.html">Open the source exhibit</a>.</p>
+        </article>
+        <article>
+          <h3>Harbor seal</h3>
+          <p>Listen for a low, rough underwater growl.</p>
+          <audio controls preload="none" aria-label="Harbor seal example" src="https://orcasound.net/ed/booth/sounds/local/harbor-seal_narrated.mp3"></audio>
+          <p class="audio-error" role="status" hidden>Audio unavailable. <a href="https://orcasound.net/ed/booth/local.html">Open the source exhibit</a>.</p>
+        </article>
+      </div>
+    </section>
   </main>
+
+  <footer class="wrap footer">
+    <p>Stations by <a href="https://www.orcasound.net/">Orcasound</a> · Audio by the <a href="https://orcasound.net/ed/booth/local.html">Langley Whale Center</a> · Shoreline from the <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html">U.S. Census Bureau</a></p>
+    <a href="readme.md">Project notes</a>
+  </footer>
 </body>
 </html>
