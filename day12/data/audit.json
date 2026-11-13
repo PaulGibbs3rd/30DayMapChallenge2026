@@ -1,0 +1,564 @@
+{
+  "coverage": {
+    "2000": {
+      "observed": 207,
+      "single": 206,
+      "shared": 1,
+      "zero": 0,
+      "unavailable": 2,
+      "mappedObserved": 207
+    },
+    "2001": {
+      "observed": 207,
+      "single": 206,
+      "shared": 1,
+      "zero": 0,
+      "unavailable": 2,
+      "mappedObserved": 207
+    },
+    "2002": {
+      "observed": 207,
+      "single": 207,
+      "shared": 0,
+      "zero": 0,
+      "unavailable": 2,
+      "mappedObserved": 207
+    },
+    "2003": {
+      "observed": 207,
+      "single": 206,
+      "shared": 1,
+      "zero": 0,
+      "unavailable": 2,
+      "mappedObserved": 207
+    },
+    "2004": {
+      "observed": 207,
+      "single": 207,
+      "shared": 0,
+      "zero": 0,
+      "unavailable": 2,
+      "mappedObserved": 207
+    },
+    "2005": {
+      "observed": 208,
+      "single": 208,
+      "shared": 0,
+      "zero": 0,
+      "unavailable": 1,
+      "mappedObserved": 208
+    },
+    "2006": {
+      "observed": 208,
+      "single": 208,
+      "shared": 0,
+      "zero": 0,
+      "unavailable": 1,
+      "mappedObserved": 208
+    },
+    "2007": {
+      "observed": 208,
+      "single": 207,
+      "shared": 1,
+      "zero": 0,
+      "unavailable": 1,
+      "mappedObserved": 208
+    },
+    "2008": {
+      "observed": 208,
+      "single": 208,
+      "shared": 0,
+      "zero": 0,
+      "unavailable": 1,
+      "mappedObserved": 208
+    },
+    "2009": {
+      "observed": 208,
+      "single": 208,
+      "shared": 0,
+      "zero": 0,
+      "unavailable": 1,
+      "mappedObserved": 208
+    },
+    "2010": {
+      "observed": 208,
+      "single": 208,
+      "shared": 0,
+      "zero": 0,
+      "unavailable": 1,
+      "mappedObserved": 208
+    },
+    "2011": {
+      "observed": 208,
+      "single": 206,
+      "shared": 2,
+      "zero": 0,
+      "unavailable": 1,
+      "mappedObserved": 208
+    },
+    "2012": {
+      "observed": 209,
+      "single": 207,
+      "shared": 2,
+      "zero": 0,
+      "unavailable": 0,
+      "mappedObserved": 209
+    },
+    "2013": {
+      "observed": 209,
+      "single": 208,
+      "shared": 1,
+      "zero": 0,
+      "unavailable": 0,
+      "mappedObserved": 209
+    },
+    "2014": {
+      "observed": 209,
+      "single": 207,
+      "shared": 2,
+      "zero": 0,
+      "unavailable": 0,
+      "mappedObserved": 209
+    },
+    "2015": {
+      "observed": 209,
+      "single": 207,
+      "shared": 2,
+      "zero": 0,
+      "unavailable": 0,
+      "mappedObserved": 209
+    },
+    "2016": {
+      "observed": 209,
+      "single": 208,
+      "shared": 1,
+      "zero": 0,
+      "unavailable": 0,
+      "mappedObserved": 209
+    },
+    "2017": {
+      "observed": 209,
+      "single": 209,
+      "shared": 0,
+      "zero": 0,
+      "unavailable": 0,
+      "mappedObserved": 209
+    },
+    "2018": {
+      "observed": 209,
+      "single": 209,
+      "shared": 0,
+      "zero": 0,
+      "unavailable": 0,
+      "mappedObserved": 209
+    },
+    "2019": {
+      "observed": 209,
+      "single": 208,
+      "shared": 1,
+      "zero": 0,
+      "unavailable": 0,
+      "mappedObserved": 209
+    },
+    "2020": {
+      "observed": 209,
+      "single": 209,
+      "shared": 0,
+      "zero": 0,
+      "unavailable": 0,
+      "mappedObserved": 209
+    },
+    "2021": {
+      "observed": 209,
+      "single": 208,
+      "shared": 1,
+      "zero": 0,
+      "unavailable": 0,
+      "mappedObserved": 209
+    },
+    "2022": {
+      "observed": 209,
+      "single": 207,
+      "shared": 2,
+      "zero": 0,
+      "unavailable": 0,
+      "mappedObserved": 209
+    },
+    "2023": {
+      "observed": 208,
+      "single": 205,
+      "shared": 2,
+      "zero": 1,
+      "unavailable": 1,
+      "mappedObserved": 208
+    },
+    "2024": {
+      "observed": 194,
+      "single": 189,
+      "shared": 4,
+      "zero": 1,
+      "unavailable": 15,
+      "mappedObserved": 194
+    },
+    "2025": {
+      "observed": 94,
+      "single": 94,
+      "shared": 0,
+      "zero": 0,
+      "unavailable": 115,
+      "mappedObserved": 94
+    }
+  },
+  "quality": {
+    "2000": {
+      "sparseWithSourceData": 45,
+      "positiveTotalsBelowTolerance": 14,
+      "maxReconciledDifferenceTWh": 0.001
+    },
+    "2001": {
+      "sparseWithSourceData": 45,
+      "positiveTotalsBelowTolerance": 15,
+      "maxReconciledDifferenceTWh": 0.001
+    },
+    "2002": {
+      "sparseWithSourceData": 43,
+      "positiveTotalsBelowTolerance": 13,
+      "maxReconciledDifferenceTWh": 0.001
+    },
+    "2003": {
+      "sparseWithSourceData": 42,
+      "positiveTotalsBelowTolerance": 12,
+      "maxReconciledDifferenceTWh": 0.002
+    },
+    "2004": {
+      "sparseWithSourceData": 38,
+      "positiveTotalsBelowTolerance": 12,
+      "maxReconciledDifferenceTWh": 0.001
+    },
+    "2005": {
+      "sparseWithSourceData": 38,
+      "positiveTotalsBelowTolerance": 11,
+      "maxReconciledDifferenceTWh": 0.002
+    },
+    "2006": {
+      "sparseWithSourceData": 38,
+      "positiveTotalsBelowTolerance": 12,
+      "maxReconciledDifferenceTWh": 0.002
+    },
+    "2007": {
+      "sparseWithSourceData": 38,
+      "positiveTotalsBelowTolerance": 12,
+      "maxReconciledDifferenceTWh": 0.001
+    },
+    "2008": {
+      "sparseWithSourceData": 38,
+      "positiveTotalsBelowTolerance": 12,
+      "maxReconciledDifferenceTWh": 0.002
+    },
+    "2009": {
+      "sparseWithSourceData": 38,
+      "positiveTotalsBelowTolerance": 12,
+      "maxReconciledDifferenceTWh": 0.001
+    },
+    "2010": {
+      "sparseWithSourceData": 37,
+      "positiveTotalsBelowTolerance": 11,
+      "maxReconciledDifferenceTWh": 0.002
+    },
+    "2011": {
+      "sparseWithSourceData": 37,
+      "positiveTotalsBelowTolerance": 10,
+      "maxReconciledDifferenceTWh": 0.002
+    },
+    "2012": {
+      "sparseWithSourceData": 36,
+      "positiveTotalsBelowTolerance": 11,
+      "maxReconciledDifferenceTWh": 0.001
+    },
+    "2013": {
+      "sparseWithSourceData": 35,
+      "positiveTotalsBelowTolerance": 9,
+      "maxReconciledDifferenceTWh": 0.001
+    },
+    "2014": {
+      "sparseWithSourceData": 32,
+      "positiveTotalsBelowTolerance": 9,
+      "maxReconciledDifferenceTWh": 0.002
+    },
+    "2015": {
+      "sparseWithSourceData": 32,
+      "positiveTotalsBelowTolerance": 10,
+      "maxReconciledDifferenceTWh": 0.002
+    },
+    "2016": {
+      "sparseWithSourceData": 32,
+      "positiveTotalsBelowTolerance": 8,
+      "maxReconciledDifferenceTWh": 0.002
+    },
+    "2017": {
+      "sparseWithSourceData": 31,
+      "positiveTotalsBelowTolerance": 8,
+      "maxReconciledDifferenceTWh": 0.002
+    },
+    "2018": {
+      "sparseWithSourceData": 31,
+      "positiveTotalsBelowTolerance": 7,
+      "maxReconciledDifferenceTWh": 0.001
+    },
+    "2019": {
+      "sparseWithSourceData": 31,
+      "positiveTotalsBelowTolerance": 6,
+      "maxReconciledDifferenceTWh": 0.002
+    },
+    "2020": {
+      "sparseWithSourceData": 31,
+      "positiveTotalsBelowTolerance": 6,
+      "maxReconciledDifferenceTWh": 0.001
+    },
+    "2021": {
+      "sparseWithSourceData": 31,
+      "positiveTotalsBelowTolerance": 6,
+      "maxReconciledDifferenceTWh": 0.001
+    },
+    "2022": {
+      "sparseWithSourceData": 31,
+      "positiveTotalsBelowTolerance": 6,
+      "maxReconciledDifferenceTWh": 0.001
+    },
+    "2023": {
+      "sparseWithSourceData": 32,
+      "positiveTotalsBelowTolerance": 6,
+      "maxReconciledDifferenceTWh": 0.002
+    },
+    "2024": {
+      "sparseWithSourceData": 27,
+      "positiveTotalsBelowTolerance": 4,
+      "maxReconciledDifferenceTWh": 0.002
+    },
+    "2025": {
+      "sparseWithSourceData": 27,
+      "positiveTotalsBelowTolerance": 0,
+      "maxReconciledDifferenceTWh": 0.002
+    }
+  },
+  "unmatchedAreas": [],
+  "unmatchedMapUnits": [
+    [
+      "AIA",
+      "Anguilla"
+    ],
+    [
+      "ALD",
+      "Aland"
+    ],
+    [
+      "AND",
+      "Andorra"
+    ],
+    [
+      "ATA",
+      "Antarctica"
+    ],
+    [
+      "ATC",
+      "Ashmore and Cartier Islands"
+    ],
+    [
+      "ATF",
+      "French Southern and Antarctic Lands"
+    ],
+    [
+      "BLM",
+      "Saint Barthelemy"
+    ],
+    [
+      "BMU",
+      "Bermuda"
+    ],
+    [
+      "CCK",
+      "Cocos (Keeling) Islands"
+    ],
+    [
+      "CUW",
+      "Curaçao"
+    ],
+    [
+      "CXR",
+      "Christmas Island"
+    ],
+    [
+      "CYN",
+      "Northern Cyprus"
+    ],
+    [
+      "FSM",
+      "Federated States of Micronesia"
+    ],
+    [
+      "GGY",
+      "Guernsey"
+    ],
+    [
+      "HMD",
+      "Heard Island and McDonald Islands"
+    ],
+    [
+      "IMN",
+      "Isle of Man"
+    ],
+    [
+      "IOT",
+      "British Indian Ocean Territory"
+    ],
+    [
+      "JEY",
+      "Jersey"
+    ],
+    [
+      "KAS",
+      "Siachen Glacier"
+    ],
+    [
+      "LIE",
+      "Liechtenstein"
+    ],
+    [
+      "MAF",
+      "Saint Martin"
+    ],
+    [
+      "MCO",
+      "Monaco"
+    ],
+    [
+      "MHL",
+      "Marshall Islands"
+    ],
+    [
+      "MNP",
+      "Northern Mariana Islands"
+    ],
+    [
+      "MYT",
+      "Mayotte"
+    ],
+    [
+      "NFK",
+      "Norfolk Island"
+    ],
+    [
+      "NIU",
+      "Niue"
+    ],
+    [
+      "NLY",
+      "Caribbean Netherlands"
+    ],
+    [
+      "NSV",
+      "Svalbard"
+    ],
+    [
+      "PCN",
+      "Pitcairn Islands"
+    ],
+    [
+      "PLW",
+      "Palau"
+    ],
+    [
+      "SAH",
+      "Western Sahara"
+    ],
+    [
+      "SGS",
+      "South Georgia and the Islands"
+    ],
+    [
+      "SHN",
+      "Saint Helena"
+    ],
+    [
+      "SMR",
+      "San Marino"
+    ],
+    [
+      "SOL",
+      "Somaliland"
+    ],
+    [
+      "SXM",
+      "Sint Maarten"
+    ],
+    [
+      "TKL",
+      "Tokelau"
+    ],
+    [
+      "TLS",
+      "East Timor"
+    ],
+    [
+      "TUV",
+      "Tuvalu"
+    ],
+    [
+      "VAT",
+      "Vatican"
+    ],
+    [
+      "WLF",
+      "Wallis and Futuna"
+    ]
+  ],
+  "groupedMapUnits": {
+    "GBR": [
+      "WLS",
+      "SCT",
+      "NIR",
+      "ENG"
+    ],
+    "TZA": [
+      "TZZ",
+      "TZA"
+    ],
+    "SRB": [
+      "SRS",
+      "SRV"
+    ],
+    "PRT": [
+      "PMD",
+      "PRX",
+      "PAZ"
+    ],
+    "PNG": [
+      "PNX",
+      "PNB"
+    ],
+    "NOR": [
+      "NOR",
+      "NJM"
+    ],
+    "PSE": [
+      "GAZ",
+      "WEB"
+    ],
+    "BIH": [
+      "BIS",
+      "BHF"
+    ],
+    "BEL": [
+      "BFR",
+      "BWR",
+      "BCR"
+    ],
+    "ATG": [
+      "ACA",
+      "ACB"
+    ]
+  },
+  "withheldWithNumericData": [],
+  "duplicateRows": [],
+  "invalidGenerationRows": []
+}

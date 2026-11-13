@@ -3,25 +3,167 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Day 12 of Paul Gibbs's 30DayMapChallenge 2026: Power. Planned map; explore the theme and project links.">
-  <meta name="theme-color" content="#f5f0e5">
-  <title>Day 12: Power | 30DayMapChallenge 2026</title>
-  <link rel="stylesheet" href="../directory/placeholder.css">
+  <meta name="description" content="Compare the leading sources of domestic electricity generation around the world from 2000 to 2025.">
+  <meta name="theme-color" content="#101c23">
+  <title>When Power Changed | 30DayMapChallenge 2026</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23101c23'/%3E%3Cpath d='M18 4 8 18h7l-1 10 10-14h-7z' fill='%23f3c358'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
 </head>
-<body class="placeholder-page">
-  <main class="day-placeholder">
-    <header>
-      <p class="eyebrow">PAUL GIBBS · NOVEMBER 12, 2026</p>
-      <h1><span>Day 12</span> Power</h1>
-      <p class="theme-description">Interpret power geographically, whether through energy, infrastructure, influence, or physical force, and consider how its distribution shapes places and connections.</p>
-    </header>
-    <p class="status-badge">Planned · Map not implemented</p>
-    <p class="placeholder-note">This day's map is still to come. The theme is ready; the subject, data, and final output will be documented as the project takes shape.</p>
-    <nav class="placeholder-links" aria-label="Day 12 project links">
-      <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day12" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
-      <a href="readme.md">Project notes</a>
-      <a href="../directory/index.html">All days</a>
+<body>
+  <div class="masthead">
+    <nav class="wrap" aria-label="Project navigation">
+      <a href="../directory/">← All challenge maps</a>
+      <span>Paul Gibbs · November 12, 2026</span>
     </nav>
+  </div>
+  <main class="wrap">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Day 12 · Power</p>
+        <h1>When Power Changed</h1>
+        <p>Choose an electricity source to see where it generated more power than any other source.</p>
+      </div>
+      <aside class="source-snapshot" aria-labelledby="snapshot-title">
+        <h2 id="snapshot-title">Where wind leads</h2>
+        <div id="snapshot-years" class="snapshot-years" aria-live="polite"></div>
+        <p id="snapshot-note">Countries and economies with wind as their sole leading source.</p>
+      </aside>
+    </header>
+    <dialog id="source-places" aria-labelledby="source-places-title">
+      <div class="section-header">
+        <h2 id="source-places-title"></h2>
+        <form method="dialog"><button>Close</button></form>
+      </div>
+      <p id="source-places-empty" hidden>No places match in this year.</p>
+      <ul id="source-places-list"></ul>
+    </dialog>
+
+    <section class="comparison" aria-labelledby="comparison-title">
+      <div class="section-header">
+        <div>
+          <h2 id="comparison-title">Compare the maps</h2>
+          <p class="map-instruction">Choose a source or change a year. <a id="stats-link" href="#stats-title" hidden>See totals and trends ↓</a></p>
+        </div>
+        <div class="country-picker">
+          <label for="source-select" class="visually-hidden">Electricity source</label>
+          <select id="source-select" disabled>
+            <option value="8">Wind</option>
+          </select>
+          <label class="change-control"><input type="checkbox" id="highlight-changes" disabled> Highlight changes</label>
+          <button type="button" id="reset">Reset comparison</button>
+        </div>
+      </div>
+      <div class="legend" id="map-legend" aria-label="Electricity source legend"></div>
+      <p class="notice" id="data-message" role="status" hidden></p>
+      <p class="notice" id="map-message" role="status" hidden></p>
+      <div class="map-grid">
+        <section class="map-card" aria-labelledby="map-a-title">
+          <div class="year-header">
+            <div class="year-headline">
+              <h3 id="map-a-title"><label for="year-a">Year A <output id="year-a-value" for="year-a">2000</output></label></h3>
+              <p id="year-a-coverage" class="coverage"></p>
+            </div>
+            <div class="year-controls">
+              <button id="year-a-previous" type="button" aria-label="Previous year for map A">−</button>
+              <input id="year-a" type="range" min="2000" max="2025" step="1" value="2000">
+              <button id="year-a-next" type="button" aria-label="Next year for map A">+</button>
+            </div>
+            <p class="coverage-note" id="year-a-note" hidden>2025 has limited coverage in this release.</p>
+          </div>
+          <div class="map-frame">
+            <arcgis-map id="map-a" aria-label="Electricity source map A">
+              <arcgis-zoom slot="top-left"></arcgis-zoom>
+            </arcgis-map>
+          </div>
+        </section>
+        <section class="map-card" aria-labelledby="map-b-title">
+          <div class="year-header">
+            <div class="year-headline">
+              <h3 id="map-b-title"><label for="year-b">Year B <output id="year-b-value" for="year-b">2024</output></label></h3>
+              <p id="year-b-coverage" class="coverage"></p>
+            </div>
+            <div class="year-controls">
+              <button id="year-b-previous" type="button" aria-label="Previous year for map B">−</button>
+              <input id="year-b" type="range" min="2000" max="2025" step="1" value="2024">
+              <button id="year-b-next" type="button" aria-label="Next year for map B">+</button>
+            </div>
+            <p class="coverage-note" id="year-b-note" hidden>2025 has limited coverage in this release.</p>
+          </div>
+          <div class="map-frame">
+            <arcgis-map id="map-b" aria-label="Electricity source map B">
+              <arcgis-zoom slot="top-left"></arcgis-zoom>
+            </arcgis-map>
+          </div>
+        </section>
+      </div>
+      <p class="map-caption" id="map-caption"></p>
+      <section id="comparison-stats" class="comparison-stats" aria-labelledby="stats-title" hidden>
+        <h3 id="stats-title" tabindex="-1">What changed across countries?</h3>
+        <p id="stats-coverage" class="stats-coverage"></p>
+        <dl class="stats-grid" aria-live="polite">
+          <div>
+            <dt>Total electricity generated</dt>
+            <dd><strong id="stats-total"></strong><span id="stats-total-note"></span></dd>
+          </div>
+          <div>
+            <dt>Different leading source</dt>
+            <dd><strong id="stats-leaders"></strong><span id="stats-leaders-note"></span></dd>
+          </div>
+          <div>
+            <dt>Wind and solar share</dt>
+            <dd><strong id="stats-wind-solar"></strong><span id="stats-wind-solar-note"></span></dd>
+          </div>
+          <div id="stats-source" hidden>
+            <dt id="stats-source-title"></dt>
+            <dd><strong id="stats-source-output"></strong><span id="stats-source-share"></span><span id="stats-source-coverage"></span></dd>
+          </div>
+        </dl>
+      </section>
+    </section>
+
+    <section class="country" aria-labelledby="country-title">
+      <div class="section-header country-header">
+        <h2 id="country-title" tabindex="-1">Country history</h2>
+        <div class="country-picker">
+          <label for="country-select" class="visually-hidden">Country or economy</label>
+          <select id="country-select" disabled>
+            <option value="">Pick a country or economy</option>
+          </select>
+          <button type="button" id="country-clear" disabled>Clear selection</button>
+        </div>
+      </div>
+      <p id="country-prompt">Select a country here or on either map for its full electricity mix.</p>
+      <p id="selection-status" class="visually-hidden" role="status"></p>
+      <article id="country-detail" hidden>
+        <h3 id="country-name"></h3>
+        <p id="country-geography-note" class="notice" hidden></p>
+        <div class="country-grid">
+          <div>
+            <div id="country-comparison" class="country-comparison"></div>
+            <h4>Changes in the lead</h4>
+            <ul id="country-changes" class="country-changes"></ul>
+          </div>
+          <figure class="chart-card">
+            <figcaption>
+              <h4>Share of domestic generation</h4>
+              <p id="chart-summary" tabindex="0"></p>
+            </figcaption>
+            <div class="chart"><svg id="country-chart" aria-hidden="true" viewBox="0 0 650 235"></svg></div>
+            <div class="legend chart-legend" id="chart-legend" aria-label="Sources with positive reported generation"></div>
+          </figure>
+        </div>
+        <details id="country-table-panel">
+          <summary>View annual data table</summary>
+          <div id="country-table" role="region" aria-label="Scrollable annual generation data" tabindex="0"></div>
+        </details>
+      </article>
+    </section>
   </main>
+  <footer class="wrap footer">
+    <p>Data from <a href="https://ember-energy.org/data/yearly-electricity-data/">Ember</a> (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>), filtered and ranked by year. Present-day boundaries from <a href="https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-details/">Natural Earth</a>.</p>
+    <a href="readme.md">Project notes</a>
+  </footer>
+  <noscript><p class="wrap notice">JavaScript is required for the comparison. Explore the underlying figures in <a href="https://ember-energy.org/data/electricity-data-explorer/">Ember’s electricity data explorer</a>.</p></noscript>
 </body>
 </html>

@@ -141,9 +141,10 @@
       "day": 12,
       "date": "2026-11-12",
       "theme": "Power",
-      "title": "Power",
-      "description": "Explore energy, influence, or physical force through a geographic interpretation of power.",
-      "status": "planned"
+      "title": "When Power Changed",
+      "description": "Compare the leading electricity sources by country from 2000 to 2025 and trace the years when the lead changed.",
+      "status": "complete",
+      "tags": ["Electricity", "Ember", "ArcGIS JavaScript", "Time comparison"]
     },
     {
       "day": 13,

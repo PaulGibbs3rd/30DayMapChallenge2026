@@ -1,0 +1,20 @@
+{
+  "generation": {
+    "publisher": "Ember",
+    "release": "2026-11-11",
+    "retrieved": "2026-11-12",
+    "url": "https://files.ember-energy.org/public-downloads/generation/outputs/release_generation_yearly_global.csv",
+    "sha256": "08932763076fa781634371dd1b75d8156f76592710c7e984836ed56a663d5688",
+    "license": "CC BY 4.0"
+  },
+  "boundaries": {
+    "publisher": "Natural Earth",
+    "release": "5.1.1",
+    "retrieved": "2026-11-12",
+    "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.1/geojson/ne_50m_admin_0_map_units.geojson",
+    "sha256": "b8d421aca6e9e08e8cdf09cc26af111cc3e0deba4fe915611d58ade71e8a4db0",
+    "license": "Public domain"
+  },
+  "reconciliationToleranceTWh": 0.06,
+  "modifications": "Selected country or economy generation, reconciled totals, ranked sources, and joined Natural Earth map units by reviewed geography IDs."
+}

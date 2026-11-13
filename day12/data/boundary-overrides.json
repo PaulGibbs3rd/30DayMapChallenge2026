@@ -1,0 +1,10 @@
+{
+  "ATC": {
+    "ember": null,
+    "reason": "Uninhabited Ashmore and Cartier Islands use Australia's fallback code in Natural Earth. Keep them separate from Australia's reporting area."
+  },
+  "KOS": {
+    "ember": "XKX",
+    "reason": "Natural Earth and Ember use different non-ISO identifiers for Kosovo."
+  }
+}
