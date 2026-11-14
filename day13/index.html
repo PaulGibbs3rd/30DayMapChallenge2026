@@ -1,27 +1,94 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="calcite-mode-dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Day 13 of Paul Gibbs's 30DayMapChallenge 2026: Interactions. Planned map; explore the theme and project links.">
-  <meta name="theme-color" content="#f5f0e5">
-  <title>Day 13: Interactions | 30DayMapChallenge 2026</title>
-  <link rel="stylesheet" href="../directory/placeholder.css">
+  <meta name="description" content="Compare satellite aerosol observations with winds during an April 2014 Saharan dust crossing from the Atlantic to the Amazon.">
+  <meta name="theme-color" content="#0c151b">
+  <title>The Desert Feeds the Forest | 30DayMapChallenge 2026</title>
+  <link rel="stylesheet" href="https://js.arcgis.com/5.2/esri/themes/dark/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="https://js.arcgis.com/5.2/"></script>
+  <script type="module" src="app.js"></script>
 </head>
-<body class="placeholder-page">
-  <main class="day-placeholder">
-    <header>
-      <p class="eyebrow">PAUL GIBBS · NOVEMBER 13, 2026</p>
-      <h1><span>Day 13</span> Interactions</h1>
-      <p class="theme-description">Explore relationships between places or phenomena, or use interaction to let readers investigate the map and discover changes in its information.</p>
-    </header>
-    <p class="status-badge">Planned · Map not implemented</p>
-    <p class="placeholder-note">This day's map is still to come. The theme is ready; the subject, data, and final output will be documented as the project takes shape.</p>
-    <nav class="placeholder-links" aria-label="Day 13 project links">
-      <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day13" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
-      <a href="readme.md">Project notes</a>
-      <a href="../directory/index.html">All days</a>
+<body>
+  <main class="page">
+    <nav class="top" aria-label="Challenge navigation">
+      <a href="../directory/">← All challenge maps</a>
+      <span>Paul Gibbs · November 13, 2026</span>
     </nav>
+    <header>
+      <p class="eyebrow">Day 13 / Interactions</p>
+      <h1>The Desert Feeds <em>the Forest</em></h1>
+      <p class="intro">In April 2014, winds carried Saharan dust across the Atlantic and into the Amazon. Follow its path from desert to rainforest.</p>
+    </header>
+    <section aria-label="April 2014 dust crossing" aria-describedby="how-to-read" class="atlas">
+      <div class="reading-key" id="how-to-read">
+        <p><strong>Orange shows airborne particles.</strong> Brighter orange means higher aerosol optical depth, a measure of how much light dust, smoke, and other particles scatter or absorb.</p>
+        <p><strong>Moving lines show wind direction.</strong> Drag the lens across the orange band and the air around it to compare local winds while keeping the plume in view.</p>
+      </div>
+      <section class="story" aria-label="Guided stops">
+        <div class="stops" role="group" aria-label="Jump to a stage of the crossing">
+          <button type="button" data-stop="0" aria-pressed="true" disabled><small>APR 4–5</small>Cross the Atlantic</button>
+          <button type="button" data-stop="1" aria-pressed="false" disabled><small>APR 6–7</small>Reach the coast</button>
+          <button type="button" data-stop="2" aria-pressed="false" disabled><small>APR 8–11</small>Enter the Amazon</button>
+        </div>
+        <div class="story-notes">
+          <p data-story-step="0">On April 5, satellite lidar found dust several kilometers above the Atlantic. Watch the wind move west over the orange band. Drag the lens north to see where the flow turns east.</p>
+          <p data-story-step="1" hidden>The plume reached northeastern South America on April 6. Drag the lens toward the Guianas and watch for winds blowing toward land. The study found that a rain band could also wash dust out before it reached the forest.</p>
+          <p data-story-step="2" hidden>By April 8 the plume had reached the Amazon Tall Tower Observatory (ATTO). On April 10, look for winds blowing southwest toward the tower. The station detected a dust pulse even where the satellite map has gaps. Over many crossings, some of that dust settles and delivers phosphorus to Amazon soils.</p>
+        </div>
+      </section>
+      <div class="map-toolbar">
+        <span class="date" id="frame-date">April 5, 2014</span>
+        <div class="map-controls" role="group" aria-label="Map display">
+          <button type="button" data-mode="lens" aria-pressed="true" disabled>Wind lens</button>
+          <button type="button" data-mode="full" aria-pressed="false" disabled>Full wind</button>
+          <button type="button" data-mode="dust" aria-pressed="false" disabled>Aerosol only</button>
+          <button type="button" id="motion" aria-pressed="true" disabled>Motion</button>
+        </div>
+      </div>
+      <div id="map-stack" class="map-stack">
+        <div id="map" class="map" aria-label="Tropical Atlantic and Amazon Basin"></div>
+        <div id="wind-map" class="wind-map map" aria-hidden="true" inert></div>
+        <canvas id="wind-arrows" class="map" aria-hidden="true" hidden></canvas>
+        <button id="lens" class="lens" type="button" aria-label="Move wind lens with the arrow keys" title="Drag to reveal wind" hidden><span aria-hidden="true">↔ Drag for wind</span></button>
+        <button type="button" id="reset" class="reset" disabled>Reset view</button>
+        <p class="map-status" id="map-status" role="status">Loading the historical map…</p>
+      </div>
+      <div class="map-key">
+        <div class="aerosol-key">
+          <span>Daily aerosol optical depth</span>
+          <div><div class="ramp"></div><div class="ticks ramp-ticks"><span>0</span><span>0.2</span><span>0.4</span><span>0.7</span><span>1+</span></div></div>
+        </div>
+        <span class="wind-key"><span aria-hidden="true">⤳</span> <span id="wind-time">850 hPa wind at 12:00 UTC</span></span>
+        <span class="coverage-key">Clear areas may include gaps in satellite coverage.</span>
+      </div>
+      <div class="timeline">
+        <div class="transport" aria-label="Playback controls">
+          <button id="previous" type="button" aria-label="Previous day" disabled>←</button>
+          <button id="play" type="button" disabled>Play</button>
+          <button id="next" type="button" aria-label="Next day" disabled>→</button>
+        </div>
+        <div class="scrubber">
+          <input type="range" id="timeline" aria-label="Replay date" min="0" max="7" step="1" value="1" disabled>
+          <div class="ticks" aria-hidden="true"><span>APR 4</span><span>APR 11</span></div>
+        </div>
+      </div>
+      <p id="wind-status" class="wind-status" role="status" hidden></p>
+    </section>
+    <footer>
+      <p>The orange layer combines a day of Terra and Aqua satellite observations. Streamlines show wind at 850 hPa at the time in the legend. They describe the air at that moment, while the daily images and the event study document the crossing.</p>
+      <nav aria-label="Data and methods">
+        <a href="https://acp.copernicus.org/articles/18/10055/2018/">Event study</a>
+        <a href="https://www.nasa.gov/missions/calipso/nasa-satellite-reveals-how-much-saharan-dust-feeds-amazons-plants/">Dust and phosphorus</a>
+        <a href="https://www.earthdata.nasa.gov/data/projects/gibs">NASA Earthdata GIBS</a>
+        <a href="https://weatherbench2.readthedocs.io/en/latest/data-guide.html">ERA5 via WeatherBench 2</a>
+        <a href="https://www.naturalearthdata.com/">Natural Earth</a>
+        <a href="spec.md">Project spec</a>
+      </nav>
+    </footer>
   </main>
 </body>
 </html>

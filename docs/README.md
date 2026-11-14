@@ -1,5 +1,6 @@
 # Project documentation
 
+- [ArcGIS toolkit feedback](arcgis-toolkit-feedback.md): living installation and daily experience log for the Esri skills and developer documentation MCP server.
 - [Deployment and GitHub Pages](deployment.md): build locally, prepare the first push, enable Pages, and publish later updates.
 - [Challenge directory](../directory/readme.md): where the day descriptions and links are maintained.
 - [Day 1 project notes](../day1/readme.md): the Gorillaz tour map, data sources, music playback, and validation.
