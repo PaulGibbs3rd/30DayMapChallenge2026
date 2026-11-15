@@ -150,17 +150,19 @@
       "day": 13,
       "date": "2026-11-13",
       "theme": "Interactions",
-      "title": "Interactions",
-      "description": "Show how places and systems affect one another, or invite the viewer to interact with the map.",
-      "status": "planned"
+      "title": "The Desert Feeds the Forest",
+      "description": "Follow a documented Saharan dust crossing with daily satellite observations and an interactive wind lens.",
+      "status": "complete",
+      "tags": ["Saharan dust", "MODIS", "ERA5", "Wind lens"]
     },
     {
       "day": 14,
       "date": "2026-11-14",
       "theme": "Borgesian map",
-      "title": "Borgesian map",
-      "description": "Explore the boundary between a place and its representation, inspired by the idea of a map at impossible detail.",
-      "status": "planned"
+      "title": "Seattle at Full Detail",
+      "description": "Start with Seattle’s stairways and pile up municipal records over the aerial image, down to lane widths, tree crowns, and sidewalk defects.",
+      "status": "complete",
+      "tags": ["Seattle", "Aerial imagery", "Stairways", "Open data"]
     },
     {
       "day": 15,

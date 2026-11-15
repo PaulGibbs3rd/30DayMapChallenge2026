@@ -3,25 +3,73 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Day 14 of Paul Gibbs's 30DayMapChallenge 2026: Borgesian map. Planned map; explore the theme and project links.">
-  <meta name="theme-color" content="#f5f0e5">
-  <title>Day 14: Borgesian map | 30DayMapChallenge 2026</title>
-  <link rel="stylesheet" href="../directory/placeholder.css">
+  <meta name="description" content="Start with Seattle’s stairways and zoom in to the city’s inventory of street paint, benches, drain grates, and cracks in the sidewalk.">
+  <meta name="theme-color" content="#f4f0e7">
+  <title>Seattle at Full Detail | 30DayMapChallenge 2026</title>
+  <link rel="stylesheet" href="https://js.arcgis.com/5.2/esri/themes/light/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
 </head>
-<body class="placeholder-page">
-  <main class="day-placeholder">
-    <header>
-      <p class="eyebrow">PAUL GIBBS · NOVEMBER 14, 2026</p>
-      <h1><span>Day 14</span> Borgesian map</h1>
-      <p class="theme-description">Experiment with extreme detail and scale, asking what happens when a map approaches the complexity and extent of the territory it represents.</p>
-    </header>
-    <p class="status-badge">Planned · Map not implemented</p>
-    <p class="placeholder-note">This day's map is still to come. The theme is ready; the subject, data, and final output will be documented as the project takes shape.</p>
-    <nav class="placeholder-links" aria-label="Day 14 project links">
-      <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day14" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
-      <a href="readme.md">Project notes</a>
-      <a href="../directory/index.html">All days</a>
+<body>
+  <main class="page">
+    <nav class="masthead" aria-label="Challenge navigation">
+      <a href="../directory/index.html">← All challenge maps</a>
+      <span>14 NOV 2026 <span aria-hidden="true">/</span> SEATTLE, WA</span>
     </nav>
+
+    <header class="intro">
+      <div>
+        <p class="edition">Day 14 <span aria-hidden="true">/</span> Borgesian map</p>
+        <h1>Seattle at <em>full detail.</em></h1>
+      </div>
+      <p class="dek">Start with a city of stairs. Zoom in until street paint, drain grates, and cracks in the sidewalk have records of their own.</p>
+    </header>
+
+    <section class="atlas" aria-label="Map of Seattle’s public asset records">
+      <div class="toolbar">
+        <div class="stops" role="group" aria-label="Map locations">
+          <button type="button" data-stop="city" aria-pressed="true" disabled>Seattle</button>
+          <button type="button" data-stop="square" aria-pressed="false" disabled>Pioneer Square</button>
+          <button type="button" data-stop="howe" aria-pressed="false" disabled>East Howe Street</button>
+        </div>
+        <div class="view-controls" role="group" aria-label="Map display">
+          <button id="aerial" type="button" aria-pressed="false" disabled>Aerial basemap</button>
+          <button id="all-layers" class="primary" type="button" aria-pressed="false" disabled>Show everything</button>
+        </div>
+      </div>
+      <div class="atlas-body">
+        <div class="map-frame">
+          <arcgis-map id="map" aria-label="Seattle map">
+            <arcgis-zoom slot="top-left"></arcgis-zoom>
+            <arcgis-scale-bar slot="bottom-left" unit="dual"></arcgis-scale-bar>
+          </arcgis-map>
+          <p id="map-message" class="map-message" role="status">Opening Seattle…</p>
+          <section id="inspection" class="inspection" aria-labelledby="inspection-title" hidden>
+            <div class="inspection-header">
+              <h2 id="inspection-title">Map records</h2>
+              <button id="close-inspection" type="button" aria-label="Close map records">×</button>
+            </div>
+            <div id="inspection-body" aria-live="polite"></div>
+          </section>
+        </div>
+        <details id="layer-panel" class="layer-panel" open>
+          <summary><span>Map layers</span> <span id="layer-total"></span></summary>
+          <p id="layer-help" class="layer-help">More layers appear as you zoom. Open a group to see its sources.</p>
+          <div id="layer-groups" class="layer-groups"></div>
+        </details>
+      </div>
+      <div class="map-footer">
+        <span id="scale">Map scale</span>
+        <span id="layer-status" role="status">Loading map</span>
+        <a id="map-source" href="https://data-seattlecitygis.opendata.arcgis.com/search">City of Seattle GeoData ↗</a>
+      </div>
+    </section>
+    <footer class="notes">
+      <p>City inventories describe individual assets and observations. Records and imagery may come from different years.</p>
+      <a href="readme.md">Project notes</a>
+    </footer>
   </main>
+  <noscript><p class="noscript">Enable JavaScript to explore the map. The <a href="spec.md">layer inventory</a> includes direct links to the public data.</p></noscript>
 </body>
 </html>

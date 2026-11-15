@@ -2,7 +2,7 @@
 
 **Day 13 · Interactions · November 13, 2026**
 
-**Status:** Working preview
+**Status:** Published
 
 Replay one documented Saharan dust crossing from April 4 through April 11, 2014. The date control advances the satellite mosaic and the historical wind field together. Drag or keyboard-move the wind lens, click the map to place it, or select **Full wind** for the whole map. The guided stops follow the plume over the Atlantic, to the coast, and into the Amazon. [Event study, Section 3.5 and Figures 9 and 11–13](https://acp.copernicus.org/articles/18/10055/2018/acp-18-10055-2018.pdf)
 
