@@ -168,9 +168,10 @@
       "day": 15,
       "date": "2026-11-15",
       "theme": "Inside out",
-      "title": "Inside out",
-      "description": "Reverse a familiar perspective, reveal an interior, or turn a conventional map’s logic inside out.",
-      "status": "planned"
+      "title": "Pacific, Inside Out",
+      "description": "Flip the Pacific seafloor across sea level on a 3D globe, turning deep trenches into high ridges.",
+      "status": "complete",
+      "tags": ["3D globe", "Bathymetry", "Pacific Ocean"]
     },
     {
       "day": 16,
