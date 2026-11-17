@@ -177,9 +177,10 @@
       "day": 16,
       "date": "2026-11-16",
       "theme": "Collaborative map",
-      "title": "Collaborative map",
-      "description": "Make a map with another person and document how the shared decisions shaped the result.",
-      "status": "planned"
+      "title": "Seattle, in Common",
+      "description": "Follow the buses, trains, and ferries riders share across Seattle, on a custom vector basemap inspired by a friend’s London map.",
+      "status": "complete",
+      "tags": ["Seattle", "Public transit", "Vector tiles"]
     },
     {
       "day": 17,
