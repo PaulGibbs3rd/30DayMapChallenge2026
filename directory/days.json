@@ -186,9 +186,11 @@
       "day": 17,
       "date": "2026-11-17",
       "theme": "Light & dark",
-      "title": "Light & dark",
-      "description": "Use illumination, shadows, or contrasting tones to reveal a geographic story.",
-      "status": "planned"
+      "title": "Seattle in Shadow",
+      "description": "Turn a low sun over Pioneer Square and follow the shadows across Seattle’s waterfront and street grid.",
+      "status": "complete",
+      "tags": ["Seattle", "3D", "Shadows"],
+      "image": "../day17/preview.jpg"
     },
     {
       "day": 18,

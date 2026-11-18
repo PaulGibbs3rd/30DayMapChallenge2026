@@ -3,25 +3,78 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Day 17 of Paul Gibbs's 30DayMapChallenge 2026: Light &amp; dark. Planned map; explore the theme and project links.">
-  <meta name="theme-color" content="#f5f0e5">
-  <title>Day 17: Light &amp; dark | 30DayMapChallenge 2026</title>
-  <link rel="stylesheet" href="../directory/placeholder.css">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Turn a low sun across Pioneer Square in an infrared-inspired 3D map of Seattle.">
+  <title>Seattle in Shadow · Day 17</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <noscript><style>.scene-still{display:block} #scene-status{display:none}</style></noscript>
+  <script type="module" src="https://js.arcgis.com/5.2/"></script>
+  <script type="module" src="app.js"></script>
 </head>
-<body class="placeholder-page">
-  <main class="day-placeholder">
-    <header>
-      <p class="eyebrow">PAUL GIBBS · NOVEMBER 17, 2026</p>
-      <h1><span>Day 17</span> Light &amp; dark</h1>
-      <p class="theme-description">Use light, shadow, or contrast as part of the map's subject or visual language, exploring how illumination changes the reading of geography.</p>
+<body class="calcite-mode-dark">
+  <calcite-shell>
+    <header slot="header" class="masthead">
+      <a class="collection" href="../directory/"><span aria-hidden="true" class="eclipse"></span> 30 Day Map Challenge</a>
+      <span class="masthead-theme">Day 17 <span aria-hidden="true">/</span> Light &amp; dark</span>
+      <a class="notes" href="readme.md">Map notes <span aria-hidden="true">↗</span></a>
     </header>
-    <p class="status-badge">Planned · Map not implemented</p>
-    <p class="placeholder-note">This day's map is still to come. The theme is ready; the subject, data, and final output will be documented as the project takes shape.</p>
-    <nav class="placeholder-links" aria-label="Day 17 project links">
-      <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day17" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
-      <a href="readme.md">Project notes</a>
-      <a href="../directory/index.html">All days</a>
-    </nav>
-  </main>
+    <main class="frame">
+      <section class="stage" aria-labelledby="title">
+        <header class="intro">
+          <p class="eyebrow">Pioneer Square · Elliott Bay</p>
+          <h1 id="title">Seattle<br><em>in Shadow</em></h1>
+          <p class="description">Turn the black sun across the city, or watch the streets dim during an eclipse.</p>
+        </header>
+
+        <div class="viewport" id="viewport">
+          <div class="black-sun-sky" aria-hidden="true"><span class="black-sun" hidden></span></div>
+          <img class="scene-still" src="preview.jpg" alt="A black sun above the pale Seattle skyline and the dark Elliott Bay waterfront.">
+          <arcgis-scene id="scene" aria-label="3D map of Pioneer Square and the Elliott Bay waterfront"
+            alpha-compositing-enabled popup-disabled quality-profile="high" attribution-mode="dark"></arcgis-scene>
+          <div class="map-shade" aria-hidden="true"></div>
+          <div class="map-labels" id="map-labels" aria-hidden="true" hidden>
+            <span class="map-label tower" id="smith-label">Smith Tower</span>
+            <span class="map-label bay" id="bay-label">Elliott Bay</span>
+          </div>
+          <p class="scene-status" id="scene-status" role="status">Loading the 3D scene…</p>
+          <noscript><p class="scene-status">JavaScript is required to turn the light.</p></noscript>
+          <button class="reset" id="reset" type="button" disabled><span aria-hidden="true">↺</span> Reset view</button>
+        </div>
+
+        <section class="light-panel" aria-label="Lighting controls">
+          <div class="light-heading">
+            <label for="light-direction">Light direction</label>
+            <output id="bearing" for="light-direction">65° NE</output>
+          </div>
+          <input type="range" id="light-direction" min="65" max="295" value="65" step="1"
+            aria-describedby="lighting-note" disabled>
+          <div class="range-labels" aria-hidden="true"><span>NE</span><span>S</span><span>NW</span></div>
+          <div class="presets" role="group" aria-label="Light direction presets">
+            <button type="button" data-bearing="245" aria-pressed="false" disabled>Southwest</button>
+            <button type="button" data-bearing="65" aria-pressed="true" disabled>Northeast</button>
+          </div>
+          <p id="lighting-note"><span id="altitude">8.5° high</span> <span aria-hidden="true">·</span>
+            <span id="sun-status">Illustrative sunlight</span></p>
+          <div class="eclipse-controls">
+            <div class="light-heading">
+              <label for="eclipse-progress">Eclipse</label>
+              <output id="eclipse-coverage" for="eclipse-progress">0% covered</output>
+            </div>
+            <input type="range" id="eclipse-progress" min="0" max="100" value="0" step="1" disabled>
+            <div class="range-labels eclipse-range">
+              <span aria-hidden="true">Begins</span>
+              <button id="show-totality" type="button" aria-pressed="false" disabled>Totality</button>
+              <span aria-hidden="true">Clears</span>
+            </div>
+          </div>
+        </section>
+      </section>
+      <footer class="footer">
+        <span>Drag to move <span aria-hidden="true">·</span> Right-drag to orbit <span aria-hidden="true">·</span> Scroll or pinch to zoom</span>
+        <span>Seattle 3D buildings · 2015–16 <span aria-hidden="true">/</span> Paul Gibbs</span>
+      </footer>
+    </main>
+  </calcite-shell>
 </body>
 </html>
