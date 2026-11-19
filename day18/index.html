@@ -2,26 +2,161 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Day 18 of Paul Gibbs's 30DayMapChallenge 2026: NULL. Planned map; explore the theme and project links.">
-  <meta name="theme-color" content="#f5f0e5">
-  <title>Day 18: NULL | 30DayMapChallenge 2026</title>
-  <link rel="stylesheet" href="../directory/placeholder.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A fictional visitor’s map of Null Island. Check in at 0°, 0°, visit the John Nelson Theater, and see where missing coordinates go.">
+  <meta name="theme-color" content="#f6f0df">
+  <title>Visit Null Island · Day 18</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script id="arcgis-cdn" type="module" src="https://js.arcgis.com/5.2/" async></script>
+  <script type="module" src="app.js"></script>
 </head>
-<body class="placeholder-page">
-  <main class="day-placeholder">
-    <header>
-      <p class="eyebrow">PAUL GIBBS · NOVEMBER 18, 2026</p>
-      <h1><span>Day 18</span> NULL</h1>
-      <p class="theme-description">Use this open prompt to explore absence, missing information, undefined places, or another interpretation that gives the idea of nothing geographic meaning.</p>
+<body class="calcite-mode-light">
+  <header class="masthead">
+    <a href="../directory/">← All challenge days</a>
+    <span>Day 18 <span aria-hidden="true">/</span> NULL</span>
+    <a href="readme.md">Map notes ↗</a>
+  </header>
+  <main>
+    <header class="hero">
+      <div>
+        <h1>Visit Null Island</h1>
+        <p class="tagline">Where missing coordinates go on vacation.</p>
+        <nav class="hero-links" aria-label="On this page">
+          <a href="#island-guide">Visitor’s map ↓</a>
+          <a href="#coordinate-lab">Coordinate lab ↓</a>
+          <a href="#hotel">Guest register ↓</a>
+        </nav>
+      </div>
+      <div class="coordinates" aria-label="Zero degrees latitude and zero degrees longitude">
+        <span>0° N <span aria-hidden="true">/</span> 0° E</span>
+        <small>Gulf of Guinea</small>
+      </div>
     </header>
-    <p class="status-badge">Planned · Map not implemented</p>
-    <p class="placeholder-note">This day's map is still to come. The theme is ready; the subject, data, and final output will be documented as the project takes shape.</p>
-    <nav class="placeholder-links" aria-label="Day 18 project links">
-      <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day18" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
-      <a href="readme.md">Project notes</a>
-      <a href="../directory/index.html">All days</a>
-    </nav>
+
+    <section class="visitor-guide" id="island-guide" aria-labelledby="guide-heading">
+      <header><h2 id="guide-heading">Illustrated visitor’s map</h2></header>
+      <div class="chart-grid">
+        <figure class="island-figure">
+          <div class="island-art" id="island-art">
+            <img src="island.jpg" width="1536" height="1024" alt="Illustrated tropical resort with a lagoon, hotel, cinema, runway, beach and customs pier.">
+            <div class="map-markers" id="map-markers" aria-label="Island attractions"></div>
+          </div>
+          <figcaption><span>Select a landmark to visit.</span><span>Illustrated island · fictional geography</span></figcaption>
+        </figure>
+        <nav class="attractions" aria-labelledby="attractions-heading">
+          <h3 id="attractions-heading">Around the island</h3>
+          <ul id="attraction-list"></ul>
+        </nav>
+      </div>
+    </section>
+
+    <section class="lab" id="coordinate-lab" aria-labelledby="lab-heading">
+      <header class="lab-header">
+        <div>
+          <h2 id="lab-heading" tabindex="-1">Coordinate lab</h2>
+          <p>Explore where the hotel guests land, click for coordinates, or plot your own point.</p>
+        </div>
+        <div class="lab-actions">
+          <button class="text-button" id="map-home" type="button">Reset map to Gulf of Guinea</button>
+          <button class="text-button" id="clear-plots" type="button" disabled>Clear map pins</button>
+        </div>
+      </header>
+      <div class="lab-grid" id="where-on-earth">
+        <div>
+          <div class="lab-stage" id="lab-stage">
+            <canvas id="lab-canvas" aria-hidden="true"></canvas>
+            <arcgis-map id="lab-map" aria-label="Interactive coordinate map" popup-disabled></arcgis-map>
+            <div class="map-controls" role="group" aria-label="Map zoom">
+              <button type="button" id="map-zoom-in" aria-label="Zoom in">+</button>
+              <button type="button" id="map-zoom-out" aria-label="Zoom out">−</button>
+            </div>
+            <output class="map-readout" id="map-readout" aria-hidden="true" hidden></output>
+          </div>
+          <ul class="map-key" aria-label="Map symbols">
+            <li><i class="origin-dot" aria-hidden="true"></i> Null Island / arrivals</li>
+            <li><i class="guest-dot" aria-hidden="true"></i> Other guest locations</li>
+            <li><i class="plot-dot" aria-hidden="true"></i> Plotted point</li>
+            <li><i class="selection-dot" aria-hidden="true"></i> Inspected location</li>
+          </ul>
+        </div>
+        <form id="coordinate-form" class="coordinate-form" novalidate>
+          <h3 id="coordinate-source">Plot a point</h3>
+          <div class="plot-guest-actions" id="plot-guest-actions" hidden>
+            <p>Plot point saves this guest’s location in the <a href="#hotel">guest register</a>.</p>
+            <button type="button" class="text-button" id="deselect-guest">Deselect guest</button>
+          </div>
+          <p>Enter decimal degrees. GeoJSON puts longitude first.</p>
+          <div class="coordinate-fields">
+            <label for="plot-longitude">Longitude <small>−180 to 180</small>
+              <input id="plot-longitude" inputmode="decimal" autocomplete="off" spellcheck="false">
+            </label>
+            <label for="plot-latitude">Latitude <small>−90 to 90</small>
+              <input id="plot-latitude" inputmode="decimal" autocomplete="off" spellcheck="false">
+            </label>
+          </div>
+          <label class="lab-default"><input id="plot-default" type="checkbox"> Fill missing coordinates with zero</label>
+          <div class="coordinate-actions">
+            <button class="primary-button" type="submit">Plot point</button>
+            <button class="text-button" id="plot-swap" type="button">Swap longitude and latitude</button>
+          </div>
+          <div class="plot-result">
+            <output id="plot-status" aria-live="polite">Enter coordinates or select a guest from the register.</output>
+            <div id="plot-export" hidden><code id="plot-pair"></code> <button class="text-button" id="plot-copy" type="button">Copy GeoJSON pair</button></div>
+          </div>
+        </form>
+      </div>
+
+      <section class="register" id="hotel" aria-labelledby="register-heading">
+        <header class="register-header">
+          <div>
+            <p class="eyebrow">Hotel 9999999999</p>
+            <h2 id="register-heading" tabindex="-1">Guest register</h2>
+            <p>Something unexpected happened to your reservation.</p>
+          </div>
+          <output id="arrivals" role="status" aria-live="polite">0 arrivals at 0°, 0°</output>
+        </header>
+        <div class="register-actions">
+          <div class="switch-label">
+            <label id="native-label" for="default-checkbox"><input type="checkbox" id="default-checkbox"> Use zero as the default</label>
+            <div id="calcite-label" hidden>
+              <calcite-label layout="inline"><calcite-switch id="default-switch" scale="m"></calcite-switch>Use zero as the default</calcite-label>
+            </div>
+          </div>
+          <button type="button" class="text-button" id="reset-register" disabled>Reset register</button>
+          <a class="guest-map-link" id="show-guests" href="#coordinate-lab">Show guest locations ↑</a>
+        </div>
+        <p class="register-explanation">Select a guest, choose coordinates, and use Plot point to save their location. Replace missing values with zero to see where guests without a saved location land.</p>
+        <div class="table-wrap">
+          <table aria-label="Sample guest locations">
+            <thead><tr><th scope="col">Guest</th><th scope="col">Original</th><th scope="col">Plotted</th><th scope="col">Status</th></tr></thead>
+            <tbody id="register-rows"></tbody>
+          </table>
+        </div>
+        <p class="register-footnote">Guest records are fictional. <a href="https://doc.esri.com/en/arcgis-pro/latest/tool-reference/tool-errors-and-warnings/999001-999999/tool-errors-and-warnings-999998-999999-999999.html">The hotel name riffs on Esri’s 999999 error ↗</a></p>
+      </section>
+    </section>
+
+    <noscript><p>Enable JavaScript to visit the attractions and use the guest register.</p></noscript>
   </main>
+
+  <dialog id="attraction-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-inner">
+      <header class="dialog-header">
+        <h2 id="dialog-title"></h2>
+        <button type="button" class="close-button" id="close-dialog" aria-label="Close attraction" autofocus>×</button>
+      </header>
+      <p class="dialog-quote" id="dialog-quote"></p>
+      <p id="dialog-description"></p>
+      <button type="button" class="primary-button" id="airport-example" hidden>Try these coordinates</button>
+      <div id="screening-room" hidden>
+        <div id="theater-player"></div>
+        <a id="watch-on-youtube" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
+      </div>
+      <a id="attraction-source" hidden target="_blank" rel="noopener noreferrer"></a>
+    </div>
+  </dialog>
+
+  <footer class="footer"><span>Paul Gibbs · 30 Day Map Challenge 2026</span><div><a href="visitor-map.jpg" download>Download the visitor’s map ↓</a><a href="https://www.naturalearthdata.com/downloads/110m-physical-vectors/110m-land/">Locator data by Natural Earth ↗</a></div></footer>
 </body>
 </html>

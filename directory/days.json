@@ -196,9 +196,11 @@
       "day": 18,
       "date": "2026-11-18",
       "theme": "NULL",
-      "title": "NULL",
-      "description": "Interpret absence, missing values, or an intentionally open theme through a map.",
-      "status": "planned"
+      "title": "Visit Null Island",
+      "description": "Check in at 0°, 0° and tour a fictional resort where GIS errors become local attractions.",
+      "status": "complete",
+      "tags": ["Null Island", "GIS humor", "Cartography"],
+      "image": "../day18/visitor-map.jpg"
     },
     {
       "day": 19,
