@@ -206,9 +206,11 @@
       "day": 19,
       "date": "2026-11-19",
       "theme": "Senses: Smell",
-      "title": "Smell",
-      "description": "Consider how scents, their sources, and the experience of smell can be represented geographically.",
-      "status": "planned"
+      "title": "Follow Your Nose",
+      "description": "Walk from Westlake through Pike Place Market’s flower tables and Pier 62 to Chinatown and Little Saigon, following seven reported scents.",
+      "status": "complete",
+      "tags": ["Seattle", "Walking route", "Pike Place Market", "Chinatown–International District"],
+      "image": "../day19/walk-map.svg"
     },
     {
       "day": 20,

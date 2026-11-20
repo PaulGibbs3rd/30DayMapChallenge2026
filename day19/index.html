@@ -3,25 +3,183 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Day 19 of Paul Gibbs's 30DayMapChallenge 2026: Smell. Planned map; explore the theme and project links.">
-  <meta name="theme-color" content="#f5f0e5">
-  <title>Day 19: Smell | 30DayMapChallenge 2026</title>
-  <link rel="stylesheet" href="../directory/placeholder.css">
+  <meta name="description" content="A self-guided Seattle smell walk through Pike Place Market, along Elliott Bay, and into Chinatown and Little Saigon.">
+  <meta name="theme-color" content="#fff4e5">
+  <title>Follow Your Nose · Day 19</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=DM+Sans:wght@400..700&amp;display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script id="arcgis-cdn" type="module" src="https://js.arcgis.com/5.2/" async></script>
+  <script type="module" src="app.js"></script>
 </head>
-<body class="placeholder-page">
-  <main class="day-placeholder">
-    <header>
-      <p class="eyebrow">PAUL GIBBS · NOVEMBER 19, 2026</p>
-      <h1><span>Day 19</span> Smell</h1>
-      <p class="theme-description">Explore the geography of scents, odors, or smell-related experiences, considering how sources, movement, memory, and perception connect the nose to place.</p>
+<body>
+  <header class="masthead">
+    <a href="../directory/">← All maps</a>
+    <span>Day 19 <span aria-hidden="true">·</span> Smell</span>
+    <a href="readme.md">About this walk ↗</a>
+  </header>
+  <main>
+    <header class="intro">
+      <div class="intro-copy">
+        <p class="place-line">A Seattle smell walk</p>
+        <h1>Follow your <em>nose.</em></h1>
+        <p class="invitation">Warm buns, market flowers, a whiff of salt air. Take the slow way from Westlake to Little Saigon.</p>
+        <div class="intro-actions">
+          <a class="start-walk" href="#the-walk">Start the walk <span aria-hidden="true">↓</span></a>
+          <p class="walk-summary">2.6 mi <span aria-hidden="true">·</span> 60–75 min <span aria-hidden="true">·</span> One way</p>
+        </div>
+      </div>
+      <div class="intro-visual">
+        <figure class="market-photo">
+          <img src="pike-place-flowers.jpg" width="960" height="540" alt="Bright bouquets wrapped in brown paper at a Pike Place Market flower stall.">
+          <figcaption><span>Pike Place Market</span><a href="https://commons.wikimedia.org/wiki/File:Flowers_at_Pike_Place_Market.jpg">Photo by Daniel Eriksson</a></figcaption>
+        </figure>
+        <nav class="scent-postcard" aria-label="Jump to a scent stop">
+          <a class="postcard-market" href="#flowers" data-jump-stop="3">
+            <span class="postcard-symbol" aria-hidden="true">✿</span> Flowers <span aria-hidden="true">↘</span>
+          </a>
+          <a class="postcard-bay" href="#bay" data-jump-stop="4">
+            <span class="postcard-symbol" aria-hidden="true">≈</span> Bay air <span aria-hidden="true">↘</span>
+          </a>
+          <a class="postcard-kitchen" href="#barbecue" data-jump-stop="6">
+            <span class="postcard-symbol" aria-hidden="true">♨</span> Barbecue <span aria-hidden="true">↘</span>
+          </a>
+        </nav>
+      </div>
     </header>
-    <p class="status-badge">Planned · Map not implemented</p>
-    <p class="placeholder-note">This day's map is still to come. The theme is ready; the subject, data, and final output will be documented as the project takes shape.</p>
-    <nav class="placeholder-links" aria-label="Day 19 project links">
-      <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day19" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
-      <a href="readme.md">Project notes</a>
-      <a href="../directory/index.html">All days</a>
-    </nav>
+
+    <div class="walk-layout" id="the-walk">
+      <section class="map-panel" aria-labelledby="map-heading">
+        <header class="map-header">
+          <div>
+            <h2 id="map-heading">The smell trail</h2>
+            <p>Westlake <span aria-hidden="true">→</span> Little Saigon</p>
+          </div>
+          <button id="reset-map" class="outline-button" type="button" hidden>Full route</button>
+        </header>
+        <div class="map-stage" id="map-stage">
+          <div class="map-fallback" id="map-fallback">
+            <img src="walk-map.svg" width="1320" height="900" alt="Map of seven scent stops from Westlake through Pike Place Market and Pier 62 to Little Saigon. Full directions are in the itinerary.">
+            <div id="preview-pins" aria-label="Scent stops on the preview map"></div>
+          </div>
+          <arcgis-map id="walk-map" aria-label="Interactive route map" popup-disabled inert></arcgis-map>
+          <div class="map-tools" id="map-tools" role="group" aria-label="Map zoom" hidden>
+            <button id="zoom-in" type="button" aria-label="Zoom in">+</button>
+            <button id="zoom-out" type="button" aria-label="Zoom out">−</button>
+          </div>
+        </div>
+        <footer class="map-footer">
+          <ul class="legend" aria-label="Map legend">
+            <li><span class="route-swatch" aria-hidden="true"></span>Walking route</li>
+            <li><span class="route-swatch covered" aria-hidden="true"></span>Covered arcade</li>
+          </ul>
+          <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a>
+        </footer>
+      </section>
+
+      <section class="itinerary" aria-labelledby="itinerary-heading">
+        <header class="itinerary-header">
+          <h2 id="itinerary-heading">What’s in the air?</h2>
+          <p>Start at 4th and Pike, near Westlake Station. These seven scent clues come from past visits. Pause at each stop and see what you notice.</p>
+        </header>
+        <ol id="stops" class="stop-list">
+          <li>
+            <span class="trail-section">Pike Place Market</span>
+            <details data-stop="1" open>
+              <summary><span class="stop-number" aria-hidden="true">1</span><span class="stop-title"><strong>Baked buns</strong><small>Mee Sum Pastry</small></span></summary>
+              <div class="stop-note">
+                <p>Walk downhill on Pike Street, turn onto Pike Place, and pause by the Triangle Building’s walk-up counter. Look for the Mee Sum sign between 1526 and 1530 Pike Place.</p>
+                <p class="scent-note">A passerby reported smelling baked buns from the sidewalk. Another noticed baking aromas on approach in September 2025.</p>
+                <p class="source-links"><a href="https://app.wanderlog.com/list/geoCategory/69642/#:~:text=This%20place%20smells%20amazing%20as%20you%20walk%20by">Passerby review ↗</a> <a href="https://wanderlog.com/place/details/441995/mee-sum-pastry#:~:text=From%20the%20moment%20I%20walked%20up">2025 review ↗</a></p>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details data-stop="2">
+              <summary><span class="stop-number" aria-hidden="true">2</span><span class="stop-title"><strong>Cinnamon pastry</strong><small>Piroshky Piroshky</small></span></summary>
+              <div class="stop-note">
+                <p>Continue north on Pike Place to number 1908. Pause along the storefront where there’s space to let people pass.</p>
+                <p class="scent-note">A writer walking the market caught a whiff of cinnamon near the bakery.</p>
+                <p class="source-links"><a href="https://weekenddistractions.wordpress.com/2008/10/11/a-seattle-tradition/">Firsthand market account ↗</a></p>
+              </div>
+            </details>
+          </li>
+          <li class="flower-stop" id="flowers">
+            <details data-stop="3">
+              <summary><span class="stop-number" aria-hidden="true">✿</span><span class="stop-title"><strong>Bouquets and greenery</strong><small>Pike Place flower tables</small></span></summary>
+              <div class="stop-note">
+                <p>Cross Pike Place into the covered North Arcade near Stewart Street. Pause in the public aisle beside the flower tables near Yang Farm.</p>
+                <p class="scent-note">A food-tour writer noticed the scent of bouquets at the north end of the market. In November the displays may include fresh stems, dried flowers, or eucalyptus.</p>
+                <p class="source-links"><a href="https://spoonuniversity.com/school/wisconsin/sampled-pike-place-market/">Food-tour account ↗</a> <a href="https://www.pikeplacemarket.org/vendor/yang-farm/">Yang Farm ↗</a></p>
+              </div>
+            </details>
+          </li>
+          <li class="water-stop" id="bay">
+            <span class="trail-section">The waterfront</span>
+            <details data-stop="4">
+              <summary><span class="stop-number" aria-hidden="true">4</span><span class="stop-title"><strong>Bay air</strong><small>Pier 62</small></span></summary>
+              <div class="stop-note">
+                <p>Follow signs for MarketFront and Overlook Walk. Take the stairs or the Ocean Pavilion elevator to the promenade. Head north and pause on the sidewalk by the pier’s north edge.</p>
+                <p class="scent-note">In 2022, a local writer noticed a distinct marine smell here near the pier pilings.</p>
+                <p class="source-links"><a href="https://mynorthwest.com/history/making-scents-of-how-seattle-smelled-a-century-ago/3577305">Waterfront account ↗</a> <a href="https://waterfrontparkseattle.org/overlook-walk/">Elevator and stairs ↗</a></p>
+              </div>
+            </details>
+          </li>
+          <li class="cid-stop">
+            <span class="trail-section">Chinatown &amp; Little Saigon</span>
+            <details data-stop="5">
+              <summary><span class="stop-number" aria-hidden="true">5</span><span class="stop-title"><strong>Cake aromas</strong><small>Yummy House Bakery</small></span></summary>
+              <div class="stop-note">
+                <p>Walk south on the promenade past Pier 54 and Colman Dock. Cross Alaskan Way at South Main Street. Follow Main east, turn right at 2nd Avenue South, then left on South Jackson Street. Turn right on 5th Avenue South and walk through the Historic Chinatown Gate. Follow South King Street to 6th Avenue South and turn south to number 522.</p>
+                <p class="scent-note">Former neighborhood resident Janet Brown recalled the smell of its cakes drifting down the street.</p>
+                <p class="source-links"><a href="https://www.asiabythebook.com/voa?offset=1580664929370#:~:text=Floating%20through%20it%20all">Neighborhood account ↗</a> <a href="https://www.yummyhousebakery.com/">Bakery address ↗</a></p>
+              </div>
+            </details>
+          </li>
+          <li class="cid-stop" id="barbecue">
+            <details data-stop="6">
+              <summary><span class="stop-number" aria-hidden="true">6</span><span class="stop-title"><strong>Roast pork</strong><small>Asia Bar-B-Que</small></span></summary>
+              <div class="stop-note">
+                <p>Return to South King Street and walk past Hing Hay Park. Turn north on Maynard Avenue South to Jackson and pause outside 655A South Jackson Street.</p>
+                <p class="scent-note">A customer described the scent of barbecue drawing them toward the shop. A neighborhood account recalls roast pork in the air.</p>
+                <p class="source-links"><a href="https://unilocal.fr/etats-unis/seattle/asia-bar-b-que#:~:text=the%20wonderful%20smell%20of%20Asian%20BBQ">Customer review ↗</a> <a href="https://www.asiabarbqueseattle.com/">Restaurant address ↗</a></p>
+              </div>
+            </details>
+          </li>
+          <li class="cid-stop">
+            <details data-stop="7">
+              <summary><span class="stop-number" aria-hidden="true">7</span><span class="stop-title"><strong>Something cooking</strong><small>Saigon Deli</small></span></summary>
+              <div class="stop-note">
+                <p>Continue east on South Jackson Street under I‑5. Pause on the sidewalk at number 1237, just past 12th Avenue South.</p>
+                <p class="scent-note">A customer smelled food cooking as they parked. They didn’t name the dish.</p>
+                <p class="source-links"><a href="https://restaurantjump.com/saigon-deli-98144/#:~:text=could%20smell%20the%20food%20cooking%20as%20we%20parked">Customer review ↗</a></p>
+              </div>
+            </details>
+          </li>
+        </ol>
+        <nav class="stop-navigation" id="stop-navigation" aria-label="Move through the itinerary" hidden>
+          <button class="outline-button" id="previous-stop" type="button">← Previous stop</button>
+          <button class="next-button" id="next-stop" type="button">Next scent →</button>
+        </nav>
+      </section>
+    </div>
+
+    <section class="walk-extras" aria-label="Along and after the walk">
+      <div>
+        <h2>A smell from the past</h2>
+        <p>At 8th and King, a reporter noticed sugar and almonds in the air when Tsue Chong made fortune cookies in the neighborhood. The former factory has since found new uses. <a href="https://www.knkx.org/other-news/2020-02-01/oodles-of-noodles-and-cookies-explore-the-international-district-factory-where-carbs-are-born">KNKX account ↗</a></p>
+      </div>
+      <div>
+        <h2>Getting back</h2>
+        <p>Follow South Jackson Street west to 5th Avenue South for Link light rail back toward Westlake. <a href="https://www.soundtransit.org/ride-with-us/stops-stations/international-district-chinatown-station">Station information ↗</a></p>
+      </div>
+      <div>
+        <h2>Take the map with you</h2>
+        <p><a href="walk-map.svg" download>Download the route map ↓</a></p>
+      </div>
+    </section>
   </main>
 </body>
 </html>
