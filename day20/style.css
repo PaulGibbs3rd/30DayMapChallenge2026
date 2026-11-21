@@ -1,0 +1,78 @@
+:root {
+  color-scheme: light;
+  background: #eff4ee;
+  color: #17352f;
+  font-family: system-ui, sans-serif;
+  line-height: 1.55;
+}
+
+body { margin: 0; }
+
+.masthead, main {
+  width: min(92%, 1280px);
+  margin-inline: auto;
+}
+
+.masthead, .intro, footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.masthead {
+  padding-block: 1rem;
+  border-bottom: 1px solid #b6cbbf;
+  font-size: 0.875rem;
+}
+
+.intro { padding-block: 1.75rem 1.4rem; }
+
+h1 {
+  margin: 0;
+  font: 400 clamp(3rem, 7vw, 5.2rem)/1.04 Georgia, serif;
+  letter-spacing: -0.055em;
+}
+
+.intro p {
+  max-width: 56ch;
+  margin: 0.65rem 0 0;
+}
+
+a { color: #165846; text-underline-offset: 0.22em; }
+a:focus-visible { outline: 3px solid #bd671f; outline-offset: 4px; }
+
+.launch {
+  display: inline-block;
+  padding: 0.65rem 0.95rem;
+  border-radius: 0.4rem;
+  background: #165846;
+  color: #fff;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.launch:hover { background: #0d4737; }
+
+.portal {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: clamp(32rem, 70vh, 59rem);
+  border: 1px solid #b6cbbf;
+  border-radius: 0.75rem;
+  background: #fff;
+}
+
+footer {
+  padding-block: 0.8rem 1.6rem;
+  font-size: 0.875rem;
+}
+
+footer p { margin: 0; }
+
+@media (max-width: 540px) {
+  .masthead { gap: 0.6rem 1rem; }
+  .intro { padding-block: 1.3rem; }
+}

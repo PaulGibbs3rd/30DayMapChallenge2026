@@ -11,6 +11,7 @@ const allowedExtensions = new Set([
   ".mp4", ".webm", ".gpx", ".kml", ".kmz", ".tif", ".tiff", ".pmtiles", ".pbf"
 ]);
 const ignoredDirectories = new Set(["dist", "node_modules", "scripts"]);
+const portalCheckout = resolve(root, "day20", "city-download-portal");
 const publishingSources = ["index.html", "README.md", "NOTICE.md", "directory", "docs", ...Array.from({ length: 30 }, (_, i) => "day" + (i + 1))];
 let count = 0;
 
@@ -45,6 +46,8 @@ const render = spawnSync(process.execPath, [resolve(root, "scripts/render-direct
 if (render.status !== 0) throw new Error("Directory generation failed.");
 
 async function copyWebFiles(source, destination) {
+  // Day 20 embeds the portal's separate deployment.
+  if (source === portalCheckout) return;
   const info = await lstat(source);
   if (info.isSymbolicLink()) throw new Error("Symbolic links are not published: " + relative(root, source));
   if (info.isDirectory()) {

@@ -1,34 +1,15 @@
 # Day 20: Hexagons
 
-**Date:** November 20, 2026  
-**Status:** Planned — map not implemented.
+November 20, 2026
 
-## Theme
+Day 20 uses a hexagon as the footprint for a 3D city model. Open the [Day 20 map](index.html) or the [standalone portal](https://paulgibbs3rd.github.io/city-download-portal/), choose a scene, draw an area, and select **Hexagon** under **Footprint**. Keep terrain extrusion enabled for a flat-bottomed base, then download GLB or STL. The portal opens a preview of the downloaded file.
 
-Use hexagonal cells to organize geographic information, exploring how an even grid can reveal patterns while changing the way locations are grouped.
+## How it works
 
-## Map idea
+The portal samples the terrain within a square extent that covers the hexagon. It clips the surface and buildings to the hexagon, then extends the terrain edges down to a flat cap. The same mesh becomes the GLB or STL file.
 
-The subject, geographic extent, and cell size remain to be chosen. No finished map or selected dataset is claimed by this placeholder.
+## Data and source
 
-## Data and attribution
+The ArcGIS city scenes list their sources in the map attribution. OpenStreetMap 3D uses [OpenStreetMap building footprints](https://www.openstreetmap.org/copyright) with recorded or estimated heights. The app includes source credit in its OpenStreetMap exports.
 
-Record the source links, access dates, licenses, credits, and processing decisions when the subject and data are selected. Keep shareable data and supporting assets in this folder.
-
-## Implementation and output
-
-- Replace [the placeholder page](index.html) with the map or a presentation of the finished output.
-- Document the tools, rendering approach, and any setup requirements here as they are chosen.
-- [Source folder on GitHub](https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day20)
-- [GitHub Pages URL](https://paulgibbs3rd.github.io/30DayMapChallenge2026/day20/) — serves this placeholder until the map is implemented.
-- [All challenge days](../directory/index.html)
-
-## Validation
-
-Map-specific validation has not been run because the map is not implemented. Record the relevant data, interaction, accessibility, and layout checks when an output exists.
-
-## Reflection
-
-Pending completion: describe what worked, the decisions made, and what to try next.
-
-Theme reference: [Official 2026 challenge](https://30daymapchallenge.com/2026/).
+The app lives in the [City Download Portal repository](https://github.com/PaulGibbs3rd/city-download-portal). The challenge page uses the same deployed app.

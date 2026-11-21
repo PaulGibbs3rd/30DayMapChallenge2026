@@ -216,9 +216,10 @@
       "day": 20,
       "date": "2026-11-20",
       "theme": "Hexagons",
-      "title": "Hexagons",
-      "description": "Use hexagonal shapes or grids to organize locations, compare values, or explore a spatial pattern.",
-      "status": "planned"
+      "title": "Hexagon City Prints",
+      "description": "Clip terrain and buildings to a hexagon, then preview and export a 3D city model as GLB or STL.",
+      "status": "complete",
+      "tags": ["3D printing", "Hexagons", "City download portal", "OpenStreetMap"]
     },
     {
       "day": 21,
