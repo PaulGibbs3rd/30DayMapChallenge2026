@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Compare the same geodesic buffer in Web Mercator and three unusual world projections.">
+  <meta name="description" content="Compare the same geodesic buffer in Web Mercator, Equal Earth, and three unusual world projections.">
   <meta name="theme-color" content="#f6f3eb">
   <title>Earth Unfolded · Day 22</title>
   <link rel="icon" href="data:,">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://js.arcgis.com/5.2/esri/themes/light/main.css">
   <link rel="stylesheet" href="style.css">
   <script id="arcgis-cdn" type="module" src="https://js.arcgis.com/5.2/" async></script>
-  <script type="module" src="app.js"></script>
+  <script type="module" src="app.js?v=equal-earth"></script>
 </head>
 <body>
   <div class="site-shell">
@@ -78,6 +78,7 @@
                 <h2 id="comparison-title" class="sr-only">Comparison projection</h2>
                 <select id="projection" disabled>
                   <option value="54090">Peirce Quincuncial</option>
+                  <option value="54035">Equal Earth</option>
                   <option value="102299">Berghaus Star</option>
                   <option value="54050">Fuller / Dymaxion</option>
                 </select>
@@ -85,7 +86,10 @@
               <span class="wkid" id="projection-wkid">WKID 54090</span>
             </header>
             <div id="comparison-map" class="map" aria-label="Peirce Quincuncial world map"></div>
-            <p class="panel-caption" id="projection-caption">A square world with the North Pole at its center.</p>
+            <p class="panel-caption">
+              <span id="projection-caption">A square world with the North Pole at its center.</span>
+              <a id="equal-earth-source" href="https://docs.un.org/en/A/RES/80/307" hidden>UN resolution</a>
+            </p>
           </section>
         </div>
 

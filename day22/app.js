@@ -1,6 +1,7 @@
 const projections = {
   3857: { name: "Web Mercator", caption: "Scale increases toward the poles." },
   54090: { name: "Peirce Quincuncial", caption: "A square world with the North Pole at its center." },
+  54035: { name: "Equal Earth", caption: "Preserves relative area, even where shapes stretch or flatten." },
   102299: { name: "Berghaus Star", caption: "Five lobes surround the Northern Hemisphere in Esri’s AAG variant." },
   54050: { name: "Fuller / Dymaxion", caption: "An unfolded icosahedron cuts across the oceans." },
 };
@@ -115,6 +116,7 @@ async function start() {
     fitWorld(comparison);
     byId("projection-wkid").textContent = `WKID ${wkid}`;
     byId("projection-caption").textContent = projections[wkid].caption;
+    byId("equal-earth-source").hidden = wkid !== 54035;
     comparison.view.container.setAttribute("aria-label", `${projections[wkid].name} world map`);
     renderBuffers();
   });

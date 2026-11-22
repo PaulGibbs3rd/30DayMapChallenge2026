@@ -235,7 +235,7 @@
       "date": "2026-11-22",
       "theme": "Projections",
       "title": "Earth Unfolded",
-      "description": "Compare a geodesic buffer in Web Mercator and three unusual world projections.",
+      "description": "Compare a geodesic buffer in Web Mercator, Equal Earth, and three unusual world projections.",
       "status": "complete",
       "tags": ["Web Mercator", "World projections", "Geodesic buffers"]
     },
