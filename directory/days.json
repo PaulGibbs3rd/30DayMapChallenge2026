@@ -234,9 +234,10 @@
       "day": 22,
       "date": "2026-11-22",
       "theme": "Projections",
-      "title": "Projections",
-      "description": "Explore how representing a globe on a flat surface changes shape, distance, direction, or perspective.",
-      "status": "planned"
+      "title": "Earth Unfolded",
+      "description": "Compare a geodesic buffer in Web Mercator and three unusual world projections.",
+      "status": "complete",
+      "tags": ["Web Mercator", "World projections", "Geodesic buffers"]
     },
     {
       "day": 23,

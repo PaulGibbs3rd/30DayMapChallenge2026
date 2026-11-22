@@ -3,25 +3,106 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Day 22 of Paul Gibbs's 30DayMapChallenge 2026: Projections. Planned map; explore the theme and project links.">
-  <meta name="theme-color" content="#f5f0e5">
-  <title>Day 22: Projections | 30DayMapChallenge 2026</title>
-  <link rel="stylesheet" href="../directory/placeholder.css">
+  <meta name="description" content="Compare the same geodesic buffer in Web Mercator and three unusual world projections.">
+  <meta name="theme-color" content="#f6f3eb">
+  <title>Earth Unfolded · Day 22</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="https://js.arcgis.com/5.2/esri/themes/light/main.css">
+  <link rel="stylesheet" href="style.css">
+  <script id="arcgis-cdn" type="module" src="https://js.arcgis.com/5.2/" async></script>
+  <script type="module" src="app.js"></script>
 </head>
-<body class="placeholder-page">
-  <main class="day-placeholder">
-    <header>
-      <p class="eyebrow">PAUL GIBBS · NOVEMBER 22, 2026</p>
-      <h1><span>Day 22</span> Projections</h1>
-      <p class="theme-description">Explore how a curved world becomes a flat map, comparing the choices and distortions that influence the shapes, sizes, and relationships we see.</p>
+<body>
+  <div class="site-shell">
+    <header class="masthead">
+      <a href="../directory/">← All challenge maps</a>
+      <span>30DayMapChallenge · 2026</span>
+      <a href="readme.md">Map notes ↗</a>
     </header>
-    <p class="status-badge">Planned · Map not implemented</p>
-    <p class="placeholder-note">This day's map is still to come. The theme is ready; the subject, data, and final output will be documented as the project takes shape.</p>
-    <nav class="placeholder-links" aria-label="Day 22 project links">
-      <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day22" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
-      <a href="readme.md">Project notes</a>
-      <a href="../directory/index.html">All days</a>
-    </nav>
-  </main>
+
+    <main>
+      <header class="intro">
+        <p class="eyebrow">NOVEMBER 22 <span> / </span> PROJECTIONS</p>
+        <h1>Earth <em>Unfolded</em></h1>
+        <p>Pick a point on either map. The same buffer can swell, skew, or split when the Earth is laid flat.</p>
+      </header>
+
+      <section class="comparison" aria-label="Projection comparison">
+        <div class="toolbar">
+          <fieldset class="places" id="places" disabled>
+            <legend>Buffer center</legend>
+            <div class="place-list">
+              <button type="button" data-place="reykjavik" aria-pressed="true">Reykjavík</button>
+              <button type="button" data-place="quito" aria-pressed="false">Quito</button>
+              <button type="button" data-place="pacific" aria-pressed="false">Pacific seam</button>
+            </div>
+          </fieldset>
+          <fieldset class="radius-control" id="radius-controls" disabled>
+            <legend><label for="radius">Radius</label></legend>
+            <div class="radius-row">
+              <input id="radius" type="range" min="250" max="1500" step="50" value="500" aria-valuetext="500 kilometers">
+              <output id="radius-value" for="radius">500 km</output>
+            </div>
+          </fieldset>
+          <form id="coordinate-form">
+            <fieldset id="coordinate-controls" disabled>
+              <legend>Custom center</legend>
+              <div class="coordinates-row">
+                <label><span aria-hidden="true">Lat</span><input id="latitude" aria-label="Latitude in degrees" type="number" required min="-89.9999" max="89.9999" step="any" value="64.079"></label>
+                <label><span aria-hidden="true">Lon</span><input id="longitude" aria-label="Longitude in degrees" type="number" required min="-180" max="180" step="any" value="-21.8827"></label>
+                <button type="submit" aria-label="Use custom coordinates">Set point</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="map-grid">
+          <section class="map-panel" aria-labelledby="baseline-title">
+            <header class="panel-header">
+              <div>
+                <p class="panel-category">BASELINE</p>
+                <h2 id="baseline-title">Web Mercator</h2>
+              </div>
+              <span class="wkid">WKID 3857</span>
+            </header>
+            <div id="baseline-map" class="map" aria-label="Web Mercator world map"></div>
+            <p class="panel-caption" id="baseline-caption">Scale increases toward the poles.</p>
+          </section>
+          <section class="map-panel" aria-labelledby="comparison-title">
+            <header class="panel-header">
+              <div>
+                <label class="panel-category" for="projection">COMPARE WITH</label>
+                <h2 id="comparison-title" class="sr-only">Comparison projection</h2>
+                <select id="projection" disabled>
+                  <option value="54090">Peirce Quincuncial</option>
+                  <option value="102299">Berghaus Star</option>
+                  <option value="54050">Fuller / Dymaxion</option>
+                </select>
+              </div>
+              <span class="wkid" id="projection-wkid">WKID 54090</span>
+            </header>
+            <div id="comparison-map" class="map" aria-label="Peirce Quincuncial world map"></div>
+            <p class="panel-caption" id="projection-caption">A square world with the North Pole at its center.</p>
+          </section>
+        </div>
+
+        <div class="map-key">
+          <span><i class="key-symbol selection" aria-hidden="true"></i> Selected buffer</span>
+          <span><i class="key-symbol reference" aria-hidden="true"></i> Equator reference</span>
+          <p id="map-status" role="status">Loading maps…</p>
+        </div>
+        <noscript><p class="map-notice">JavaScript is needed to compare projections.</p></noscript>
+        <p id="map-error" class="map-notice" role="alert" hidden></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Both rings use the same distance on Earth. Each map is framed to its world extent.</p>
+      <p><a href="https://www.naturalearthdata.com/downloads/110m-physical-vectors/110m-land/">Natural Earth</a> · <a href="https://developers.arcgis.com/javascript/">ArcGIS Maps SDK for JavaScript</a></p>
+    </footer>
+  </div>
 </body>
 </html>
