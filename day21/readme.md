@@ -1,34 +1,13 @@
-# Day 21: OpenStreetMap
+# Day 21: OpenStreetMap to print
 
-**Date:** November 21, 2026  
-**Status:** Planned — map not implemented.
+November 21, 2026
 
-## Theme
+[OpenStreetMap 3D](https://paulgibbs3rd.github.io/city-download-portal/1c071fcf8ff2448599b0547116e2de55) turns a selected neighborhood into a relief model. Select an area and confirm it, choose a rectangular or hexagonal footprint, and set the longest horizontal side and base thickness in millimeters. The default STL is 100 mm across its longest side, with a 3 mm minimum base. The slicer receives the model with its flat underside at Z=0. The portal shows the exported dimensions in its preview.
 
-Work with OpenStreetMap information or contribute to its coverage, exploring the details and possibilities of a collaboratively maintained map of the world.
+## Data and interpretation
 
-## Map idea
+Buildings are extruded from [OpenStreetMap footprints](https://www.openstreetmap.org/copyright) using mapped heights or estimates. ArcGIS World Elevation provides the terrain. OpenStreetMap building queries cover selections up to 1.5 km across, and dense selections may take longer to build. Use the checkbox to export terrain alone. GLB is also available for 3D editing.
 
-An OpenStreetMap-based question or a clearly scoped contribution remains to be selected. No finished map or selected dataset is claimed by this placeholder.
+**Use mapped roofs and building parts** adds gabled, hipped, pyramidal, and skillion roofs where OpenStreetMap has the tags. Individual building parts can contribute different heights and raised sections. Missing or unsupported roof shapes use a flat cap. Check raised sections and overhangs in the slicer before printing.
 
-## Data and attribution
-
-Record the source links, access dates, licenses, credits, and processing decisions when the subject and data are selected. Keep shareable data and supporting assets in this folder.
-
-## Implementation and output
-
-- Replace [the placeholder page](index.html) with the map or a presentation of the finished output.
-- Document the tools, rendering approach, and any setup requirements here as they are chosen.
-- [Source folder on GitHub](https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day21)
-- [GitHub Pages URL](https://paulgibbs3rd.github.io/30DayMapChallenge2026/day21/) — serves this placeholder until the map is implemented.
-- [All challenge days](../directory/index.html)
-
-## Validation
-
-Map-specific validation has not been run because the map is not implemented. Record the relevant data, interaction, accessibility, and layout checks when an output exists.
-
-## Reflection
-
-Pending completion: describe what worked, the decisions made, and what to try next.
-
-Theme reference: [Official 2026 challenge](https://30daymapchallenge.com/2026/).
+Day 21 embeds the dedicated OpenStreetMap scene from the [City Download Portal](https://github.com/PaulGibbs3rd/city-download-portal). [All challenge days](../directory/index.html).

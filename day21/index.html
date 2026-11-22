@@ -3,25 +3,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Day 21 of Paul Gibbs's 30DayMapChallenge 2026: OpenStreetMap. Planned map; explore the theme and project links.">
-  <meta name="theme-color" content="#f5f0e5">
+  <meta name="description" content="Turn OpenStreetMap buildings and terrain into a model sized for your 3D printer.">
+  <meta name="theme-color" content="#eff4ee">
   <title>Day 21: OpenStreetMap | 30DayMapChallenge 2026</title>
-  <link rel="stylesheet" href="../directory/placeholder.css">
+  <link rel="stylesheet" href="../day20/style.css">
 </head>
-<body class="placeholder-page">
-  <main class="day-placeholder">
-    <header>
-      <p class="eyebrow">PAUL GIBBS · NOVEMBER 21, 2026</p>
-      <h1><span>Day 21</span> OpenStreetMap</h1>
-      <p class="theme-description">Work with OpenStreetMap information or contribute to its coverage, exploring the details and possibilities of a collaboratively maintained map of the world.</p>
+<body>
+  <nav class="masthead" aria-label="Challenge navigation">
+    <a href="../directory/">← All maps</a>
+    <span>Day 21 · November 21, 2026</span>
+    <a href="readme.md">Project notes</a>
+  </nav>
+  <main>
+    <header class="intro">
+      <div>
+        <h1>OpenStreetMap to print</h1>
+        <p>Draw an area in OpenStreetMap 3D. Set the longest side and base thickness in millimeters, then preview the STL you’ll send to your slicer.</p>
+      </div>
+      <a class="launch" href="https://paulgibbs3rd.github.io/city-download-portal/1c071fcf8ff2448599b0547116e2de55">Open the full scene</a>
     </header>
-    <p class="status-badge">Planned · Map not implemented</p>
-    <p class="placeholder-note">This day's map is still to come. The theme is ready; the subject, data, and final output will be documented as the project takes shape.</p>
-    <nav class="placeholder-links" aria-label="Day 21 project links">
-      <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day21" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
-      <a href="readme.md">Project notes</a>
-      <a href="../directory/index.html">All days</a>
-    </nav>
+    <iframe class="portal" src="https://paulgibbs3rd.github.io/city-download-portal/1c071fcf8ff2448599b0547116e2de55" title="OpenStreetMap 3D print exporter"></iframe>
+    <section class="intro" aria-labelledby="tile-heading">
+      <div>
+        <h2 id="tile-heading">Making a city tile</h2>
+        <p>For Day 21, I used OpenStreetMap to turn a few blocks of Seattle into a 3D-printable city tile. The terrain gives the tile its relief. Building heights, roof shapes, and parts add detail where contributors have mapped them.</p>
+        <p>Choose a rectangle or hexagon, set the size in millimeters, and preview the STL before importing it into your slicer. I tested a 90 mm terrain tile with a 4 mm flat base, plus a downtown selection with 410 building features in the source area.</p>
+      </div>
+    </section>
+    <footer>
+      <p>Building footprints © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>. Terrain from ArcGIS World Elevation.</p>
+      <a href="https://github.com/PaulGibbs3rd/city-download-portal">Portal source on GitHub</a>
+    </footer>
   </main>
 </body>
 </html>

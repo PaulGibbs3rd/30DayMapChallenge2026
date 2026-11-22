@@ -225,9 +225,10 @@
       "day": 21,
       "date": "2026-11-21",
       "theme": "OpenStreetMap",
-      "title": "OpenStreetMap",
-      "description": "Build from OpenStreetMap data or contribute to the shared geographic record through mapping.",
-      "status": "planned"
+      "title": "OpenStreetMap to Print",
+      "description": "Turn OpenStreetMap buildings and terrain into a 3D print with a custom size and flat base.",
+      "status": "complete",
+      "tags": ["OpenStreetMap", "3D printing", "STL", "Terrain"]
     },
     {
       "day": 22,
