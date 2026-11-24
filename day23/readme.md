@@ -1,34 +1,29 @@
-# Day 23: Taste
+# The Coffee Atlas
 
-**Date:** November 23, 2026  
-**Status:** Planned — map not implemented.
+**Day 23 · Senses: Taste · November 23, 2026**
 
-## Theme
+Explore 15 coffees from 14 countries on an Equal Earth world map. Filter the tasting menu by flavor, open an origin’s tasting card, or add two coffees to a flight. The starter flight pairs two washed coffees with jasmine notes from Yirgacheffe and Boquete. [Official challenge](https://30daymapchallenge.com/2026/) · [Working spec](spec.md)
 
-Explore food, drink, or flavor through geography, considering where ingredients, traditions, preferences, and sensory experiences connect people with particular places.
+## Explore the atlas
 
-## Map idea
+- Choose a flavor family to filter both the menu and the map. Open a coffee from either surface. Click a numbered marker to zoom into the nearby origins it represents.
+- Each tasting card names the coffee, process, and sources for both its notes and position. The map shows approximate geographic anchors such as a town within a growing region. The Kannur point marks an area where Monsooned Malabar coffee is processed.
+- Choose **Try the jasmine pair** or build a two-coffee flight from the tasting cards. A flight keeps its coffees when the flavor filter changes.
 
-A taste-related subject and suitable geographic evidence remain to be chosen. No finished map or selected dataset is claimed by this placeholder.
+## Sources and methodology
 
-## Data and attribution
+The [local GeoJSON catalog](data/coffees.geojson) holds the tasting descriptors and location sources for each coffee. The descriptions come from the named producer, roaster, importer, or regional organization and describe that example. Variety, processing, roast, and brewing can change how a coffee tastes. The app uses broad flavor families for browsing and shows shared notes as text. [World Coffee Research Sensory Lexicon](https://worldcoffeeresearch.org/resources/sensory-lexicon) · [Specialty Coffee Association Coffee Value Assessment](https://sca.coffee/value-assessment)
 
-Record the source links, access dates, licenses, credits, and processing decisions when the subject and data are selected. Keep shareable data and supporting assets in this folder.
+The world outline uses Natural Earth 1:110 million land geometry. Location references include GeoNames, Mapcarta, the municipality of Patrocínio, and World Coffee Research. The catalog identifies the reference behind each point. [Natural Earth](https://www.naturalearthdata.com/downloads/110m-physical-vectors/110m-land/) · [Public domain terms](https://www.naturalearthdata.com/about/terms-of-use/) · [GeoNames attribution](https://www.geonames.org/about.html)
 
-## Implementation and output
+## ArcGIS build
 
-- Replace [the placeholder page](index.html) with the map or a presentation of the finished output.
-- Document the tools, rendering approach, and any setup requirements here as they are chosen.
-- [Source folder on GitHub](https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day23)
-- [GitHub Pages URL](https://paulgibbs3rd.github.io/30DayMapChallenge2026/day23/) — serves this placeholder until the map is implemented.
-- [All challenge days](../directory/index.html)
+Generated the [CDN starter](starter/index.html) from `day23/` with `npx -y @arcgis/create --name starter --template cdn`. The CLI reported `1.0.0-0`. The generated starter and atlas load ArcGIS Maps SDK for JavaScript `5.2` from the CDN. The atlas uses a custom map with local layers, the ArcGIS map and zoom components, and Calcite design tokens. Visitors can use it anonymously. The menu and flight remain available if the ArcGIS CDN fails to load. [Esri setup and CLI](https://developers.arcgis.com/javascript/latest/get-started/)
 
-## Validation
+The build used the Esri requirements, authentication, ArcGIS Maps SDK for JavaScript, and Calcite skills. The Esri Developer Documentation MCP supplied the SDK setup guidance, map and view references, client-side projection example, and Calcite theming guidance. [Client-side projection](https://developers.arcgis.com/javascript/latest/sample-code/client-projection/) · [ArcGIS map component](https://developers.arcgis.com/javascript/latest/references/map-components/components/arcgis-map/) · [Calcite colors and theming](https://developers.arcgis.com/calcite-design-system/foundations/colors/)
 
-Map-specific validation has not been run because the map is not implemented. Record the relevant data, interaction, accessibility, and layout checks when an output exists.
+## Run locally
 
-## Reflection
+Run `npm run dev` from the repository root and open `/30DayMapChallenge2026/day23/`. Run `npm run check` to validate the catalog, flavor and flight examples, and packaged site.
 
-Pending completion: describe what worked, the decisions made, and what to try next.
-
-Theme reference: [Official 2026 challenge](https://30daymapchallenge.com/2026/).
+[Open the map](index.html) · [All challenge days](../directory/)

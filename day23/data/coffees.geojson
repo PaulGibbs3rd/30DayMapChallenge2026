@@ -1,0 +1,325 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "kona",
+      "geometry": {"type":"Point","coordinates":[-155.8431,19.1822]},
+      "properties": {
+        "region": "Kona, Hawaiʻi",
+        "country": "United States",
+        "coffee": "Aloha Star 100% Kona · Medium roast",
+        "process": "Washed",
+        "species": "Arabica",
+        "notes": ["Dried cherry","Green grape","Caramel","Brown sugar","Anise"],
+        "flavors": ["other-fruit","caramel","spice"],
+        "acidity": "Gentle brightness",
+        "body": "Smooth body",
+        "sourceName": "Aloha Star Coffee",
+        "sourceUrl": "https://www.alohastarcoffee.com/shop/p/private-reserve-100-kona-washed-medium-roast",
+        "locationType": "Growing area",
+        "locationNote": "Honomalino anchors the growing area in South Kona on Hawaiʻi Island.",
+        "locationUrl": "https://mapcarta.com/24058138",
+        "accessed": "2026-11-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "huehuetenango",
+      "geometry": {"type":"Point","coordinates":[-91.47001,15.32097]},
+      "properties": {
+        "region": "Huehuetenango",
+        "country": "Guatemala",
+        "coffee": "Regional selection",
+        "process": "Washed",
+        "species": "Arabica",
+        "notes": ["Orange","Milk chocolate","Biscuit"],
+        "flavors": ["citrus","chocolate"],
+        "sourceName": "InterAmerican Coffee",
+        "sourceUrl": "https://interamericancoffee.de/wp-content/uploads/2024/08/Factsheet_GUA_Huehuetenango-Regional.pdf",
+        "locationType": "Growing region",
+        "locationNote": "Huehuetenango city anchors the regional selection.",
+        "locationUrl": "https://www.geonames.org/3595416",
+        "accessed": "2026-11-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "tarrazu",
+      "geometry": {"type":"Point","coordinates":[-84.02026,9.6601]},
+      "properties": {
+        "region": "Tarrazú",
+        "country": "Costa Rica",
+        "coffee": "Kwiso Coffee",
+        "process": "Honey",
+        "species": "Arabica",
+        "notes": ["Chocolate","Pronounced sweetness"],
+        "flavors": ["chocolate"],
+        "sourceName": "Kwiso Coffee",
+        "sourceUrl": "https://kwiso-coffee.com/finca-y-procesos",
+        "locationType": "Growing area",
+        "locationNote": "San Marcos de Tarrazú anchors the growing area.",
+        "locationUrl": "https://www.geonames.org/3621762/san-marcos.html",
+        "accessed": "2026-11-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "boquete",
+      "geometry": {"type":"Point","coordinates":[-82.44472,8.77015]},
+      "properties": {
+        "region": "Boquete",
+        "country": "Panama",
+        "coffee": "Hacienda La Esmeralda",
+        "process": "Washed",
+        "species": "Arabica",
+        "variety": "Geisha",
+        "notes": ["Jasmine","Meyer lemon","White peach"],
+        "flavors": ["floral","citrus","other-fruit"],
+        "sourceName": "La Cabra",
+        "sourceUrl": "https://lacabra.com/products/esmeralda",
+        "locationType": "Growing area",
+        "locationNote": "Bajo Boquete anchors the growing area.",
+        "locationUrl": "https://www.geonames.org/advanced-search.html?country=PA&q=Panamaa&startRow=2550",
+        "accessed": "2026-11-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "huila",
+      "geometry": {"type":"Point","coordinates":[-76.05071,1.85371]},
+      "properties": {
+        "region": "Huila",
+        "country": "Colombia",
+        "coffee": "Regional selection",
+        "process": "Washed",
+        "species": "Arabica",
+        "variety": "Castillo, Colombia",
+        "notes": ["Fruit","Caramel"],
+        "flavors": ["other-fruit","caramel"],
+        "acidity": "Bright acidity",
+        "body": "Medium body",
+        "sourceName": "InterAmerican Coffee",
+        "sourceUrl": "https://interamericancoffee.de/wp-content/uploads/2024/08/FactSheet_COL_Huila_Regionals.pdf",
+        "locationType": "Growing region",
+        "locationNote": "Pitalito provides a regional reference in southern Huila.",
+        "locationUrl": "https://www.geonames.org/3672110/pitalito.html",
+        "accessed": "2026-11-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cerrado",
+      "geometry": {"type":"Point","coordinates":[-46.99278,-18.94389]},
+      "properties": {
+        "region": "Cerrado Mineiro",
+        "country": "Brazil",
+        "coffee": "Cerrado Mineiro trace lot",
+        "process": "Natural",
+        "species": "Arabica",
+        "variety": "Topázio MG 1190",
+        "notes": ["Milk chocolate","Caramel","Brown sugar","Honey"],
+        "flavors": ["chocolate","caramel"],
+        "elevation": "1,036 m",
+        "acidity": "Citrus acidity",
+        "body": "Creamy body",
+        "sourceName": "Cerrado Mineiro",
+        "sourceUrl": "https://intranet.cerradomineiro.org/trace/index.php/trace/verde/cod/7898328781777393438",
+        "locationType": "Growing region",
+        "locationNote": "Patrocínio anchors the Cerrado Mineiro growing region.",
+        "locationUrl": "https://pmp.patrocinio.mg.gov.br/portal/informacoes-sobre-o-municipio/",
+        "accessed": "2026-11-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "yirgacheffe",
+      "geometry": {"type":"Point","coordinates":[38.2,6.16667]},
+      "properties": {
+        "region": "Yirgacheffe",
+        "country": "Ethiopia",
+        "coffee": "Gersay Beyou Grade 1",
+        "process": "Washed",
+        "species": "Arabica",
+        "variety": "74165",
+        "notes": ["Jasmine","Raisin","Brown sugar"],
+        "flavors": ["floral","other-fruit","caramel"],
+        "elevation": "1,914 m",
+        "sourceName": "Mercanta",
+        "sourceUrl": "https://coffeehunter.com/coffee/gersay-beyou-yirgacheffe-grade-1/",
+        "locationType": "Growing area",
+        "locationNote": "Yirgacheffe town anchors the wider Gersay growing area.",
+        "locationUrl": "https://www.geonames.org/advanced-search.html?country=ET&q=&startRow=250",
+        "accessed": "2026-11-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sidama",
+      "geometry": {"type":"Point","coordinates":[38.448,6.718]},
+      "properties": {
+        "region": "Sidama",
+        "country": "Ethiopia",
+        "coffee": "Kontema Grade 1",
+        "process": "Natural",
+        "species": "Arabica",
+        "notes": ["Blueberry","Strawberry","Milk chocolate","Spice"],
+        "flavors": ["berry","chocolate","spice"],
+        "sourceName": "Mercanta",
+        "sourceUrl": "https://coffeehunter.com/coffee/sidama-kontema-g1-3/",
+        "locationType": "Growing region",
+        "locationNote": "The point represents the Sidama region.",
+        "locationUrl": "https://www.geonames.org/search.html?country=ET&q=Etioopia&startRow=50",
+        "accessed": "2026-11-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nyeri",
+      "geometry": {"type":"Point","coordinates":[37.1544,-0.5029]},
+      "properties": {
+        "region": "Nyeri",
+        "country": "Kenya",
+        "coffee": "Gichathaini AA",
+        "process": "Washed",
+        "species": "Arabica",
+        "notes": ["Blackcurrant","Blood orange","Grapefruit","Caramel"],
+        "flavors": ["berry","citrus","caramel"],
+        "elevation": "1,600–1,900 m",
+        "sourceName": "Terra Coffee Roasters",
+        "sourceUrl": "https://terracoffeeroasters.jp/en/blogs/origin/kenya-gichathaini-aa-washed",
+        "locationType": "Mill area",
+        "locationNote": "The Gikanda cooperative nursery provides an area reference for the Gichathaini mill.",
+        "locationUrl": "https://cdn2.assets-servd.host/worldcoffee-research/production/documents/Baseline-Assessment-of-The-Coffee-Nursery-System-in-Kenya.pdf",
+        "accessed": "2026-11-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nyamasheke",
+      "geometry": {"type":"Point","coordinates":[29.14791,-2.36154]},
+      "properties": {
+        "region": "Nyamasheke",
+        "country": "Rwanda",
+        "coffee": "Rwamatamu Hirwa peaberry",
+        "process": "Washed",
+        "species": "Arabica",
+        "notes": ["Orange","Sweet chocolate","Floral notes"],
+        "flavors": ["citrus","chocolate","floral"],
+        "sourceName": "Atomic Coffee Roasters",
+        "sourceUrl": "https://atomicroastery.com/products/rwanda-nyamasheke",
+        "locationType": "Growing region",
+        "locationNote": "The point represents the Nyamasheke district.",
+        "locationUrl": "https://www.geonames.org/advanced-search.html?country=RW&q=&startRow=50",
+        "accessed": "2026-11-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haraz",
+      "geometry": {"type":"Point","coordinates":[43.74156,15.07422]},
+      "properties": {
+        "region": "East Haraz",
+        "country": "Yemen",
+        "coffee": "Haraz Coffee microlot",
+        "process": "Anaerobic",
+        "species": "Arabica",
+        "variety": "Dawairi, Ja’adi",
+        "notes": ["Honey","Dark chocolate","Berry","Orange"],
+        "flavors": ["chocolate","berry","citrus"],
+        "elevation": "2,300 m",
+        "sourceName": "Haraz Coffee",
+        "sourceUrl": "https://haraz-coffee.com/en/products/",
+        "locationType": "Growing region",
+        "locationNote": "Manākhah provides a reference point in the Haraz highlands.",
+        "locationUrl": "https://www.geonames.org/73091/manakhah.html",
+        "accessed": "2026-11-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "kannur",
+      "geometry": {"type":"Point","coordinates":[75.3738,11.8764]},
+      "properties": {
+        "region": "Kannur",
+        "country": "India",
+        "coffee": "Monsooned Malabar Arabica",
+        "process": "Monsooned",
+        "species": "Arabica",
+        "notes": ["Earthy","Nuts","Spice"],
+        "flavors": ["spice","chocolate"],
+        "acidity": "Mild acidity",
+        "body": "Full body",
+        "sourceName": "Invest India",
+        "sourceUrl": "https://static.investindia.gov.in/s3fs-public/2021-11/ODOP%20PAR.pdf",
+        "locationType": "Processing location",
+        "locationNote": "Kannur anchors the Malabar processing example.",
+        "locationUrl": "https://mapcarta.com/Kannur",
+        "accessed": "2026-11-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gayo",
+      "geometry": {"type":"Point","coordinates":[96.8467,4.6212]},
+      "properties": {
+        "region": "Gayo Highlands",
+        "country": "Indonesia",
+        "coffee": "Ratu Ketiara",
+        "process": "Wet-hulled",
+        "species": "Arabica",
+        "notes": ["Baking spice","Cacao","Lemongrass","Honey"],
+        "flavors": ["spice","chocolate"],
+        "sourceName": "Royal Coffee",
+        "sourceUrl": "https://cdn.royalcoffee.com/wp-content/uploads/2023/02/17074644/Crown-Jewel-Sumatra-FTO-Aceh-Ratu-Ketiara-Gayo-Wet-Hulled-CJO1518.pdf",
+        "locationType": "Growing region",
+        "locationNote": "Takengon anchors the Gayo Highlands in Aceh, Sumatra.",
+        "locationUrl": "https://www.geonames.org/1213593",
+        "accessed": "2026-11-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "daklak",
+      "geometry": {"type":"Point","coordinates":[108.3169,13.111]},
+      "properties": {
+        "region": "Đắk Lắk",
+        "country": "Vietnam",
+        "coffee": "Ea Tân Fine Robusta",
+        "process": "Anaerobic natural",
+        "species": "Robusta",
+        "variety": "Robusta Sẻ",
+        "notes": ["Passion fruit","Jackfruit","Pink guava"],
+        "flavors": ["other-fruit"],
+        "elevation": "800–850 m",
+        "sourceName": "RAAW Coffee",
+        "sourceUrl": "https://raaw.coffee/dak-lak-fine-robusta",
+        "locationType": "Growing area",
+        "locationNote": "Ea Tân commune anchors the cooperative’s growing area.",
+        "locationUrl": "https://mapcarta.com/29795654",
+        "accessed": "2026-11-23"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "baroida",
+      "geometry": {"type":"Point","coordinates":[145.89609,-6.34234]},
+      "properties": {
+        "region": "Eastern Highlands",
+        "country": "Papua New Guinea",
+        "coffee": "Colbran family · Baroida Estate",
+        "process": "Washed",
+        "species": "Arabica",
+        "notes": ["Dried fig","Lime","Cola","Sugarcane"],
+        "flavors": ["other-fruit","citrus"],
+        "elevation": "1,700–1,850 m",
+        "sourceName": "Genovese Coffee",
+        "sourceUrl": "https://genovese.com.au/product/papua-new-guinea-the-colbran-family-washed/",
+        "locationType": "Growing area",
+        "locationNote": "Aiyura provides a reference near the Baroida growing area.",
+        "locationUrl": "https://www.geonames.org/advanced-search.html?country=PG&featureClass=P&q=&startRow=150",
+        "accessed": "2026-11-23"
+      }
+    }
+  ]
+}

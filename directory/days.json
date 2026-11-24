@@ -243,9 +243,10 @@
       "day": 23,
       "date": "2026-11-23",
       "theme": "Senses: Taste",
-      "title": "Taste",
-      "description": "Explore food, drink, ingredients, or the places and experiences connected with taste.",
-      "status": "planned"
+      "title": "The Coffee Atlas",
+      "description": "Explore 15 coffees around the world, filter by tasting notes, and compare two origins in a café-style tasting flight.",
+      "status": "complete",
+      "tags": ["Coffee", "Flavor profiles", "Equal Earth", "ArcGIS JavaScript"]
     },
     {
       "day": 24,

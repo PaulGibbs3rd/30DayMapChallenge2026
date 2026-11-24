@@ -3,25 +3,85 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Day 23 of Paul Gibbs's 30DayMapChallenge 2026: Taste. Planned map; explore the theme and project links.">
-  <meta name="theme-color" content="#f5f0e5">
-  <title>Day 23: Taste | 30DayMapChallenge 2026</title>
-  <link rel="stylesheet" href="../directory/placeholder.css">
+  <meta name="description" content="Explore the flavor profiles of 15 coffees on a world map and compare two origins in a café-style tasting flight.">
+  <meta name="theme-color" content="#2b1b14">
+  <title>The Coffee Atlas · Day 23</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,550;0,9..144,650;1,9..144,400&amp;display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
 </head>
-<body class="placeholder-page">
-  <main class="day-placeholder">
-    <header>
-      <p class="eyebrow">PAUL GIBBS · NOVEMBER 23, 2026</p>
-      <h1><span>Day 23</span> Taste</h1>
-      <p class="theme-description">Explore food, drink, or flavor through geography, considering where ingredients, traditions, preferences, and sensory experiences connect people with particular places.</p>
+<body>
+  <header class="masthead">
+    <div class="masthead-content">
+      <a href="../directory/">← All challenge maps</a>
+      <span><span class="bean masthead-bean" aria-hidden="true"></span> Day 23 · Senses: Taste</span>
+      <a href="readme.md">Map notes <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main class="page">
+    <header class="intro">
+      <div>
+        <h1>The Coffee <em>Atlas</em></h1>
+        <p>A café menu for the world. Find a flavor you like and see where it was grown.</p>
+      </div>
+      <a class="intro-link" href="#flight">Tasting flight <span aria-hidden="true">↘</span></a>
     </header>
-    <p class="status-badge">Planned · Map not implemented</p>
-    <p class="placeholder-note">This day's map is still to come. The theme is ready; the subject, data, and final output will be documented as the project takes shape.</p>
-    <nav class="placeholder-links" aria-label="Day 23 project links">
-      <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day23" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
-      <a href="readme.md">Project notes</a>
-      <a href="../directory/index.html">All days</a>
-    </nav>
+
+    <section aria-label="Explore coffees">
+      <div class="filter-bar">
+        <h2 id="filter-heading">Browse by flavor</h2>
+        <div id="filters" class="filters" role="group" aria-labelledby="filter-heading"></div>
+      </div>
+
+      <div class="atlas-layout">
+        <section class="map-card" aria-label="World map of coffee origins">
+          <div class="map-header">
+            <h2>Where coffee grows</h2>
+            <button type="button" id="reset-map" class="map-reset" disabled>World view</button>
+          </div>
+          <div class="map-stage" id="map-stage" data-state="loading">
+            <div id="map-mount" class="map-mount"></div>
+            <div id="map-pins" class="map-pins" aria-label="Mapped coffees"></div>
+            <p id="map-status" class="map-status" role="status">Loading the world map…</p>
+          </div>
+          <div class="map-footer">
+            <span><span class="bean legend-bean" aria-hidden="true"></span> Approximate origins</span>
+            <span>Equal Earth · Natural Earth</span>
+          </div>
+        </section>
+
+        <section class="menu-card" aria-labelledby="menu-heading">
+          <header class="menu-header">
+            <h2 id="menu-heading">Tasting menu</h2>
+            <p id="menu-count" role="status"></p>
+          </header>
+          <div id="menu" class="menu-body" aria-busy="true">
+            <p class="menu-message">Loading coffee profiles…</p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="flight" class="flight" aria-labelledby="flight-heading">
+      <header class="flight-header">
+        <div>
+          <h2 id="flight-heading" tabindex="-1">Tasting flight</h2>
+          <p>Compare the tasting notes and processes of two coffees.</p>
+        </div>
+        <button type="button" class="flight-preset" id="starting-flight" disabled>Try the jasmine pair <span aria-hidden="true">↗</span></button>
+      </header>
+      <p class="sr-only" role="status" id="flight-status"></p>
+      <div id="flight-content" class="flight-content"></div>
+    </section>
+
+    <footer class="page-footer">
+      <p>Each profile describes one published coffee example. Variety, processing, roast, and brewing can change the cup.</p>
+      <a href="readme.md">About the data <span aria-hidden="true">↗</span></a>
+    </footer>
   </main>
 </body>
 </html>
