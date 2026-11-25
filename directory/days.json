@@ -252,9 +252,10 @@
       "day": 24,
       "date": "2026-11-24",
       "theme": "Network",
-      "title": "Network",
-      "description": "Map the connections that link places, people, routes, or other parts of a system.",
-      "status": "planned"
+      "title": "Washington State Ferries",
+      "description": "Explore 19 Washington ferry terminals in a nautical chart and a transit-style diagram. Pick a dock to see where one sailing can take you.",
+      "status": "complete",
+      "tags": ["Ferries", "Salish Sea", "GTFS", "ArcGIS JavaScript"]
     },
     {
       "day": 25,
