@@ -1,34 +1,30 @@
-# Day 25: Is this a map?
+# Day 25 — Is this a map?
 
-**Date:** November 25, 2026  
-**Status:** Planned — map not implemented.
+November 25, 2026
 
-## Theme
+Two 3D-printed relief maps show different reasons a city rises. In Seattle's Queen Anne neighborhood, streets and buildings climb with the hill. On the southern tip of Manhattan, the buildings supply most of the height. Both prints make the shape of the city something you can feel. [Open the Day 25 exhibit](index.html)
 
-Stretch cartographic conventions by mixing spatial information with art or unusual visual forms, asking what makes a representation recognizable as a map.
+## Models
 
-## Map idea
+| Print | Model dimensions | Original export |
+| --- | --- | --- |
+| Queen Anne, Seattle | 100.0 × 86.6 × 15.1 mm | [STL, 26.8 MB](assets/queen-anne.stl) |
+| Lower Manhattan, New York City | 100.0 × 86.6 × 34.9 mm | [STL, 35.7 MB](assets/lower-manhattan.stl) |
 
-The experiment and the geographic information it should communicate remain to be chosen. No finished map or selected dataset is claimed by this placeholder.
+Dimensions are the bounding boxes of the exported meshes, given as X × Y × Z. The files are in millimeters with Z up and the flat base at Z = 0. Open either STL in a slicer using millimeters to keep the original print size.
 
-## Data and attribution
+## 3D viewer
 
-Record the source links, access dates, licenses, credits, and processing decisions when the subject and data are selected. Keep shareable data and supporting assets in this folder.
+Use **View in 3D** under either photograph to open that model. Drag to orbit and use the scroll wheel or a two-finger pinch to zoom. With the canvas focused, the arrow keys rotate, **+** and **−** zoom, and **Home** resets the camera. **Top view** gives a straight-down view of the footprint.
 
-## Implementation and output
+The viewer loads compressed copies of the STL geometry on demand. Each preview preserves the original vertex positions, triangle order, and relative dimensions. It runs locally with WebGL 2 in a modern browser. The bundled renderer uses Three.js. [Three.js license](vendor/three-license.txt)
 
-- Replace [the placeholder page](index.html) with the map or a presentation of the finished output.
-- Document the tools, rendering approach, and any setup requirements here as they are chosen.
-- [Source folder on GitHub](https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day25)
-- [GitHub Pages URL](https://paulgibbs3rd.github.io/30DayMapChallenge2026/day25/) — serves this placeholder until the map is implemented.
-- [All challenge days](../directory/index.html)
+To regenerate the preview assets, run `node day25/scripts/prepare-viewer.mjs` from the repository root with the City Download Portal checkout and its Node dependencies present under `day20/city-download-portal`.
 
-## Validation
+## From the portal to the printer
 
-Map-specific validation has not been run because the map is not implemented. Record the relevant data, interaction, accessibility, and layout checks when an output exists.
+The two prints use the hexagonal footprint introduced on [Day 20](../day20/readme.md) and the print-sized OpenStreetMap exporter documented on [Day 21](../day21/readme.md). The portal clips the terrain and buildings to the chosen footprint and exports them together on a flat base. [City Download Portal source](https://github.com/PaulGibbs3rd/city-download-portal)
 
-## Reflection
+The buildings are from OpenStreetMap and the terrain is from ArcGIS World Elevation. The original STL headers retain the OpenStreetMap credit. Paul Gibbs printed and photographed both models. [© OpenStreetMap contributors and data license](https://www.openstreetmap.org/copyright)
 
-Pending completion: describe what worked, the decisions made, and what to try next.
-
-Theme reference: [Official 2026 challenge](https://30daymapchallenge.com/2026/).
+[All challenge days](../directory/) · [Official 2026 challenge](https://30daymapchallenge.com/2026/)

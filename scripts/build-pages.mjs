@@ -8,7 +8,7 @@ const allowedExtensions = new Set([
   ".html", ".css", ".js", ".mjs", ".json", ".geojson", ".csv", ".tsv", ".md", ".txt",
   ".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg", ".ico", ".avif",
   ".woff", ".woff2", ".ttf", ".otf", ".wasm", ".pdf", ".mp3", ".ogg", ".wav",
-  ".mp4", ".webm", ".gpx", ".kml", ".kmz", ".tif", ".tiff", ".pmtiles", ".pbf"
+  ".mp4", ".webm", ".gpx", ".kml", ".kmz", ".tif", ".tiff", ".pmtiles", ".pbf", ".stl"
 ]);
 const ignoredDirectories = new Set(["dist", "node_modules", "scripts"]);
 const portalCheckout = resolve(root, "day20", "city-download-portal");

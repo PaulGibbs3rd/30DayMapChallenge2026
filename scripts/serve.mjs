@@ -14,7 +14,7 @@ const types = {
   ".json": "application/json", ".geojson": "application/geo+json", ".md": "text/plain; charset=utf-8",
   ".txt": "text/plain; charset=utf-8", ".svg": "image/svg+xml", ".png": "image/png",
   ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp", ".gif": "image/gif",
-  ".ico": "image/x-icon", ".pdf": "application/pdf", ".wasm": "application/wasm"
+  ".ico": "image/x-icon", ".pdf": "application/pdf", ".wasm": "application/wasm", ".stl": "model/stl"
 };
 http.createServer(async (request, response) => {
   try {

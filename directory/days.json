@@ -262,8 +262,9 @@
       "date": "2026-11-25",
       "theme": "Is this a map?",
       "title": "Is this a map?",
-      "description": "Test the edges of cartography with an experiment that blends geographic thinking, art, and visualization.",
-      "status": "planned"
+      "description": "Rotate and zoom 3D relief models of Queen Anne in Seattle and the southern tip of Manhattan. See the printed results and download the STL files.",
+      "status": "complete",
+      "tags": ["3D printing", "Seattle", "Lower Manhattan", "OpenStreetMap"]
     },
     {
       "day": 26,

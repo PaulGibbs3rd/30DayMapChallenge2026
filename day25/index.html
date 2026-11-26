@@ -3,25 +3,97 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Day 25 of Paul Gibbs's 30DayMapChallenge 2026: Is this a map?. Planned map; explore the theme and project links.">
-  <meta name="theme-color" content="#f5f0e5">
+  <meta name="description" content="Photographs and interactive 3D models of two relief prints, showing Queen Anne in Seattle and the southern tip of Manhattan.">
+  <meta name="theme-color" content="#f4f1eb">
   <title>Day 25: Is this a map? | 30DayMapChallenge 2026</title>
-  <link rel="stylesheet" href="../directory/placeholder.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="vendor/three.js"></script>
+  <script defer src="viewer.js"></script>
 </head>
-<body class="placeholder-page">
-  <main class="day-placeholder">
-    <header>
-      <p class="eyebrow">PAUL GIBBS · NOVEMBER 25, 2026</p>
-      <h1><span>Day 25</span> Is this a map?</h1>
-      <p class="theme-description">Stretch cartographic conventions by mixing spatial information with art or unusual visual forms, asking what makes a representation recognizable as a map.</p>
+<body>
+  <nav class="masthead" aria-label="Challenge navigation">
+    <a href="../directory/">← All maps</a>
+    <a href="readme.md">Project notes ↗</a>
+  </nav>
+
+  <main>
+    <header class="intro">
+      <div>
+        <p class="eyebrow">Day 25 <span aria-hidden="true">/</span> <time datetime="2026-11-25">November 25, 2026</time></p>
+        <h1>Is this a map?</h1>
+      </div>
+      <div class="lede">
+        <p>I used the updated City Download Portal to 3D print two pieces of city geography. On one, the streets climb a hill. On the other, a skyline rises from the tip of an island.</p>
+        <a href="#model-viewer">Explore the 3D models ↓</a>
+      </div>
     </header>
-    <p class="status-badge">Planned · Map not implemented</p>
-    <p class="placeholder-note">This day's map is still to come. The theme is ready; the subject, data, and final output will be documented as the project takes shape.</p>
-    <nav class="placeholder-links" aria-label="Day 25 project links">
-      <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day25" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
-      <a href="readme.md">Project notes</a>
-      <a href="../directory/index.html">All days</a>
-    </nav>
+
+    <div class="gallery">
+      <figure>
+        <a class="photo" href="assets/queen-anne.png" aria-label="View the full-size Queen Anne photo">
+          <img src="assets/queen-anne.png" width="2880" height="2160" alt="White hexagonal print of Queen Anne with low buildings stepping uphill along a street grid.">
+        </a>
+        <figcaption>
+          <p class="eyebrow">Seattle, Washington</p>
+          <h2>Queen Anne</h2>
+          <p>Look along the streets to see how the whole neighborhood climbs with the terrain.</p>
+          <div class="model-links">
+            <a class="view-model" href="#model-viewer" data-view-model="queen-anne" aria-label="View Queen Anne in 3D">View in 3D <span aria-hidden="true">↓</span></a>
+            <a class="download" href="assets/queen-anne.stl" download aria-label="Download Queen Anne STL, 26.8 megabytes">Download STL <span>26.8 MB ↓</span></a>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <a class="photo" href="assets/lower-manhattan.png" aria-label="View the full-size Lower Manhattan photo">
+          <img src="assets/lower-manhattan.png" width="2160" height="2880" alt="White hexagonal print of the southern tip of Manhattan with tightly packed towers rising above the waterfront.">
+        </a>
+        <figcaption>
+          <p class="eyebrow">New York City</p>
+          <h2>Lower Manhattan</h2>
+          <p>Follow the waterfront around the southern tip and see how closely the towers are packed behind it.</p>
+          <div class="model-links">
+            <a class="view-model" href="#model-viewer" data-view-model="lower-manhattan" aria-label="View Lower Manhattan in 3D">View in 3D <span aria-hidden="true">↓</span></a>
+            <a class="download" href="assets/lower-manhattan.stl" download aria-label="Download Lower Manhattan STL, 35.7 megabytes">Download STL <span>35.7 MB ↓</span></a>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+
+    <section class="viewer" id="model-viewer" aria-labelledby="viewer-heading">
+      <h2 id="viewer-heading">Explore in 3D</h2>
+      <div class="viewer-toolbar">
+        <div class="model-options" role="group" aria-label="Choose a model">
+          <button type="button" data-model="queen-anne" data-model-src="assets/queen-anne-mesh.js" aria-pressed="true">Queen Anne</button>
+          <button type="button" data-model="lower-manhattan" data-model-src="assets/lower-manhattan-mesh.js" aria-pressed="false">Lower Manhattan</button>
+        </div>
+        <fieldset class="view-controls" disabled>
+          <legend class="visually-hidden">Camera controls</legend>
+          <button type="button" data-action="out" aria-label="Zoom out">−</button>
+          <button type="button" data-action="in" aria-label="Zoom in">+</button>
+          <button type="button" data-action="top">Top view</button>
+          <button type="button" data-action="reset">Reset view</button>
+        </fieldset>
+      </div>
+      <div class="viewport" data-state="idle">
+        <canvas tabindex="-1" role="application" aria-label="Interactive 3D model" aria-describedby="viewer-help" aria-hidden="true"></canvas>
+        <p class="viewer-status" role="status">Enable JavaScript to use the 3D viewer.</p>
+      </div>
+      <p id="viewer-help">Drag to rotate. Scroll or pinch to zoom. Use the arrow keys and + or − when the model is focused.</p>
+    </section>
+
+    <section class="afterword" aria-labelledby="relief-heading">
+      <h2 id="relief-heading">Reading the relief</h2>
+      <div>
+        <p>Both prints are 100 mm across at their widest. On Queen Anne, much of the rise comes from the ground itself. In Lower Manhattan, the towers supply most of the height. In a relief map, those differences are part of the surface you can trace with a finger.</p>
+        <a href="https://paulgibbs3rd.github.io/city-download-portal/">Open the City Download Portal ↗</a>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <p>Prints and photographs by Paul Gibbs</p>
+    <p>Building data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> · Terrain from ArcGIS World Elevation</p>
+  </footer>
 </body>
 </html>
