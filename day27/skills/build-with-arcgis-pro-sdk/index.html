@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#152d29">
+  <title>ArcGIS Pro SDK for .NET · Day 27</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <header class="masthead">
+    <nav class="wrap top" aria-label="Day 27 navigation">
+      <a href="../../index.html">← Day 27 skills</a>
+      <a href="SKILL.md">View Markdown source</a>
+    </nav>
+  </header>
+  <main class="wrap skill-copy">
+    <nav class="skill-nav" aria-label="Skill pages">
+      <a href="../build-with-arcpy/index.html">ArcPy</a>
+      <a href="index.html" aria-current="page">ArcGIS Pro SDK for .NET</a>
+      <a href="../build-with-arcgis-enterprise-sdk/index.html">ArcGIS Enterprise SDK</a>
+    </nav>
+    <article>
+<h1>Build with ArcGIS Pro SDK for .NET</h1>
+<p>Use this SDK to extend ArcGIS Pro or build a standalone CoreHost application with supported Pro Core APIs. Use ArcPy for Python map automation or a Python geoprocessing tool. Use ArcGIS Maps SDK for .NET when the app needs its own map or scene UI outside ArcGIS Pro.</p>
+<h2>Application requirements</h2>
+<p>Identify the Pro release and deployment environment, the user's entry point, and the datasets, portal services, or Pro capabilities the change depends on. Review existing <code>.sln</code>, <code>.csproj</code>, <code>Config.daml</code>, SDK references, and build profiles before changing them. Reuse the shared ArcGIS requirements skill if the choice of application or service remains unresolved.</p>
+<table>
+<thead>
+<tr>
+<th>Need</th>
+<th>SDK project type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add a command, map tool, dockpane, or editing workflow inside Pro</td>
+<td>Add-in</td>
+</tr>
+<tr>
+<td>Customize the Pro startup experience or application shell</td>
+<td>Managed configuration</td>
+</tr>
+<tr>
+<td>Expose a custom source as data Pro can use</td>
+<td>Plug-in data source</td>
+</tr>
+<tr>
+<td>Use supported Core geometry or geodatabase APIs in a standalone process</td>
+<td>CoreHost</td>
+</tr>
+</tbody>
+</table>
+<h2>Installation, licensing, and authentication</h2>
+<ul>
+<li>Align the SDK, .NET target, architecture, IDE, and Pro assembly references with the supported <strong>target Pro release</strong>. Verify the requirements in the official SDK guide and select the right SDK extension or template for the supported IDE. Preserve the existing project's compatible references and packaging pipeline.</li>
+<li>Use the target release's public assembly inventory. Add-ins reference <code>ArcGIS.Desktop.Framework.dll</code>, and the task determines which public Core and extension assemblies are also needed. For file-based Pro assembly references, preserve the SDK template's Copy Local setting of false. For add-ins or configurations already using <code>Esri.ArcGISPro.Extensions30</code>, use the matching release with <code>PackageReference</code> and avoid mixing it with duplicate file references.</li>
+<li>Start new work from the matching Esri project and item templates. Check the project’s <code>Config.daml</code> desktop version, stable IDs, component class names, and command placement. Use the official DAML ID reference for built-in Pro elements.</li>
+<li>Check the Pro license and extensions needed for the workflow separately from access to portal items or enterprise data. Prefer the documented host portal session when an in-Pro workflow calls protected resources. When the workflow adds a sign-in flow or uses new protected services, follow the project's access model and the shared ArcGIS authentication guidance.</li>
+<li>For CoreHost, verify the runtime installation, license, and supported platform for the target release. The manual console project pattern uses x64 and an <code>[STAThread]</code> entry point. Initialize <code>ArcGIS.Core.Hosting.Host</code> before constructing Core objects. <a href="https://github.com/Esri/arcgis-pro-sdk/wiki/ProConcepts-CoreHost">CoreHost setup</a></li>
+</ul>
+<h2>Patterns and guidelines</h2>
+<ul>
+<li>Use the API reference to identify calls that require the main CIM thread (MCT). Use <code>await QueuedTask.Run(...)</code> for those calls inside Pro. Keep UI updates on the WPF dispatcher and unrelated I/O off the MCT. Avoid synchronous blocking of either thread.</li>
+<li>Validate the active map, target layer, and selection at execution time. Use DAML conditions for UI availability where appropriate. Preserve the current selection and project state except where the requested workflow changes them.</li>
+<li>Apply the host’s edit workflow for map edits. Use <code>EditOperation</code> where supported and inspect success and errors before showing a success message. For CoreHost, follow the datastore’s transaction API. Dispose geodatabase resources at their proper scope.</li>
+<li>See <a href="references/workflows.html">Pro SDK implementation workflows</a> for DAML and WPF lifecycle, map tools, editing, asynchronous geoprocessing, and release artifacts.</li>
+</ul>
+<h2>How to query documentation</h2>
+<p>Use the <a href="https://doc.esri.com/en/arcgis-pro/latest/sdk/api-reference/topic1.html">ArcGIS Pro .NET API Reference</a> to verify the public assembly, exact member signature, threading annotation, and release requirements. Check the version shown at the top of the page. Use the <a href="https://github.com/Esri/arcgis-pro-sdk?tab=readme-ov-file#table-of-contents">Esri SDK repository table of contents</a> to find ProConcepts for design and lifecycle, ProGuides for setup and workflow, ProSnippets for API examples, and <a href="https://github.com/Esri/arcgis-pro-sdk-community-samples">community samples</a> for complete projects. Use <a href="https://github.com/Esri/arcgis-pro-sdk/tags">repository tags</a> and the <a href="https://github.com/Esri/arcgis-pro-sdk/wiki/ProGuide-Installation-and-Upgrade">installation and upgrade guide</a> to align examples with the target release.</p>
+<p>If the Esri developer MCP is available, search with <code>pro-sdk</code> and the exact API name, then verify the result against the target-release API reference. A standalone skill install does not configure the MCP server.</p>
+<h2>Validation process</h2>
+<ol>
+<li><strong>Build with the target toolchain.</strong> Restore and build with the supported SDK, .NET target, and configuration. Verify member availability and assembly packaging against the target API reference. Check DAML-to-class wiring and the expected output package or executable. A CoreHost compile does not establish that an add-in packages or loads.</li>
+<li><strong>Load in Pro or the CoreHost runner.</strong> For an add-in, install or debug the built package in the target Pro release, confirm Pro discovers the intended package in Add-In Manager and its command is available, and open a disposable project with representative data. For a managed configuration or plug-in data source, exercise the actual startup or Catalog entry point. For CoreHost, prove that <code>Host.Initialize()</code> succeeds in the intended runner and execute a minimal Core operation.</li>
+<li><strong>Exercise valid and invalid context.</strong> Run the command or tool with the intended map and selection. Check missing or unsupported layers, empty selections, and cancellation where available. Verify button or pane state, thread-sensitive behavior, and that errors are visible without leaving stale UI or unhandled exceptions.</li>
+<li><strong>Check side effects and access.</strong> Verify expected edits or outputs, failure behavior, and undo and redo when Pro supports them for that workflow. When a workflow uses protected resources, test the intended signed-in account and a caller without the required access. Test any registered package or signing policy relevant to distribution.</li>
+<li><strong>Record evidence.</strong> Report the SDK and Pro releases, configuration, artifact path, entry point tested, and pass, fail, or not run for build, load, and behavior. If the required Pro host or license is unavailable, report the specific limitation.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#152d29">
+  <title>ArcGIS Enterprise SDK · Day 27</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <header class="masthead">
+    <nav class="wrap top" aria-label="Day 27 navigation">
+      <a href="../../index.html">← Day 27 skills</a>
+      <a href="SKILL.md">View Markdown source</a>
+    </nav>
+  </header>
+  <main class="wrap skill-copy">
+    <nav class="skill-nav" aria-label="Skill pages">
+      <a href="../build-with-arcpy/index.html">ArcPy</a>
+      <a href="../build-with-arcgis-pro-sdk/index.html">ArcGIS Pro SDK for .NET</a>
+      <a href="index.html" aria-current="page">ArcGIS Enterprise SDK</a>
+    </nav>
+    <article>
+<h1>Build with ArcGIS Enterprise SDK</h1>
+<p>Use the Enterprise SDK when the task requires custom behavior running in ArcGIS Enterprise. Ordinary portal administration, standard REST queries, or an app consuming an existing service belongs with the appropriate REST or client SDK. A published geoprocessing workflow may fit ArcPy when it only needs geoprocessing tools.</p>
+<h2>Application requirements</h2>
+<p>Identify the exact Enterprise and ArcGIS Server release, deployment platform and site topology, target service type, and the operation or response contract. Determine whether the user needs source, a build artifact, or an authorized deployment. Confirm which clients use the service and what behavior must remain compatible when the extension is enabled, disabled, or updated.</p>
+<table>
+<thead>
+<tr>
+<th>Need</th>
+<th>Extension point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add an operation to an eligible map or image service</td>
+<td>Server object extension (SOE, Java or .NET where supported)</td>
+</tr>
+<tr>
+<td>Extend existing operations through an eligible service’s internal APIs</td>
+<td>Server object interceptor (SOI, Java or .NET where supported)</td>
+</tr>
+<tr>
+<td>Process requests or responses at the REST handler layer</td>
+<td>Java service interceptor, with server-side URL patterns and chain order</td>
+</tr>
+<tr>
+<td>Serve external records through feature service workflows</td>
+<td>Custom data feed, built with the SDK’s Node.js tooling</td>
+</tr>
+<tr>
+<td>Run a custom Java tool callable by authorized MCP clients</td>
+<td>ArcGIS Enterprise custom MCP tool</td>
+</tr>
+</tbody>
+</table>
+<h2>Installation and compatibility</h2>
+<ul>
+<li>Select the SDK release and extension-specific instructions from the <a href="https://developers.arcgis.com/enterprise-sdk/">Enterprise SDK landing page</a>. The SDK is available through My Esri with ArcGIS Enterprise. Check platform support separately for development, deployment, and the specific service capability. Verify support before carrying an extension from Windows or Linux to Kubernetes, or across single-machine and multi-machine deployments.</li>
+<li>For SOEs and SOIs, confirm the exact service was published through a supported workflow. Esri’s sample repository uses ArcGIS Pro-published map services, including supported capabilities of those services. Check hosted feature-service use separately under the REST service-interceptor workflow, including the target release's limits.</li>
+<li>For .NET SOEs and SOIs, check the supported Windows, Visual Studio, and .NET toolchain and use the SDK’s matching template. Verify that the target ArcGIS Server has .NET Extension Support when required.</li>
+<li>For Java SOEs, SOIs, and service interceptors, check the version-matched JDK, Maven, and SDK artifacts or archetypes. Enterprise custom MCP tool artifacts have their own release matrix. For custom data feeds, check the supported Node.js version and CLI independently.</li>
+<li>Confirm the service’s publisher, the administrator who can register or enable the extension, and the identity of the actual caller. Use the project’s established authentication flow and validate both service access and extension-specific authorization. Use the shared ArcGIS authentication skill when the workflow introduces new protected resources or sign-in behavior.</li>
+</ul>
+<h2>Patterns and guidelines</h2>
+<ul>
+<li>Start from the official template or closest release-matched sample. Keep the server adapter small and test domain logic outside the server where practical. Separate extension configuration from credentials. Validate request input, bound downstream work, and keep per-request data out of shared instance fields. Preserve the service’s normal authorization and avoid logging secrets or sensitive payloads.</li>
+<li>Use the appropriate <a href="references/extension-workflows.html">Enterprise SDK extension workflows</a> to choose a build command, verify the package, and distinguish uploading, registration, enablement, and activation. A successful build establishes none of the last three states.</li>
+<li>If deployment is in scope, capture baseline behavior and the current configuration on the intended staging site. Identify the version-specific disable or rollback mechanism and which services it could affect. A registration, update, or removal can activate behavior or restart dependent services.</li>
+</ul>
+<h2>How to query documentation</h2>
+<p>Use the <a href="https://developers.arcgis.com/enterprise-sdk/">Enterprise SDK</a> and its release selector for prerequisites, API reference, and supported service types. Use the <a href="https://github.com/Esri/arcgis-enterprise-sdk-resources">Esri Enterprise SDK resources repository</a> for sample projects and service fixtures. Pick the release branch or SDK-installed sample that matches the target. Confirm the selected sample's SDK dependency and README even when the repository links to a newer API guide. See <a href="references/extension-workflows.html">sample selection by extension type</a> for starting points.</p>
+<p>The Esri developer MCP has no dedicated Enterprise SDK focus. When available, use <code>developers</code> for discovery, then confirm the operation and toolchain in the version-specific SDK guide.</p>
+<h2>Validation process</h2>
+<ol>
+<li><strong>Compatibility and build.</strong> Record target release, platform, topology, service type, toolchain, sample revision, and artifact type. Check Maven, .NET, or Node dependencies against the target SDK. Run the relevant local tests and build from the supported template. Check the expected artifact, configuration, version, and required dependencies.</li>
+<li><strong>Behavior before deployment.</strong> Test normal and invalid inputs with a small known-answer fixture. For external dependencies, test timeout, unavailable data, and retry behavior. For interceptors, test the targeted operation and an unchanged pass-through path. Record what can be demonstrated with fixtures or mocks.</li>
+<li><strong>Deploy and exercise staging when authorized.</strong> Compare against a baseline recorded before the change. Verify deployment, registration, enablement or activation as applicable. Test from the intended client with an allowed and a denied caller. Confirm results, response schema, service logs, and relevant latency or concurrency behavior. For multiple server machines, verify consistent behavior across eligible instances when the topology supports it.</li>
+<li><strong>Recovery and release.</strong> Identify the supported disable or rollback steps, then verify baseline behavior after recovery on staging when the test permits it. Record the artifact and configuration used, observed results, and any unrun checks. Report packaging, staging activation, production deployment, and client verification separately.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

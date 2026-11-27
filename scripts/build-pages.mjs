@@ -12,6 +12,7 @@ const allowedExtensions = new Set([
 ]);
 const ignoredDirectories = new Set(["dist", "node_modules", "scripts"]);
 const portalCheckout = resolve(root, "day20", "city-download-portal");
+const day27SkillBundle = resolve(root, "day27", "arcgis-developer-skills.zip");
 const publishingSources = ["index.html", "README.md", "NOTICE.md", "directory", "docs", ...Array.from({ length: 30 }, (_, i) => "day" + (i + 1))];
 let count = 0;
 
@@ -62,7 +63,7 @@ async function copyWebFiles(source, destination) {
   const name = basename(source);
   if (source === resolve(root, "directory/template.html")) return;
   if (name.startsWith(".") || name === "package.json" || name === "package-lock.json") return;
-  if (!allowedExtensions.has(extname(name).toLowerCase())) return;
+  if (!allowedExtensions.has(extname(name).toLowerCase()) && source !== day27SkillBundle) return;
   await mkdir(resolve(destination, ".."), { recursive: true });
   await cp(source, destination);
   count++;

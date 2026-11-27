@@ -3,25 +3,70 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Day 27 of Paul Gibbs's 30DayMapChallenge 2026: New tool. Planned map; explore the theme and project links.">
-  <meta name="theme-color" content="#f5f0e5">
-  <title>Day 27: New tool | 30DayMapChallenge 2026</title>
-  <link rel="stylesheet" href="../directory/placeholder.css">
+  <meta name="description" content="A portable Agent Skills extension for Esri’s ArcGIS agentic developer toolkit, covering ArcPy, the ArcGIS Pro SDK for .NET, and the ArcGIS Enterprise SDK.">
+  <meta name="theme-color" content="#152d29">
+  <title>ArcGIS Agent Skills Extension · Day 27</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="placeholder-page">
-  <main class="day-placeholder">
-    <header>
-      <p class="eyebrow">PAUL GIBBS · NOVEMBER 27, 2026</p>
-      <h1><span>Day 27</span> New tool</h1>
-      <p class="theme-description">Try an unfamiliar tool in the mapping workflow, using a focused geographic question to learn its capabilities and document what it changes.</p>
-    </header>
-    <p class="status-badge">Planned · Map not implemented</p>
-    <p class="placeholder-note">This day's map is still to come. The theme is ready; the subject, data, and final output will be documented as the project takes shape.</p>
-    <nav class="placeholder-links" aria-label="Day 27 project links">
-      <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day27" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
-      <a href="readme.md">Project notes</a>
-      <a href="../directory/index.html">All days</a>
+<body>
+  <header class="masthead">
+    <nav class="wrap top" aria-label="Challenge navigation">
+      <a href="../directory/">← All challenge days</a>
+      <span>Paul Gibbs · November 27, 2026</span>
     </nav>
+    <div class="wrap intro">
+      <p class="eyebrow">Day 27 · New tool</p>
+      <h1>ArcGIS<br>agent skills</h1>
+      <p class="dek">An independent extension to Esri’s ArcGIS agentic developer toolkit, with skills for ArcPy, ArcGIS Pro SDK for .NET, and ArcGIS Enterprise SDK.</p>
+      <div class="actions">
+        <a class="primary" href="arcgis-developer-skills.zip" download>Download all three <span aria-hidden="true">↓</span></a>
+        <a href="#install">Setup instructions</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="catalog" aria-labelledby="skills">
+      <h2 id="skills">Choose a skill</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>ArcPy</h3>
+          <p>Build geoprocessing scripts and Python toolboxes, work with geodatabases, and automate ArcGIS Pro projects and layouts.</p>
+          <a href="skills/build-with-arcpy/index.html">View the ArcPy skill <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="card">
+          <h3>ArcGIS Pro SDK <span>for .NET</span></h3>
+          <p>Build and package add-ins, map tools, and CoreHost apps. Check the target Pro release, threading requirements, and editing behavior.</p>
+          <a href="skills/build-with-arcgis-pro-sdk/index.html">View the Pro SDK skill <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="card">
+          <h3>ArcGIS Enterprise SDK</h3>
+          <p>Choose an extension for the target server release, from SOEs and SOIs to service interceptors, custom data feeds, and MCP tools.</p>
+          <a href="skills/build-with-arcgis-enterprise-sdk/index.html">View the Enterprise SDK skill <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="install" id="install" aria-labelledby="install-title">
+      <h2 id="install-title">Add to your AI agent</h2>
+      <div>
+        <ol>
+          <li>Extract the ZIP and import the folders you want from <code>skills/</code> using your agent’s skill installer or documented skills directory.</li>
+          <li>Keep each folder’s <code>SKILL.md</code> and <code>references/</code> together. Add the folders alongside Esri’s existing toolkit skills.</li>
+          <li>Select the skill in your agent or ask for it by name, such as <code>build-with-arcpy</code>.</li>
+        </ol>
+        <p>For agents without built-in skill loading, provide the Markdown and its references as task context. Running ArcGIS workflows requires the appropriate software, licenses, and access. <a href="INSTALL.md">Toolkit and setup details</a></p>
+      </div>
+    </section>
   </main>
+
+  <footer class="wrap footer">
+    <p>An independent Day 27 extension to the <a href="https://developers.arcgis.com/ai/arcgis-agentic-developer-toolkit/">ArcGIS agentic developer toolkit</a>, using the open <a href="https://agentskills.io/specification">Agent Skills format</a>.</p>
+    <nav aria-label="Project links">
+      <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day27">Project on GitHub</a>
+      <a href="readme.md">Release notes</a>
+      <a href="LICENSE.txt">Apache 2.0 license</a>
+    </nav>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#152d29">
+  <title>Enterprise SDK extension workflows · Day 27</title>
+  <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+  <header class="masthead">
+    <nav class="wrap top" aria-label="Day 27 navigation">
+      <a href="../../../index.html">← Day 27 skills</a>
+      <a href="extension-workflows.md">View Markdown source</a>
+    </nav>
+  </header>
+  <main class="wrap skill-copy">
+    <nav class="skill-nav" aria-label="Skill pages">
+      <a href="../../build-with-arcpy/index.html">ArcPy</a>
+      <a href="../../build-with-arcgis-pro-sdk/index.html">ArcGIS Pro SDK for .NET</a>
+      <a href="../index.html">ArcGIS Enterprise SDK</a>
+    </nav>
+    <article>
+<h1>ArcGIS Enterprise SDK extension workflows</h1>
+<p>Use the section for the intended extension and select the same release as the target deployment in the official documentation. Check installation and deployment prerequisites separately.</p>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Typical artifact</th>
+<th>Test first</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Java or .NET SOE or SOI</td>
+<td><code>.soe</code></td>
+<td>Published service type, operation contract, native permissions</td>
+</tr>
+<tr>
+<td>Java service interceptor</td>
+<td><code>.interceptor</code></td>
+<td>URL scope, chain ordering, pass-through, and deployment topology</td>
+</tr>
+<tr>
+<td>Custom data feed</td>
+<td><code>.cdpk</code></td>
+<td>Provider schema, stable identifiers, query support, and upstream failures</td>
+</tr>
+<tr>
+<td>Enterprise custom MCP tool</td>
+<td><code>.mcp</code></td>
+<td>Validated input and output schema, caller eligibility, and retry behavior</td>
+</tr>
+</tbody>
+</table>
+<h2>Choose a release-matched sample</h2>
+<p>Start with Esri’s <a href="https://github.com/Esri/arcgis-enterprise-sdk-resources/tree/master/Samples">Enterprise SDK sample catalog</a>. Use the target release's sample branch when available, such as <a href="https://github.com/Esri/arcgis-enterprise-sdk-resources/tree/release-v11.5.0">11.5</a>, or the samples bundled with the target SDK. Verify the sample's project dependencies and required service capabilities before adapting or building it. Record the sample branch or commit in validation notes.</p>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Starting point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SOE or SOI</td>
+<td>Select the Java or .NET project and matching service fixture from the <a href="https://github.com/Esri/arcgis-enterprise-sdk-resources/tree/master/Samples">sample catalog</a>. For a Java REST SOE, the <a href="https://developers.arcgis.com/enterprise-sdk/guide/java/build-rest-soes-using-the-maven-command/">official Maven walkthrough</a> describes the archetype and package.</td>
+</tr>
+<tr>
+<td>Service interceptor</td>
+<td>The <a href="https://github.com/Esri/arcgis-enterprise-sdk-resources/tree/master/Samples/service-interceptors/AuditLogInterceptor">audit-log sample</a> illustrates the request lifecycle. Adapt URL scope and logged fields to the intended service and data policy.</td>
+</tr>
+<tr>
+<td>Custom data feed</td>
+<td>The <a href="https://github.com/Esri/arcgis-enterprise-sdk-resources/tree/master/Samples/custom-data-feeds/csv-full-fetch-read-only-points">read-only CSV point provider</a> provides a small starting point for testing field mapping and geometry.</td>
+</tr>
+<tr>
+<td>Custom MCP tool</td>
+<td>Use the archetype and examples linked from the <a href="https://developers.arcgis.com/enterprise-sdk/api-reference/mcp/">Enterprise MCP API reference</a>. Match its release and JDK to the server.</td>
+</tr>
+</tbody>
+</table>
+<h2>Server object extensions and interceptors</h2>
+<ul>
+<li>For Java, use the SDK's release-matched <code>install-maven-artifacts</code> script and choose the official project archetype. For a REST SOE the documented archetype is <code>rest-soe-archetype</code>. Build the generated project with the documented Maven lifecycle and check for the <code>.soe</code> in its output. For .NET, use the matching SDK Visual Studio template and build through the project’s packaging target.</li>
+<li>For an SOE, define the published operations, parameters, output shape, and errors. For an SOI, preserve the behavior and contract of unaffected operations, including the service’s existing authorization checks. Treat native geodatabase and server objects as scoped resources and follow the extension lifecycle for initialization and cleanup.</li>
+<li>Use the service fixture requested by the chosen sample. The catalog describes USA and vegetation map-image services using the installed <code>EnterpriseSDKSampleData.zip</code> where provided. For a disposable staging run, publish the matching fixture from ArcGIS Pro, capture the service capabilities and a representative response, then compare before and after enablement. Check the intended custom operation or interception, existing operations, denied access, and release-appropriate capabilities. ArcGIS Server Manager and Enterprise Manager have different workflows. Registration and per-service enablement are distinct. Inspect server logs if registration or activation fails, and verify impact before updating or removing a shared extension.</li>
+</ul>
+<p><a href="https://developers.arcgis.com/enterprise-sdk/guide/java/install-the-maven-artifacts/">Java SDK installation</a> · <a href="https://developers.arcgis.com/enterprise-sdk/guide/java/build-rest-soes-using-the-maven-command/">Java REST SOE build</a> · <a href="https://developers.arcgis.com/enterprise-sdk/guide/net/installation-net/">.NET SDK installation</a> · <a href="https://developers.arcgis.com/enterprise-sdk/guide/java/deploy-extensions-java/">Java deployment</a> · <a href="https://developers.arcgis.com/enterprise-sdk/guide/net/deploy-extensions-net/">.NET deployment</a> · <a href="https://developers.arcgis.com/enterprise-sdk/guide/net/enable-extensions-net/">Service enablement</a></p>
+<h2>Service interceptors</h2>
+<ul>
+<li>Use the Java interceptor template for the release. A service interceptor receives REST request and response data through its handler framework. For a workflow that needs service internals, check whether a service-level SOI is applicable.</li>
+<li>Limit URL patterns to the intended staging endpoints. Check chain order, propagation through the chain, and the response when a dependency is unavailable. Confirm how the release handles supported protocols and multiple machines. Registration can activate interception for matching requests.</li>
+<li>Verify at least one matching request and one nonmatching request, plus safe failure behavior with existing authorization. Compare latency with the baseline. Confirm the documented disable or removal procedure before deploying across a wider scope.</li>
+</ul>
+<p><a href="https://developers.arcgis.com/enterprise-sdk/guide/service-interceptors/">Service interceptor guide</a> · <a href="https://developers.arcgis.com/enterprise-sdk/guide/service-interceptors/create-deploy-service-interceptors/">Create and deploy service interceptors</a> · <a href="https://developers.arcgis.com/enterprise-sdk/guide/service-interceptors/faq/">Service interceptor FAQ</a></p>
+<h2>Custom data feeds</h2>
+<ul>
+<li>Use the supported Node.js and custom data feeds tooling. Generate or inspect the provider, its dependencies, and its <code>cdconfig.json</code>. Choose the documented service parameter format for the target release and keep upstream credentials in an appropriate configuration or secret store. Validate field names and types, stable feature IDs, geometry, and spatial reference with small upstream fixtures.</li>
+<li>Test in the local custom data app, including the query operations the exposed feature service claims to support. In the custom data app directory, use the documented <code>cdf export &lt;name&gt;</code> workflow when packaging a <code>.cdpk</code>. Registration and service creation require the relevant server privileges.</li>
+<li>In staging, query the published service with representative filters, ordering, and pagination where supported. For a read-only CSV point provider, prepare three rows with known coordinates and stable IDs, with two rows matching a chosen filter. Verify unfiltered and filtered results, field values, and point locations. Confirm attempted writes fail under the documented read-only configuration. Check a slow or unavailable upstream source and compare feature counts and identifiers with the fixture. Inspect the rollback instructions because unregistering a provider can affect its dependent services.</li>
+</ul>
+<p><a href="https://developers.arcgis.com/enterprise-sdk/guide/custom-data-feeds/">Custom data feeds guide</a> · <a href="https://developers.arcgis.com/enterprise-sdk/guide/custom-data-feeds/custom-data-cli-reference/">Custom Data CLI</a> · <a href="https://developers.arcgis.com/enterprise-sdk/guide/custom-data-feeds/build-a-custom-data-package-file/">Build a custom data package</a> · <a href="https://developers.arcgis.com/enterprise-sdk/guide/custom-data-feeds/register-a-custom-data-provider/">Register a provider</a></p>
+<h2>Enterprise custom MCP tools</h2>
+<ul>
+<li>Check the supported Enterprise release, deployment platform, JDK, and version of the MCP Maven artifacts. Use the official archetype to implement one <code>IMCPTool</code> per <code>.mcp</code> package. Define input and output schemas and keep per-call state in the execution context or local variables.</li>
+<li>Test the tool’s list and call behavior with appropriate caller permissions. Verify malformed input, concurrent calls, and any operation with side effects. Enable retries only for operations that can safely run again. Preserve the tool and catalog access model when updating an existing deployment.</li>
+<li>Package with the official Maven build, then verify discovery and invocation in the intended staging catalog after deployment. Distinguish deployment mechanics for the release from the client’s configuration of the connected server.</li>
+</ul>
+<p><a href="https://developers.arcgis.com/enterprise-sdk/api-reference/mcp/">Enterprise MCP API, lifecycle, and supported releases</a></p>
+    </article>
+  </main>
+</body>
+</html>

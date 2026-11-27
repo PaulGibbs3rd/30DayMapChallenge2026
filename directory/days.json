@@ -279,9 +279,11 @@
       "day": 27,
       "date": "2026-11-27",
       "theme": "New tool",
-      "title": "New tool",
-      "description": "Try an unfamiliar tool in the mapmaking process and document what the experiment teaches.",
-      "status": "planned"
+      "title": "ArcGIS Agent Skills Extension",
+      "pageLabel": "Open skills",
+      "description": "Extend Esri’s ArcGIS agentic developer toolkit with portable skills for ArcPy, the ArcGIS Pro SDK for .NET, and the ArcGIS Enterprise SDK.",
+      "status": "complete",
+      "tags": ["Agent Skills", "ArcPy", "ArcGIS Pro SDK", "ArcGIS Enterprise SDK"]
     },
     {
       "day": 28,

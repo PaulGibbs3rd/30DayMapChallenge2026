@@ -1,0 +1,12 @@
+ArcGIS Agent Skills Extension · 30DayMapChallenge 2026, Day 27
+Published by Paul Gibbs.
+
+These three instruction-only skills follow the structure of the Esri Developer
+Agent Skills repository for the ArcGIS agentic developer toolkit at commit 817bf39:
+https://github.com/Esri/esri-developer-agent-skills/tree/817bf39
+
+Day 27 adds ArcPy, ArcGIS Pro SDK for .NET, and ArcGIS Enterprise SDK guidance.
+The skills are distributed under the Apache License, Version 2.0.
+See LICENSE.txt for the license text.
+
+ArcGIS is an Esri product. This release is an independent challenge entry.

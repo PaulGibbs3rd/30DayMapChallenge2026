@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#152d29">
+  <title>Pro SDK implementation workflows · Day 27</title>
+  <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+  <header class="masthead">
+    <nav class="wrap top" aria-label="Day 27 navigation">
+      <a href="../../../index.html">← Day 27 skills</a>
+      <a href="workflows.md">View Markdown source</a>
+    </nav>
+  </header>
+  <main class="wrap skill-copy">
+    <nav class="skill-nav" aria-label="Skill pages">
+      <a href="../../build-with-arcpy/index.html">ArcPy</a>
+      <a href="../index.html">ArcGIS Pro SDK for .NET</a>
+      <a href="../../build-with-arcgis-enterprise-sdk/index.html">ArcGIS Enterprise SDK</a>
+    </nav>
+    <article>
+<h1>Pro SDK implementation workflows</h1>
+<p>Check method signatures, threading requirements, and sample compatibility against the project's Pro release.</p>
+<h2>Find the right API and example</h2>
+<table>
+<thead>
+<tr>
+<th>Workflow</th>
+<th>Start with</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add-in shell, DAML, or threading</td>
+<td><a href="https://github.com/Esri/arcgis-pro-sdk/wiki/ProConcepts-Framework">Framework concepts</a> and <a href="https://github.com/Esri/arcgis-pro-sdk/wiki/ProConcepts-Asynchronous-Programming-in-ArcGIS-Pro">asynchronous programming</a></td>
+</tr>
+<tr>
+<td>Selection, map content, or layout export</td>
+<td><a href="https://github.com/Esri/arcgis-pro-sdk/wiki/ProGuide-Feature-Selection">Feature selection guide</a>, <a href="https://github.com/Esri/arcgis-pro-sdk/wiki/ProConcepts-Map-Authoring">map authoring</a>, or <a href="https://github.com/Esri/arcgis-pro-sdk/wiki/ProConcepts-Layouts">layouts</a></td>
+</tr>
+<tr>
+<td>Geometry or geodatabase logic</td>
+<td><a href="https://github.com/Esri/arcgis-pro-sdk/wiki/ProConcepts-Geometry">Geometry concepts</a> and <a href="https://github.com/Esri/arcgis-pro-sdk/wiki/ProConcepts-Geodatabase">geodatabase concepts</a></td>
+</tr>
+</tbody>
+</table>
+<p>The <a href="https://doc.esri.com/en/arcgis-pro/latest/sdk/api-reference/topic1.html">API reference assembly inventory</a> lists Core assemblies under Pro's <code>bin</code> and public subsystems under <code>bin/Extensions</code>. Use documented public types. For an add-in, check <code>ArcGIS.Desktop.Framework.dll</code> first; add the documented extension references needed for the feature. CoreHost uses the supported Core APIs and host initialization. The <a href="https://github.com/Esri/arcgis-pro-sdk/wiki/ProGuide-ArcGIS-Pro-Extensions-NuGet">Extensions NuGet guide</a> explains the supported alternative to file-based references for add-ins and configurations.</p>
+<h2>Commands, dockpanes, and map tools</h2>
+<ul>
+<li>Start with Esri's matching item template. Verify <code>Config.daml</code> names the intended module, class, and UI location. Keep existing IDs when modifying a shipped command. Check the DAML reference before calling built-in commands.</li>
+<li>Put ArcGIS event subscriptions and cleanup in the appropriate module or pane lifecycle. For a dockpane, use WPF bindings and existing MVVM conventions. Keep UI updates on the dispatcher. For a map tool, use the tool lifecycle and appropriate drawing or sketch mode, and verify coordinate conversion against the active map.</li>
+<li>On the MCT, keep the operation focused on the Pro state it needs. Capture a stable dataset identifier, field value, or plain result while the object is valid. Avoid retaining live cursors or rows across UI interactions. Check stale context after asynchronous work if the map or selection may have changed.</li>
+</ul>
+<p><a href="https://github.com/Esri/arcgis-pro-sdk/wiki/ProConcepts-Framework">Pro Framework and threading</a> · <a href="https://github.com/Esri/arcgis-pro-sdk/wiki/ArcGIS-Pro-DAML-ID-Reference">DAML IDs</a></p>
+<h2>Mapping, editing, and geoprocessing</h2>
+<ul>
+<li>Work with the intended <code>MapView</code>, <code>Map</code>, layout, and layer type. Verify selectability, editability, schema, and spatial reference before processing features. Use the documented coordinate and geometry APIs for measurement or projection.</li>
+<li>Group edits that users should undo together in one supported <code>EditOperation</code>. Read its error message when execution fails and avoid reporting partial work as complete. For CoreHost datastore edits, check the datastore’s <code>Geodatabase.ApplyEdits</code> guidance and applicability before choosing a transaction pattern.</li>
+<li>For geoprocessing from Pro, use the release-matched <code>Geoprocessing.ExecuteToolAsync</code> pattern and the tool’s required parameter order or value array. Inspect result status and messages and handle canceled and failed runs. Add outputs to the map only when the workflow expects that behavior.</li>
+</ul>
+<p><a href="https://github.com/Esri/arcgis-pro-sdk/wiki/ProConcepts-Geodatabase">Geodatabase concepts</a> · <a href="https://github.com/Esri/arcgis-pro-sdk/wiki/ProConcepts-Editing">Editing concepts</a> · <a href="https://github.com/Esri/arcgis-pro-sdk/wiki/ProConcepts-Geoprocessing">Geoprocessing concepts</a></p>
+<h2>Build, packaging, and regression checks</h2>
+<ul>
+<li>Build through the existing project or the documented SDK template. Check <code>.esriAddinX</code> for add-ins and <code>.proConfigX</code> for managed configurations. Follow the selected template for packaging a plug-in data source or deploying a CoreHost app. Check organizational trust or signing policy on the receiving machine.</li>
+<li>Run in the actual Pro host with the debugger, a disposable <code>.aprx</code>, and known selections. For a tool that reads a selection, use two selected features and a separate unselected feature. Confirm the output includes only the two selected IDs. Clear the selection and verify the supported empty-state behavior. For a write tool, use a copy, verify changed values, and test undo and redo where available.</li>
+<li>If the package builds but Pro does not load it, check registration or the configured add-in folder, trust policy, and the <code>desktopVersion</code> requirement. If the package loads but a control is absent, check <code>defaultAssembly</code>, <code>defaultNamespace</code>, DAML IDs, and class names. If a call throws <code>CalledOnWrongThreadException</code>, verify the method's threading annotation and queue the related MCT calls together. <a href="https://github.com/Esri/arcgis-pro-sdk/wiki/ProGuide-Diagnosing-ArcGIS-Pro-Add-ins">Esri add-in diagnostics</a></li>
+<li>Use ordinary unit tests for pure logic. Use the SDK's established in-host regression-testing pattern when a test must exercise Pro or its data APIs. Report compile-only and in-host results separately.</li>
+</ul>
+<p><a href="https://doc.esri.com/en/arcgis-pro/latest/sdk/api-reference/conceptdocs/docs/ProGuide-Build-your-first-add-in.html">Build your first add-in</a> · <a href="https://github.com/Esri/arcgis-pro-sdk/wiki/ProConcepts-CoreHost">CoreHost</a> · <a href="https://github.com/Esri/arcgis-pro-sdk/wiki/ProGuide-Regression-Testing">Pro regression testing</a></p>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#152d29">
+  <title>ArcPy implementation workflows · Day 27</title>
+  <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+  <header class="masthead">
+    <nav class="wrap top" aria-label="Day 27 navigation">
+      <a href="../../../index.html">← Day 27 skills</a>
+      <a href="workflows.md">View Markdown source</a>
+    </nav>
+  </header>
+  <main class="wrap skill-copy">
+    <nav class="skill-nav" aria-label="Skill pages">
+      <a href="../index.html">ArcPy</a>
+      <a href="../../build-with-arcgis-pro-sdk/index.html">ArcGIS Pro SDK for .NET</a>
+      <a href="../../build-with-arcgis-enterprise-sdk/index.html">ArcGIS Enterprise SDK</a>
+    </nav>
+    <article>
+<h1>ArcPy implementation workflows</h1>
+<p>Use the workflow for the requested deliverable and the documentation for its ArcGIS release.</p>
+<h2>Geoprocessing and spatial data</h2>
+<ul>
+<li>Use toolbox-qualified calls such as <code>arcpy.analysis.Buffer</code> and <code>arcpy.management.CopyFeatures</code>. Inspect the documentation for parameters the tool can leave at defaults and those that need domain-specific choices. Check <code>Result</code> outputs and warnings when a later step depends on them. Use <code>arcpy.GetMessages(2)</code> promptly when handling <code>arcpy.ExecuteError</code>, and propagate the failure to the caller.</li>
+<li>For projected outputs, distinguish assigning known coordinate-system metadata from actually transforming coordinates. Use <code>Project</code> for features and <code>Project Raster</code> for rasters when appropriate. Choose a supported geographic transformation for the area and accuracy requirement if the datums differ. Check whether the required coordinate-system grid files are present. For rasters, choose snap raster, alignment, cell size, extent, and resampling appropriate to the source values.</li>
+<li>Use a file geodatabase when the workflow depends on domains, geodatabase field types, or schema that does not survive a simpler export format. Verify output names are valid for the actual workspace. Inspect the workspace’s SQL dialect and active filters before reusing a where clause across stores.</li>
+<li>Scope temporary outputs to the run when a job may be retried or run in parallel. For required edit sessions, confirm the data store and versioning model before choosing an <code>arcpy.da.Editor</code> pattern. Keep cursors inside one edit operation and release them before schema changes.</li>
+</ul>
+<p><a href="https://doc.esri.com/en/arcgis-pro/latest/help/analysis/geoprocessing/basics/python-and-geoprocessing.html">Python and geoprocessing</a> · <a href="https://doc.esri.com/en/arcgis-pro/latest/arcpy/classes/envmanager.html">EnvManager</a> · <a href="https://doc.esri.com/en/arcgis-pro/latest/tool-reference/data-management/project.html">Project</a> · <a href="https://doc.esri.com/en/arcgis-pro/latest/arcpy/data-access/editor.html">Editor</a></p>
+<h2>Script tools and Python toolboxes</h2>
+<ul>
+<li>Match each script-tool parameter’s order, type, direction, and optional status to the toolbox. Use <code>GetParameter</code> for typed values and <code>GetParameterAsText</code> for text values. Set output parameters with <code>SetParameter</code> or <code>SetParameterAsText</code> as required. For a derived output tied to an edited input, set the parameter dependency and return the resulting data.</li>
+<li>In a <code>.pyt</code>, define <code>arcpy.Parameter</code> objects in <code>getParameterInfo</code> and read their values inside <code>execute</code>. Keep validation lightweight and avoid doing geoprocessing at import time. Report messages through the geoprocessing interface. Confirm the tool works from Pro and from any programmatic caller the project supports.</li>
+</ul>
+<p><a href="https://doc.esri.com/en/arcgis-pro/latest/arcpy/functions/getparameterastext.html">Script tool parameters</a> · <a href="https://doc.esri.com/en/arcgis-pro/latest/arcpy/functions/setparameterastext.html">SetParameterAsText</a> · <a href="https://doc.esri.com/en/arcgis-pro/latest/arcpy/geoprocessing_and_python/a-quick-tour-of-python-toolboxes.html">Python toolboxes</a></p>
+<h2>Projects, layouts, and exports</h2>
+<ul>
+<li>Use <code>arcpy.mp.ArcGISProject(&quot;CURRENT&quot;)</code> in a supported in-app context and an explicit <code>.aprx</code> path in a standalone process. Select the intended map and layout by a verified name or stable project convention. Check for missing and ambiguous matches, broken data sources, and read-only project state.</li>
+<li>Save a derivative with <code>saveACopy</code> where appropriate; reopen the resulting project when validating it. Use the export API supported by the target release. Verify map frame extent, scale, page size, legend, and expected output files against the requested layout.</li>
+</ul>
+<p><a href="https://doc.esri.com/en/arcgis-pro/latest/arcpy/mapping/arcgisproject-class.html">ArcGISProject</a> · <a href="https://doc.esri.com/en/arcgis-pro/latest/arcpy/mapping/layout-class.html">Layout</a></p>
+<h2>Publishing and server execution</h2>
+<ul>
+<li>Choose the matching sharing draft for the intended item or service. Confirm the portal or server, target folder, ownership or publishing permissions, registered versus copied data, overwrites, and audience. For a web tool or geoprocessing service, use a successful, representative execution as required by the publishing workflow.</li>
+<li>Inspect analyzer messages when staging and resolve errors. Verify which Python environment, libraries, file paths, and permissions are available on the server. Replace assumptions about a signed-in desktop session or a mapped desktop drive with paths accessible to the actual server process.</li>
+<li>When publication is in scope, upload the staged definition to the intended environment and run the service with the expected caller. Verify the result and any long-running, asynchronous, or failure path the service exposes.</li>
+</ul>
+<p><a href="https://doc.esri.com/en/arcgis-pro/latest/arcpy/sharing/introduction-to-arcpy-sharing.html">ArcPy sharing</a> · <a href="https://doc.esri.com/en/arcgis-pro/latest/help/analysis/geoprocessing/share-analysis/publishing-web-tools-in-a-python-script.html">Publish web tools using Python</a> · <a href="https://doc.esri.com/en/arcgis-pro/latest/help/analysis/geoprocessing/share-analysis/authoring-geoprocessing-services-with-python-scripts.html">Authoring with Python scripts</a></p>
+    </article>
+  </main>
+</body>
+</html>

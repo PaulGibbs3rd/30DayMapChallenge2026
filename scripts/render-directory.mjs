@@ -13,7 +13,7 @@ const cards=manifest.days.map(day=>{
  '<p class="day-date">NOVEMBER '+number+' · '+escape(day.theme)+'</p>'+
  '<h3>'+escape(day.title)+'</h3><p class="day-description">'+escape(day.description)+'</p>'+
  (tags?'<div class="day-tags">'+tags+'</div>':'<p class="planned-note">Map concept to be selected.</p>')+
- '<div class="day-links"><a class="page-link" href="../day'+day.day+'/" title="GitHub Pages: '+hosted+'">'+(complete?'Open map':'Day page')+' <span aria-hidden="true">↗</span><small>GITHUB PAGES</small></a>'+
+ '<div class="day-links"><a class="page-link" href="../day'+day.day+'/" title="GitHub Pages: '+hosted+'">'+escape(day.pageLabel ?? (complete?'Open map':'Day page'))+' <span aria-hidden="true">↗</span><small>GITHUB PAGES</small></a>'+
  '<a href="'+source+'" target="_blank" rel="noopener noreferrer" aria-label="Source code for Day '+day.day+'">Source ↗</a><a href="../day'+day.day+'/readme.md">Notes</a></div></article>';
 }).join('\n');
 const template=await readFile(resolve(root,'directory/template.html'),'utf8');
