@@ -1,0 +1,25 @@
+{
+  "background": "#293f43",
+  "styles": {
+    "water-before": {"fill": "#366472"},
+    "water-after": {"fill": "#366472"},
+    "land-before": {"fill": "#a3ad94"},
+    "land-after": {"fill": "#a3ad94"},
+    "common": {"line": "#cbd8cb", "style": "dot"},
+    "gain": {"fill": "#e8b45d", "line": "#8c5a20"},
+    "loss": {"fill": "#ad87c5", "line": "#604579", "hatch": "backward-diagonal"},
+    "shore-before": {"line": "#faf0d2", "style": "short-dash"},
+    "shore-after": {"line": "#18342f", "casing": "#faf0d2"}
+  },
+  "views": {
+    "before": ["water-before", "land-before", "shore-before"],
+    "after": ["water-after", "land-after", "shore-after"],
+    "change": ["water-after", "land-after", "common", "gain", "loss", "shore-after", "shore-before"]
+  },
+  "labels": [
+    {"text": "Strait of Juan de Fuca", "point": [296570, 131615], "italic": true},
+    {"text": "Elwha River", "point": [297005, 130720]}
+  ],
+  "scale": {"start": [297915, 130025], "meters": 500},
+  "northArrow": [[298390, 131635], [298430, 131725], [298470, 131635]]
+}

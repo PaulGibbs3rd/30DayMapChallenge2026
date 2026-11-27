@@ -270,9 +270,10 @@
       "day": 26,
       "date": "2026-11-26",
       "theme": "Water",
-      "title": "Water",
-      "description": "Explore water’s places, movement, boundaries, or role in shaping the landscape.",
-      "status": "planned"
+      "title": "Where the Elwha Built Land",
+      "description": "Compare two USGS surveys and see where the Elwha River delta built land after dam removal in Washington.",
+      "status": "complete",
+      "tags": ["Elwha River", "Shoreline change", "USGS", "ArcGIS JavaScript"]
     },
     {
       "day": 27,

@@ -3,25 +3,79 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Day 26 of Paul Gibbs's 30DayMapChallenge 2026: Water. Planned map; explore the theme and project links.">
-  <meta name="theme-color" content="#f5f0e5">
-  <title>Day 26: Water | 30DayMapChallenge 2026</title>
-  <link rel="stylesheet" href="../directory/placeholder.css">
+  <meta name="description" content="Compare USGS surveys of the Elwha River delta before and after two dams came down.">
+  <meta name="theme-color" content="#14272d">
+  <title>Where the Elwha Built Land · Day 26</title>
+  <link rel="stylesheet" href="https://js.arcgis.com/5.2/esri/themes/dark/main.css">
+  <link rel="stylesheet" href="style.css">
+  <script id="arcgis-cdn" type="module" src="https://js.arcgis.com/5.2/" async></script>
+  <script type="module" src="app.js"></script>
 </head>
-<body class="placeholder-page">
-  <main class="day-placeholder">
-    <header>
-      <p class="eyebrow">PAUL GIBBS · NOVEMBER 26, 2026</p>
-      <h1><span>Day 26</span> Water</h1>
-      <p class="theme-description">Explore water in the landscape, considering its movement, presence, uses, or influence on the connections between environments, settlements, and everyday life.</p>
-    </header>
-    <p class="status-badge">Planned · Map not implemented</p>
-    <p class="placeholder-note">This day's map is still to come. The theme is ready; the subject, data, and final output will be documented as the project takes shape.</p>
-    <nav class="placeholder-links" aria-label="Day 26 project links">
-      <a href="https://github.com/PaulGibbs3rd/30DayMapChallenge2026/tree/main/day26" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
-      <a href="readme.md">Project notes</a>
-      <a href="../directory/index.html">All days</a>
+<body>
+  <main class="page">
+    <nav class="top" aria-label="Challenge navigation">
+      <a href="../directory/">← All maps</a>
+      <span>30 Day Map Challenge <span aria-hidden="true">/</span> 26 Water</span>
     </nav>
+
+    <header class="intro">
+      <p class="place">Elwha River Delta <span aria-hidden="true">·</span> Washington</p>
+      <h1>Where the Elwha<br class="title-break"> built land</h1>
+      <p class="dek">Two dams held sediment upstream for decades. After they came down, the river carried sand and gravel to the Strait of Juan de Fuca and reshaped its own shoreline.</p>
+    </header>
+
+    <div class="map-layout">
+      <section class="map-panel" aria-label="Elwha River delta map">
+        <div class="map-toolbar">
+          <div id="map-controls" class="segmented" role="group" aria-label="Map view" hidden>
+            <button type="button" data-view="before" aria-pressed="false">Before</button>
+            <button type="button" data-view="after" aria-pressed="false">July 2017</button>
+            <button type="button" data-view="change" aria-pressed="true">Change</button>
+          </div>
+          <a class="download" href="assets/elwha-change.png" download>Download map <span aria-hidden="true">↧</span></a>
+        </div>
+        <div class="map-stage">
+          <div id="map-fallback" role="group" aria-label="Elwha River delta map" aria-describedby="map-help">
+            <img id="map-image" src="assets/map-change.png" alt="Map of the Elwha River delta before and after dam removal" width="1200" height="780" draggable="false">
+          </div>
+          <div id="arcgis-map" aria-hidden="true"></div>
+          <div id="map-navigation" class="map-navigation" role="group" aria-label="Map navigation" hidden>
+            <button type="button" data-map-action="zoom-in" aria-label="Zoom in" title="Zoom in">+</button>
+            <button type="button" data-map-action="zoom-out" aria-label="Zoom out" title="Zoom out">−</button>
+            <button type="button" data-map-action="reset" aria-label="Reset map view" title="Reset map view">↺</button>
+          </div>
+          <span class="map-north" aria-hidden="true">N</span>
+          <span id="map-scale" class="map-scale" hidden></span>
+        </div>
+        <div class="map-notes">
+          <p id="map-caption" aria-live="polite">Compare the two surveyed high-water shorelines at the same scale.</p>
+          <p id="map-help" hidden>Use + and − to zoom. Drag to pan.</p>
+        </div>
+      </section>
+
+      <aside class="side" aria-label="Map legend and location">
+        <section aria-labelledby="legend-title">
+          <h2 id="legend-title">Reading the map</h2>
+          <ul class="legend">
+            <li data-legend="gain"><i class="swatch gain" aria-hidden="true"></i><span>Rose above high water<strong id="gain-value"></strong></span></li>
+            <li data-legend="loss"><i class="swatch loss" aria-hidden="true"></i><span>Fell below high water<strong id="loss-value"></strong></span></li>
+            <li data-legend="before"><i class="swatch before" aria-hidden="true"></i><span id="before-legend">Pre-removal shoreline</span></li>
+            <li data-legend="after"><i class="swatch after" aria-hidden="true"></i><span>July 2017 shoreline</span></li>
+            <li data-legend="coverage"><i class="swatch coverage" aria-hidden="true"></i><span>Surveyed both times</span></li>
+            <li data-legend="context"><i class="swatch context" aria-hidden="true"></i><span>Outside survey coverage</span></li>
+          </ul>
+        </section>
+        <figure class="locator">
+          <img src="assets/locator.png" alt="The Elwha River mouth is north of the former Elwha Dam and Glines Canyon Dam, on the Olympic Peninsula west of Port Angeles." width="600" height="410">
+          <figcaption>The Lower Elwha Klallam Tribe helped bring about dam removal and continues to restore the river. <a href="https://www.elwha.org/departments/natural-resources/habitat-restoration/">Tribal restoration work</a></figcaption>
+        </figure>
+      </aside>
+    </div>
+
+    <footer class="sources">
+      <p>Shorelines estimate local mean high water. Change is measured only where both surveys have coverage.</p>
+      <p><a href="readme.md">Data and methods</a> <span aria-hidden="true">·</span> <a href="https://cmgds.marine.usgs.gov/data-releases/community/elwha-river-delta/">USGS Elwha surveys</a></p>
+    </footer>
   </main>
 </body>
 </html>

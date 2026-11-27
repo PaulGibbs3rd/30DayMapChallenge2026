@@ -1,0 +1,30 @@
+{
+  "before": {
+    "label": "September 2009",
+    "start": "2009-09-15",
+    "end": "2009-09-17",
+    "doi": "10.3133/ds288",
+    "file": "elwha-data_09.zip",
+    "sha256": "5a9f16e58de1c284e8d33314c50515b10ec3173766ac69cf6e14dee03064dcce"
+  },
+  "after": {
+    "label": "July 2017",
+    "start": "2017-07-20",
+    "end": "2017-07-23",
+    "doi": "10.5066/P9AJ8ALB",
+    "file": "ew17_july_dem_5m.asc",
+    "sha256": "dce7150dedf952731bfcf3b60226f49a7a996e83a8237c70bf268d79929a9219"
+  },
+  "cellMeters": 5,
+  "highWaterMetersNavd88": 1.86,
+  "baselineMaxTriangleEdgeMeters": 50,
+  "commonSquareMeters": 2400625,
+  "gainSquareMeters": 227950,
+  "lossSquareMeters": 9550,
+  "bounds": [
+    295450,
+    129900,
+    298650,
+    131980
+  ]
+}
